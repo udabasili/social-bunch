@@ -1,0 +1,2 @@
+export const START_FETCHING = "START_FETCHING";
+export const ERROR_FETCHING = "ERROR_FETCHING";

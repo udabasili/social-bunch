@@ -1,0 +1,45 @@
+.modal-container{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background: rgba($color: #000000, $alpha: .8);
+    box-shadow: 2px 3px 10px black;
+
+
+    .modal-content{
+        position: fixed;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        width: 40%;
+        background-color: rgba(160, 157, 157, 0.931);
+        border: 3px $color-logo-background solid ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem auto;
+        padding: 3em;
+        
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+             
+            
+            }
+
+            .close-button{
+                color: red;
+                position: absolute;
+                cursor: pointer;
+                left: 90%;
+                font-size: 30px;
+                top: 0;
+            }
+        }
+    
+}

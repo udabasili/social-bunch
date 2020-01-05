@@ -1,0 +1,29 @@
+.auth-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+}
+.form{
+    display: flex;
+    position: relative;
+    width: 40%;
+    flex-direction: column;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    height: 90%;
+    justify-content: center;
+    box-shadow: 2px 2px 10px black;
+    
+}
+
+@media only screen and (max-width:600px){
+    .form{
+        width:80%;
+        margin: 0 auto;
+
+    }
+
+}

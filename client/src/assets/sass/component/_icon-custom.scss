@@ -1,0 +1,11 @@
+.icon-custom{
+    font-size: 2rem;
+    margin: 10px;
+    color: $color-icon;
+    cursor: pointer;
+
+  &:hover{
+      opacity: .5;
+      transform: scale(1.5);
+    }
+}

@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+$green: #86BB71;
+$blue: #94C2ED;
+$orange: #E38968;
+$gray: #92959E;
+
+
+.chat-area {
+    padding: 3rem 3rem 2rem;
+    width: 100%;
+    position: relative;
+    margin: 4rem auto;
+    bottom: 0;
+    overflow-y: auto;
+    background-color: $color-card-background;
+    height: 90%;
+    
+    .message-data {
+      margin-bottom: 1.5rem;
+      font-size: 1.3rem;
+    }
+
+    .sender-data{
+        text-align: right;
+    }
+    .receive-data{
+      text-align: left;
+  }
+    
+    .message-data-time {
+      color: lighten($gray, 8%);
+      padding-left: .2rem;
+      font-size: 1rem;
+    }
+    
+    .message {      
+      color: black;
+      padding: 18px 20px;
+      line-height: 2.5rem;
+      font-size: 1.5rem;
+      border-radius: 7px;
+      margin-bottom: 3rem;
+      width: 70%;
+      position: relative;
+      
+      &:after {
+        bottom: 100%;
+        left: 7%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        border-width: 10px;
+        margin-left: -10px;
+      }
+    }
+    
+    .send-message {
+      background: $color-icon;
+      float: right;
+      text-align: left;
+    }
+    
+    .receive-message {
+      background: $blue;
+      float: left;
+      text-align: left;
+      
+      &:after {
+        border-bottom-color: $blue;
+        left: 93%;
+      }
+    }
+    
+  }
+  
+  .clearfix{
+    list-style-type: none;
+  }
+  .clearfix:after {
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: " ";
+      clear: both;
+      height: 0;
+  }
+  

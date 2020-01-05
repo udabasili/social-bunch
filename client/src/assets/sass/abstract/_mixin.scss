@@ -1,0 +1,28 @@
+@mixin primary-header {
+    font-family: 'Anton', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+@mixin secondary-header {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+@mixin paragraph {
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif
+    
+}
+
+@mixin removeDefaultButtonStyle{
+    background-color:transparent;
+    outline: none;
+    border: none;
+    overflow: hidden;
+    position: relative;
+}

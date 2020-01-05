@@ -1,0 +1,34 @@
+.messages{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.message{
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid white;
+    padding: 2rem 1rem 1rem 0;
+
+    &__image{
+
+        .user-icon{
+            margin-top: 0;
+        }
+    }
+
+    &__content{
+        text-align: left;
+        margin-right: 10%;
+
+        &__username{
+            font-size: 1.2rem;
+        }
+
+        &__message{
+            font-size: .9rem;
+        }
+    }
+}
+
+
