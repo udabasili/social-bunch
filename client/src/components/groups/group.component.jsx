@@ -8,8 +8,14 @@ import {createGroup,
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import ModalWindow from "../modal-window/modal-window.component";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+
+
+
+/**
+  * @desc handles showing the adding of group by user, leaving, joining and deleting events 
+  * @author Udendu Abasili
+
+*/
 
 class Group extends Component {
     state={
@@ -52,12 +58,9 @@ class Group extends Component {
     const{
       allGroups, 
       currentUser,
-      deleteGroup,
       joinGroup,
-      leaveGroup,
-          } = this.props
+      leaveGroup } = this.props
     const {name, category} = this.state;
-    console.log(currentUser.username);
     
     return (
       <div className="event">  
@@ -80,12 +83,6 @@ class Group extends Component {
                       <h3 className="card__date-time">
                         <span>Category:{group.category}</span>
                       </h3>
-                      <ul>
-                        <h3>Attenders</h3>
-                        {group.members.map((member)=>(
-                          <li>{member}</li>
-                        ))}
-                      </ul>
                     </div>
                     { group.members.includes(currentUser.username) ?
                     <button className="card__join-button" onClick={() =>leaveGroup(group._id)}>
@@ -129,14 +126,13 @@ class Group extends Component {
     );
   }
 }
+
 const mapDispatchToProps = (dispatch) =>({
   createGroup: group => dispatch(createGroup(group)),
   joinGroup: group => dispatch(joinGroup(group)),
   leaveGroup: group => dispatch(leaveGroup(group)),
   getAllGroups: () => dispatch(getAllGroups()),
   deleteGroup: () => dispatch(deleteGroup()),
-
-
 })
 
 

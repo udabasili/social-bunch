@@ -8,12 +8,12 @@ const messageSchema = new Schema(
             type:String,
         },
         createdBy:{
-            type:mongoose.Schema.Types.ObjectId,
-            ref:"User"
-        },
-        sentTo:{
             type:String,
         },
+
+        type:{
+            type:String
+        }
     },
     {
         timestamps:true

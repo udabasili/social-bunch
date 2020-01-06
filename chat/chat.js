@@ -9,19 +9,29 @@ exports.setRooms = async() =>{
     try {
         let groups = await Group.find()
         let sockets = await Socket.find()
-        // create a room based on the group information if it doesnt exist
-            for( var i = 0; i < groups.length; i++ ) {
+        if (groups){
+             // create a room based on the group information if it doesnt exist
+             for( var i = 0; i < groups.length; i++ ) {
+                if(sockets){
+                    if (sockets.every(socket => !socket.name.includes(groups[i].name))){
+                        let socket = new Socket();
+                        socket.name = groups[i].name,
+                        socket.save()
 
-                if (sockets.every(socket => !socket.name.includes(groups[i].name))){
-                let socket = new Socket();
-                socket.name = groups[i].name,
-                socket.save()
-
+                        }
+                    }
+                    else{
+                        let socket = new Socket();
+                        socket.name = groups[i].name,
+                        socket.save()
+                    }
+                }
+                
+                return  {
+                success: "rooms successfully added"
             }
         }
-        return{
-            success: "completed"
-        }
+       
     }
     catch(error){
         return{
@@ -31,24 +41,18 @@ exports.setRooms = async() =>{
 }
 
 exports.createRoom = async (roomName ) =>{
-
     try {
-        if(!roomName){
-            return{
-                error:"group id must be passed in"
-            }
-        }
 
         let socket = await Socket.create({
             name: roomName
         })
+
         await socket.save()
         let sockets = await Socket.find()                
         return sockets
         
-    } catch (error) {
-        console.log(error);
-        
+    }
+     catch (error) {        
         return{
             error: error
         }
@@ -58,13 +62,15 @@ exports.createRoom = async (roomName ) =>{
 }
 
 exports.getUsersPerRoom = async (groupId) =>{
+
     try {
         let group = await Group.findById(mongoose.Types.ObjectId(groupId))
         let socket = await Socket.findOne({name: group.name})
         socket =  socket.users
         return socket
-
-    } catch (error) {
+    } 
+    
+    catch (error) {
         return{
             error:error
         }
@@ -74,48 +80,33 @@ exports.getUsersPerRoom = async (groupId) =>{
 exports.joinRoom = async (username, socketId, groupId ) =>{
 
     try {
+
         let group = await Group.findById(mongoose.Types.ObjectId(groupId))
         let socket = await Socket.findOne({name: group.name})
-        //check if username, room and socketId were passed in
-        if(!username || !socketId || !groupId){
-            return{
-                error:"username  and room must be passed in"
-            }
-        }
-        
-        
-
-        //if user already in room, sned error, else add to room      
-        if(socket.users.every(user => user.username !== username)){
-            console.log("here");
-            
+        if(socket.users.every(user => user.username !== username)){            
             socket.users.push({
                 username: username,
                 socketId: socketId
             })
-    
             await socket.save()
-       
         }
 
         socket = await Socket.find({
             name: group.name
         })
-
         return{
             socket
         }
     
-    } catch (error) {
+    } 
+    catch (error) {
         return{
             error: error
-            }
+        }
     }
     
 
 }
-
-//add user to room when he joins and update socket id
 
 //user leave room by room Id
 exports.leaveRoom = async function(username, roomId){
@@ -134,36 +125,35 @@ exports.leaveRoom = async function(username, roomId){
             name: group.name
         })
 
-        return{
-            socket
-        }
+        return  {socket}
+    } 
 
-        
-    } catch (error) {
-        console.log(error
-            );
-        
-        return {
-            error: error,
-        }
+    catch (error) { 
+        return { error: error}
     }
     
 }
 
 // remove user from all rooms when he disconnects
 exports.logout = async function(socketId){  
-         await Socket.remove({
-                socketId: socketId
-            })
-            return {
-                message: `${socketId} has left group`
-            }
-        }
-   
+
+    try {
+        let now = new Date()
+
+        let user = await User.findOne({
+            socketId: socketId
+        })
+        user.lastOnline = now 
+        user.socketId = null
+        await user.save()
+
+
+    } 
+    catch (error) {
+        
+    }
     
-
-
-
+}
 
 exports.getUser =  async (userId, groupId ) =>{
     
@@ -174,8 +164,8 @@ exports.getUser =  async (userId, groupId ) =>{
     
     let room = group.name
     socket = await Socket.findOne({
-        name: room
-    })    
+         name: room
+    })   
     if(user){
         let response = {
             username,
@@ -185,3 +175,70 @@ exports.getUser =  async (userId, groupId ) =>{
     }
 }
 
+exports.setUserSocketId = async (username, socketId) =>{
+
+    try {
+
+        let user = await User.findOne({
+        username: username
+        })        
+
+        user.socketId = socketId;
+        await user.save()
+
+        return{
+            socket: `:${username} given socket id`
+        }
+        
+    } 
+        catch (error) {
+
+            return {
+            error: error,
+        }
+        
+    }
+    
+
+}
+exports.getUserSocketId = async (username) =>{
+
+    try {
+
+        let user = await User.findOne({
+            username: username
+        })        
+        console.log(user.socketId );
+
+        return user.socketId 
+
+        
+    }   catch (error) {
+        console.log(error);
+        
+        return {
+        error: error,
+        }
+
+    }
+    
+    
+}
+
+exports.getOnlineFriends = async (username) =>{
+    let user = await User.findOne({
+        username: username
+    })
+    let users = await User.find()
+
+    let onlineUsers = await User.find({"socketId":{$ne: null}})
+
+    let onlineFriends = user.friends.map(friend => ({
+        username:friend.userInfo.username,
+        isOnline: onlineUsers.some(user => user.username === friend.userInfo.username),
+        lastOnline: users.filter( user => user.username === friend.userInfo.username)[0].lastOnline
+
+    }))        
+    return onlineFriends
+    
+}

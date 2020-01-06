@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {getAllUsers, addFriend} from "../../nodeserver/node.utils";
+import {getAllUsers, sendFriendRequest} from "../../nodeserver/node.utils";
 import {connect} from "react-redux";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -54,7 +54,7 @@ class Users extends Component {
           <ul className="item-list">
             {filteredData.map((data, i)=>(
               <UserListItem key={i} 
-                addFriend={this.props.addFriend} 
+                sendFriendRequest={this.props.sendFriendRequest} 
                 userData={data} />
             ))
           }
@@ -67,7 +67,7 @@ class Users extends Component {
 }
 const mapDispatchToProps = (dispatch) =>({
   getAllUsers: () => dispatch(getAllUsers()),
-  // addFriend: (addedUserUsername, status) => dispatch(addFriend(addedUserUsername, status))
+  sendFriendRequest: (addedUserId) => dispatch(sendFriendRequest(addedUserId))
 
 })
 

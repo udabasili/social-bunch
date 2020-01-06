@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const path = require('path')
-
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
@@ -9,6 +8,9 @@ const userSchema = new Schema({
             type: String,
             required:true,
             unique:true
+        },
+        socketId:{
+            type: String
         },
         email:{
             type:String,
@@ -34,18 +36,18 @@ const userSchema = new Schema({
         location:{
             type:String
         },
+        lastOnline:{
+            type:Date
+        },
         friends:[
             {
                 userInfo:{},
-                messages:[{
-                    type: mongoose.Schema.Types.ObjectId,
-                    ref:"Message"
-                }]
+                messages:[]
             }
         ],
-        friendsRequest:[
+        friendsRequests:[
             {
-                userInfo:{}
+                userInfo:{},
             }
         ]
     },
@@ -55,8 +57,6 @@ const userSchema = new Schema({
 
 userSchema.methods.encryptPassword =  async function(req, res, next){
     try {
-    
-        console.log(this.password);
         
         let hashedPassword = await bcrypt.hash(this.password, 10);
         this.password = hashedPassword
@@ -69,9 +69,7 @@ userSchema.methods.encryptPassword =  async function(req, res, next){
 
 userSchema.methods.comparePassword = async function (userConfirmPassword, next) {
     try {
-        let passwordCheck = await bcrypt.compare(userConfirmPassword, this.password)
-        console.log(typeof userConfirmPassword);
-                
+        let passwordCheck = await bcrypt.compare(userConfirmPassword, this.password)                
         return passwordCheck;
 
     } catch (error) {
@@ -88,22 +86,22 @@ userSchema.methods.uploadImage =  function(imageBuffer){
     }
 }
 
-userSchema.methods.addFriends = async function(addedFriend) {
+userSchema.methods.addFriend = async function(friend) {
     try {
-        let updatedFriendsList = [...this.friends]
+        let updatedFriendList = [...this.friends]
         //check if friend already exists 
-        let existingFriend = updatedFriendsList.findIndex((friend)=>{
-            friend.userInfo._id.toString() === addedFriend._id.toString()
-        })
+        let existingFriend = updatedFriendList.findIndex((friendList)=>(
+            friendList.userInfo._id.toString() === friend._id.toString()
+        ))
         if (existingFriend !== -1){
             return;
         }
  
-        updatedFriendsList.push({
-            userInfo:addedFriend,
+        updatedFriendList.push({
+            userInfo:friend,
             messages:[]
         })
-        this.friends = updatedFriendsList;
+        this.friends = updatedFriendList;
         return this.save()
 
     } catch (error) {
@@ -112,6 +110,74 @@ userSchema.methods.addFriends = async function(addedFriend) {
         return (error)   
     }
     
+}
+
+userSchema.methods.removeFriendRequest = async function(sender) {
+    try {
+        let updatedFriendRequestList = [...this.friendsRequests]
+        //check if friend already exists 
+        updatedFriendRequestList = updatedFriendRequestList.filter((friend)=>(
+            friend.userInfo._id.toString() !== sender._id.toString()
+        ))
+
+        this.friendsRequests = updatedFriendRequestList;
+        return this.save()
+
+    } catch (error) {
+        console.log(error);
+        
+        return (error)   
+    }
+    
+}
+
+userSchema.methods.sendFriendRequest = async function(sender) {
+    try {
+        let updatedFriendRequestList = [...this.friendsRequests]
+        //check if friend already exists 
+        let existingFriendRequest = updatedFriendRequestList.findIndex((friend)=>(
+            friend.userInfo._id.toString() === sender._id.toString()
+        ))
+        if (existingFriendRequest !== -1){
+            return;
+        }
+ 
+        updatedFriendRequestList.push({
+            userInfo:sender,
+        })
+        this.friendsRequests = updatedFriendRequestList;
+        return this.save()
+
+    } catch (error) {
+        console.log(error);
+        
+        return (error)   
+    }
+    
+}
+
+userSchema.methods.saveMessage = function(user, message, type) {
+    try {
+
+        let friends = [...this.friends]
+        let friendIndex = friends.findIndex((friend)=>(
+            friend.userInfo.username === user.username
+        ))
+        console.log(friendIndex);
+        
+        if (friendIndex !== -1){
+            friends[friendIndex].messages.push(message)
+        }
+
+        this.friends = friends;
+        this.save()
+        
+    } catch (error) {
+        console.log(error);
+        
+    }
+    
+
 }
 
 userSchema.methods.filterUserData = function() {
@@ -126,6 +192,10 @@ userSchema.statics.filterData = function(users) {
         try {
             return users.map((user)=>{
                 let obj = user.toObject();        
+                delete obj.friends 
+                delete obj.friendsRequests
+                delete obj.lastOnline
+                delete obj.socketId
                 delete obj.password;
                 delete obj.email;
                 delete obj.friends;

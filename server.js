@@ -13,6 +13,10 @@ const authRoute = require("./routes/auth");
 const authenticated = require("./middleware/confirmAuth")
 const spotify = require("./spotify/spotify")
 const PORT = process.env.PORT || 6000 ;
+
+app.use(express.static(path.join(__dirname,'client/build')))
+
+
 //socket.io config 
  // we use this 
 
@@ -46,19 +50,19 @@ app.use(function(req, res, next){
 //static file for Production stage
 
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname,'client/build')))
-    app.get("*", (req, res)=>{
-        res.sendFile(path.join(__dirname, 'client/build/index.html'))
-    })
+    
 }
 
 //start the connection of the server
 io.on("connection", (client)=>{
     
     //set all the rooms once we reload
-    client.on("onload",(callback) => {
+    client.on("onload",(username,callback) => {
         chat.setRooms()
-        .then((response)=>callback(response))
+        .then((response)=>{
+            chat.setUserSocketId(username, client.id)
+                .then(response=>callback(response))
+        })
     })
     
 
@@ -124,13 +128,30 @@ io.on("connection", (client)=>{
         chat.getUser(senderId, groupId)
             .then((response) =>{                                
                 client.to(response.room).emit('newMessage', {
-                    message: message,
-                    dateTime: date.toISOString(),
+                    text: message,
+                    createdAt: date.toISOString(),
                     groupName: response.room,
-                    sender: response.username,
-                    type:'receive'
+                    createdBy: response.username,
                 })
             })   
+        })
+        //send private message
+        client.on("messageUser", ({message,receiver,sender}, callback) =>{
+            
+        let date = new Date();
+        chat.getUserSocketId(receiver)
+            .then((response) =>{                 
+                console.log(message,receiver,);
+                
+                    io.to(response).emit('privateNewMessage', {
+                    text: message,
+                    createdAt: date.toISOString(),
+                    createdBy: sender,
+                })
+                     
+                callback("finsihed")
+            }
+            )   
         })
 // get all the members in the group status when the page is loaded
     client.on("getOnlineUsers", (roomId, callback)=>{
@@ -141,11 +162,22 @@ io.on("connection", (client)=>{
                 callback(err)
         });
     })
+
+    // get all the members in the group status when the page is loaded
+    client.on("getOnlineFriends", (username, callback)=>{
+        chat.getOnlineFriends(username)
+            .then((result) => {                                
+                callback(result)
+            }).catch((err) => {
+                callback(err)
+        });
+    })
+    
     
     client.on("disconnect",  function(){
         chat.logout(client.id)
         .then((data)=>{
-            console.log(data);
+            
             
             })
         console.log(`${client.id} has left the chat`);
@@ -153,6 +185,9 @@ io.on("connection", (client)=>{
     })
 })
 
+app.get("*", (req, res)=>{
+    res.sendFile(path.join(__dirname, 'client/build/index.html'))
+})
 
 server.listen(PORT, (req, res)=>{
     console.log(`Serving is running on PORT ${PORT}`);

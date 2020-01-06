@@ -74,16 +74,16 @@
 
 .add-button{
   width: 50%;
-  padding: .5rem 3rem;
+  padding: 1.5rem 1.5rem;
   @include removeDefaultButtonStyle;
-  box-shadow: 2px 2px 10px black;
-  background-color: $color-icon;
+  box-shadow: 0px 10px 10px rgba(black, .1);
+  background-color: rgb(189, 187, 187);
   cursor: pointer;
-  border: 2px solid black;
+  border: 2px solid $color-icon;
   text-transform: uppercase;
   font-weight: bolder;
   margin: 0 auto;
-  border-radius: 10px;
+  border-radius: 20px;
 
   &:focus{
     opacity: .7;

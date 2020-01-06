@@ -1,12 +1,12 @@
 import React from 'react'
 import UserIcon from "../user-icon-status/user-icon-status";
-import { faUserPlus, faEye } from '@fortawesome/free-solid-svg-icons';
+import { faUserPlus, faEye, faHourglass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {connect} from "react-redux";
 
-function UserListItem({addFriend = f => f, userData, currentUser}) {   
-    const {_id, userImage, username} = userData;
-    console.log(userData);
+function UserListItem({sendFriendRequest = f => f, userData, currentUser}) {   
+    const {_id, userImage, username, friendsRequests} = userData;
+    console.log(friendsRequests);
     
   return (
     <div class="user-card">
@@ -17,8 +17,13 @@ function UserListItem({addFriend = f => f, userData, currentUser}) {
         </div>
         { currentUser.username !== username &&
         <div class="user-card__buttons"> 
-          
-            <FontAwesomeIcon  className="icon-custom" onClick={()=>addFriend(username,true)} icon={faUserPlus}/>
+          { friendsRequests.map((friendsRequest) => (
+            friendsRequest.userInfo.username === currentUser.username ?
+            <FontAwesomeIcon  className="icon-custom"  icon={faHourglass}/>:
+            <FontAwesomeIcon  className="icon-custom" onClick={()=>sendFriendRequest(_id)} icon={faUserPlus}/>
+              )
+            )
+          }
             <FontAwesomeIcon className="icon-custom" icon={faEye}/>
         </div>
         }

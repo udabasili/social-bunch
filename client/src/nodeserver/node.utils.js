@@ -28,48 +28,27 @@ const convertBufferToImage = (user) =>{
 }
 
 
-//Get the user location
-export const getUserLocation = () => {
-    if (!navigator.geolocation) {
-        return alert("Sorry this browser doesn't support geolocation ")
-    }    
-    return navigator.geolocation.getCurrentPosition((position)=>{
-        let lat = position.coords.latitude
-        let long = position.coords.longitude
-        let api = process.env.REACT_APP_GOOGLE_API;
-        axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${long}&key=${api}`)
-            .then((response)=> {
-                if(response.data.status === "OK"){
-                    // console.log(response.data.results[8].formatted_address)
-                    }
-                }
-            )
-        return position
-    })
 
-}
 
 /************USER ***************/
 //Check if user is authenticated 
-export const verifyUser = () => {
+export const verifyUser = async () => {
     let [header] = setHeader()
-    return dispatch =>{
-        dispatch(startFetching())
-        axios.get("/authenticate-user",{headers:header})
+    return   axios.get("/authenticate-user",{headers:header})
         .then((response) =>{            
             let currentUser = response.data.user
             currentUser = convertBufferToImage(currentUser)
-            dispatch(setCurrentUser(currentUser))
             localStorage.setItem("validator", response.data.token)
-            localStorage.setItem("userId", currentUser._id)
-            return response.data.status
+            localStorage.setItem("userId", currentUser._id)            
+            return currentUser
         })
         .catch((error)=> {
-          return  error.response
+            localStorage.removeItem("validator")
+            localStorage.removeItem("userId")
+            return error
         })
     }
     
-}
 
 //Get all the users registered
 export const getAllUsers = () =>{
@@ -100,8 +79,7 @@ export const Login = async (userData) =>{
             startIOConnection()
                 .then(() => {
                     //join socket based on group id and send user id to create group
-                    socket.emit("onload",function(response){
-                        console.log(response);
+                    socket.emit("onload", username, function(response){
                     })
                 })
             return  currentUser
@@ -119,29 +97,61 @@ export const SignUp = async (fileHeader, fileData, jsonData) =>{
     return axios.post("/auth/register", formData, fileHeader)
 }
 
-export const addFriend =  (addedUserUsername, approvalStatus) =>{
+export const sendFriendRequest =  (addedUserId) =>{
     let [header,userId] = setHeader()
     return dispatch =>{
         dispatch(startFetching());
-        let body = {addedUserUsername,approvalStatus}
-        return axios.post(`/user/${userId}/add-friend`, body, {headers:header})
-            .then((response)=>{                
-                let currentUser = response.data.message
+        return axios.get(`/user/${userId}/send-friend-request/${addedUserId}`, {headers:header})
+        .then((response)=>{                
+                let currentUser = response.data.message.filteredUser
                 currentUser = convertBufferToImage(currentUser)
+                let users = response.data.message.filteredUsers
+                users =  users.map(users=>{
+                    return convertBufferToImage(users)
+                })
                 dispatch(setCurrentUser(currentUser))
+                dispatch(setAllUsers(users))
+
             })
             .catch((error)=>console.log(error.response))
     }
 }
-export const showFriends = () =>{
 
+export const rejectFriendRequest =  (addedUserId) =>{
+    let [header,userId] = setHeader()
+    return dispatch =>{
+        dispatch(startFetching());
+        return axios.get(`/user/${userId}/reject-friend-request/${addedUserId}`, {headers:header})
+            .then((response)=>{                
+                let currentUser = response.data.message.filteredUser
+                currentUser = convertBufferToImage(currentUser)
+                let users = response.data.message.filteredUsers
+                users =  users.map(users=>{
+                    return convertBufferToImage(users)
+                })
+                dispatch(setAllUsers(users))
+                dispatch(setCurrentUser(currentUser))
+                })
+            .catch((error)=>console.log(error.response))
+    }
 }
-export const sendFriendRequest = () =>{
 
-}
 
-export const acceptFriendRequest = () =>{
-
+export const acceptFriendRequest =  (addedUserId) =>{
+    let [header,userId] = setHeader()
+    
+    return dispatch =>{
+        dispatch(startFetching());
+        return axios.get(`/user/${userId}/accept-friend-request/${addedUserId}`, {headers:header})
+            .then((response)=>{                
+                let users =  response.data.message.map(users=>{
+                    return convertBufferToImage(users)
+                })
+                
+                    dispatch(setAllUsers(users))
+                })
+            .catch((error)=>console.log(error.response))
+    }
 }
 
 //Events
@@ -182,6 +192,7 @@ export const getEventById = async (eventId) =>{
 
 export const joinEvent = (eventId) =>{
     let [header,userId] = setHeader()
+    
     return dispatch =>{
         dispatch(startFetching())        
         axios.get(`/user/${userId}/event/${eventId}/join`, {headers:header})
@@ -313,7 +324,6 @@ export async function startIOConnection (){
 //send message to group
 export const sendMessageToGroup = (message, groupId) =>{
     let [header,userId] = setHeader()
-    console.log(userId);
     
     return socket.emit("messageToGroup", {
         message: message,
@@ -327,6 +337,21 @@ export const sendMessageToGroup = (message, groupId) =>{
         console.log("message delivered")
     })
 }
+
+export const sendMessageToPerson =  (message, sender, receiver) =>{
+    console.log(message, sender, receiver);
+      
+     return socket.emit("messageUser", {
+        message,
+        sender,
+        receiver
+        }, (response)=>{
+            
+        return response
+    })
+    
+}
+
 //recieve message
 //send message to group
 export const setRooms = (username) =>{
@@ -336,12 +361,20 @@ export const setRooms = (username) =>{
     })
 }
 
-export const sendMessage = (message) =>{
-    return socket.emit("sendMessage", message, (error)=>{
-        if(error){
-            console.log(error);
-            
+export const sendMessage = (message, receiverId) =>{
+    
+    let [header,userId] = setHeader()
+  
+
+    return dispatch =>{
+        dispatch(startFetching())
+         axios.post(`/user/${userId}/send-message/${receiverId}`, {message}, {headers: header})
+            .then((response)=>{                
+                let currentUser = response.data.message.filteredUser
+                currentUser = convertBufferToImage(currentUser)
+                dispatch(setCurrentUser(currentUser))
+
+            })
+            .catch((error)=>console.log(error.response))
         }
-        console.log("message delivered")
-    })
 }

@@ -12,6 +12,7 @@ import {
    getAllUsers,
    setRooms,
    startIOConnection} from "./nodeserver/node.utils"
+import {setCurrentUser } from "./redux/action/user.action";
 import PrivateRoute from "./components/protected-route/protected-route";
 import {connect} from "react-redux";
 
@@ -23,15 +24,17 @@ class App extends React.Component {
 
 componentDidMount() {
     
-  this.props.verifyUser()
+  verifyUser()
+   ;
+    
   if(localStorage.getItem("validator") && this.props.currentUser){  
       this.props.getAllGroups()
       this.props.getAllEvents()
       this.props.getAllUsers()
+      let username = this.props.currentUser.username      
       startIOConnection()
-      socket.emit("onload",function(){
-         console.log("loaded");
-         
+      socket.emit("onload", username, function(response){
+         console.log(response);
       })
       socket.emit("setRoomsByUser",  function(response){
         console.log(response);
@@ -65,14 +68,14 @@ const mapDispatchToProps = (dispatch) =>({
   getAllEvents: () => dispatch(getAllEvents()),
   getAllGroups : () => dispatch(getAllGroups()),
   getAllUsers : () => dispatch(getAllUsers()),
-  verifyUser: () => dispatch(verifyUser())
+  setCurrentUser: user => dispatch(setCurrentUser(user)),
+
 
 })
 
 const mapStateToProps = (state) =>({
     currentUser:state.user.currentUser
  })
- 
 
 
 export default withRouter(connect(mapStateToProps , mapDispatchToProps)(App));

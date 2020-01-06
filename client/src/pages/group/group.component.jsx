@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {withRouter} from "react-router-dom"
 import Profile from "../../components/profile/profile.component";
 import ChatArea from '../../components/chat-area/chat-area.component';
-import { ChatMessenger } from '../../components/chat-messages/chat-messages.component';
+import ChatMessenger  from '../../components/chat-messages/chat-messages.component';
 import ChatBox from "../../components/chat-box/chat-box.component";
 import { socket, getGroupById, setRooms } from '../../nodeserver/node.utils';
 import {connect} from "react-redux";
@@ -64,6 +64,9 @@ class GroupPage extends Component {
         
     }
 
+
+    //Get the user location
+  
     showProfile = (value) =>{
       this.setState({
         friend: value

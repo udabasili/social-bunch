@@ -1,6 +1,7 @@
 const User = require("../model/user");
 const Event = require("../model/event");
 const Group = require("../model/group");
+const mongoose = require("mongoose");
 
 const token =require("../utils/token")
 
@@ -91,33 +92,28 @@ exports.editUser = async function(req, res, next){
     }
 }
 
-exports.addFriend = async function(req, res, next){
+exports.acceptFriend = async function(req, res, next){
     try {
-        let friendToAddUsername = req.body.addedUserUsername
-        let friendApprovalStatus = req.body.approvalStatus
-        let user = await User.findOne({
-            username: req.user.username
 
-        })
-        let addedFriend = await User.findOne({
-            username: friendToAddUsername
-        })
-        let filteredFriendData = await addedFriend.filterUserData()
-        
-        if(friendApprovalStatus === "accepted"){
-            user.addFriends(filteredFriendData)
-            addedFriend.addFriends(req.user)
-            }
-        user = await User.findOne({
-            username: req.user.username
-
-        })
-        user = user.filterUserData()
-
+        let userId = mongoose.Types.ObjectId(req.params.userId);
+        let friendId = mongoose.Types.ObjectId(req.params.addedUserId);
+        let user = await User.findById(userId)
+        let friend = await User.findById(friendId)
+        let filteredFriendData = await friend.filterUserData()
+        await user.addFriend(filteredFriendData)
+        await friend.addFriend(req.user)
+        user.removeFriendRequest(friend)
+        let users = await Users.find()
+        user = await User.findById(userId)
+        let filteredUser = await user.filterUserData()
+        let filteredUsers =  await Users.filterData(users)
         return res.status(200).json({
             status:200,
-            message:user
-            })
+            message:{
+                filteredUser,
+                filteredUsers
+            }
+        })
         
     } catch (error) {
         return next({
@@ -125,6 +121,61 @@ exports.addFriend = async function(req, res, next){
             message:error.message
         })
     }
+}
+
+exports.rejectFriend = async function(req, res, next){
+    try {
+        let userId = mongoose.Types.ObjectId(req.params.userId);
+        let senderId = mongoose.Types.ObjectId(req.params.addedUserId);
+        let user = await User.findById(userId)
+        let sender = await User.findById(senderId)
+        user.removeFriendRequest(sender)
+        let users = await Users.find()
+        user = await User.findById(userId)
+        let filteredUser = await user.filterUserData()
+        let filteredUsers =  await Users.filterData(users)
+        return res.status(200).json({
+            status:200,
+            message:{
+                filteredUser,
+                filteredUsers
+            }
+        })
+    } catch (error) {
+
+        return ({
+            status:500,
+            message:error.message
+        })
+        
+    }
+}
+    
+exports.sendFriendRequest = async function(req, res, next){
+    try {
+        let senderId = mongoose.Types.ObjectId(req.params.userId);
+        let receiverId = mongoose.Types.ObjectId(req.params.addedUserId);
+        let userReceiver = await User.findById(receiverId)
+        userReceiver.friendsRequest
+        let userSender = await User.findById(senderId)
+        let filteredSenderData = await userSender.filterUserData()
+        userReceiver.sendFriendRequest(filteredSenderData)
+        let users = await Users.find({})
+        
+        let filteredData =  await Users.filterData(users)
+        return res.status(200).json({
+            status:200,
+            message:filteredData
+        })
+    } catch (error) {
+        return ({
+            status:500,
+            message:error.message
+        })
+        
+    }
+        
+    
 }
 exports.getUserEvents = async (req, res, next) =>{
     try {

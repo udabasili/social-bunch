@@ -3,6 +3,7 @@ const User = require("../model/user");
 
 exports.confirmAuthentication = async (req, res, next) =>{
     try {
+        
         let token = (req.headers['authorization']).split(" ")[1];
         if (!token) {
             return next({
@@ -51,13 +52,13 @@ exports.confirmAuthentication = async (req, res, next) =>{
 }
 
 exports.protectedRoute = function(req, res, next){
-    
+    console.log( (req.headers['authorization']));
     let token = (req.headers['authorization']).split(" ")[1];
     if (!token) {
         return res.status(401).json({message: 'Must pass token'});
     }
     jwt.verify(token, process.env.SECRET_KEY, function(err, user) {
-        if (err){
+        if (err){            
             return next({
                 status:401,
                 message:"unAuthorized User"

@@ -11,9 +11,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationArrow, faMusic} from '@fortawesome/free-solid-svg-icons';
 import { authEndpoint, clientId, redirectUri, scopes } from "../../components/spotify/config";
 import hash from "../../components/spotify/hash";
-import {getUserLocation } from "../../nodeserver/node.utils";
+import {socket} from "../../nodeserver/node.utils";
 import ChatArea from '../../components/chat-area/chat-area.component';
-import { ChatMessenger } from '../../components/chat-messages/chat-messages.component';
+import  ChatMessenger  from '../../components/chat-messages/chat-messages.component';
+import axios from "axios";
 
 const SpotifyWebApi = require('spotify-web-api-node');
 let spotify = new SpotifyWebApi();
@@ -27,7 +28,8 @@ class Chatroom extends Component {
           location:false,
         },
       token: null,
-      message:null,
+      messages:[],
+      location:null,
       albums:null, 
       friend:null
     };
@@ -39,7 +41,7 @@ class Chatroom extends Component {
         friend: value
       })
     }
-  switchButton = (innerFunction,type) =>{      
+  switchButton = (type) =>{      
     this.setState((prevState)=>({
         ...prevState,
         switchButton:{
@@ -47,7 +49,16 @@ class Chatroom extends Component {
         }
     }), ()=> {
       if(this.state.switchButton[type]){
-        innerFunction()
+        
+        
+        this.getUserLocation() 
+          
+      }
+      else{
+        this.setState((prevState)=>({
+          ...prevState,
+            location: null
+        }))
       }
     })
   }
@@ -63,6 +74,33 @@ componentDidMount() {
     this.getCurrentlyPlaying(_token);
 
     }
+    socket.on('privateNewMessage', this.setMessage)
+
+  }
+
+
+  getUserLocation = () => {
+    if (!navigator.geolocation) {
+        return alert("Sorry this browser doesn't support geolocation ")
+    }    
+    navigator.geolocation.getCurrentPosition((position)=>{
+        let lat = position.coords.latitude
+        let long = position.coords.longitude
+        let api = process.env.REACT_APP_GOOGLE_API;
+      return axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${long}&key=${api}`)
+            .then((response)=> {
+                if(response.data.status === "OK"){
+                    let location  = response.data.results[8].formatted_address
+                    this.setState((prevState)=>({
+                      ...prevState,
+                        location: location
+                    }))
+                    
+                    }
+                }
+            )
+    })
+
   }
   
   getCurrentlyPlaying(token) {
@@ -81,9 +119,11 @@ componentDidMount() {
   }
 
   setMessage = (message) =>{
-    this.setState({
-      message: message})
-    
+    this.setState(prevState => ({
+      ...prevState,
+      messages: [...prevState.messages, message]
+    })
+    )
   }
 
   navComponents = () =>{
@@ -123,7 +163,9 @@ componentDidMount() {
   }  
 
   render() {
-    let message = this.state.message
+    let messages = this.state.messages
+    console.log(this.state.friend);
+    
     return (
       <div>
           <main className="chatroom">
@@ -141,7 +183,7 @@ componentDidMount() {
 
                   </div>
                   <FontAwesomeIcon 
-                      onClick={()=>this.switchButton(getUserLocation,"location" )} 
+                      onClick={()=>this.switchButton("location" )} 
                       icon={faLocationArrow}/>
 
                 </div>
@@ -157,11 +199,14 @@ componentDidMount() {
                 </div>
               </div>
               <ChatArea>
-                {message &&
-                  <ChatMessenger  message={message}/>
+                {this.state.messages.map((message) =>(
+                  <ChatMessenger message={message}
+                    location = {this.state.location}/>
+                  ))
                 }
               </ChatArea>
-              <ChatBox getMessage={this.setMessage}/>
+              <ChatBox getMessage={this.setMessage} 
+                recipient={this.state.friend}/>
             </div>
             <div className="chatroom__right-section">
               {this.state.friend &&

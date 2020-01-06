@@ -1,27 +1,50 @@
 import  React from 'react';
+import {connect} from "react-redux";
 
-export const ChatMessenger = ({message}) =>  {    
-        let timeSplit =  message.dateTime.split("T")[1].split(":");
-        let date = message.dateTime.split("T")[0].split("-")
+/**
+  * @desc handles the styling of the messages being received and sent by user or in group
+  * @param props messages being received or sent with details including type of message and time of being sent
+  * @author Udendu Abasili
+
+*/
+
+ const ChatMessenger = ({currentUser, message, location}) =>  {    
+    console.log(location);
+    
+    let timeSplit =  message.createdAt.split("T")[1].split(":");
+    let date = message.createdAt.split("T")[0].split("-");
+
     return (
-        <li class="clearfix">
-            <div class= {`message-data ${  message.type === "send" ? "sender-data"
-                : message.type === "receive" ? "receive-data" : ""  }`}>
-                <span class="message-data-name" >
-                    {message.currentUser || message.sender}
+        <li className="clearfix">
+            <div 
+                className= {`message-data ${  message.createdBy === currentUser.username ? "sender-data"
+                :" receive-data"}`}>
+                <span className="message-data-name" >
+                    {message.createdBy === currentUser.username ?
+                        "Me" : message.createdBy
+                    }
                 </span> 
-                <span class="message-data-time" >
+                <span className="message-data-time" >
+                {message.createdBy === currentUser.username &&
+                    location}
+                </span>
+                <span className="message-data-time" >
                     {`${date[1]}-${date[2]}`}
                 </span> &nbsp; &nbsp;
-                <span class="message-data-time" >
-                        {`${timeSplit[0]}:${timeSplit[1]}`}
-                    </span> &nbsp; &nbsp;
+                <span className="message-data-time" >
+                    {`${timeSplit[0]}:${timeSplit[1]}`}
+                </span> &nbsp; &nbsp;
             </div>
-                <div class= {`message ${  message.type === "send" ? "send-message"
-                : message.type === "receive" ? "receive-message" : ""  }`}>
-                    {message.message}
+                <div className= {`message ${   message.createdBy === currentUser.username ? "send-message"
+                : "receive-message" }`}>
+                    {message.text}
             </div>
         </li>
     )
 }
             
+const mapStateToProps = (state) =>({
+    currentUser:state.user.currentUser
+ })
+ 
+ export default connect(mapStateToProps, null)(ChatMessenger)
