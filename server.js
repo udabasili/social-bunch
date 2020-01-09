@@ -31,12 +31,11 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 //routes
+app.use(authRoute);
 app.use("/authenticate-user", authenticated.confirmAuthentication)
-
 app.use(generalRoutes);
 app.use(authenticated.protectedRoute);
 app.use("/video-token", videoChat.getVideoToken)
-app.use(authRoute);
 app.use("/user/:userId/", authenticated.confirmUser,userRoutes);
 app.use(errorHandler);
 
