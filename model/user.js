@@ -59,7 +59,6 @@ userSchema.methods.encryptPassword =  async function(req, res, next){
         
         let hashedPassword = await bcrypt.hash(this.password, 10);
         this.password = hashedPassword
-        this.save()
     } catch (error) {
         return next(error)
     }
@@ -79,7 +78,6 @@ userSchema.methods.comparePassword = async function (userConfirmPassword, next) 
 userSchema.methods.uploadImage =  function(imageBuffer){
     try {
         this.userImage = imageBuffer
-        return this.save();
     } catch (error) {
         return next(error)
     }

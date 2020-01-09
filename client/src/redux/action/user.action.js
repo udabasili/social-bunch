@@ -50,7 +50,7 @@ export const SignUp =  (fileHeader, fileData, jsonData) =>{
         return axios.post("/auth/register", formData, fileHeader)
             .then((response) =>{
                 dispatch(removeError())            
-                resolve(response.data)
+                resolve(response)
             })
             .catch((error) =>{
                 dispatch(addError(error.response.data.error.message))

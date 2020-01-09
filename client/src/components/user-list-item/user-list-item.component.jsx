@@ -16,12 +16,15 @@ function UserListItem({sendFriendRequest = f => f, userData, currentUser}) {
         </div>
         { currentUser.username !== username &&
         <div class="user-card__buttons"> 
-          { friendsRequests.map((friendsRequest) => (
-            friendsRequest.userInfo.username === currentUser.username ?
-            <FontAwesomeIcon  className="icon-custom"  icon={faHourglass}/>:
+          { friendsRequests  ?
+              friendsRequests.map((friendsRequest) => (
+              friendsRequest.userInfo.username === currentUser.username ?
+              <FontAwesomeIcon  className="icon-custom"  icon={faHourglass}/>:
+              <FontAwesomeIcon  className="icon-custom" onClick={()=>sendFriendRequest(_id)} icon={faUserPlus}/>
+              )    
+            ) :
             <FontAwesomeIcon  className="icon-custom" onClick={()=>sendFriendRequest(_id)} icon={faUserPlus}/>
-              )
-            )
+
           }
             <FontAwesomeIcon className="icon-custom" icon={faEye}/>
         </div>

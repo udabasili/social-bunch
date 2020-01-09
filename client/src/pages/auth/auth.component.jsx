@@ -52,10 +52,8 @@ class Auth extends Component {
         case "register":
           this.props.SignUp(header, this.state.imageFile, this.state.userData)
             .then((response) =>{
-                if(response.data.status === 200){
                   this.setState({auth: "login"})
-                }
-              })
+                })
           break;
         case "login":
           this.props.Login(this.state.auth, this.state.userData).then(()=>{
