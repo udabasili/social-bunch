@@ -9,7 +9,7 @@ import { getAllUsers, sendFriendRequest} from '../../redux/action/user.action';
 class Users extends Component {
     state={
         searchItem:"",
-        filteredData:[],
+        filteredUserData:[],
         users:"",
     }
 
@@ -21,7 +21,7 @@ class Users extends Component {
 
     searchUsersHandler = (e) =>{
         this.setState({searchItem:e.target.value },()=>{
-            this.setState({filteredData: this.props.allUsers.filter((user)=>{
+            this.setState({filteredUserData: this.props.allUsers.filter((user)=>{
                 return user.username.toLowerCase().includes(this.state.searchItem.toLowerCase())
                 })
             })
@@ -39,7 +39,7 @@ class Users extends Component {
     }
     
   render() {
-    let {filteredData, searchItem} = this.state
+    let {filteredUserData, searchItem} = this.state
     const {allUsers, currentUser} = this.props
     return (
       <div className="users">
@@ -50,12 +50,12 @@ class Users extends Component {
                 className="search-box__input" ></input>
             <FontAwesomeIcon  className="search-box__icon" icon={faSearch}/>
         </div> 
-        {(filteredData && searchItem)  &&
+        {(filteredUserData && searchItem)  &&
           <ul className="item-list">
-            {filteredData.map((data, i)=>(
+            {filteredUserData.map((user, i)=>(
               <UserListItem key={i} 
                 sendFriendRequest={this.props.sendFriendRequest} 
-                userData={data} />
+                user={user} />
             ))
           }
         </ul>

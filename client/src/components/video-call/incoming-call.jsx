@@ -1,9 +1,8 @@
 import React, { Component, useRef } from 'react';
 import Video from 'twilio-video';
 import axios from 'axios';
-import {connect} from "react-redux";
 import ReceiveCall from "./recieve-call";
-
+import {connect} from "twilio-video"
 class VideoComponent extends Component {
  constructor(props) {
     super(props)
@@ -41,15 +40,22 @@ class VideoComponent extends Component {
             this.setState({
                 incomingCalling: false
             })
-            let connectOptions = { name: this.state.room};
-            if (this.state.previewTracks) {
-                connectOptions.tracks = this.state.previewTracks;
-        }
-
-        Video.connect(this.state.token, connectOptions).then(this.roomJoined, error => {
-            alert('Could not connect to Twilio: ' + error.message);
-            
+        //     let connectOptions = { name: this.state.room};
+        //     if (this.state.previewTracks) {
+        //         connectOptions.tracks = this.state.previewTracks;
+        // }
+        connect(this.state.token, { name: this.state.room}).then(room => {
+          console.log(`Successfully joined a Room: ${room}`);
+          room.on('participantConnected', participant => {
+            console.log(`A remote Participant connected: ${participant}`);
           });
+        }, error => {
+          console.error(`Unable to connect to Room: ${error.message}`);
+        });
+        // Video.connect(this.state.token).then(this.roomJoined, error => {
+        //     alert('Could not connect to Twilio: ' + error.message);
+            
+        //   });
         }
 
         leaveRoom = () =>{
@@ -133,9 +139,6 @@ class VideoComponent extends Component {
    }
 }
 
-const mapStateToProps = (state) =>({
-    currentUser:state.user.currentUser,
 
-  })
   
-export default connect(mapStateToProps, null)(VideoComponent);
+export default VideoComponent

@@ -173,11 +173,15 @@ export const sendFriendRequest =  (addedUserId) =>{
                 users =  users.map(users=>{
                     return convertBufferToImage(users)
                 })
+                console.log({currentUser, users});
+                
                 dispatch(setCurrentUser(currentUser))
                 dispatch(setAllUsers(users))
 
             })
             .catch((error)=>{
+                console.log(error.message);
+                
                 dispatch(addError("Something went Wrong. Try Again Later"))
             })
     }

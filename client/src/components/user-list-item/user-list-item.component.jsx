@@ -4,8 +4,8 @@ import { faUserPlus, faEye, faHourglass } from '@fortawesome/free-solid-svg-icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {connect} from "react-redux";
 
-function UserListItem({sendFriendRequest = f => f, userData, currentUser}) {   
-    const {_id, userImage, username, friendsRequests} = userData;
+function UserListItem({sendFriendRequest = f => f, user, currentUser}) {   
+    const {_id, userImage, username, friendsRequests} = user;
     
   return (
     <div class="user-card">
@@ -16,7 +16,7 @@ function UserListItem({sendFriendRequest = f => f, userData, currentUser}) {
         </div>
         { currentUser.username !== username &&
         <div class="user-card__buttons"> 
-          { friendsRequests  ?
+          { friendsRequests > 0 ?
               friendsRequests.map((friendsRequest) => (
               friendsRequest.userInfo.username === currentUser.username ?
               <FontAwesomeIcon  className="icon-custom"  icon={faHourglass}/>:
