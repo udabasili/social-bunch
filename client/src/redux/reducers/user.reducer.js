@@ -6,8 +6,8 @@ import {
 import {START_FETCHING, ERROR_FETCHING} from "../actionType/fetch.actionTypes"
 
 const INITIAL_STATE = {
+    isAuthenticated: null,
     isFetching:false,
-    errorMessage:null,
     users:[],
     currentUser:null,
 }
@@ -20,18 +20,12 @@ export default function userReducer (state=INITIAL_STATE, action){
                 isFetching:true
             }
 
-        case ERROR_FETCHING:
-            return{
-                ...state,
-                errorMessage:action.payload,
-                isFetching:false,
-
-            }
         case CURRENT_USER:
             return {
                 ...state,
                 isFetching: false,
-                currentUser: action.payload
+                currentUser: action.payload,
+                isAuthenticated: Object.keys(action.payload).length > 0
             }
         case GET_USERS:
             return {

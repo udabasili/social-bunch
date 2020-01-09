@@ -1,8 +1,9 @@
 import  React, {useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
-import { sendMessageToGroup, sendMessageToPerson, sendMessage} from "../../nodeserver/node.utils";
+import { faPaperPlane, faPlaneArrival } from '@fortawesome/free-solid-svg-icons'
 import {connect} from "react-redux";
+import { sendMessageToGroup, sendMessageToPerson } from '../../services/socketIo';
+import { sendMessage } from '../../redux/action/user.action';
 
 /**
   * @desc handles the sending of message to groups or individuals based  props passed
@@ -19,12 +20,13 @@ const ChatBox = ({groupId, recipient, currentUser, sendMessage, getMessage}) => 
     const onSubmitHandler = (e) =>{
         e.preventDefault()            
         let date = new Date();
+        console.log(message, groupId);
         
         if(groupId){ //to group
             sendMessageToGroup(message, groupId)
             getMessage({
                 text:message, 
-                createdAt: date.toISOString(),
+                created_at : date,
                 createdBy:currentUser.username,
             })
         }
@@ -33,12 +35,12 @@ const ChatBox = ({groupId, recipient, currentUser, sendMessage, getMessage}) => 
             sendMessage(message, recipient.friend._id)
             getMessage({
                 text:message, 
-                createdAt: date.toISOString(),
+                createdAt: date,
                 createdBy:currentUser.username,
             })
         }
         else{
-            alert("Must click on a friend icon or be in a group to send message")
+            alert("Click on a friend icon or join in a group to send message")
         }           
        
         setMessage("")
@@ -46,15 +48,16 @@ const ChatBox = ({groupId, recipient, currentUser, sendMessage, getMessage}) => 
 
     return(
         <form onSubmit={onSubmitHandler} className="chat-box">
+            <button  type="submit" className="chat-box__icon">
+                <FontAwesomeIcon icon={faPaperPlane}/>  </button>
             <input 
-                type="text" 
-                className="chat-box__input" 
+                type="text"
+                name="chat_message" 
                 onChange={(e)=>setMessage(e.target.value)}
                 value={message}
-                placeholder="Chat..." required/>
-            <button type="submit" className="chat-box__submit">
-                <FontAwesomeIcon  icon={faPaperPlane}/>
-            </button>
+                placeholder="Send a message" 
+                class="chat-box__input chat_message" required/>
+            
         </form>
     )
 }

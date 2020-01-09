@@ -1,6 +1,5 @@
 const express = require("express")
-const route = express.Router()
-const userController = require("../controllers/user")
+const route = express.Router({mergeParams: true})// get id from router
 const usersController = require("../controllers/users")
 const eventController = require("../controllers/event")
 const groupController = require("../controllers/groups")

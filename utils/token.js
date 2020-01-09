@@ -8,7 +8,7 @@ const generateToken  = (user) =>{
    imageUrl:user.imageUrl
   };
   return token = jwt.sign(u, process.env.SECRET_KEY, {
-     expiresIn: 60 * 60 * 24 // expires in 24 hours
+     expiresIn: 60 * 60 * 24 
   });
 }
 

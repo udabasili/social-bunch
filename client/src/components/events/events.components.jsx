@@ -6,7 +6,7 @@ import {createEvent,
         getAllEvents, 
         joinEvent, 
         leaveEvent, 
-        deleteEvent} from "../../nodeserver/node.utils";
+        deleteEvent} from "../../redux/action/event.action";
 import {connect} from "react-redux";
 import ModalWindow from "../modal-window/modal-window.component";
 
@@ -16,6 +16,7 @@ import ModalWindow from "../modal-window/modal-window.component";
 
 */
 class Events extends Component {
+
     state={
         eventName:"",
         time:"",
@@ -60,7 +61,7 @@ class Events extends Component {
       currentUser,
       deleteEvent,
       joinEvent,
-      leaveEvent} = this.props;
+      leaveEvent } = this.props;
 
     return (
       <div className="event">  
@@ -71,27 +72,21 @@ class Events extends Component {
           <ul className="event__list">
             {allEvents.map((event)=>(
               <div className="card__container">
-                <div className="card__content" style={{backgroundImage:`url(${event.imageUrl})`, backgroundSize:"contain"}}>
-                { event.createdBy === currentUser.username &&
-                  <FontAwesomeIcon 
-                    onClick = {()=>deleteEvent(event._id)}
-                    className="close-button icon-custom"
-                    icon={faTimes}/>
-                }
-              
+                <div className="card__content" 
+                  style={{backgroundImage:`url(${event.imageUrl})`, backgroundSize:"contain"}}>
+                  { event.createdBy === currentUser.username &&
+                    <FontAwesomeIcon 
+                      onClick = {()=>deleteEvent(event._id)}
+                      className="close-button icon-custom"
+                      icon={faTimes}/>
+                    }
                     <div className="card__text-content">
                       <h1 className="primary-header">{event.eventName}</h1>
                       <h3 className="card__date-time">
-                        <span>Time: {event.time}</span>
-                        <span>Date: {event.date.split("T")[0]}</span>
+                        <span>Time : {event.time}</span>
+                        <span>Date : {event.date.split("T")[0]}</span>
                       </h3>
-                      <ul>
-                        <p>{event.summary}</p>
-                        <h3>Attenders</h3>
-                        {event.attenders.map((attender)=>(
-                          <li>{attender}</li>
-                        ))}
-                      </ul>
+                      <div className="card__created-by">CreatedBy: {event.createdBy}</div>
                     </div>
                     { event.attenders.includes(currentUser.username) ?
                     <button className="card__join-button" onClick={() =>leaveEvent(event._id)}>
@@ -109,7 +104,7 @@ class Events extends Component {
         }
         {this.state.showModal && 
             <ModalWindow closeHandler={this.toggleModal} >
-              <Calendar onChange={this.getDate}
+              <Calendar onChange={this.getDate} 
               />
               <form onSubmit={this.onSubmitHandler}>
                 <label className="event__label" for="event-name">Event Name</label>

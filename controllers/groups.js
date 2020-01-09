@@ -11,31 +11,30 @@ exports.createGroup = async (req, res, next) =>{
             message:groups
         })          
     } 
-    catch (error) {
-        return next({
-            status:500,
-            message:error.message
-        })
-    }
+     catch (error) {
+        return next(error)
+    }     
+    
 
 }
 
 exports.getGroup = async (req, res, next) =>{
-    try {
+    try {        
         let groupId = mongoose.Types.ObjectId(req.params.groupId);
-        let group = await Group.findById(groupId)
+        let group = await Group.findById(groupId)        
         return res.status(200).json({
             status:200,
             message:group
         })    
     } 
-    catch (error) {
+    catch (error) {                
         return next({
             status:500,
             message:error.message
         })
     }
 }
+
 
 exports.getGroups = async (req, res, next) =>{
     try {
@@ -45,13 +44,12 @@ exports.getGroups = async (req, res, next) =>{
             message:groups
         })    
     } 
-    catch (error) {
-        return next({
-            status:500,
-            message:error.message
-        })
-    }
+     catch (error) {
+        return next(error)
+    }     
 }
+
+
 exports.joinGroup = async (req, res, next) =>{
     let currentUser = req.user
     let groupId= mongoose.Types.ObjectId(req.params.groupId)
@@ -66,12 +64,11 @@ exports.joinGroup = async (req, res, next) =>{
             message:groups
         })
 
-    } catch (error) {
-        return next({
-            status:500,
-            message:error.message
-        })
-    }
+    }     
+    catch (error) {
+        return next(error)
+    }     
+    
 
 }
 
@@ -88,10 +85,7 @@ exports.leaveGroup = async (req, res, next) =>{
         })
     } 
     catch (error) {
-        return next({
-            status:500,
-            message:error.message
-        })
+        return next(error)
     }
 
 }
@@ -105,11 +99,9 @@ exports.removeGroup = async (req, res, next) =>{
             status:200,
             message:groups
         })
-    } catch (error) {
-        return next({
-            status:500,
-            message:error.message
-        })
-    }
+    }  catch (error) {
+        return next(error)
+    }     
+    
 
 }

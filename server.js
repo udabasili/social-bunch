@@ -8,36 +8,37 @@ const userRoutes = require("./routes/user")
 const generalRoutes = require("./routes/general")
 const chat = require("./chat/chat");
 const messages = require("./chat/messages");
+const videoChat = require("./video-call/video")
 const mongoConnect = require("./utils/db");
 const authRoute = require("./routes/auth");
 const authenticated = require("./middleware/confirmAuth")
-const spotify = require("./spotify/spotify")
 const PORT = process.env.PORT || 6000 ;
 
-app.use(express.static(path.join(__dirname,'client/build')))
-
-
 //socket.io config 
- // we use this 
-
  const http = require("http");
 const server = http.createServer(app);//we use this config to pass to socketio and run it
 //instead of app
 const socketIo = require("socket.io");
 const io = socketIo(server)
-
-
-//intialize middleware
+//initialize middleware
 app.use(cors())
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
+
+//if in production
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname,'client/build')))
+}
+
 //routes
-app.use(authRoute)
-app.use(spotify)
-app.use(authenticated.protectedRoute)
-app.use(userRoutes)
-app.use(generalRoutes)
-app.use(errorHandler)
+app.use("/authenticate-user", authenticated.confirmAuthentication)
+
+app.use(generalRoutes);
+app.use(authenticated.protectedRoute);
+app.use("/video-token", videoChat.getVideoToken)
+app.use(authRoute);
+app.use("/user/:userId/", authenticated.confirmUser,userRoutes);
+app.use(errorHandler);
 
 //app.use(errorHandler)
 //Handling pages not found
@@ -49,9 +50,6 @@ app.use(function(req, res, next){
 
 //static file for Production stage
 
-if (process.env.NODE_ENV === 'production') {
-    
-}
 
 //start the connection of the server
 io.on("connection", (client)=>{
@@ -86,29 +84,6 @@ io.on("connection", (client)=>{
        })
 
     
-    //get socketid when you access  
-
-    //set the current users chatooom status based on the group he is
-    // client.on("setRoomsByUser",(username, callback) => {         
-    //     chat.setRooms(username, client.id)
-    //     .then((response) =>{
-    //         if(response.error){
-    //             return callback(response.error)
-    //         }
-    //         let username = response.username
-    //         let rooms = response.rooms                
-    //         // send message to rooms the current user is part of
-    //         for (let room of rooms){                
-    //             client.join(room)
-    //             io.to(room).emit('newUser', messages.generateMessage(`${username} has joined!`))
-    //         }
-            
-    //     })
-    // })
-    
-
-     
-
     //user leave group
     client.on("leave", ({username, roomId }, callback) =>{         
         chat.leaveRoom(username, roomId )
@@ -118,8 +93,6 @@ io.on("connection", (client)=>{
                 let room = response.socket[0].name
                client.leave(room)
                 io.to(room).emit("onlineUsersStatus", response)
-                          
-                
             })
         })
     //send message to particular room
@@ -135,24 +108,35 @@ io.on("connection", (client)=>{
                 })
             })   
         })
+
         //send private message
         client.on("messageUser", ({message,receiver,sender}, callback) =>{
-            
         let date = new Date();
         chat.getUserSocketId(receiver)
             .then((response) =>{                 
-                console.log(message,receiver,);
-                
                     io.to(response).emit('privateNewMessage', {
                     text: message,
                     createdAt: date.toISOString(),
                     createdBy: sender,
-                })
-                     
-                callback("finsihed")
+                    })     
+            callback()
             }
-            )   
-        })
+        )   
+    })
+
+    client.on("voiceCall", ({receive, currentName, room}) =>{
+        console.log(receive, currentName);
+        
+        chat.getUserSocketId(receive)
+        .then((response) =>{                             
+            io.to(response).emit('receive', {
+            incomingCalling: true,
+            room:room,
+            caller: currentName,
+            calling:receive
+            })     
+        })   
+    })
 // get all the members in the group status when the page is loaded
     client.on("getOnlineUsers", (roomId, callback)=>{
         chat.getAllUsersRoom(roomId)
@@ -177,8 +161,6 @@ io.on("connection", (client)=>{
     client.on("disconnect",  function(){
         chat.logout(client.id)
         .then((data)=>{
-            
-            
             })
         console.log(`${client.id} has left the chat`);
         
@@ -193,7 +175,7 @@ server.listen(PORT, (req, res)=>{
     console.log(`Serving is running on PORT ${PORT}`);
     mongoConnect.on('error', console.error.bind(console, 'MongoDB connection error:'));
     mongoConnect.once('open', function(data) {
-        console.log("Mongoose database connected")
+    console.log("Mongoose database connected")
         
     })
     

@@ -1,10 +1,9 @@
 import {GET_EVENTS} from "../actionType/event.actionType"
 
-import {START_FETCHING, ERROR_FETCHING} from "../actionType/fetch.actionTypes"
+import {START_FETCHING} from "../actionType/fetch.actionTypes"
 
 const INITIAL_STATE = {
     isFetching:false,
-    errorMessage:null,
     events:null,
 
 }
@@ -15,14 +14,6 @@ export default function groupReducer (state=INITIAL_STATE, action){
             return{
                 ...state,
                 isFetching:true
-            }
-
-        case ERROR_FETCHING:
-            return{
-                ...state,
-                errorMessage:action.payload,
-                isFetching:false,
-
             }
         case GET_EVENTS:
             return {

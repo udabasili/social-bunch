@@ -25,8 +25,11 @@
 @import "./layout/navigation";
 @import "./layout/sections";
 @import "./layout/chat-area";
+@import "./layout/user-profile";
+@import "./layout/group-members-section";
 
 //page
 @import "./pages/auth.scss";
 @import "./pages/chatroom.scss";
 @import "./pages/group.scss";
+@import "./pages/profile.scss";

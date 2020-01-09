@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faKey, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import {Login, SignUp } from "../../nodeserver/node.utils"
-import {setCurrentUser, setAllUsers } from "../../redux/action/user.action";
+import {Login, SignUp } from "../../redux/action/user.action";
 import {withRouter} from "react-router-dom";
 import {connect} from "react-redux";
+import { removeError } from '../../redux/action/errors.action';
+
+
 class Auth extends Component {
     state={
         loggedIn:false,
-        auth:"signUp",
+        auth:"register",
         error:null,
         userData: {
           username:"",
@@ -20,6 +22,11 @@ class Auth extends Component {
 
     }
 
+    componentWillMount(){
+      this.props.removeError()
+    }
+
+    //update state based on name to input
     onChangeHandler = (e) =>{
       let name = e.target.name
       let value = e.target.value
@@ -28,49 +35,37 @@ class Auth extends Component {
         userData:{
           ...prevState.userData,
           [name]:value
-        }
-      })
+          }
+        })
       )
-
     }
 
     onSubmitHandler = (e) =>{
       e.preventDefault()
-      
       const header = {
         headers: {
             'content-type': 'multipart/form-data'
           }
       };
+
       switch (this.state.auth) {
-        case "signUp":
-          SignUp(header, this.state.imageFile, this.state.userData)
+        case "register":
+          this.props.SignUp(header, this.state.imageFile, this.state.userData)
             .then((response) =>{
                 if(response.data.status === 200){
                   this.setState({auth: "login"})
                 }
-              }
-            )
-
-          break;
-        case "login":
-            Login(this.state.userData)
-              .then((response)=>{                                
-                if (response.status !== 404 && response.status !== 500){
-                  this.props.setCurrentUser(response)
-                  this.props.history.push("/")
-                  return;
-                }
-                this.setState({error: response.data.error.message})
               })
           break;
-        
+        case "login":
+          this.props.Login(this.state.auth, this.state.userData).then(()=>{
+            this.props.history.push("/")
+          })
+            
+          break;
         default:
           break;
       }
-            
-  
-      
       
     }
 
@@ -90,18 +85,39 @@ class Auth extends Component {
       };
     }
 
-    changeAuthState = ()=>{
-      this.setState({auth:"login"})
+    changeAuthState = (value)=>{
+      this.props.removeError()
+      this.setState({auth:value})
     }
 
   render() {
+    const { errors,history, removeError } = this.props;
+    
+    
+    const{auth, userData } = this.state;
+    //if there is any change in route remove previous error
+    history.listen(() =>{
+       removeError()
+    })
+
     return (
       <div className="auth-container">
         <form className="form" onSubmit={this.onSubmitHandler} >
 
-        <div className="primary-header form__header">{this.state.auth}</div>
-        <div>{this.state.error}</div>
-        {(this.state.auth === "signUp") &&
+        <div className="primary-header form__header">{auth}</div>
+        <div className="alert-error">{
+          errors.message === "Email doesn't exist. Please Register" ? 
+          <div>
+          <span>Email doesn't exist. Please </span>
+          <span 
+            className="switch-auth" 
+            style={{color:"blue", cursor:"pointer"}} 
+            onClick={()=>this.changeAuthState("register")}> Register </span>
+          </div>
+           :
+          errors.message
+          }</div>
+        {(auth === "register") &&
         <div className="form__component">
             <i className="form__group__icon"><FontAwesomeIcon icon={faUser}/></i>
             <div className="form__group">
@@ -109,7 +125,7 @@ class Auth extends Component {
                 type="text" 
                 name="username" 
                 onChange={this.onChangeHandler} 
-                value={this.state.userData.username}
+                value={userData.username}
                 className="form__input"/>
               <label htmlFor="username" className="form__label">
                 Username
@@ -126,7 +142,7 @@ class Auth extends Component {
               <input 
                 type="email"  
                 onChange={this.onChangeHandler}
-                value={this.state.userData.email}
+                value={userData.email}
                 name="email" 
                 className="form__input"/>
               <label htmlFor="email" className="form__label">Email</label>
@@ -139,12 +155,12 @@ class Auth extends Component {
                 type="password" 
                 name="password" 
                 onChange={this.onChangeHandler}
-                value={this.state.userData.password}
+                value={userData.password}
                 className="form__input"/>
               <label htmlFor="password" className="form__label">Password</label>
             </div>
           </div>
-          {(this.state.auth === "signUp") &&(
+          {(auth === "register") &&(
             <div>
               <div className="form__component">
                 <i className="form__group__icon">
@@ -155,14 +171,19 @@ class Auth extends Component {
                   type="password" 
                   name="confirmPassword" 
                   onChange={this.onChangeHandler}
-                  value={this.state.userData.confirmPassword}
+                  value={userData.confirmPassword}
                   className="form__input"/>
                 <label htmlFor="confirm-password" className="form__label">Confirm Password</label>
               </div>
             </div>
             <div className="form__group-image">
-              <input type="file" className="image-upload__input" name="image" onChange={this.url}  accept="image/*"/>
-              <input type="text" className="image-upload__message" disabled placeholder="Upload Profile Image"/>
+              <input type="file" 
+                className="image-upload__input" 
+                name="image" 
+                onChange={this.url}  accept="image/*"/>
+              <input type="text" 
+                className="image-upload__message" 
+                disabled placeholder="Upload Profile Image"/>
               <button 
                 className="image-upload__button" 
                 onClick={this.onImageUploadHandler}
@@ -173,10 +194,10 @@ class Auth extends Component {
           }
           <input type="submit" className="form-submit-button" value="Submit"/>
         </form>
-        {(this.state.auth === "signUp") &&
+        {(auth === "register") &&
         <div className="login-signup">
             <span>Registered Already? </span>
-            <span className="switch-auth" onClick={this.changeAuthState}>Log In</span>
+            <span className="switch-auth" onClick={() => this.changeAuthState("login")}>Log In</span>
           </div>
         }
         
@@ -186,8 +207,8 @@ class Auth extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) =>({
-  setCurrentUser: user => dispatch(setCurrentUser(user)),
-
+const mapStateToProp = state =>({
+  errors : state.errors
 })
-export default withRouter(connect(null, mapDispatchToProps)(Auth))
+
+export default withRouter(connect(mapStateToProp, {Login, removeError, SignUp})(Auth))

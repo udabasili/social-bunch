@@ -2,6 +2,7 @@
     &__left-section{
         background-color:  $color-card-background;
         height: 100%;
+        margin-right: 2rem;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, .15);
         margin-left: $left-nav-width;
         width: 35vw;
@@ -16,17 +17,21 @@
             height: 40%;
             display: flex;
             overflow: auto;
-            border-top: 2px rgb(255, 255, 255) solid;
-            border-bottom: 2px rgb(255, 255, 255) solid;
+            border-top: 2px $color-background solid;
+            border-bottom: 4px $color-background solid;
 
         }
         
         .user-contacts{
             display: flex;
             overflow: auto;
+            padding: 15px;
 
             &__item{
                 cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
         }
 
@@ -34,6 +39,18 @@
             display: flex;
             text-align: left;
             flex-direction: column;
+
+             hr{
+                margin-top: 15px;
+            }
+
+            .list-group-item-info{
+                text-align: center;
+                padding: 10px;
+                padding-bottom: 0;
+                text-transform: uppercase;
+                font-size: 1.4rem;
+            }
 
             &__input{
                 width: 70%;
@@ -92,9 +109,8 @@
     }
 
     &__main-section{
-        height: 100%;
+        height: 95%;
         width: 50vw;
-        margin-left: 2rem;
 
         position: relative;
 
@@ -138,29 +154,65 @@
             }
         }
         .chat-box{
+            width: 100%;
             display: flex;
             align-items: center;
-            width: 100%;
             height: 10%;
-            background-color: $color-icon;
             position: absolute;
-            bottom: 0;
+            top: 100%;
+            transform: translateY(-100%);
+            background: #fff;
+            justify-content: space-between;
+            border-top: 1px solid gray;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+
+            a {
+                display: inline-block;
+                text-align: center;
+              }
+
+              &__icon {
+                width: 35px;
+                cursor: pointer;
+                color: $color-icon;
+                @include removeDefaultButtonStyle;
+
+                height: 35px;
+                font-size: 20px;
+                box-shadow: none;
+                order: 2;
+                margin-right: 30px;
+              }
             
             &__input{
-                margin-left:10%;
+                position: relative;
+                text-align: left;
+                outline: none;
+                width: 90%;
+                height: 100%;
+                padding-left: 3rem;
+                font-size: 1.4rem;
+                font-family: 'Roboto';
+                color: #4b4b4b;            
                 border: none;
-                width: 70%;
-                height: 90%;
+                outline: none;
+                  
 
             }
 
             &__submit{
-                margin-left: 3rem;
+                margin-left: 0;
+                color: $color-icon;
+                font-size: 2rem;
+                border-left: 1px solid $color-icon;
                 position: relative;
-                top: 3px;
+                border: 1px solid black;
                 cursor: pointer;
-                font-size: 3rem;
-                @include removeDefaultButtonStyle;
+                background-color: white;
+                height: 90%;
+
+
 
                 & > *{
                     font-size: 3rem;
@@ -172,6 +224,7 @@
     }
     &__right-section{
         background-color:  $color-background;
+        margin-left: 20px;
         height: 100%;
         box-shadow: -10px 10px 20px rgba(0, 0, 0, .15);
         width: 30vw;

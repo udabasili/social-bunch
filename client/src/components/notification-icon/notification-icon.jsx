@@ -9,7 +9,7 @@ function NotificationIcon({toggleDropDown, showDropDown, friendsRequestCount}) {
         <FontAwesomeIcon 
             icon={faBell}
             onClick={()=>toggleDropDown(!showDropDown)}
-            className="icon-custom notification__dialog__icon"
+            className="notification__dialog__icon"
             />
     </div>
   );

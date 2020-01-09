@@ -4,7 +4,7 @@ import {createGroup,
     joinGroup, 
     leaveGroup, 
     deleteGroup, 
-    getGroupById} from "../../nodeserver/node.utils";
+    getGroupById} from "../../redux/action/group.action";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import ModalWindow from "../modal-window/modal-window.component";
@@ -66,6 +66,10 @@ class Group extends Component {
       <div className="event">  
         <button className="add-button" onClick={()=> this.toggleModal(true) } >Add Group</button>
         {allGroups && 
+        <div>
+        <hr/>
+          <p className="list-group-item-info"> Click on title after joining to enter Room</p>
+          <hr/>
           <ul>
             {allGroups.map((group, i)=>(
               <div key={i} className="card__container">
@@ -81,7 +85,7 @@ class Group extends Component {
                         <h1 className="primary-header">{group.name}</h1>
                     }
                       <h3 className="card__date-time">
-                        <span>Category:{group.category}</span>
+                        <span>{`Category : ${group.category}`}</span>
                       </h3>
                     </div>
                     { group.members.includes(currentUser.username) ?
@@ -97,6 +101,7 @@ class Group extends Component {
             ))
           }
         </ul>
+        </div>
         }
         {this.state.showModal && 
             <ModalWindow closeHandler={this.toggleModal} >

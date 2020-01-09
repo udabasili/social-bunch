@@ -1,61 +1,163 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, {useState} from 'react'
+import {Redirect} from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome, faPhone, faIndustry, faInfo } from '@fortawesome/free-solid-svg-icons'
+import ContentEditable from "react-contenteditable";
+import { editUser } from '../../redux/action/user.action';
+import {connect} from "react-redux";
 
-export default function ProfilePage() {
+
+
+class ProfilePage extends React.Component {
+
+
+  state = {
+    user:{
+    _id:"",
+    username:"",
+    userImage:"",
+    telephone:"Add phone",
+    bio:"Add bio  here",
+    occupation:"Add Occupation",
+    location:"add location",
+    joined:""
+    },
+    success:null
+
+  }
+
+    componentDidMount(){
+      if (this.props.history.location.state){ 
+        let userData = this.props.history.location.state.userData.friend;
+        this.setState({
+          _id: userData._id,
+          username: userData.username,
+          userImage: userData.userImage,
+          joined: userData.createdAt.split("T")[0]
+        })
+
+      }
+      else{
+        this.props.history.push("/")
+      }
+     
+    }
+
+  onSubmitHandler = () =>{
+    let userData = {}
+    for (let x in this.state.user){      
+      if(x !== "joined" && x !== "_id"){
+        userData[x]  = this.state[x]
+
+      }
+    }
+
+    this.props.editUser(userData)
+      .then((response)=>this.setState({
+        success: response.success})
+      )
+
+    
+  }
+  onChangeBioHandler = (e) =>{
+    this.setState({bio:e.target.value})
+   
+   
+ }
+   onChangeTelephoneHandler = (e) =>{
+     this.setState({telephone:e.target.value})
+    
+    
+  }
+  onChangeLocationHandler = (e) =>{
+    this.setState({location:e.target.value})
+
+    
+  }
+
+  onChangeOccupationHandler = (e) =>{
+    this.setState({occupation:e.target.value})
+
+    
+  }
+
+  
+
+  render(){
+    const{
+      _id,
+      userImage,
+      username,
+      location,
+      joined,
+      bio,
+      telephone,
+      occupation,
+      
+    } = this.state;   
   return (
-     <div class="w3-third">
-        <div class="w3-white w3-text-grey w3-card-4">
-            <div class="w3-display-container">
-                <img src="https://www.w3schools.com/w3images/avatar_hat.jpg" style="width:100%" alt="Avatar"/>
-                <div class="w3-display-bottomleft w3-container w3-text-black">
-                    <h2>Jane Doe</h2>
+    this.props.history.location.state.userData ?
+      <div className="user-profile">
+        <div className="user-profile__row">
+          <div className="user-profile__third">
+            <div className="user-profile__card">
+              <div className="user-profile__display">
+                <img 
+                  src={userImage} 
+                  className="user-profile__display__image"
+                  alt="Avatar"/>
+                <div className="user-profile__display__user" >
+                  <input type="hidden" name="id" value={_id}/>
+                  <h2>{username}</h2>
                 </div>
+              </div>
+              <div className="user-profile__information">
+              <div>Joined: {joined} </div>
+                <div><FontAwesomeIcon icon={faHome}/>
+                <ContentEditable
+                    html={location}
+                    disabled={false} // use true to disable edition
+                    onChange={this.onChangeLocationHandler} // handle innerHTML change
+                  /></div>
+                <div><FontAwesomeIcon icon={faPhone}/><ContentEditable
+                    
+                    html={telephone}
+                    disabled={false} // use true to disable edition
+                    onChange={this.onChangeTelephoneHandler} // handle innerHTML change
+                  /></div>
+                <div><FontAwesomeIcon icon={faIndustry}/><ContentEditable
+                    html={occupation}
+                    disabled={false} // use true to disable edition
+                    onChange={this.onChangeOccupationHandler} // handle innerHTML change
+                  /></div>
+              </div>
             </div>
-            <div class="w3-container">
-                <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Designer</p>
-                <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>London, UK</p>
-                <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>ex@mail.com</p>
-                <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>1224435534</p>
-                <hr/>
-                <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-                <p>Adobe Photoshop</p>
-                <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
-            </div>
-            <p>Photography</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
-                <div class="w3-center w3-text-white">80%</div>
-           </div>
+          </div>
+          <div className="user-profile__two-third">
+            <div className="user-profile__bio">
+              <h2 className=""> <FontAwesomeIcon icon={faInfo}/> Bio</h2>
+              <ContentEditable
+                className="user-profile__bio__content" 
+                html={bio}
+                disabled={false} // use true to disable edition
+                onChange={this.onChangeBioHandler} // handle innerHTML change
+              />
+              <div className="form-button" onClick={this.onSubmitHandler} >Submit</div> 
+            </div>   
+          </div>
         </div>
-        <p>Illustrator</p>
-         <div class="w3-light-grey w3-round-xlarge w3-small">
-           <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
-         </div>
-         <p>Media</p>
-         <div class="w3-light-grey w3-round-xlarge w3-small">
-           <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
-         </div>
-         <br/>
-         <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
-         <p>English</p>
-         <div class="w3-light-grey w3-round-xlarge">
-           <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
-         </div>
-         <p>Spanish</p>
-         <div class="w3-light-grey w3-round-xlarge">
-           <div class="w3-round-xlarge w3-teal" style="height:24px;width:55%"></div>
-         </div>
-         <p>German</p>
-         <div class="w3-light-grey w3-round-xlarge">
-           <div class="w3-round-xlarge w3-teal" style="height:24px;width:25%"></div>
-         </div>
-       </div>
-     </div><br/>
-   </div>
-  );
-}
+      </div> :
+      <Redirect to="/"/>
 
-ProfilePage.propTypes = {
+      )
+  }
+    }
 
-}
+
+  const mapStateToProps = (dispatch) =>({
+    editUser: userData => dispatch(editUser(userData))
+ })
+ 
+
+
+export default connect(null , mapStateToProps)(ProfilePage);

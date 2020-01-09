@@ -9,10 +9,10 @@ import {connect} from "react-redux";
 */
 
  const ChatMessenger = ({currentUser, message, location}) =>  {    
-    console.log(location);
+    console.log(message);
     
-    let timeSplit =  message.createdAt.split("T")[1].split(":");
-    let date = message.createdAt.split("T")[0].split("-");
+    // let timeSplit =  message.createdAt.split("T")[1].split(":");
+    // let date = message.createdAt.split("T")[0].split("-");
 
     return (
         <li className="clearfix">
@@ -25,19 +25,17 @@ import {connect} from "react-redux";
                     }
                 </span> 
                 <span className="message-data-time" >
-                {message.createdBy === currentUser.username &&
-                    location}
+                    {message.createdBy === currentUser.username &&
+                        location}
                 </span>
                 <span className="message-data-time" >
-                    {`${date[1]}-${date[2]}`}
                 </span> &nbsp; &nbsp;
                 <span className="message-data-time" >
-                    {`${timeSplit[0]}:${timeSplit[1]}`}
                 </span> &nbsp; &nbsp;
             </div>
-                <div className= {`message ${   message.createdBy === currentUser.username ? "send-message"
-                : "receive-message" }`}>
-                    {message.text}
+            <div className= {`message ${   message.createdBy === currentUser.username ? "send-message"
+            : "receive-message" }`}>
+                {message.text}
             </div>
         </li>
     )

@@ -3,34 +3,39 @@
     align-items: center;
     background-color: $color-nav-header;
     border-bottom: .5vh red solid;
-    box-shadow: 10px 10px 20px black;
     height: 15vh;
-    font-size: 1.4rem;
     justify-content: flex-end;
+    width: 100%;
+    font-size: 1.4rem;
 }
 .user{
     display: flex;
-    margin-right: 3rem;
+    width: 30%;
+    height: 100%;
+    justify-content: space-evenly;
     align-items: center;
-
-    & > *{
-        margin-left: 2rem ;
-    }
 
     &__photo{
         border-radius:50%;
-        margin-right: 2rem;
         width: 4rem;
+        margin-right: 1rem;
         height: 4rem;
     }
 
+    &__username{
+        text-decoration: none;
+    }
+
     &__notification{
+        display: flex;
+        margin-right: 2rem;
         position: relative;
-        display: inline-block;
+        height: 100%;
+        align-self: center;
+        justify-content: center;
 
         &__header{
             background-color: $color-icon;
-            margin: 0;
             width: 100%;
             color: white;
         }
@@ -51,14 +56,10 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            margin: 20px;
 
             .option-button{
                 margin: 20px;
 
-                & > * {
-                     margin-left: 10px;
-                }
             }
         }
     }

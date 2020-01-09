@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
-const path = require('path')
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
@@ -89,7 +88,6 @@ userSchema.methods.uploadImage =  function(imageBuffer){
 userSchema.methods.addFriend = async function(friend) {
     try {
         let updatedFriendList = [...this.friends]
-        //check if friend already exists 
         let existingFriend = updatedFriendList.findIndex((friendList)=>(
             friendList.userInfo._id.toString() === friend._id.toString()
         ))
@@ -104,9 +102,7 @@ userSchema.methods.addFriend = async function(friend) {
         this.friends = updatedFriendList;
         return this.save()
 
-    } catch (error) {
-        console.log(error);
-        
+    } catch (error) {        
         return (error)   
     }
     

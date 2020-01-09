@@ -16,13 +16,7 @@ exports.createEvent = async (req, res, next) =>{
           
         } 
     catch (error) {        
-        if (error.code ===11000) {
-          error.message = "Sorry, this email/username is taken" ;
-        }
-        return next({
-            status:500,
-            message:error.message
-        })
+        return next(error)
     }
 
 }
@@ -36,13 +30,13 @@ exports.getEvent = async (req, res, next) =>{
             message:event
             })
         } 
-    catch (error) {
-        return next({
-            status:500,
-            message:error.message
-        })
-    }
+     catch (error) {
+        return next(error)
+    }     
+
 }
+    
+
 
 exports.getEvents = async (req, res, next) =>{
     try {
@@ -52,13 +46,11 @@ exports.getEvents = async (req, res, next) =>{
             message:events
             })
         } 
-    catch (error) {
-        return next({
-            status:500,
-            message:error.message
-        })
+     catch (error) {
+        return next(error)
+    }     
     }
-}
+
 
 exports.joinEvent = async (req, res, next) =>{
     
@@ -74,14 +66,12 @@ exports.joinEvent = async (req, res, next) =>{
             message:allEvents
             })
         } 
-    catch (error) {
-        return next({
-            status:500,
-            message:error.message
-        })
+     catch (error) {
+        return next(error)
+    }     
     }
 
-}
+
 
 exports.leaveEvent = async (req, res, next) =>{
     try{
@@ -90,19 +80,16 @@ exports.leaveEvent = async (req, res, next) =>{
         let eventId = mongoose.Types.ObjectId(req.params.eventId)
         let event = await Event.findById(eventId)
         await event.removeAttender(currentUser.username)
-       
         let allEvents = await Event.find()
         return res.status(200).json({
             status:200,
             message:allEvents
         })
         } 
-    catch (error) {
-        return next({
-            status:500,
-            message:error.message
-        })
-    }
+     catch (error) {
+        return next(error)
+    }     
+    
 
 }
 
@@ -115,11 +102,9 @@ exports.deleteEvent = async (req, res, next) =>{
             status:200,
             message:allEvents
             })
-    } catch (error) {
-        return next({
-            status:500,
-            message:error.message
-        })
-    }
+    }  catch (error) {
+        return next(error)
+    }     
+    
 
 }

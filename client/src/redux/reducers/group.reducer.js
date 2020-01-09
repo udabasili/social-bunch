@@ -1,10 +1,9 @@
 import {GET_GROUPS} from "../actionType/group.actionType"
 
-import {START_FETCHING, ERROR_FETCHING} from "../actionType/fetch.actionTypes"
+import {START_FETCHING} from "../actionType/fetch.actionTypes"
 
 const INITIAL_STATE = {
     isFetching:false,
-    errorMessage:null,
     groups: null
   
 }
@@ -17,13 +16,6 @@ export default function groupReducer (state=INITIAL_STATE, action){
                 isFetching:true
             }
 
-        case ERROR_FETCHING:
-            return{
-                ...state,
-                errorMessage:action.payload,
-                isFetching:false,
-
-            }
         case GET_GROUPS:
             return {
                 ...state,

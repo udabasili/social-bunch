@@ -2,10 +2,11 @@ import React,{useState} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faTimes, faSignOutAlt, faBell } from '@fortawesome/free-solid-svg-icons';
 import {connect} from "react-redux";
-import {setCurrentUser } from "../../redux/action/user.action";
-import {withRouter} from "react-router-dom";
-import {acceptFriendRequest, rejectFriendRequest, socket} from "../../nodeserver/node.utils";
+import {setCurrentUser, logOut, rejectFriendRequest, acceptFriendRequest } from "../../redux/action/user.action";
+import {withRouter, Link} from "react-router-dom";
 import NotificationIcon from "../../components/notification-icon/notification-icon";
+
+
 
 /**
   * @desc header handling notifications and log out actions
@@ -14,15 +15,10 @@ import NotificationIcon from "../../components/notification-icon/notification-ic
   * @author Udendu Abasili
 
 */
-function Header ({currentUser, acceptRequest, rejectRequest, history, setCurrentUser}) {
+function Header ({currentUser, acceptRequest, rejectRequest, logOut}) {
     
     const [showDropDown, toggleDropDown] = useState(false)
     //Logout  user nad clear token, current user in redux and disconnect from server
-    const signOut = () =>{
-        sessionStorage.removeItem("validator")
-        socket.disconnect()
-        history.push("/auth")
-    }    
 
     const toggleDropDownHandler = (value) =>{
         toggleDropDown(value)
@@ -71,14 +67,18 @@ function Header ({currentUser, acceptRequest, rejectRequest, history, setCurrent
                     </ul>
                     }
                 </div>
-                <img 
-                    src={currentUser.userImage}
-                    alt="your profile" 
-                    className="user__photo"/>
-                    <span className="secondary-header">{currentUser.username}</span>
+                
+                    
+                    <Link to={`/user/${currentUser._id}/profile`} className="user__username">
+                        <img 
+                        src={currentUser.userImage}
+                        alt="your profile" 
+                        className="user__photo"/>
+                        <span  >{currentUser.username}</span>
+                    </Link>
                     <div className="sign-out">
                     <FontAwesomeIcon 
-                        onClick={signOut} 
+                        onClick={() =>logOut()} 
                         icon={faSignOutAlt}
                         className="icon-custom"
                     />
@@ -96,6 +96,7 @@ const mapStateToProps = (state) =>({
      acceptRequest: (addedUserId) => dispatch(acceptFriendRequest(addedUserId)),
      rejectRequest: (addedUserId) => dispatch(rejectFriendRequest(addedUserId)),
      setCurrentUser: user => dispatch(setCurrentUser(user)),
+     logOut : () => dispatch(logOut())
 
 
  })

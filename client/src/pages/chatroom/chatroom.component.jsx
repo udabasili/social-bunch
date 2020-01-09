@@ -11,10 +11,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationArrow, faMusic} from '@fortawesome/free-solid-svg-icons';
 import { authEndpoint, clientId, redirectUri, scopes } from "../../components/spotify/config";
 import hash from "../../components/spotify/hash";
-import {socket} from "../../nodeserver/node.utils";
 import ChatArea from '../../components/chat-area/chat-area.component';
 import  ChatMessenger  from '../../components/chat-messages/chat-messages.component';
 import axios from "axios";
+import { socket } from '../../services/socketIo';
+import ModalWindow from '../../components/modal-window/modal-window.component';
+import VideoComponent from "../../components/video-call/incoming-call"
 
 const SpotifyWebApi = require('spotify-web-api-node');
 let spotify = new SpotifyWebApi();
@@ -24,6 +26,10 @@ class Chatroom extends Component {
     super(props)
     this.state = {
       currentLink:"messages",
+      incomingCalling: false,
+      calling:null,
+      caller: null,
+      showModal: false,
       switchButton:{
           location:false,
         },
@@ -31,15 +37,18 @@ class Chatroom extends Component {
       messages:[],
       location:null,
       albums:null, 
+      room:null,
       friend:null
     };
     this.getCurrentlyPlaying = this.getCurrentlyPlaying.bind(this);
     }
   
     showProfile = (value) =>{
-      this.setState({
-        friend: value
-      })
+      this.setState((prevState)=>({
+        ...prevState,
+        friend: value,
+        messages: new Array(0)
+      }))
     }
   switchButton = (type) =>{      
     this.setState((prevState)=>({
@@ -49,10 +58,8 @@ class Chatroom extends Component {
         }
     }), ()=> {
       if(this.state.switchButton[type]){
-        
-        
+
         this.getUserLocation() 
-          
       }
       else{
         this.setState((prevState)=>({
@@ -64,6 +71,8 @@ class Chatroom extends Component {
   }
   
 componentDidMount() {
+  socket.on('privateNewMessage', this.setMessage)
+  socket.on('receive', this.receiveVideo)
   let _token = hash.access_token; 
   if (_token && _token !== undefined) {
     localStorage.setItem("token",_token)
@@ -74,9 +83,21 @@ componentDidMount() {
     this.getCurrentlyPlaying(_token);
 
     }
-    socket.on('privateNewMessage', this.setMessage)
 
   }
+
+  receiveVideo = (message) =>{
+    console.log(message);
+    this.setState({
+      incomingCalling:message.incomingCalling, 
+        caller: message.caller,
+        calling: message.calling,
+        room: message.room,
+        showModal: true
+    })
+    
+}
+
 
 
   getUserLocation = () => {
@@ -126,6 +147,17 @@ componentDidMount() {
     )
   }
 
+  setMessagePerUser = (message, value) => {
+    console.log(value);
+    let friend = value.friend
+    this.setState(prevState => ({
+      ...prevState,
+      messages: [...message],
+      friend: {friend}
+    })
+    )
+  }
+
   navComponents = () =>{
     switch (this.state.currentLink) {
       case "messages":
@@ -133,7 +165,7 @@ componentDidMount() {
           <div>
             <h1 className="primary-header">Contacts</h1>
             <Contacts showProfile={this.showProfile}/>
-            <Messages/>
+            <Messages showMessages={this.setMessagePerUser}/>
           </div>
         )  
         case "events":
@@ -163,12 +195,20 @@ componentDidMount() {
   }  
 
   render() {
-    let messages = this.state.messages
-    console.log(this.state.friend);
     
     return (
       <div>
           <main className="chatroom">
+          {(this.state.showModal && this.state.incomingCalling) &&
+            <ModalWindow closeHandler={this.toggleModal}  >
+              <VideoComponent 
+              calling={this.state.calling}
+              caller={this.state.caller}
+              incomingCalling={this.state.incomingCalling}
+              room={this.state.room}
+              />
+            </ModalWindow>
+            }
           <LeftNav 
             albums={this.state.albums}
             navLinkChangeHandler={this.navLinkChangeHandler}  
@@ -185,7 +225,6 @@ componentDidMount() {
                   <FontAwesomeIcon 
                       onClick={()=>this.switchButton("location" )} 
                       icon={faLocationArrow}/>
-
                 </div>
                 <div className="icon">
                   <div>

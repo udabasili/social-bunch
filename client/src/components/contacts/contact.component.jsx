@@ -1,7 +1,7 @@
 import  React, {useEffect, useState} from 'react'
 import  UserIcon from "../user-icon-status/user-icon-status";
 import {connect} from "react-redux";
-import { socket } from '../../nodeserver/node.utils';
+import { socket } from '../../services/socketIo';
 
 /**
   * @desc handles showing the user's friends and checking if they are online or not sending the online
@@ -12,6 +12,7 @@ import { socket } from '../../nodeserver/node.utils';
 */
 
 function Contacts({currentUser, showProfile}) {  
+  
     const [onlineFriends, setOnlineFriends] = useState([])  
       useEffect(() => {
         const interval = setInterval(() => {
@@ -34,9 +35,8 @@ function Contacts({currentUser, showProfile}) {
                      onClick={() => {
                        return showProfile({
                          friend:{
-                           _id:friend.userInfo._id,
-                           username:friend.userInfo.username,
-                           image: `data:image/png;base64,${friend.userInfo.userImage}`
+                           image: friend.userInfo.userImage,
+                           ...friend.userInfo
                           }
                         })
                         }

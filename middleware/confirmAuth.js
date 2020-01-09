@@ -1,6 +1,8 @@
 const jwt = require("jsonwebtoken");
 const User = require("../model/user");
+const mongoose = require("mongoose");
 
+//confirm token is correct
 exports.confirmAuthentication = async (req, res, next) =>{
     try {
         
@@ -18,6 +20,7 @@ exports.confirmAuthentication = async (req, res, next) =>{
                 message:"unAuthorized User"
             })
         }
+        
         return User.findOne({
             username: user.username
             })
@@ -50,40 +53,77 @@ exports.confirmAuthentication = async (req, res, next) =>{
     }
     
 }
-
+// check token before giving access to account 
 exports.protectedRoute = function(req, res, next){
-    console.log( (req.headers['authorization']));
+    try{
+        
+        let token = (req.headers['authorization']).split(" ")[1];
+        
+        if (!token) {
+            return res.status(401).json({message: 'Must pass token'});
+        }
+        jwt.verify(token, process.env.SECRET_KEY, function(err, user) {
+            
+            if (err ){            
+                return next({
+                    status:401,
+                    message:"unAuthorized User"
+                })
+            }               
+            return User.findOne({
+                username: user.username
+                })
+                .then((user) =>{
+                    //check if user exists in database
+                    if( user.length === 0 ){
+                        return next({
+                            status:401,
+                            message:"unAuthorized User"
+                        })
+                    }
+                    else{
+                        const filteredData = user.filterUserData()
+                        req.user = filteredData
+                        
+                        next()
+                    }
+                })
+        })
+
+    }
+    catch(error){
+        console.log(error);
+        
+        return next({
+            status:401,
+            message:"unAuthorized User"
+        })
+        
+    }
+    
+}
+
+// check if it is the right user
+
+exports.confirmUser  = function(req, res, next){
     let token = (req.headers['authorization']).split(" ")[1];
     if (!token) {
         return res.status(401).json({message: 'Must pass token'});
     }
     jwt.verify(token, process.env.SECRET_KEY, function(err, user) {
-        if (err){            
-            return next({
-                status:401,
-                message:"unAuthorized User"
-            })
+        // check if token is valid or if user id decoded
+        let decodedId = user._id;
+        let paramsId =  req.params.userId;
+        console.log(user._id === req.params.userId );
+        
+        if (user && decodedId === paramsId){            
+            return next();
         }               
-        return User.findOne({
-            username: user.username
-        })
-            .then((user) =>{
-                //check if user exists from token and is logged in
-                if( user.length === 0 ){
-                    return next({
+        else {
+            return  next({
                         status:401,
                         message:"unAuthorized User"
-                    })
-                }
-                else{
-                    const filteredData = user.filterUserData()
-
-                    req.user = filteredData
-                    
-                    next()
-                }
-            })
+                })
+            }
     })
-
-    
 }

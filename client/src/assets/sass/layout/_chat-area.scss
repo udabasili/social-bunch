@@ -14,6 +14,9 @@ $gray: #92959E;
     bottom: 0;
     overflow-y: auto;
     background-color: $color-card-background;
+    box-shadow: 0 8px 10px rgba($color: #000000, $alpha: .2),
+    0 10px 10px rgba($color: #000000, $alpha: .2)
+    ;
     height: 90%;
     
     .message-data {
@@ -39,7 +42,6 @@ $gray: #92959E;
       padding: 18px 20px;
       line-height: 2.5rem;
       font-size: 1.5rem;
-      border-radius: 7px;
       margin-bottom: 3rem;
       width: 70%;
       position: relative;
@@ -61,17 +63,16 @@ $gray: #92959E;
       background: $color-icon;
       float: right;
       text-align: left;
+      word-break: break-all;
     }
     
     .receive-message {
       background: $blue;
+      word-break: break-all;
       float: left;
       text-align: left;
       
-      &:after {
-        border-bottom-color: $blue;
-        left: 93%;
-      }
+    
     }
     
   }

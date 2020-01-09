@@ -2,8 +2,8 @@ const User = require("../model/user");
 const Event = require("../model/event");
 const Group = require("../model/group");
 const mongoose = require("mongoose");
-
 const token =require("../utils/token")
+
 
 exports.signUp = async function(req, res, next){
     try {
@@ -15,7 +15,7 @@ exports.signUp = async function(req, res, next){
         await newUser.save()
         return res.status(200).json({
             status:200,
-            message:"successful register"
+            message:"success"
         })
     } catch (error) {        
         if (error.code ===11000) {
@@ -28,33 +28,31 @@ exports.signUp = async function(req, res, next){
     }
 }
 
+
 exports.signIn = async function (req, res, next) {
-        
-        
     try {
         let user = await User.findOne({
             email: req.body.email
         })
-        console.log( user);
         if (!user){
                 return next({
                     status:404,
                     message: "Email doesn't exist. Please Register"
             })
         }
-        let isMatched = await user.comparePassword(req.body.password)
-        console.log(isMatched);
-        
+        let isMatched = await user.comparePassword(req.body.password)        
         if(isMatched){
             let generateToken = token(user)
             const filteredData = user.filterUserData()
             
             return res.status(200).json({
                 status:200,
+                message:{
                 validator:generateToken,
                 currentUser:filteredData
-                })
-            }
+                }
+            })
+        }
         else {
             return next({
                 status:404,
@@ -71,26 +69,26 @@ exports.signIn = async function (req, res, next) {
     }
 }
 
+
 exports.editUser = async function(req, res, next){
     try{
-        let updatedUserData = req.body
-        let user = await User.findOneAndUpdate({
-                email
-            }, updatedUserData, {new: true} )
-        await user.save()
+        let updatedUserData = req.body        
+        let userId = mongoose.Types.ObjectId(req.params.userId);
+        
+        let user = await User.findOneAndUpdate({_id:userId}, 
+            {$set:updatedUserData})
+        user = await User.findById(userId)        
         let filteredData = await user.filterUserData()
         return res.status(200).json({
             status:200,
             message:filteredData
         })
-  
-    } catch (error) {
-        return next({
-            status:500,
-            message:error.message
-        })
+    }  
+    catch (error) {
+        return next(error)
+        }     
     }
-}
+
 
 exports.acceptFriend = async function(req, res, next){
     try {
@@ -115,12 +113,10 @@ exports.acceptFriend = async function(req, res, next){
             }
         })
         
-    } catch (error) {
-        return next({
-            status:500,
-            message:error.message
-        })
-    }
+    }  catch (error) {
+        return next(error)
+    }     
+    
 }
 
 exports.rejectFriend = async function(req, res, next){
@@ -191,13 +187,11 @@ exports.getUserEvents = async (req, res, next) =>{
             message:userEvents
             })
     } 
-    catch (error) {
-        return next({
-            status:500,
-            message:error.message
-        })
+     catch (error) {
+        return next(error)
+    }     
     }
-}
+
 
 exports.getUserGroups = async (req, res, next) =>{
     try {
@@ -213,12 +207,10 @@ exports.getUserGroups = async (req, res, next) =>{
             message:userGroups
         })
     } 
-    catch (error) {
-        return next({
-            status:500,
-            message:error.message
-        })
-    }
+     catch (error) {
+        return next(error)
+    }     
+    
 }
 
 exports.getUserFriends = async (req, res, next) =>{
@@ -230,10 +222,7 @@ exports.getUserFriends = async (req, res, next) =>{
             message:user.friends
             })
     } 
-    catch (error) {
-        return next({
-            status:500,
-            message:error.message
-        })
+     catch (error) {
+        return next(error)
+    }     
     }
-}

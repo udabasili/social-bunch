@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import UserIcon from "../user-icon-status/user-icon-status";
 import {connect} from "react-redux";
+import { socket } from '../../services/socketIo';
+
 
 /**
   * @desc show messages sent by friends
@@ -9,21 +11,43 @@ import {connect} from "react-redux";
   * @author Udendu Abasili
 
 */
+
 function Messages(props) {
-    console.log(props.currentUser.friends)
     
+    const [onlineFriends, setOnlineFriends] = useState([])  
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+          socket.emit("getOnlineFriends",props.currentUser.username, (response)=>{            
+              setOnlineFriends(response)
+     
+           })
+        }, 10000);
+        return () => clearInterval(interval);
+      }, []);
+
     return (
         <div className="messages">
             {props.currentUser.friends.map((friend, i)=>(
-                friend.messages ? 
-                    <div key={i} className="message">
+                friend.messages  ? 
+                    <div key={i} onClick={()=>props.showMessages(friend.messages, {friend:{
+                           image: friend.userInfo.userImage,
+                            ...friend.userInfo
+                            }} 
+                            )} 
+                          className="message">
                         <div className="message__image">
-                            <UserIcon imageUri={`data:image/png;base64,${friend.userInfo.userImage}`}/>
+                            <UserIcon 
+                                imageUri={`data:image/png;base64,${friend.userInfo.userImage}`}
+                                username = {friend.userInfo.username} 
+                                onlineUsers = {onlineFriends}
+                                />
                         </div>
                         <div className="message__content">
                             <h2 className="secondary-header">{friend.userInfo.username}</h2>
                             <p className="paragraph">{friend.messages[friend.messages.length-1].text}</p>
                         </div>
+                        <hr/>
                     </div>
                     :
                 <div></div>

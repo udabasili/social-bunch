@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import {getAllUsers, sendFriendRequest} from "../../nodeserver/node.utils";
 import {connect} from "react-redux";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import UserListItem from "../../components/user-list-item/user-list-item.component";
+import { getAllUsers, sendFriendRequest} from '../../redux/action/user.action';
 
 
 class Users extends Component {

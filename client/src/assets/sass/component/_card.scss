@@ -1,8 +1,10 @@
 .card{
+
     &__container{
       border-radius: 5px;
       width: 80%;
-      height: 70%;
+      padding: 2px;
+      height: 30vh;
       box-shadow: 2px 2px 2px black;
       background-color: $color-icon;
       margin: 9%;
@@ -10,8 +12,13 @@
 
     &__content {
         width: 100%;
-        padding: 2rem 3rem 5rem 3rem;
+        padding: 20px;
         position: relative;
+        font-size: .6em;
+        background-color: rgb(145, 3, 3);
+        color: white;
+        height: 100%;
+        background-blend-mode: multiply;
         text-align: center;
 
         .close-button{
@@ -32,13 +39,14 @@
         &__join-button {
             position: absolute;
             bottom: 2%;
+            padding: 2px 15px;
             cursor: pointer;
             right: 50%;
             transform: translate(50%,0);
             background-color: black;
             color: white;
             border: 0;
-            width: 10rem;
+            width: 15rem;
             height: 4rem;
             text-align: center;
             border-radius: 30px;
@@ -59,18 +67,20 @@
       &__text-content{
         flex-direction: column;
         align-items: center;
+        font-size: 1.5rem;
         display: flex;
 
         a{
           text-decoration: none;
+          color: rgb(248, 149, 149)
         }
       }
         
       &__date-time{
+          margin: 0;
 
         span{
-          margin: 1rem;
-          font-size: 1rem;
+          font-size: 1.3rem;
         }
       }
     }

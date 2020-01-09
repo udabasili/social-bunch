@@ -4,6 +4,7 @@ import storage from "redux-persist/lib/storage";
 import {persistReducer} from "redux-persist";
 import groupReducer from "./reducers/group.reducer";
 import eventReducer from "./reducers/event.reducer";
+import errorReducer from "./reducers/error.reducer";
 
 
 const persistConfig = {
@@ -14,7 +15,8 @@ const persistConfig = {
 const rootReducer = combineReducers({
     user: userReducer,
     groups: groupReducer,
-    events: eventReducer
+    events: eventReducer,
+    errors: errorReducer
 
 })
 

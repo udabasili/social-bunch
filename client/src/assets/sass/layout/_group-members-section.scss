@@ -1,0 +1,32 @@
+.w3-card-4{
+    box-shadow: none;
+}
+
+.w3-bar{
+    cursor: pointer;
+}
+
+.user-group-status{
+    width: 12px;
+    order: 3;
+    margin-left: 20px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+
+
+.online{
+    background-color: greenyellow;
+
+}
+
+.offline{
+    background-color: yellow;
+
+}
+
+.w3-bar{
+    display: flex;
+    align-items: center;
+}

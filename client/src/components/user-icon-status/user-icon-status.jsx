@@ -5,7 +5,6 @@ export default function UserIcon({imageUri, username, onlineUsers}) {
   const [lastOnline, setLastOnline]  = useState("")  
  
   useEffect(() => {
-    console.log(onlineUsers);
     
     if (onlineUsers){
       let userIndex = onlineUsers.findIndex(friend =>(

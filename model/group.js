@@ -14,10 +14,13 @@ const groupSchema = new Schema({
     },
     members:{
         type:Array
-    } },
+    } 
+    
+    },
     {
         timestamps:true
-    })
+})
+
 groupSchema.methods.removeMember = async function(username){
     let members = [...this.members]
     members = members.filter((member)=> member !== username)

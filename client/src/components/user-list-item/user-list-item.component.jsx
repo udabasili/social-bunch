@@ -6,7 +6,6 @@ import {connect} from "react-redux";
 
 function UserListItem({sendFriendRequest = f => f, userData, currentUser}) {   
     const {_id, userImage, username, friendsRequests} = userData;
-    console.log(friendsRequests);
     
   return (
     <div class="user-card">
