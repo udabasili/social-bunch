@@ -67,9 +67,7 @@ export function Login (type, userData){
     return dispatch =>{
         return new Promise((resolve, reject)=>{
             return restApi("post", `/auth/${type}`, userData)
-                .then(response => {
-                    console.log(response);
-                    
+                .then(response => {                    
                     dispatch(removeError())
                     localStorage.setItem("validator", response.validator)
                     setRestApiHeader(response.validator)
@@ -110,7 +108,6 @@ export function editUser (userData){
                 })
                
                 .catch((error)=>{                    
-                    console.log(error);
                     return reject("Something went Wrong. Try Again Later")
                 })
         })
@@ -164,18 +161,14 @@ export const getAllUsers = () =>{
 export const sendFriendRequest =  (addedUserId) =>{
     return dispatch =>{
         return restApi("get", `/user/${userId}/send-friend-request/${addedUserId}`)
-        .then((response)=>{          
-            console.log(response);
-      
+        .then((response)=>{                
             dispatch(removeError())            
                 let currentUser = response
                 currentUser = convertBufferToImage(currentUser)
                 dispatch(setCurrentUser(currentUser))
 
             })
-            .catch((error)=>{
-                console.log(error.message);
-                
+            .catch((error)=>{                
                 dispatch(addError("Something went Wrong. Try Again Later"))
             })
     }

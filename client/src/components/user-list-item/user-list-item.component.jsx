@@ -6,12 +6,9 @@ import {connect} from "react-redux";
 
 function UserListItem({sendFriendRequest = f => f, user, currentUser}) {   
     const {_id, userImage, username, friendsRequests} = user;
-    console.log(friendsRequests);
     
     function checkCondition(){
-      currentUser.requestsSent.filter(request => console.log(request.sentTo))
       if ( friendsRequests ){
-        console.log("here");
         
         if(friendsRequests.filter(request => request.username === username).length > 0){
           return <FontAwesomeIcon  icon={faHourglass}/>
@@ -43,7 +40,7 @@ function UserListItem({sendFriendRequest = f => f, user, currentUser}) {
           <img src={userImage}  className="user-card__image" />
             <div 
               className={`user-card__info`}>
-                <div>{username}</div>
+                <div className="user-card__username">{username}</div>
                 <div class="user-card__buttons"> 
                   {checkCondition()}
                   <Link 

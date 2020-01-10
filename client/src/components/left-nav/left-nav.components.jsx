@@ -15,6 +15,7 @@ const LeftNav = ({navLinkChangeHandler, albums, onChangeHandler}) => {
          }
         )
     }
+    
     return (
     <div className="nav-container">
         <div className="nav-container__logo-box">

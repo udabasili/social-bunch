@@ -129,7 +129,6 @@ userSchema.methods.removeFriendRequest = async function(sender) {
         return this.save()
 
     } catch (error) {
-        console.log(error);
         
         return (error)   
     }
@@ -155,9 +154,7 @@ userSchema.methods.sendFriendRequest = async function(sender) {
         this.friendsRequests = updatedFriendRequestList;
         return this.save()
 
-    } catch (error) {
-        console.log(error);
-        
+    } catch (error) {        
         return (error)   
     }
     
@@ -170,7 +167,6 @@ userSchema.methods.saveMessage = function(user, message, type) {
         let friendIndex = friends.findIndex((friend)=>(
             friend.userInfo.username === user.username
         ))
-        console.log(friendIndex);
         
         if (friendIndex !== -1){
             friends[friendIndex].messages.push(message)
@@ -180,7 +176,6 @@ userSchema.methods.saveMessage = function(user, message, type) {
         this.save()
         
     } catch (error) {
-        console.log(error);
         
     }
     

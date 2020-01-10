@@ -14,6 +14,9 @@
   background-color: #fafafa;
   box-shadow: 0 0 2rem #babbbc;
 
+    &__username{
+      font-size: 1rem;
+    }
     &__image{
       width: 6rem;
       border-radius: 50%;

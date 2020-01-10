@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faVideo, faPhone, faBan } from '@fortawesome/free-solid-svg-icons';
+import { faVideo,  faBan } from '@fortawesome/free-solid-svg-icons';
 import {Link} from "react-router-dom";
 import ModalWindow from "../modal-window/modal-window.component";
 import VideoComponent from "../video-calling/video-component"

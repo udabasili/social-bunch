@@ -96,7 +96,6 @@ componentDidMount() {
   }
 
   receiveVideo = (message) =>{
-    console.log(message);
     this.setState({
       incomingCalling:message.incomingCalling, 
         caller: message.caller,
@@ -137,9 +136,7 @@ componentDidMount() {
     token = localStorage.getItem("token")
     spotify.setAccessToken(token)
     spotify.getNewReleases()
-    .then((data)=> {        
-      console.log(data);
-      
+    .then((data)=> {              
         this.setState({albums: data.body.albums.items[0]})
         })
       .catch((error)=>console.log(error)

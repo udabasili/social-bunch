@@ -14,9 +14,6 @@ export default function UserIcon({imageUri, username, onlineUsers}) {
           setIsOnline(onlineUsers[userIndex].isOnline)
       setLastOnline(onlineUsers[userIndex].isOnline)
       }
-      
-      
-      
     }
     return () => {
     };

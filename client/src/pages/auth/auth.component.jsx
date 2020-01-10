@@ -74,7 +74,6 @@ class Auth extends Component {
       fileUpload.onchange =  () => {
         let fileName = fileUpload.value.split('\\')[fileUpload.value.split('\\').length - 1];
         filePath.value = fileName
-        console.log()
         this.setState((prevState, props) => ({
           ...prevState,
             imageFile:fileUpload.files[0]

@@ -3,6 +3,7 @@ import {Route, Redirect} from "react-router-dom";
 import {connect} from "react-redux";
 import Header from "../../components/header/header";
 
+
 const PrivateRoute = ({ component: Component, currentUser, ...rest }) => {    
     return (
     <Route {...rest} render={(props) => (
