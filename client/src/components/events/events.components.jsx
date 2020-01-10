@@ -111,12 +111,7 @@ class Events extends Component {
                 <input 
                   type="text" className="event__input" 
                   onChange={this.onChangeHandle} name="eventName" 
-                  placeholder="Your name.." required/>
-                <label className="event__label" for="summary">Summary</label>
-                <textarea 
-                  rows="4" cols="50" 
-                  className="event__input" 
-                  name="summary" onChange={this.onChangeHandle}></textarea>
+                  placeholder="Your name.." required/>              
                 <label className="event__label" for="time">Time</label>
                 <input type="time" className="event__input" name="time" onChange={this.onChangeHandle} required/>
                 <label className="event__label" for="time">ImageUrl</label>
