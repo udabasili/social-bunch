@@ -4,7 +4,8 @@ import { faWindowMinimize, faTimes, faPlus } from "@fortawesome/free-solid-svg-i
 
 const Player = props => {
   const [minimize, setMinimized] = useState(true)
-
+  console.log(props);
+  
   const minimizeWindow = () =>{
     let spotify =  document.querySelector('.spotify');
     setMinimized(!minimize)
@@ -19,7 +20,7 @@ const Player = props => {
       <div className="spotify">
         <div className="spotify__row">
           <div className="column middle">
-            <input type="search" placeholder="Search Music....."/>
+           
           </div>
           <div className="spotify__column">
             <span onClick={minimizeWindow} className="dot minimize">
@@ -28,9 +29,7 @@ const Player = props => {
                 <FontAwesomeIcon icon={faPlus}/>
               }
             </span>
-            <span className="dot close">
-              <FontAwesomeIcon icon={faTimes}/>
-            </span>
+            
           </div>
         </div>
         <div className="content">

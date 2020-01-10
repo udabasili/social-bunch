@@ -20,7 +20,7 @@ function Contacts({currentUser, showProfile}) {
               setOnlineFriends(response)
      
            })
-        }, 10000);
+        }, 2000);
         return () => clearInterval(interval);
       }, []);
 

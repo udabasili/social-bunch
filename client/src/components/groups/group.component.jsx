@@ -42,18 +42,20 @@ class Group extends Component {
         ()=>this.props.getAllGroups())
     }
 
+
     onChangeHandle = (e) =>{
         this.setState({[e.target.name]:e.target.value })
     }
+
 
     onSubmitHandler = (e) =>{
       e.preventDefault()
       const group = this.state
       this.props.createGroup(group)
       this.setState({showModal:false})
-        
     }
     
+
   render() {
     const{
       allGroups, 
@@ -64,7 +66,7 @@ class Group extends Component {
     
     return (
       <div className="event">  
-        <button className="add-button" onClick={()=> this.toggleModal(true) } >Add Group</button>
+        <button className="add-button" onClick={()=> this.toggleModal(true) } >Add</button>
         {allGroups && 
         <div>
         <hr/>

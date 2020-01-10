@@ -101,10 +101,10 @@ exports.acceptFriend = async function(req, res, next){
         await user.addFriend(filteredFriendData)
         await friend.addFriend(req.user)
         user.removeFriendRequest(friend)
-        let users = await Users.find()
+        let users = await User.find()
         user = await User.findById(userId)
         let filteredUser = await user.filterUserData()
-        let filteredUsers =  await Users.filterData(users)
+        let filteredUsers =  await User.filterData(users)
         return res.status(200).json({
             status:200,
             message:{
@@ -126,10 +126,10 @@ exports.rejectFriend = async function(req, res, next){
         let user = await User.findById(userId)
         let sender = await User.findById(senderId)
         user.removeFriendRequest(sender)
-        let users = await Users.find()
+        let users = await User.find()
         user = await User.findById(userId)
         let filteredUser = await user.filterUserData()
-        let filteredUsers =  await Users.filterData(users)
+        let filteredUsers =  await User.filterData(users)
         return res.status(200).json({
             status:200,
             message:{
@@ -151,23 +151,27 @@ exports.sendFriendRequest = async function(req, res, next){
     try {
         let senderId = mongoose.Types.ObjectId(req.params.userId);
         let receiverId = mongoose.Types.ObjectId(req.params.addedUserId);
+        console.log(senderId, receiverId)
         let userReceiver = await User.findById(receiverId)
-        userReceiver.friendsRequest
         let userSender = await User.findById(senderId)
         let filteredSenderData = await userSender.filterUserData()
-        userReceiver.sendFriendRequest(filteredSenderData)
-        let users = await Users.find({})
-        
-        let filteredData =  await Users.filterData(users)
+        userSender.requestsSent.push({
+            sentTo: userReceiver.username,
+            status:"pending"
+        })
+        await userSender.save()
+        await userReceiver.sendFriendRequest(filteredSenderData)
+        user = await User.findById(senderId)
+        let filteredUser = await user.filterUserData()
         return res.status(200).json({
             status:200,
-            message:filteredData
+            message:filteredUser
+
         })
     } catch (error) {
-        return ({
-            status:500,
-            message:error.message
-        })
+        console.log(error);
+        
+        return (next)
         
     }
         

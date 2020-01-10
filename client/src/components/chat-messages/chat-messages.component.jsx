@@ -8,9 +8,7 @@ import {connect} from "react-redux";
 
 */
 
- const ChatMessenger = ({currentUser, message, location}) =>  {    
-    console.log(message);
-    
+ const ChatMessenger = ({currentUser, message, location}) =>  {        
     // let timeSplit =  message.createdAt.split("T")[1].split(":");
     // let date = message.createdAt.split("T")[0].split("-");
 

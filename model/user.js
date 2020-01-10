@@ -47,8 +47,19 @@ const userSchema = new Schema({
         friendsRequests:[
             {
                 userInfo:{},
+                status:{
+                type: String
             }
-        ]
+            }
+        ],
+        requestsSent:[{
+            sentTo:{
+                type: String
+            },
+            status:{
+                type: String
+            }
+        }]
     },
     {
         timestamps:true
@@ -138,7 +149,9 @@ userSchema.methods.sendFriendRequest = async function(sender) {
  
         updatedFriendRequestList.push({
             userInfo:sender,
+            status:"pending"
         })
+
         this.friendsRequests = updatedFriendRequestList;
         return this.save()
 

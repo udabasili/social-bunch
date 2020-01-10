@@ -23,6 +23,8 @@ export function restApi(method, path, data){
 
 //set src value
 export const convertBufferToImage = (user) =>{
+    console.log(user);
+    
     let imageUrl = user.userImage
     imageUrl = "data:image/png;base64," + imageUrl;
     user.userImage = imageUrl

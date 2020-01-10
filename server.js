@@ -123,16 +123,15 @@ io.on("connection", (client)=>{
         )   
     })
 
-    client.on("voiceCall", ({receive, currentName, room}) =>{
-        console.log(receive, currentName);
-        
-        chat.getUserSocketId(receive)
+    client.on("voiceCall", ({ calling, caller, room}) =>{     
+        console.log({ calling, caller, room})   
+        chat.getUserSocketId(calling)
         .then((response) =>{                             
             io.to(response).emit('receive', {
             incomingCalling: true,
             room:room,
-            caller: currentName,
-            calling:receive
+            caller: caller,
+            calling:calling
             })     
         })   
     })

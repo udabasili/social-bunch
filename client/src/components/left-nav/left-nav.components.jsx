@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar, faMailBulk, faUserFriends, faObjectGroup } from '@fortawesome/free-solid-svg-icons';
 import Player from "../spotify/player";
 
-const LeftNav = ({navLinkChangeHandler, albums}) => {
+const LeftNav = ({navLinkChangeHandler, albums, onChangeHandler}) => {
 
    const onClickHandle = (value) =>{
     let divArray = Array.from(document.querySelectorAll(".nav-icon__item"))
@@ -33,7 +33,7 @@ const LeftNav = ({navLinkChangeHandler, albums}) => {
                 <FontAwesomeIcon  className="nav-icon__icon" icon={faUserFriends}></FontAwesomeIcon>
             </a>
             {albums && (
-                <Player albums={albums}/>
+                <Player onChangeHandler={onChangeHandler} albums={albums}/>
             
           )}
         </nav>        

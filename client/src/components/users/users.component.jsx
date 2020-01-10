@@ -17,8 +17,6 @@ class Users extends Component {
       this.props.getAllUsers()
     }
 
-  
-
     searchUsersHandler = (e) =>{
         this.setState({searchItem:e.target.value },()=>{
             this.setState({filteredUserData: this.props.allUsers.filter((user)=>{
@@ -40,7 +38,7 @@ class Users extends Component {
     
   render() {
     let {filteredUserData, searchItem} = this.state
-    const {allUsers, currentUser} = this.props
+
     return (
       <div className="users">
         <div className="search-box">
@@ -48,7 +46,6 @@ class Users extends Component {
                 placeholder="Search for Users....." 
                 onChange={this.searchUsersHandler}
                 className="search-box__input" ></input>
-            <FontAwesomeIcon  className="search-box__icon" icon={faSearch}/>
         </div> 
         {(filteredUserData && searchItem)  &&
           <ul className="item-list">

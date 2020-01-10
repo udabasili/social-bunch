@@ -66,7 +66,7 @@ class Events extends Component {
     return (
       <div className="event">  
         <button className="add-button" onClick={()=> this.toggleModal(true)} >
-          Add Event
+          Add
         </button>
         {allEvents && 
           <ul className="event__list">
@@ -90,10 +90,10 @@ class Events extends Component {
                     </div>
                     { event.attenders.includes(currentUser.username) ?
                     <button className="card__join-button" onClick={() =>leaveEvent(event._id)}>
-                          Leave Event
+                          Leave 
                         </button>                        
                         : <button className="card__join-button" onClick={() =>joinEvent(event._id)}>
-                          <span >Join Event</span>
+                          <span >Join </span>
                         </button>
                     }
                   </div>

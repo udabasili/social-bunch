@@ -125,8 +125,8 @@ class GroupPage extends Component {
                         </div>
                       </li>
                       ))}
-                       </ul>
-                      </div>
+                    </ul>
+                  </div>
                 </section>
             </div>
         )

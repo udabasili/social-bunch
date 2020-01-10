@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 //confirm token is correct
 exports.confirmAuthentication = async (req, res, next) =>{
     try {
-        
+        console.log((req.headers['authorization']).split(" ")[1])
         let token = (req.headers['authorization']).split(" ")[1];
         if (!token) {
             return next({
@@ -56,13 +56,15 @@ exports.confirmAuthentication = async (req, res, next) =>{
 // check token before giving access to account 
 exports.protectedRoute = function(req, res, next){
     try{
-        
+        console.log((req.headers['authorization']).split(" ")[1])
+
         let token = (req.headers['authorization']).split(" ")[1];
         
         if (!token) {
             return res.status(401).json({message: 'Must pass token'});
         }
         jwt.verify(token, process.env.SECRET_KEY, function(err, user) {
+            console.log(err);
             
             if (err ){            
                 return next({
@@ -106,11 +108,15 @@ exports.protectedRoute = function(req, res, next){
 // check if it is the right user
 
 exports.confirmUser  = function(req, res, next){
-    let token = (req.headers['authorization']).split(" ")[1];
+    try {
+        let token = (req.headers['authorization']).split(" ")[1];
+
     if (!token) {
         return res.status(401).json({message: 'Must pass token'});
     }
     jwt.verify(token, process.env.SECRET_KEY, function(err, user) {
+        console.log("1");
+
         // check if token is valid or if user id decoded
         let decodedId = user._id;
         let paramsId =  req.params.userId;
@@ -123,7 +129,18 @@ exports.confirmUser  = function(req, res, next){
             return  next({
                         status:401,
                         message:"unAuthorized User"
-                })
-            }
-    })
-}
+                    })
+                }
+            })
+        }
+
+        catch(error){
+        console.log(error);
+        
+        return next({
+            status:401,
+            message:"unAuthorized User"
+            })
+        
+        }
+    }

@@ -17,9 +17,9 @@ class ProfilePage extends React.Component {
     username:"",
     userImage:"",
     telephone:"Add phone",
-    bio:"Add bio  here",
+    bio:"Add bio here",
     occupation:"Add Occupation",
-    location:"add location",
+    location:"Add location",
     joined:""
     },
     success:null
@@ -28,14 +28,22 @@ class ProfilePage extends React.Component {
 
     componentDidMount(){
       if (this.props.history.location.state){ 
-        let userData = this.props.history.location.state.userData.friend;
-        this.setState({
-          _id: userData._id,
-          username: userData.username,
-          userImage: userData.userImage,
-          joined: userData.createdAt.split("T")[0]
-        })
-
+        let userData = this.props.history.location.state.userData;
+        this.setState((prevState) => ({
+          ...prevState,
+          user:{
+            ...prevState.user,
+            _id: userData._id,
+            username: userData.username,
+            bio: userData.bio || "Add bio here",
+            location: userData.location || "Add location",
+            telephone: userData.telephone|| "Add phone",
+            userImage: userData.userImage,
+            occupation:userData.location || "Add Occupation",
+            joined: userData.createdAt.split("T")[0]
+            }
+          })
+        )
       }
       else{
         this.props.history.push("/")
@@ -60,28 +68,51 @@ class ProfilePage extends React.Component {
     
   }
   onChangeBioHandler = (e) =>{
-    this.setState({bio:e.target.value})
-   
-   
- }
-   onChangeTelephoneHandler = (e) =>{
-     this.setState({telephone:e.target.value})
-    
-    
+    this.setState((prevState) => ({
+      ...prevState,
+      user:{
+        ...prevState.user, 
+        bio:e.target.value
+        }
+      })
+    )
   }
-  onChangeLocationHandler = (e) =>{
-    this.setState({location:e.target.value})
 
+
+   onChangeTelephoneHandler = (e) =>{
+    this.setState((prevState) => ({
+      ...prevState,
+      user:{
+        ...prevState.user, 
+        telephone:e.target.value
+        }
+      })
+    )
+  }
     
+  
+
+  onChangeLocationHandler = (e) =>{
+    this.setState((prevState) => ({
+      ...prevState,
+      user:{
+        ...prevState.user, 
+        location:e.target.value
+        }
+      })
+    )
   }
 
   onChangeOccupationHandler = (e) =>{
-    this.setState({occupation:e.target.value})
-
-    
+     this.setState((prevState) => ({
+      ...prevState,
+      user:{
+        ...prevState.user, 
+        occupation:e.target.value
+        }
+      })
+    )
   }
-
-  
 
   render(){
     const{
@@ -92,9 +123,10 @@ class ProfilePage extends React.Component {
       joined,
       bio,
       telephone,
-      occupation,
-      
-    } = this.state;   
+      occupation} = this.state.user
+
+      const {currentUser} = this.props
+
   return (
     this.props.history.location.state.userData ?
       <div className="user-profile">
@@ -116,31 +148,33 @@ class ProfilePage extends React.Component {
                 <div><FontAwesomeIcon icon={faHome}/>
                 <ContentEditable
                     html={location}
-                    disabled={false} // use true to disable edition
-                    onChange={this.onChangeLocationHandler} // handle innerHTML change
+                    disabled={!(currentUser.username === username)} 
+                    onChange={this.onChangeLocationHandler} 
                   /></div>
                 <div><FontAwesomeIcon icon={faPhone}/><ContentEditable
                     
                     html={telephone}
-                    disabled={false} // use true to disable edition
-                    onChange={this.onChangeTelephoneHandler} // handle innerHTML change
+                    disabled={!(currentUser.username === username)} 
+                    onChange={this.onChangeTelephoneHandler} 
                   /></div>
                 <div><FontAwesomeIcon icon={faIndustry}/><ContentEditable
                     html={occupation}
-                    disabled={false} // use true to disable edition
-                    onChange={this.onChangeOccupationHandler} // handle innerHTML change
+                    disabled={!(currentUser.username === username)} 
+                    onChange={this.onChangeOccupationHandler} 
                   /></div>
               </div>
             </div>
           </div>
           <div className="user-profile__two-third">
+          {this.state.success && 
+            <div className="alert-success">{this.state.success}</div>}
             <div className="user-profile__bio">
               <h2 className=""> <FontAwesomeIcon icon={faInfo}/> Bio</h2>
               <ContentEditable
                 className="user-profile__bio__content" 
-                html={bio}
-                disabled={false} // use true to disable edition
-                onChange={this.onChangeBioHandler} // handle innerHTML change
+                html={ bio}
+                disabled={!(currentUser.username === username)} 
+                onChange={this.onChangeBioHandler} 
               />
               <div className="form-button" onClick={this.onSubmitHandler} >Submit</div> 
             </div>   
@@ -154,10 +188,13 @@ class ProfilePage extends React.Component {
     }
 
 
-  const mapStateToProps = (dispatch) =>({
+  const mapDispatchToProps = (dispatch) =>({
     editUser: userData => dispatch(editUser(userData))
  })
  
+ const mapStateToProps = (state) =>({
+  currentUser:state.user.currentUser,
+})
 
 
-export default connect(null , mapStateToProps)(ProfilePage);
+export default connect(mapStateToProps , mapDispatchToProps)(ProfilePage);

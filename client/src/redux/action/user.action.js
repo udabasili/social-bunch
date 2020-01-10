@@ -99,7 +99,6 @@ export function Login (type, userData){
 }
 
 export function editUser (userData){
-    console.log(userData);
     return dispatch =>{
         return new Promise((resolve, reject)=>{
             return restApi("post", `/user/${userId}/profile/edit`, userData)
@@ -165,18 +164,13 @@ export const getAllUsers = () =>{
 export const sendFriendRequest =  (addedUserId) =>{
     return dispatch =>{
         return restApi("get", `/user/${userId}/send-friend-request/${addedUserId}`)
-        .then((response)=>{                
+        .then((response)=>{          
+            console.log(response);
+      
             dispatch(removeError())            
-                let currentUser = response.filteredUser
+                let currentUser = response
                 currentUser = convertBufferToImage(currentUser)
-                let users = response.filteredUsers
-                users =  users.map(users=>{
-                    return convertBufferToImage(users)
-                })
-                console.log({currentUser, users});
-                
                 dispatch(setCurrentUser(currentUser))
-                dispatch(setAllUsers(users))
 
             })
             .catch((error)=>{

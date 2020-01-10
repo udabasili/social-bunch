@@ -16,7 +16,8 @@ import  ChatMessenger  from '../../components/chat-messages/chat-messages.compon
 import axios from "axios";
 import { socket } from '../../services/socketIo';
 import ModalWindow from '../../components/modal-window/modal-window.component';
-import VideoComponent from "../../components/video-call/incoming-call"
+import VideoComponent from "../../components/video-calling/video-component"
+import {connect} from "react-redux";
 
 const SpotifyWebApi = require('spotify-web-api-node');
 let spotify = new SpotifyWebApi();
@@ -30,9 +31,7 @@ class Chatroom extends Component {
       calling:null,
       caller: null,
       showModal: false,
-      switchButton:{
-          location:false,
-        },
+      switchButton:{location:false},
       token: null,
       messages:[],
       location:null,
@@ -42,7 +41,7 @@ class Chatroom extends Component {
     };
     this.getCurrentlyPlaying = this.getCurrentlyPlaying.bind(this);
     }
-  
+  //show user's profile 
     showProfile = (value) =>{
       this.setState((prevState)=>({
         ...prevState,
@@ -50,6 +49,8 @@ class Chatroom extends Component {
         messages: new Array(0)
       }))
     }
+
+  //toggle location button off and on
   switchButton = (type) =>{      
     this.setState((prevState)=>({
         ...prevState,
@@ -58,7 +59,6 @@ class Chatroom extends Component {
         }
     }), ()=> {
       if(this.state.switchButton[type]){
-
         this.getUserLocation() 
       }
       else{
@@ -68,6 +68,15 @@ class Chatroom extends Component {
         }))
       }
     })
+  }
+
+  onChangeHandler = (value) =>{
+    spotify.searchTracks(value)
+  .then((data) =>{
+    this.setState({ albums: data.body.tracks.items[0]});
+  }, function(err) {
+    console.error(err);
+  });
   }
   
 componentDidMount() {
@@ -129,6 +138,8 @@ componentDidMount() {
     spotify.setAccessToken(token)
     spotify.getNewReleases()
     .then((data)=> {        
+      console.log(data);
+      
         this.setState({albums: data.body.albums.items[0]})
         })
       .catch((error)=>console.log(error)
@@ -139,16 +150,16 @@ componentDidMount() {
     this.setState({currentLink: value})
   }
 
+
   setMessage = (message) =>{
     this.setState(prevState => ({
       ...prevState,
       messages: [...prevState.messages, message]
-    })
-    )
-  }
+      })
+    )}
+
 
   setMessagePerUser = (message, value) => {
-    console.log(value);
     let friend = value.friend
     this.setState(prevState => ({
       ...prevState,
@@ -194,8 +205,8 @@ componentDidMount() {
     }
   }  
 
+
   render() {
-    
     return (
       <div>
           <main className="chatroom">
@@ -203,6 +214,7 @@ componentDidMount() {
             <ModalWindow closeHandler={this.toggleModal}  >
               <VideoComponent 
               calling={this.state.calling}
+              currentUser={this.props.currentUser.username}
               caller={this.state.caller}
               incomingCalling={this.state.incomingCalling}
               room={this.state.room}
@@ -211,6 +223,7 @@ componentDidMount() {
             }
           <LeftNav 
             albums={this.state.albums}
+            onChangeHandler={this.onChangeHandler}
             navLinkChangeHandler={this.navLinkChangeHandler}  
             className="navigation"/>
             <div className="chatroom__left-section">
@@ -249,7 +262,9 @@ componentDidMount() {
             </div>
             <div className="chatroom__right-section">
               {this.state.friend &&
-                <Profile userData={this.state.friend}/>
+                <Profile userData={this.state.friend}
+                  currentUser = {this.props.currentUser}
+                />
               }
             </div>
           </main>
@@ -258,4 +273,11 @@ componentDidMount() {
   }
 }
 
-export default Chatroom
+const mapStateToProps = (state) =>({
+  currentUser:state.user.currentUser,
+})
+
+
+
+
+export default connect(mapStateToProps , null)(Chatroom);

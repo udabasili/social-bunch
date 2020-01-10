@@ -15,14 +15,14 @@ import { socket } from '../../services/socketIo';
 function Messages(props) {
     
     const [onlineFriends, setOnlineFriends] = useState([])  
-
+//Get the list of online friends from the server and map through the list of friends to show status
     useEffect(() => {
         const interval = setInterval(() => {
           socket.emit("getOnlineFriends",props.currentUser.username, (response)=>{            
               setOnlineFriends(response)
      
            })
-        }, 10000);
+        }, 2000);
         return () => clearInterval(interval);
       }, []);
 
@@ -32,8 +32,7 @@ function Messages(props) {
                 friend.messages  ? 
                     <div key={i} onClick={()=>props.showMessages(friend.messages, {friend:{
                            image: friend.userInfo.userImage,
-                            ...friend.userInfo
-                            }} 
+                            ...friend.userInfo}} 
                             )} 
                           className="message">
                         <div className="message__image">
@@ -45,7 +44,7 @@ function Messages(props) {
                         </div>
                         <div className="message__content">
                             <h2 className="secondary-header">{friend.userInfo.username}</h2>
-                            <p className="paragraph">{friend.messages[friend.messages.length-1].text}</p>
+                            <p className="message__content__count">{`${friend.messages.length} messages`}</p>
                         </div>
                         <hr/>
                     </div>

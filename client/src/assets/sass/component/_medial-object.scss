@@ -1,3 +1,5 @@
+/** MESSAGES AND USER FRIENDS SECTION STYLING **/
+
 .messages{
     display: flex;
     flex-direction: column;
@@ -20,6 +22,15 @@
     &__content{
         text-align: left;
         margin-right: 10%;
+        font-size: 2rem;
+        cursor: pointer;
+
+        &__count{
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+
+
 
         &__username{
             font-size: 1.2rem;

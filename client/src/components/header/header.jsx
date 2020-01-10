@@ -69,7 +69,11 @@ function Header ({currentUser, acceptRequest, rejectRequest, logOut}) {
                 </div>
                 
                     
-                    <Link to={`/user/${currentUser._id}/profile`} className="user__username">
+                    <Link to={{
+                        pathname: `/user/${currentUser._id}/profile`,
+                        state: { userData: currentUser}
+
+                        }} className="user__username">
                         <img 
                         src={currentUser.userImage}
                         alt="your profile" 

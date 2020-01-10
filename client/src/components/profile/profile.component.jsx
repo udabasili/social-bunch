@@ -3,13 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVideo, faPhone, faBan } from '@fortawesome/free-solid-svg-icons';
 import {Link} from "react-router-dom";
 import ModalWindow from "../modal-window/modal-window.component";
-import VideoComponent from "../video-call/video-call.component"
+import VideoComponent from "../video-calling/video-component"
 
 
 export default class Profile extends Component {
     
     state = {
-        showModal: false
+        showModal: false,
+        room:Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15),
     }
     toggleModal = (showModal) =>{
         this.setState({showModal: showModal})
@@ -30,14 +31,13 @@ export default class Profile extends Component {
                         <h2 className="profile__username">{this.props.userData.friend.username}</h2>   
                         <div className="communication">
                             <FontAwesomeIcon className="icon-custom"  onClick={()=> this.toggleModal(true)} icon={faVideo}/>
-                            <FontAwesomeIcon className="icon-custom" icon={faPhone}/>
                             <FontAwesomeIcon className="icon-custom" icon={faBan}/>
                         </div>  
                         <Link 
                             className="btn btn-white" 
                             to={{
                                 pathname: `/user/${this.props.userData.friend._id}/profile`,
-                                state: { userData: this.props.userData}
+                                state: { userData: this.props.userData.friend}
                             }}
                         >
                         Profile
@@ -49,7 +49,10 @@ export default class Profile extends Component {
                         <ModalWindow closeHandler={this.toggleModal}  >
                             <VideoComponent 
                             closeHandler={this.toggleModal} 
-                            user={this.props.userData.friend}
+                            calling={this.props.userData.friend.username}
+                            caller={this.props.currentUser.username}
+                            currentUser={this.props.currentUser.username}
+                            room={this.state.room}
                             />
                         </ModalWindow>
                     }
