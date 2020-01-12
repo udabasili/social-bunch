@@ -11,7 +11,7 @@ import { socket } from '../../services/socketIo';
 
 */
 
-function Contacts({currentUser, showProfile}) {  
+function Contacts({currentUser, showMessages}) {  
   
     const [onlineFriends, setOnlineFriends] = useState([])  
       useEffect(() => {
@@ -32,15 +32,10 @@ function Contacts({currentUser, showProfile}) {
                   <div 
                     key={i} 
                     className="user-contacts__item"
-                     onClick={() => {
-                       return showProfile({
-                         friend:{
+                    onClick={()=> showMessages({
                            image: friend.userInfo.userImage,
-                           ...friend.userInfo
-                          }
-                        })
-                        }
-                       }>
+                            ...friend.userInfo}
+                            )} >
                       <UserIcon 
                         imageUri={`data:image/png;base64,${friend.userInfo.userImage}`}
                         username = {friend.userInfo.username} 

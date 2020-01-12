@@ -12,7 +12,7 @@
   .room {
     position: relative;
     height: 70%;
-      width:70%;
+    width:100%;
   }
  
 
@@ -36,4 +36,128 @@
     border-radius: 6px;
   }
   
-  
+  /**PHONE RINGING ANIMATION **/
+
+  .coccoc-alo-ph-circle {
+    width: 160px;
+    height: 160px;
+    top: 20px;
+    left: 20px;
+    position: absolute;
+    background-color: transparent;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 2px solid rgba(30, 30, 30, 0.4);
+    opacity: .1;
+    transition: all .5s;
+}
+
+.incoming-call__phone{
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    z-index: 200000 !important;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transition: visibility .5s;
+    right: 150px;
+    top: 30px;
+}
+
+
+
+.incoming-call-circle {
+    width: 100px;
+    height: 100px;
+    top: 50px;
+    left: 50px;
+    position: absolute;
+    background-color: rgb(0, 204, 255);
+    border-radius: 100%;
+    border: 2px solid transparent;
+    animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
+    transition: all .5s;
+}
+
+.incoming-call-phone-icon {
+    width: 60px;
+    height: 60px;
+    top: 70px;
+    left: 70px;
+    position: absolute;
+    background:  url(https://drive.google.com/uc?id=1V3N2b79QjDWetC_ss9wI3c-xpWDymn9R) no-repeat center center;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    animation: shaking-phone 1s infinite ease-in-out;
+}
+
+@keyframes coccoc-alo-circle-fill-anim {
+    0% {
+        transform: rotate(0) scale(.7) skew(1deg);
+    }
+    50% {
+        transform: rotate(0) scale(1) skew(1deg);
+    }
+    100% {
+        transform: rotate(0) scale(.7) skew(1deg);
+    }
+}
+
+
+@keyframes shaking-phone {
+    0% {
+        transform: rotate(0) scale(1) skew(1deg)
+    }
+    10% {
+        transform: rotate(-25deg) scale(1) skew(1deg)
+    }
+    20% {
+        transform: rotate(25deg) scale(1) skew(1deg)
+    }
+    30% {
+        transform: rotate(-25deg) scale(1) skew(1deg)
+    }
+    40% {
+        transform: rotate(25deg) scale(1) skew(1deg)
+    }
+    50% {
+        transform: rotate(0) scale(1) skew(1deg)
+    }
+    100% {
+        transform: rotate(0) scale(1) skew(1deg)
+    }
+}
+
+.incoming-call{
+
+  &__buttons{
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin: 20px;
+    @include removeDefaultButtonStyle();
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    padding: 15px;
+
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+
+  .accept{
+    background-color: green;
+  }
+
+  .reject{
+    background-color: red;
+  }
+}

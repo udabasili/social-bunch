@@ -123,7 +123,7 @@ class Auth extends Component {
                 name="username" 
                 onChange={this.onChangeHandler} 
                 value={userData.username}
-                className="form__input"/>
+                className="form__input" required/>
               <label htmlFor="username" className="form__label">
                 Username
               </label>
@@ -141,7 +141,7 @@ class Auth extends Component {
                 onChange={this.onChangeHandler}
                 value={userData.email}
                 name="email" 
-                className="form__input"/>
+                className="form__input" required/>
               <label htmlFor="email" className="form__label">Email</label>
             </div>
           </div>
@@ -153,7 +153,7 @@ class Auth extends Component {
                 name="password" 
                 onChange={this.onChangeHandler}
                 value={userData.password}
-                className="form__input"/>
+                className="form__input" required/>
               <label htmlFor="password" className="form__label">Password</label>
             </div>
           </div>
@@ -169,7 +169,7 @@ class Auth extends Component {
                   name="confirmPassword" 
                   onChange={this.onChangeHandler}
                   value={userData.confirmPassword}
-                  className="form__input"/>
+                  className="form__input" required/>
                 <label htmlFor="confirm-password" className="form__label">Confirm Password</label>
               </div>
             </div>

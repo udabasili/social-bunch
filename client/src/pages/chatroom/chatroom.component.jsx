@@ -1,23 +1,19 @@
 import React, { Component } from 'react';
 import LeftNav from "../../components/left-nav/left-nav.components";
 import Contacts from "../../components/contacts/contact.component";
-import Messages from "../../components/messages/messages.component";
+import UserMessageHistory from "../../components/user-message-history/user-message-history.component";
 import Profile from "../../components/profile/profile.component";
-import ChatBox from "../../components/chat-box/chat-box.component";
 import Events from "../../components/events/events.components";
 import Group from "../../components/groups/group.component";
 import Users from "../../components/users/users.component";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationArrow, faMusic} from '@fortawesome/free-solid-svg-icons';
-import { authEndpoint, clientId, redirectUri, scopes } from "../../components/spotify/config";
 import hash from "../../components/spotify/hash";
-import ChatArea from '../../components/chat-area/chat-area.component';
-import  ChatMessenger  from '../../components/chat-messages/chat-messages.component';
-import axios from "axios";
 import { socket } from '../../services/socketIo';
 import ModalWindow from '../../components/modal-window/modal-window.component';
-import VideoComponent from "../../components/video-calling/video-component"
+import VideoComponent from "../../components/video-calling/video-component";
 import {connect} from "react-redux";
+import { getLocation } from '../../redux/action/user.action';
+import PrivateMessages from '../../components/private-messages/private-messages.component';
+
 
 const SpotifyWebApi = require('spotify-web-api-node');
 let spotify = new SpotifyWebApi();
@@ -27,112 +23,83 @@ class Chatroom extends Component {
     super(props)
     this.state = {
       currentLink:"messages",
+      showUserMessages: false,
       incomingCalling: false,
       calling:null,
       caller: null,
       showModal: false,
-      switchButton:{location:false},
       token: null,
-      messages:[],
       location:null,
       albums:null, 
       room:null,
       friend:null
     };
-    this.getCurrentlyPlaying = this.getCurrentlyPlaying.bind(this);
+    this.getAlbum = this.getAlbum.bind(this);
     }
   //show user's profile 
     showProfile = (value) =>{
       this.setState((prevState)=>({
         ...prevState,
         friend: value,
-        messages: new Array(0)
       }))
     }
 
-  //toggle location button off and on
-  switchButton = (type) =>{      
-    this.setState((prevState)=>({
-        ...prevState,
-        switchButton:{
-          ...prevState.switchButton,[type]: !prevState.switchButton[type]
-        }
-    }), ()=> {
-      if(this.state.switchButton[type]){
-        this.getUserLocation() 
-      }
-      else{
-        this.setState((prevState)=>({
-          ...prevState,
-            location: null
-        }))
-      }
-    })
-  }
-
-  onChangeHandler = (value) =>{
-    spotify.searchTracks(value)
-  .then((data) =>{
-    this.setState({ albums: data.body.tracks.items[0]});
-  }, function(err) {
-    console.error(err);
-  });
-  }
+    showUserMessagesHandler = (value) => {
+      this.setState({
+        showUserMessages: true,
+        friend:value
+      })
+    }
   
-componentDidMount() {
-  socket.on('privateNewMessage', this.setMessage)
-  socket.on('receive', this.receiveVideo)
-  let _token = hash.access_token; 
-  if (_token && _token !== undefined) {
-    localStorage.setItem("token",_token)
-    this.setState({
-      token: _token
-    });
-    _token = localStorage.getItem("token")
-    this.getCurrentlyPlaying(_token);
+  componentDidMount() {
+    socket.on('privateMessage', this.popUpUserProfile)
+    socket.on('receive', this.receiveVideo)
+    let _token = hash.access_token; 
+    if (_token && _token !== undefined) {
+      localStorage.setItem("token",_token)
+      this.setState({
+        token: _token
+      });
+      _token = localStorage.getItem("token")
+      this.getAlbum(_token);
+
+      }
 
     }
+    //recieve the socket information about the contact being video called and pop up the video compoent
+    //to activate the video room for the recipient to join
 
-  }
+    receiveVideo = (message) =>{
+      this.setState({
+        incomingCalling:message.incomingCalling, 
+          caller: message.caller,
+          calling: message.calling,
+          room: message.room,
+          showModal: true
+      })   
+    }
 
-  receiveVideo = (message) =>{
-    this.setState({
-      incomingCalling:message.incomingCalling, 
-        caller: message.caller,
-        calling: message.calling,
-        room: message.room,
-        showModal: true
-    })
-    
-}
+    toggleModal = (value) =>{
+      this.setState((prevState) => ({
+        ...prevState,
+        showModal: value
+        })
+      )
+    }
 
+    popUpUserProfile = (message) =>{      
+      let userFriend = this.props.allUsers.filter(user => user.username === message.createdBy)[0]    
+        this.setState(prevState => ({
+          ...prevState,
+          showUserMessages: true,
+          friend: userFriend
 
+      })
+    )}
 
-  getUserLocation = () => {
-    if (!navigator.geolocation) {
-        return alert("Sorry this browser doesn't support geolocation ")
-    }    
-    navigator.geolocation.getCurrentPosition((position)=>{
-        let lat = position.coords.latitude
-        let long = position.coords.longitude
-        let api = process.env.REACT_APP_GOOGLE_API;
-      return axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${long}&key=${api}`)
-            .then((response)=> {
-                if(response.data.status === "OK"){
-                    let location  = response.data.results[8].formatted_address
-                    this.setState((prevState)=>({
-                      ...prevState,
-                        location: location
-                    }))
-                    
-                    }
-                }
-            )
-    })
-
-  }
-  
-  getCurrentlyPlaying(token) {
+          
+  //get album from spotify
+  getAlbum(token) {
     token = localStorage.getItem("token")
     spotify.setAccessToken(token)
     spotify.getNewReleases()
@@ -148,23 +115,6 @@ componentDidMount() {
   }
 
 
-  setMessage = (message) =>{
-    this.setState(prevState => ({
-      ...prevState,
-      messages: [...prevState.messages, message]
-      })
-    )}
-
-
-  setMessagePerUser = (message, value) => {
-    let friend = value.friend
-    this.setState(prevState => ({
-      ...prevState,
-      messages: [...message],
-      friend: {friend}
-    })
-    )
-  }
 
   navComponents = () =>{
     switch (this.state.currentLink) {
@@ -172,8 +122,8 @@ componentDidMount() {
         return (
           <div>
             <h1 className="primary-header">Contacts</h1>
-            <Contacts showProfile={this.showProfile}/>
-            <Messages showMessages={this.setMessagePerUser}/>
+            <Contacts showMessages={this.showUserMessagesHandler}/>
+            <UserMessageHistory showMessages={this.showUserMessagesHandler}/>
           </div>
         )  
         case "events":
@@ -210,6 +160,7 @@ componentDidMount() {
           {(this.state.showModal && this.state.incomingCalling) &&
             <ModalWindow closeHandler={this.toggleModal}  >
               <VideoComponent 
+              closeHandler={this.toggleModal} 
               calling={this.state.calling}
               currentUser={this.props.currentUser.username}
               caller={this.state.caller}
@@ -220,42 +171,17 @@ componentDidMount() {
             }
           <LeftNav 
             albums={this.state.albums}
-            onChangeHandler={this.onChangeHandler}
             navLinkChangeHandler={this.navLinkChangeHandler}  
             className="navigation"/>
             <div className="chatroom__left-section">
               {this.navComponents()}
             </div>
             <div className="chatroom__main-section">
-              <div className="chat-area-header">
-                <div className="icon">
-                  <div className={this.state.switchButton["location"] ? "" : "strike" }>
-
-                  </div>
-                  <FontAwesomeIcon 
-                      onClick={()=>this.switchButton("location" )} 
-                      icon={faLocationArrow}/>
-                </div>
-                <div className="icon">
-                  <div>
-                  </div>
-                  <a 
-                    href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
-                    "%20"
-                      )}&response_type=token&show_dialog=true`}>
-                    <FontAwesomeIcon icon={faMusic}/>
-                  </a>
-                </div>
-              </div>
-              <ChatArea>
-                {this.state.messages.map((message) =>(
-                  <ChatMessenger message={message}
-                    location = {this.state.location}/>
-                  ))
-                }
-              </ChatArea>
-              <ChatBox getMessage={this.setMessage} 
-                recipient={this.state.friend}/>
+            { this.state.friend && this.state.showUserMessages &&
+              <PrivateMessages 
+                recipient={this.state.friend}
+                currentUser = {this.props.currentUser}/>
+              }
             </div>
             <div className="chatroom__right-section">
               {this.state.friend &&
@@ -272,9 +198,15 @@ componentDidMount() {
 
 const mapStateToProps = (state) =>({
   currentUser:state.user.currentUser,
+  errors : state.errors,
+  allUsers: state.user.users,
+
+})
+
+const mapDispatchToProps = dispatch => ({
+  getLocation: (coords) => dispatch(getLocation(coords))  
+
 })
 
 
-
-
-export default connect(mapStateToProps , null)(Chatroom);
+export default connect(mapStateToProps , mapDispatchToProps)(Chatroom);

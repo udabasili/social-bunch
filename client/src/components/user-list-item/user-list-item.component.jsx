@@ -10,24 +10,31 @@ function UserListItem({sendFriendRequest = f => f, user, currentUser}) {
     function checkCondition(){
       if ( friendsRequests ){
         
-        if(friendsRequests.filter(request => request.username === username).length > 0){
+        if(friendsRequests.some(request => request.username === username)){
+          console.log(1);
+          
           return <FontAwesomeIcon  icon={faHourglass}/>
 
           }
-        } else if ( currentUser.requestsSent.filter(request => request.sentTo === username).length > 0
+        } else if ( currentUser.requestsSent.some(request => request.sentTo === username)
         ){
+          console.log(2);
+
           return <FontAwesomeIcon  icon={faHourglass}/>
 
-
         }
-        else if (currentUser.friends.filter(friend => friend.userInfo.username === username)||
-        currentUser.username !== username
+        else if (currentUser.friends.some(friend => friend.userInfo.username === username)||
+        currentUser.username === username
         ){
+          console.log(3);
+
           return <div></div>
 
         }
   
       else{
+        console.log(4);
+
         return <FontAwesomeIcon className="friend-request" onClick={()=>sendFriendRequest(_id)} icon={faUserPlus}/>
 
       }

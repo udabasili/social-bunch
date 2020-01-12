@@ -6,7 +6,7 @@ import React from 'react'
 
 const ChatArea = (props) => (
     <div className="chat-area">
-            {props.children}
+        {props.children}
     </div>
 )
 

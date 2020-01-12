@@ -34,6 +34,8 @@ export const createEvent = (event) =>{
                     dispatch(setEvents(response))
                 })
                 .catch((error)=>{
+                    console.log(error);
+                    
 
 
         })

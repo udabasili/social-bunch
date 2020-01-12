@@ -1,6 +1,5 @@
 import React,{useState} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWindowMinimize, faTimes, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 const Player = props => {
   const [minimize, setMinimized] = useState(true)
@@ -24,10 +23,6 @@ const Player = props => {
           </div>
           <div className="spotify__column">
             <span onClick={minimizeWindow} className="dot minimize">
-              { minimize ? 
-                <FontAwesomeIcon icon={faWindowMinimize}/>  :
-                <FontAwesomeIcon icon={faPlus}/>
-              }
             </span>
             
           </div>

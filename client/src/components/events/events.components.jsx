@@ -52,6 +52,15 @@ class Events extends Component {
       const event = this.state
       this.props.addEvent(event)
       this.setState({showModal:false})
+      this.setState((prevState) => ({
+        ...prevState,
+        eventName:"",
+        time:"",
+        summary:"",
+        imageUrl:"",
+        date:"",
+        }
+      ))
     }
     
 
@@ -112,9 +121,13 @@ class Events extends Component {
                   type="text" className="event__input" 
                   onChange={this.onChangeHandle} name="eventName" 
                   placeholder="Your name.." required/>              
-                <label className="event__label" for="time">Time</label>
-                <input type="time" className="event__input" name="time" onChange={this.onChangeHandle} required/>
-                <label className="event__label" for="time">ImageUrl</label>
+                <label className="event__label" for="time" >Time</label>
+                <input 
+                  type="time" 
+                  className="event__input" 
+                  name="time" 
+                  onChange={this.onChangeHandle} required/>
+                <label className="event__label" for="time" required>ImageUrl</label>
                 <input type="text" className="event__input" name="imageUrl" onChange={this.onChangeHandle} required/>
                 <input type="submit" className="form-submit-button" value="Submit"/>
               </form>

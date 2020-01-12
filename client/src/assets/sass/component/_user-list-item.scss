@@ -24,9 +24,10 @@
     }
 
     &__info{
-      width: 60%;
+      width: 90%;
       display: flex;
       margin-left: 10px;
+      justify-content: space-between;
       flex-direction: row;
       align-items: center;
     }
@@ -36,7 +37,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-left: 20px;
+      margin-right: 10px;
      
      .friend-request{
       cursor: pointer;

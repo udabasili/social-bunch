@@ -5,7 +5,6 @@ const mongoose = require("mongoose");
 //confirm token is correct
 exports.confirmAuthentication = async (req, res, next) =>{
     try {
-        console.log((req.headers['authorization']).split(" ")[1])
         let token = (req.headers['authorization']).split(" ")[1];
         if (!token) {
             return next({
@@ -56,10 +55,7 @@ exports.confirmAuthentication = async (req, res, next) =>{
 // check token before giving access to account 
 exports.protectedRoute = function(req, res, next){
     try{
-        console.log((req.headers['authorization']).split(" ")[1])
-
         let token = (req.headers['authorization']).split(" ")[1];
-        
         if (!token) {
             return res.status(401).json({message: 'Must pass token'});
         }

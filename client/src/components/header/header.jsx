@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faTimes, faSignOutAlt, faBell } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faTimes, faSignOutAlt, faBell, faHome } from '@fortawesome/free-solid-svg-icons';
 import {connect} from "react-redux";
 import {setCurrentUser, logOut, rejectFriendRequest, acceptFriendRequest } from "../../redux/action/user.action";
 import {withRouter, Link} from "react-router-dom";
@@ -26,6 +26,9 @@ function Header ({currentUser, acceptRequest, rejectRequest, logOut}) {
 
     return (
         <div className="header">
+            <Link to="" className="header__home">
+                <FontAwesomeIcon icon={faHome}/>
+            </Link>
             <div className="user">
                 <div className="user__notification">
                     <NotificationIcon 
@@ -67,8 +70,6 @@ function Header ({currentUser, acceptRequest, rejectRequest, logOut}) {
                     </ul>
                     }
                 </div>
-                
-                    
                     <Link to={{
                         pathname: `/user/${currentUser._id}/profile`,
                         state: { userData: currentUser}

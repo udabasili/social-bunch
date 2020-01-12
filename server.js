@@ -6,8 +6,8 @@ const errorHandler = require("./controllers/errorHandler")
 const path = require("path");
 const userRoutes = require("./routes/user")
 const generalRoutes = require("./routes/general")
+const messageRoutes = require("./routes/messages")
 const chat = require("./chat/chat");
-const messages = require("./chat/messages");
 const videoChat = require("./video-call/video")
 const mongoConnect = require("./utils/db");
 const authRoute = require("./routes/auth");
@@ -35,6 +35,7 @@ app.use(authRoute);
 app.use("/authenticate-user", authenticated.confirmAuthentication)
 app.use(generalRoutes);
 app.use(authenticated.protectedRoute);
+app.use(messageRoutes);
 app.use("/video-token", videoChat.getVideoToken)
 app.use("/user/:userId/", authenticated.confirmUser,userRoutes);
 app.use(errorHandler);
@@ -71,12 +72,14 @@ io.on("connection", (client)=>{
     })
 
     //add the user to a room when he loads link
-    client.on("join", ({username, groupId}, callback) =>{         
+    client.on("join", ({username, groupId}, callback) =>{ 
+        console.log(username, groupId);
+                
         chat.joinRoom(username, client.id, groupId)
            .then((response) =>{
-            let room = response.socket[0].name
+                let room = response.socket[0].name
                client.join(room)
-                io.to(room).emit("onlineUsersStatus", response)
+                io.to(room).emit("updateRoomMemberStatus", response)
                callback(response);                            
                
            })
@@ -84,22 +87,25 @@ io.on("connection", (client)=>{
 
     
     //user leave group
-    client.on("leave", ({username, roomId }, callback) =>{         
+    client.on("leave", ({username, roomId }, callback) =>{    
+        console.log({username, roomId })     
         chat.leaveRoom(username, roomId )
-            .then((response) =>{
-                console.log(response);
-                
+            .then((response) =>{                
                 let room = response.socket[0].name
                client.leave(room)
-                io.to(room).emit("onlineUsersStatus", response)
+                client.to(room).emit("updateRoomMemberStatus", response)
             })
         })
     //send message to particular room
     client.on("messageToGroup", ({message,senderId, groupId}) =>{
+        console.log(message,senderId, groupId);
+        
         let date = new Date();
         chat.getUser(senderId, groupId)
-            .then((response) =>{                                
-                client.to(response.room).emit('newMessage', {
+            .then((response) =>{      
+                console.log(response);
+                                          
+                io.to(response.room).emit('groupMessage', {
                     text: message,
                     createdAt: date.toISOString(),
                     groupName: response.room,
@@ -108,15 +114,19 @@ io.on("connection", (client)=>{
             })   
         })
 
-        //send private message
-        client.on("messageUser", ({message,receiver,sender}, callback) =>{
+        //send private message  F_sp5QzOF7WoNpDNAAAD Dreamcatcher008
+        client.on("messageUser", ({message,receiver,sender,location}, callback) =>{
         let date = new Date();
-        chat.getUserSocketId(receiver)
-            .then((response) =>{                 
-                    io.to(response).emit('privateNewMessage', {
+        chat.getUserSocketId(receiver)        
+            .then((response) =>{      
+                console.log(response, receiver);
+           
+                    client.to(response).emit('privateMessage', {
                     text: message,
                     createdAt: date.toISOString(),
                     createdBy: sender,
+                    sentTo: receiver,
+                    location
                     })     
             callback()
             }
@@ -127,7 +137,7 @@ io.on("connection", (client)=>{
         console.log({ calling, caller, room})   
         chat.getUserSocketId(calling)
         .then((response) =>{                             
-            io.to(response).emit('receive', {
+            client.to(response).emit('receive', {
             incomingCalling: true,
             room:room,
             caller: caller,

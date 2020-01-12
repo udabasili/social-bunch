@@ -7,7 +7,7 @@ import Header from "../../components/header/header";
 const PrivateRoute = ({ component: Component, currentUser, ...rest }) => {    
     return (
     <Route {...rest} render={(props) => (
-       localStorage.getItem("validator") && currentUser
+       sessionStorage.getItem("validator") && currentUser
         ? <div>
             <Header/>
             <Component {...props} />

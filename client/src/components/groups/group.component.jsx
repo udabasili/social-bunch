@@ -4,7 +4,7 @@ import {createGroup,
     joinGroup, 
     leaveGroup, 
     deleteGroup, 
-    getGroupById} from "../../redux/action/group.action";
+    getGroupMembersById} from "../../redux/action/group.action";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import ModalWindow from "../modal-window/modal-window.component";
@@ -22,16 +22,17 @@ class Group extends Component {
         name:"",
         category:"",
         showModal: false
-
     }
+
     componentDidMount(){
       this.props.getAllGroups()
     }
 
-    getGroupById = (groupId) =>{
-      getGroupById(groupId)
+    getGroupMembersById = (groupId) =>{
+      this.props.getGroupMembersById(groupId)
   
     }
+
     getDate = (e) =>{
         let date = new Date(e)     
         this.setState({date: date})
@@ -52,7 +53,11 @@ class Group extends Component {
       e.preventDefault()
       const group = this.state
       this.props.createGroup(group)
-      this.setState({showModal:false})
+      this.setState({
+        showModal:false,
+        name:"",
+        category:"",
+      })
     }
     
 
@@ -81,7 +86,7 @@ class Group extends Component {
                       group.members.includes(currentUser.username) ?
                         <Link  
                           to={`/group/${group._id}`} 
-                          onClick={this.getGroupById(group._id)}>
+                          onClick={this.getGroupMembersById(group._id)}>
                             <h1 className="primary-header">{group.name}</h1>
                         </Link>:
                         <h1 className="primary-header">{group.name}</h1>
@@ -92,10 +97,10 @@ class Group extends Component {
                     </div>
                     { group.members.includes(currentUser.username) ?
                     <button className="card__join-button" onClick={() =>leaveGroup(group._id)}>
-                          Leave Group
+                          Leave
                         </button>                        
                         : <button className="card__join-button" onClick={() =>joinGroup(group._id)}>
-                          <span >Join Group</span>
+                          <span >Join</span>
                         </button>
                     }
                 </div>
@@ -140,6 +145,7 @@ const mapDispatchToProps = (dispatch) =>({
   leaveGroup: group => dispatch(leaveGroup(group)),
   getAllGroups: () => dispatch(getAllGroups()),
   deleteGroup: () => dispatch(deleteGroup()),
+  getGroupMembersById: (groupId) => dispatch(getGroupMembersById(groupId))
 })
 
 

@@ -1,5 +1,5 @@
 import {
-    GET_GROUPS, 
+    GET_GROUPS, GET_ROOM, 
     } from "../actionType/group.actionType";
 import { removeError, addError } from "./errors.action";
 import { restApi, userId } from "../../services/api";
@@ -15,9 +15,15 @@ export const setGroups = (groups) =>({
 
 }) 
 
+export const setRoom = (roomInfo) =>({
+    type: GET_ROOM,
+    payload: roomInfo
+
+}) 
 
 
-export const getAllGroups = () =>{
+
+export const getAllGroups = () => {
     return dispatch =>{
         return restApi ("get", "/groups")
             .then((response)=>{       
@@ -30,15 +36,18 @@ export const getAllGroups = () =>{
     }
 }
 
-export const getGroupById = (groupId) =>{
-
+export const getGroupMembersById = (groupId) => {
     return dispatch =>{
         return new Promise((resolve, reject)=>{
-        return restApi ("get", `/user/${userId}/group/${groupId}`)
-        .then((response)=>{
-            return resolve(response)   
+        return restApi ("get", `/user/${userId}/group/${groupId}/`)
+            .then((response)=>{
+                dispatch(removeError())
+                dispatch(setRoom(response))
+                return resolve(response)   
             })
         .catch((error)=>{
+            console.log(error)
+            reject()
             })
         })
     }

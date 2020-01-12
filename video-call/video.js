@@ -35,8 +35,8 @@ var token = new AccessToken(
    });
         
     } catch (error) {
-        
-        
+        console.log(error)    
+    
     }
 
 

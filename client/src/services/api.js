@@ -9,7 +9,7 @@ export function TokenHeader(token){
         delete axios.defaults.headers.common["Authorization"];
     }
 }
-export  const userId = localStorage.getItem("userId");
+export  const userId = sessionStorage.getItem("userId");
 export function restApi(method, path, data){
     return new Promise((resolve, reject) => {
         return axios[method](path, data)
@@ -23,7 +23,6 @@ export function restApi(method, path, data){
 
 //set src value
 export const convertBufferToImage = (user) =>{
-    console.log(user);
     
     let imageUrl = user.userImage
     imageUrl = "data:image/png;base64," + imageUrl;

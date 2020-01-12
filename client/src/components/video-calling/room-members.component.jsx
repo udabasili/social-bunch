@@ -72,8 +72,7 @@ const RoomMembers = ({member}) => {
   }, [audioTracks]);
 
   return (
-    <div className="member">
-      <h3>{member.identity}</h3>
+    <div className="video-component">
       <video ref={videoRef} autoPlay={true} />
       <audio ref={audioRef} autoPlay={true} muted={true}/>
     </div>

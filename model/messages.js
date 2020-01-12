@@ -11,7 +11,7 @@ const messageSchema = new Schema(
             type:String,
         },
 
-        type:{
+        location:{
             type:String
         }
     },

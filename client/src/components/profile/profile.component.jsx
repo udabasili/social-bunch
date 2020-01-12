@@ -16,28 +16,31 @@ export default class Profile extends Component {
         this.setState({showModal: showModal})
     }   
 
-    render() {        
+    render() {                
         return (
             <div className="profile">
                 { this.props.userData ? 
                     <div>
                         <div className="profile__image">
                             <img 
-                                src={ this.props.userData.friend.image ? 
-                                    `data:image/png;base64,${this.props.userData.friend.image }` :
-                                    this.props.userData.friend.userImage}
+                                src={ this.props.userData.image ? 
+                                    `data:image/png;base64,${this.props.userData.image }` :
+                                    this.props.userData.userImage}
                                 className="profile__image-user"/>
                         </div>
-                        <h2 className="profile__username">{this.props.userData.friend.username}</h2>   
+                        <h2 className="profile__username">{this.props.userData.username}</h2> 
+                        {!this.props.groupChat &&
                         <div className="communication">
                             <FontAwesomeIcon className="icon-custom"  onClick={()=> this.toggleModal(true)} icon={faVideo}/>
                             <FontAwesomeIcon className="icon-custom" icon={faBan}/>
+                        
                         </div>  
+                        }
                         <Link 
                             className="btn btn-white" 
                             to={{
-                                pathname: `/user/${this.props.userData.friend._id}/profile`,
-                                state: { userData: this.props.userData.friend}
+                                pathname: `/user/${this.props.userData._id}/profile`,
+                                state: { userData: this.props.userData}
                             }}
                         >
                         Profile
@@ -49,7 +52,7 @@ export default class Profile extends Component {
                         <ModalWindow closeHandler={this.toggleModal}  >
                             <VideoComponent 
                             closeHandler={this.toggleModal} 
-                            calling={this.props.userData.friend.username}
+                            calling={this.props.userData.username}
                             caller={this.props.currentUser.username}
                             currentUser={this.props.currentUser.username}
                             room={this.state.room}

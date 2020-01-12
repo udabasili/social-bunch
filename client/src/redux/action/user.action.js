@@ -25,7 +25,7 @@ export const setCurrentUser = (user) =>({
 
 export const logOut = () =>{
     return dispatch =>{
-        localStorage.clear()
+        sessionStorage.clear()
         dispatch(setCurrentUser({}))
         setRestApiHeader(false)
         dispatch(setAllUsers([]))
@@ -69,10 +69,10 @@ export function Login (type, userData){
             return restApi("post", `/auth/${type}`, userData)
                 .then(response => {                    
                     dispatch(removeError())
-                    localStorage.setItem("validator", response.validator)
+                    sessionStorage.setItem("validator", response.validator)
                     setRestApiHeader(response.validator)
                     let currentUser = convertBufferToImage(response.currentUser);
-                    localStorage.setItem("userId", currentUser._id);
+                    sessionStorage.setItem("userId", currentUser._id);
                     dispatch(setCurrentUser(currentUser));
                     return currentUser.username
                 })
@@ -116,7 +116,7 @@ export function editUser (userData){
 
 //Check if user is authenticated 
 export const verifyUser = async () => { 
-    let token = localStorage.validator;
+    let token = sessionStorage.validator;
     setRestApiHeader(token)
     return dispatch =>{
         return new Promise((resolve, reject)=>{
@@ -125,14 +125,14 @@ export const verifyUser = async () => {
                 let currentUser = convertBufferToImage(response.currentUser)
                 dispatch(setCurrentUser(currentUser));
                 setRestApiHeader(token)
-                localStorage.setItem("validator", response.validator)
-                localStorage.setItem("userId", currentUser._id)            
+                sessionStorage.setItem("validator", response.validator)
+                sessionStorage.setItem("userId", currentUser._id)            
                 return resolve()
             })
             .catch((error)=>{
                 setRestApiHeader(null)
-                localStorage.removeItem("validator")
-                localStorage.removeItem("userId")
+                sessionStorage.removeItem("validator")
+                sessionStorage.removeItem("userId")
                 dispatch(addError("Please Login again"))
                 return reject("")
             })
@@ -202,10 +202,14 @@ export const acceptFriendRequest =  (addedUserId) =>{
         return restApi("get", `/user/${userId}/accept-friend-request/${addedUserId}`)
             .then((response)=>{                
                 dispatch(removeError())            
-                let users =  response.map(users=>{
+                let currentUser = response.filteredUser
+                currentUser = convertBufferToImage(currentUser)
+                let users = response.filteredUsers
+                users =  users.map(users=>{
                     return convertBufferToImage(users)
                 })
-                    dispatch(setAllUsers(users))
+                dispatch(setAllUsers(users))
+                dispatch(setCurrentUser(currentUser))
                 })
                 .catch((error)=>{
                 dispatch(addError("Something went Wrong. Try Again Later"))
@@ -214,21 +218,20 @@ export const acceptFriendRequest =  (addedUserId) =>{
 }
 
 
-export const sendMessage = (message, receiverId) =>{  
+
+export const getLocation = (coords) =>{
     return dispatch =>{
-        dispatch(startFetching())
-        return restApi("post", `/user/${userId}/send-message/${receiverId}`, message)
-            .then((response)=>{         
-                dispatch(removeError())           
-                let currentUser = response.filteredUser
-                currentUser = convertBufferToImage(currentUser)
-                dispatch(setCurrentUser(currentUser))
-
-            })
-            .catch((error)=>{
-                dispatch(addError("Something went Wrong. Try Again Later"))
-            }
-                    )
-        }
+    return new Promise((resolve, reject) =>{
+        return restApi("post", `/user/${userId}/get-location`, coords)
+            .then((result) => {                
+                dispatch(removeError())
+                resolve(result)
+                return result
+                
+            }).catch((err) => {                
+                dispatch(addError(err))
+                reject()
+            });
+    })
+    }
 }
-

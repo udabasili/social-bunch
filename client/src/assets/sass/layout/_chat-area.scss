@@ -9,15 +9,14 @@ $gray: #92959E;
 .chat-area {
     padding: 3rem 3rem 2rem;
     width: 100%;
+    height: 80%;
     position: relative;
-    margin: 4rem auto;
     bottom: 0;
     overflow-y: auto;
     background-color: $color-card-background;
     box-shadow: 0 8px 10px rgba($color: #000000, $alpha: .2),
     0 10px 10px rgba($color: #000000, $alpha: .2)
     ;
-    height: 90%;
     
     .message-data {
       margin-bottom: 1.5rem;
@@ -33,7 +32,7 @@ $gray: #92959E;
     
     .message-data-time {
       color: lighten($gray, 8%);
-      padding-left: .2rem;
+      padding-left: 1rem;
       font-size: 1rem;
     }
     
@@ -72,7 +71,6 @@ $gray: #92959E;
       float: left;
       text-align: left;
       
-    
     }
     
   }
@@ -88,4 +86,75 @@ $gray: #92959E;
       clear: both;
       height: 0;
   }
+
   
+//Chat send Box
+
+  .chat-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 10%;
+    position: absolute;
+    top: 100%;
+    transform: translateY(-100%);
+    background: #fff;
+    justify-content: space-between;
+    border-top: 1px solid gray;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    a {
+        
+    display: inline-block;
+    text-align: center;
+    }
+
+    &__icon {
+        width: 35px;
+        cursor: pointer;
+        color: $color-icon;
+        @include removeDefaultButtonStyle;
+
+        height: 35px;
+        font-size: 20px;
+        box-shadow: none;
+        order: 2;
+        margin-right: 30px;
+    }
+    
+    &__input{
+        position: relative;
+        text-align: left;
+        outline: none;
+        width: 90%;
+        height: 100%;
+        padding-left: 3rem;
+        font-size: 1.4rem;
+        font-family: 'Roboto';
+        color: #4b4b4b;            
+        border: none;
+        outline: none;
+        
+
+    }
+
+    &__submit{
+        margin-left: 0;
+        color: $color-icon;
+        font-size: 2rem;
+        border-left: 1px solid $color-icon;
+        position: relative;
+        border: 1px solid black;
+        cursor: pointer;
+        background-color: white;
+        height: 90%;
+
+
+
+        & > *{
+            font-size: 3rem;
+
+        }
+    }
+  }

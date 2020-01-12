@@ -33,6 +33,7 @@ const Room = ({ roomName, token }) => {
     return () => {
         setRoom(currentRoom => {
           if (currentRoom && currentRoom.localParticipant.state === 'connected') {
+            currentRoom.localParticipant.tracks.forEach(track => track.stop());            
             currentRoom.disconnect();
             return null;
           } else {
@@ -47,10 +48,9 @@ const Room = ({ roomName, token }) => {
             {room ? (
               <RoomMembers key={room.localParticipant.sid}  member={room.localParticipant}/> 
             ) : (
-              ''
+              <div class="loader"></div>
             )}
           </div>
-          <h3>Remote Participants</h3>
           <div className="recipient">{remoteParticipants}</div>
         </div>
       );

@@ -5,14 +5,14 @@ import { socket } from '../../services/socketIo';
 
 
 /**
-  * @desc show messages sent by friends
+  * @desc show past messages between a user and his friend
   * friends list to User Icon as props
   * @param props for the toggle button of showing and hiding profile window and current user from redux
   * @author Udendu Abasili
 
 */
 
-function Messages(props) {
+function UserMessageHistory(props) {
     
     const [onlineFriends, setOnlineFriends] = useState([])  
 //Get the list of online friends from the server and map through the list of friends to show status
@@ -20,7 +20,6 @@ function Messages(props) {
         const interval = setInterval(() => {
           socket.emit("getOnlineFriends",props.currentUser.username, (response)=>{            
               setOnlineFriends(response)
-     
            })
         }, 2000);
         return () => clearInterval(interval);
@@ -30,9 +29,9 @@ function Messages(props) {
         <div className="messages">
             {props.currentUser.friends.map((friend, i)=>(
                 friend.messages  ? 
-                    <div key={i} onClick={()=>props.showMessages(friend.messages, {friend:{
+                    <div key={i} onClick={()=>props.showMessages({
                            image: friend.userInfo.userImage,
-                            ...friend.userInfo}} 
+                            ...friend.userInfo}
                             )} 
                           className="message">
                         <div className="message__image">
@@ -57,6 +56,7 @@ function Messages(props) {
 }
 const mapStateToProps = (state) =>({
     currentUser:state.user.currentUser
+
  })
  
- export default connect(mapStateToProps, null)(Messages)
+ export default connect(mapStateToProps, null)(UserMessageHistory)

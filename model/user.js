@@ -173,7 +173,24 @@ userSchema.methods.saveMessage = function(user, message, type) {
         }
 
         this.friends = friends;
-        this.save()
+        return this.save()
+        
+    } catch (error) { 
+    }
+}
+
+//get message based on a user's friend
+userSchema.methods.getMessages = function(user) {
+    try {
+        let messages = []
+        let friendIndex = this.friends.findIndex((friend)=>(
+            friend.userInfo.username === user.username
+        ))
+        
+        if (friendIndex !== -1){
+            messages = this.friends[friendIndex].messages
+        }        
+        return messages;
         
     } catch (error) {
         

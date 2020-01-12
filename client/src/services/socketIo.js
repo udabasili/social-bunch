@@ -3,6 +3,7 @@ import { userId } from './api';
 
 export const socket =  io.connect("")
 
+
 /***CHAT */
 /**start the connection based on the socket name */
 export async function startIOConnection (){
@@ -13,8 +14,7 @@ export async function startIOConnection (){
 }
 
 //send message to group
-export const sendMessageToGroup = (message, groupId) =>{
-    
+export const sendMessageToGroup = (message, groupId) =>{    
     return socket.emit("messageToGroup", {
         message: message,
         groupId: groupId,
@@ -24,15 +24,15 @@ export const sendMessageToGroup = (message, groupId) =>{
             console.log(error);
             
         }
-        console.log("message delivered")
     })
 }
 
-export const sendMessageToPerson =  (message, sender, receiver) =>{      
+export const sendMessageToPerson =  (message, sender, receiver, location) =>{      
      return socket.emit("messageUser", {
         message,
         sender,
-        receiver
+        receiver,
+        location
         }, (response)=>{
             
         return response

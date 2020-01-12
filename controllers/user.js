@@ -2,7 +2,17 @@ const User = require("../model/user");
 const Event = require("../model/event");
 const Group = require("../model/group");
 const mongoose = require("mongoose");
-const token =require("../utils/token")
+const token =require("../utils/token");
+
+
+const api = process.env.GOOGLE_API;
+
+const googleMapsClient = require('@google/maps').createClient({
+    key: api,
+    Promise: Promise
+
+
+});
 
 
 exports.signUp = async function(req, res, next){
@@ -100,7 +110,7 @@ exports.acceptFriend = async function(req, res, next){
         let filteredFriendData = await friend.filterUserData()
         await user.addFriend(filteredFriendData)
         await friend.addFriend(req.user)
-        user.removeFriendRequest(friend)
+        await user.removeFriendRequest(friend)
         let users = await User.find()
         user = await User.findById(userId)
         let filteredUser = await user.filterUserData()
@@ -230,3 +240,42 @@ exports.getUserFriends = async (req, res, next) =>{
         return next(error)
     }     
     }
+
+exports.getLocation = (req, res, next) =>{    
+        let lat  = req.body.lat
+        let long = req.body.long
+        googleMapsClient.reverseGeocode({
+            latlng: [lat, long]
+        })
+        .asPromise()
+        .then((response) => {
+            console.log(response);
+            
+            if(response.json.status === "OK"){
+                let location  = response.json.results[8].formatted_address
+                console.log(location)
+                return  res.status(200).json({
+                            status:200,
+                            message: location
+                        })
+                    }
+            else{
+                console.log(response.json);
+                
+                return next({
+                    error: 404,
+                    message:"Location not found"
+                })
+            }
+        }).catch((err) => {
+            console.log(err);
+            
+            return next({
+                    error: 500,
+                    message:"Location not found"
+                })
+        });
+
+        
+   
+}

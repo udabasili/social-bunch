@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import {withRouter} from "react-router-dom"
 import Profile from "../../components/profile/profile.component";
-import ChatArea from '../../components/chat-area/chat-area.component';
 import ChatMessenger  from '../../components/chat-messages/chat-messages.component';
-import ChatBox from "../../components/chat-box/chat-box.component";
+import ChatSendBox from "../../components/chat-send-box/chat-send-box.component";
 import {connect} from "react-redux";
-import { getGroupById } from '../../redux/action/group.action';
+import { getGroupMembersById } from '../../redux/action/group.action';
 import { socket, setRooms } from '../../services/socketIo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
@@ -17,49 +16,58 @@ class GroupPage extends Component {
     super(props)
     this.state = {
       messages:[],
-      groupMembers:[],
+      groupMembers:props.room.members,
+      groupId:props.match.params.groupId,
+      currentUser:props.currentUser,
       onlineMembers:[],
       showProfile:false,
-      friend:null
+      user:null
 
         }
       };
 
     componentDidMount() {
-      let groupId = this.props.match.params.groupId;
-      let username= this.props.currentUser.username;
-      socket.emit("join", {username, groupId}, (response) => {
+      socket.on('groupMessage', this.setMessage)
+      socket.on("users", this.users)
+      socket.on("updateRoomMemberStatus", this.updateStatus)
+      const {currentUser, groupId } = this.state
+      let username = currentUser.username      
+      this.props.getGroupMembersById(groupId)
+      socket.emit("join", {username, groupId}, (response) => {        
         this.setState((prevState) => ({
           onlineMembers:[...response.socket[0].users]
             })
           )   
         })
+      this.setRooms(username)
+      
+     
 
-      socket.on('newMessage', this.setMessage)
-      socket.on("users", this.users)
-      setRooms(username)
-      this.props.getGroupById(this.props.match.params.groupId)
+    }
+
+    componentWillUnmount(){
+      let roomId = this.state.groupId;
+      let username= this.state.currentUser.username;
+      //update online users in the group when anyone leaves
+      socket.emit('leave', { username, roomId }, (response) => {
+          socket.on("updateRoomMemberStatus", this.updateStatus)
+
+      })
+    }
+
+    setRooms = (username) => {
+      this.props.getGroupMembersById(this.state.groupId)
         .then((response) => {
             this.setState((prevState) => ({
               groupMembers:[...response.members]
               })
             )
         })
-
-    socket.on("onlineUsersStatus", this.updateStatus)
-    }
-
-    componentWillUnmount(){
-      let roomId = this.props.match.params.groupId;
-      let username= this.props.currentUser.username;
-      //update online users in the group when anyone leaves
-      socket.emit('leave', { username, roomId }, (response) => {
-          socket.on("onlineUsersStatus", this.updateStatus)
-
-      })
-    }
+      }
 
     updateStatus = (response) =>{      
+      console.log(response);
+      
       this.setState((prevState) => ({
         onlineMembers:[...response.socket[0].users]
 
@@ -69,17 +77,12 @@ class GroupPage extends Component {
     }
 
     showProfile = (user) =>{
-      let friend = this.props.users.filter((u) => u.username === user)
-      friend = (friend[0]);
-      
-      this.setState({ friend:{
-          friend: friend
-          
-        }
-      })
+       user = this.props.users.filter((u) => u.username === user)[0]
+      this.setState({ user})
     }
     
     setMessage = (message) =>{
+      
       this.setState(prevState => ({
         ...prevState,
         messages: [...prevState.messages, message]
@@ -88,32 +91,36 @@ class GroupPage extends Component {
     }
 
     render() {
-
-        let groupId = this.props.match.params.groupId                
+      const {user, messages, groupMembers, onlineMembers, groupId} =this.state
 
         return (
             <div className="group">
                 <section className="group__left-section">
-                    <Profile userData={this.state.friend}/>
+                    <Profile userData={user} groupChat/>
                 </section>
                 <section className="chatroom__main-section">
-                <ChatArea>
-                {this.state.messages.map((message) =>(
-                  <ChatMessenger message={message}/>
-                  ))
-                }
-              </ChatArea>
-              <ChatBox getMessage={this.setMessage} groupId={groupId}/>
+                  <div className="chat-container">
+                    <div className="chat-area-header">
+                    </div>
+                    <div className="chat-area" ref={this.chatArea}>
+                      { messages &&
+                        messages.map((message) =>(
+                          <ChatMessenger message={message}/>
+                          ))
+                      }
+                      </div>
+                    </div>
+                  <ChatSendBox getMessage={this.setMessage} groupId={groupId}/>
                 </section>
                 <section className="group__right-section">
                 <div>
                     <h2 className="primary-header">Group Members</h2>
                     <ul className="w3-ul w3-card-4">
-                      {this.state.groupMembers.map((member)=>(
+                      {groupMembers.map((member)=>(
                         <li className="w3-bar" onClick={() => this.showProfile(member)}>
                         <span 
                           className={`user-group-status
-                            ${this.state.onlineMembers.some(onlineMember => onlineMember.username === member) ? 
+                            ${onlineMembers.some(onlineMember => onlineMember.username === member) ? 
                             "online" : 
                             "offline"}`}>
                           </span>
@@ -135,11 +142,13 @@ class GroupPage extends Component {
 
 const mapStateToProps = (state) =>({
     currentUser:state.user.currentUser,
-    users: state.user.users
+    users: state.user.users,
+    room:state.groups.room
+
  })
  
  const mapDispatchToProps = dispatch => ({
-   getGroupById: id => dispatch(getGroupById(id))
+   getGroupMembersById: id => dispatch(getGroupMembersById(id))
  })
 
 

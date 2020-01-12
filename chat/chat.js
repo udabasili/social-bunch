@@ -77,49 +77,58 @@ exports.getUsersPerRoom = async (groupId) =>{
     }
 }
 
-exports.joinRoom = async (username, socketId, groupId ) =>{
 
+exports.joinRoom = async (username, socketId, groupId ) =>{
+    console.log(username, socketId);
+    
     try {
 
         let group = await Group.findById(mongoose.Types.ObjectId(groupId))
         let socket = await Socket.findOne({name: group.name})
-        if(socket.users.every(user => user.username !== username)){            
+        console.log();
+        
+        if(socket.users.filter(roomMember => roomMember.username === username).length === 0){            
             socket.users.push({
                 username: username,
                 socketId: socketId
             })
+        
             await socket.save()
         }
+        else{
+            socket.users.map(roomMember => {
+                return roomMember.username === username  ? 
+                ({...roomMember, socketId}) :
+                roomMember
+        })
+        await socket.save()
 
+    }
         socket = await Socket.find({
             name: group.name
         })
         return{
             socket
         }
-    
     } 
     catch (error) {
         return{
             error: error
         }
     }
-    
-
 }
+
 
 //user leave room by room Id
 exports.leaveRoom = async function(username, roomId){
     try {
-
         let group = await Group.findById(mongoose.Types.ObjectId(roomId))
         let socket = await Socket.findOne({
             name: group.name
         })
+
         if(socket){
             await socket.leaveRoom(username)
-
-            
         }
         socket = await Socket.find({
             name: group.name
@@ -139,29 +148,22 @@ exports.logout = async function(socketId){
 
     try {
         let now = new Date()
-
         let user = await User.findOne({
             socketId: socketId
         })
         user.lastOnline = now 
         user.socketId = null
         await user.save()
-
-
-    } 
+    }
     catch (error) {
-        
     }
     
 }
 
 exports.getUser =  async (userId, groupId ) =>{
-    
     let group = await Group.findById(mongoose.Types.ObjectId(groupId))
     let user = await User.findById(mongoose.Types.ObjectId(userId))
-    let username = user.username
-    console.log(username);
-    
+    let username = user.username    
     let room = group.name
     socket = await Socket.findOne({
          name: room
@@ -182,10 +184,8 @@ exports.setUserSocketId = async (username, socketId) =>{
         let user = await User.findOne({
         username: username
         })        
-
         user.socketId = socketId;
         await user.save()
-
         return{
             socket: `:${username} given socket id`
         }
@@ -196,11 +196,10 @@ exports.setUserSocketId = async (username, socketId) =>{
             return {
             error: error,
         }
-        
     }
-    
-
 }
+
+
 exports.getUserSocketId = async (username) =>{
 
     try {
@@ -208,37 +207,29 @@ exports.getUserSocketId = async (username) =>{
         let user = await User.findOne({
             username: username
         })        
-        console.log(user.socketId );
+        return user.socketId;
+    }   catch (error) {        
+            return {
+                error: error,
+            }
 
-        return user.socketId 
-
-        
-    }   catch (error) {
-        console.log(error);
-        
-        return {
-        error: error,
-        }
-
-    }
-    
-    
+    }    
 }
+
 
 exports.getOnlineFriends = async (username) =>{
     let user = await User.findOne({
         username: username
     })
     let users = await User.find()
-
-    let onlineUsers = await User.find({"socketId":{$ne: null}})
-
+    let onlineUsers = await User.find({"socketId":{$ne: null}});
     let onlineFriends = user.friends.map(friend => ({
         username:friend.userInfo.username,
         isOnline: onlineUsers.some(user => user.username === friend.userInfo.username),
         lastOnline: users.filter( user => user.username === friend.userInfo.username)[0].lastOnline
-
-    }))        
+            }
+        )
+    )        
     return onlineFriends
     
 }
