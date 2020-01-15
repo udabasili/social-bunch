@@ -1,14 +1,15 @@
 const util = require('util')
 const Cloud = require('@google-cloud/storage')
 const path = require('path')
-let serviceKey;
-if (process.env.NODE_ENV === "production"){
-  serviceKey = process.env.CREDS
-}
-else{
-  serviceKey = path.join(__dirname, '../utils/simply-chart-b0f4e69d71d8.json')
+let   serviceKey = path.join(__dirname, '../utils/simply-chart-b0f4e69d71d8.json')
 
-}
+// if (process.env.NODE_ENV === "production"){
+//   serviceKey = process.env.CREDS
+// }
+// else{
+//   serviceKey = path.join(__dirname, '../utils/simply-chart-b0f4e69d71d8.json')
+
+// }
 
 const { Storage } = Cloud
 
