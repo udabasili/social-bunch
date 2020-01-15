@@ -1,7 +1,6 @@
 const util = require('util')
 const Cloud = require('@google-cloud/storage')
 const path = require('path')
-let serviceKey;
 
 if (process.env.NODE_ENV === "production"){
   serviceKey = process.env.CREDS

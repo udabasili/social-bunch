@@ -22,8 +22,8 @@ const socketIo = require("socket.io");
 const io = socketIo(server)
 //initialize middleware
 app.use(cors())
-app.use(bodyParser.json({ limit: '10mb' }));
-app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.disable('x-powered-by')
 
 //if in production
@@ -121,9 +121,7 @@ io.on("connection", (client)=>{
         client.on("messageUser", ({message,receiver,sender,location}, callback) =>{
         let date = new Date();
         chat.getUserSocketId(receiver)        
-            .then((response) =>{      
-                console.log(response, receiver);
-           
+            .then((response) =>{                 
                     client.to(response).emit('privateMessage', {
                     text: message,
                     createdAt: date.toISOString(),
