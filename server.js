@@ -27,10 +27,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.disable('x-powered-by')
 
 //if in production
-app.get("*", (req, res)=>{
-    res.sendFile(path.join(__dirname, 'client/build/index.html'))
-})
-app.use(express.static(path.join(__dirname,'client/build')))
+app.use(express.static(path.join(__dirname,'/client/build')))
+
+
 
 
 //routes
@@ -53,7 +52,9 @@ app.use(function(req, res, next){
 
 //static file for Production stage
 
-
+app.get("/*", (req, res)=>{
+    res.sendFile(path.join(__dirname, '/client/build/index.html'))
+})
 //start the connection of the server
 io.on("connection", (client)=>{
     

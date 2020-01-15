@@ -12,4 +12,4 @@ This is a chat app built with  React , Node, SocketIo and Twolio among multiple 
 
 
 ### To Run
-The best way is to visit the heroku website for the deployed website  [Simply Chat](https://simply-chatapp.herokuapp.com/).
+The best way is to visit the heroku website for the deployed website  [Simply Chat](https://simply-chart.appspot.com/).

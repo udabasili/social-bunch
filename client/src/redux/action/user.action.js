@@ -69,10 +69,11 @@ export function Login (type, userData){
             return restApi("post", `/auth/${type}`, userData)
                 .then(response => {                    
                     dispatch(removeError())
+                    let currentUser =  response.currentUser
+                    sessionStorage.setItem("userId", currentUser._id);
+
                     sessionStorage.setItem("validator", response.validator)
                     setRestApiHeader(response.validator)
-                    let currentUser =  response.currentUser
-                    localStorage.setItem("userId", currentUser._id);
                     dispatch(setCurrentUser(currentUser));
                     return currentUser.username
                 })
@@ -126,15 +127,15 @@ export const verifyUser = async () => {
                 dispatch(setCurrentUser(currentUser));
                 setRestApiHeader(token)
                 sessionStorage.setItem("validator", response.validator)
-                localStorage.setItem("userId", currentUser._id)            
+                sessionStorage.setItem("userId", currentUser._id)            
                 return resolve()
             })
             .catch((error)=>{
                 setRestApiHeader(null)
                 sessionStorage.removeItem("validator")
-                localStorage.removeItem("userId")
+                sessionStorage.removeItem("userId")
                 dispatch(addError("Please Login again"))
-                return reject("")
+                return reject()
             })
         })
     }

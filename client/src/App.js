@@ -20,7 +20,7 @@ class App extends React.Component {
 
   componentDidMount() {
     verifyUser().then(async()=>{   
-        if(localStorage.getItem("validator") && this.props.currentUser){  
+        if(sessionStorage.getItem("validator") && this.props.currentUser){  
             this.props.getAllGroups()
             this.props.getAllEvents()
             this.props.getAllUsers()

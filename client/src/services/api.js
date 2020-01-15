@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export let userId = localStorage.getItem("userId");
+export let userId = sessionStorage.getItem("userId");
 
 export function TokenHeader(token){
     if(token){

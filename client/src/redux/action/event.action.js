@@ -12,7 +12,6 @@ export const setEvents = (events) =>({
 }) 
 
 export const getAllEvents = () =>{
-
     return dispatch =>{
         return restApi ("get", "/events")
             .then((response)=>{
@@ -27,6 +26,7 @@ export const getAllEvents = () =>{
 
 
 export const createEvent = (event) =>{
+    console.log(userId)
     return dispatch =>{
         return restApi ("post", `/user/${userId}/create-event/`, event)
             .then((response)=>{                
