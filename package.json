@@ -10,7 +10,8 @@
     "client": "cd client && yarn start",
     "heroku-postbuild": "cd client && yarn && yarn run build",
     "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "preinstall": "preinstall.js"
   },
   "dependencies": {
     "@google-cloud/storage": "^4.2.0",
