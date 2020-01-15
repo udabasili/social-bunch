@@ -4,7 +4,6 @@ const path = require('path')
 let serviceKey;
 if (process.env.NODE_ENV === "production"){
   serviceKey = process.env.CREDS
-  serviceKey = JSON.parse(serviceKey)
 }
 else{
   serviceKey = path.join(__dirname, '../utils/simply-chart-b0f4e69d71d8.json')
