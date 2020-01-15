@@ -6,12 +6,12 @@
   "author": "udendu abasili",
   "license": "MIT",
   "scripts": {
+    "preinstall": "node preinstall.js",
     "start": "node server.js",
     "client": "cd client && yarn start",
     "heroku-postbuild": "cd client && yarn && yarn run build",
     "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "preinstall": "preinstall.js"
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "dependencies": {
     "@google-cloud/storage": "^4.2.0",
