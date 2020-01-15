@@ -17,6 +17,7 @@ const googleMapsClient = require('@google/maps').createClient({
 
 exports.signUp = async function(req, res, next){
     try {
+        console.log(req.files)
         let imageBuffer = req.files["file"][0];        
         const imageUrl = await uploadImage(imageBuffer)
         let userData= JSON.parse(req.body.data);
