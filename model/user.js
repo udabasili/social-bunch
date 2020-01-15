@@ -21,7 +21,7 @@ const userSchema = new Schema({
             required:true,
         },
         userImage:{
-            type:Buffer,
+            type:String,
         },
         bio:{
             type:String

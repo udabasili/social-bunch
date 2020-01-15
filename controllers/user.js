@@ -3,7 +3,7 @@ const Event = require("../model/event");
 const Group = require("../model/group");
 const mongoose = require("mongoose");
 const token =require("../utils/token");
-
+const uploadImage = require("./imageUpload")
 
 const api = process.env.GOOGLE_API;
 
@@ -17,17 +17,20 @@ const googleMapsClient = require('@google/maps').createClient({
 
 exports.signUp = async function(req, res, next){
     try {
-        let imageBuffer = req.files["file"][0].buffer;
+        let imageBuffer = req.files["file"][0];        
+        const imageUrl = await uploadImage(imageBuffer)
         let userData= JSON.parse(req.body.data);
         let newUser = await User.create(userData);
         await newUser.encryptPassword()
-        await newUser.uploadImage(imageBuffer)
+        newUser.userImage = imageUrl;
         await newUser.save()
         return res.status(200).json({
             status:200,
             message:"success"
         })
     } catch (error) {        
+        console.log(error);
+        
         if (error.code ===11000) {
           error.message = "Sorry, this email/username is taken" ;
         }

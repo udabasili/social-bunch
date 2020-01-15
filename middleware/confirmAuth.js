@@ -54,14 +54,13 @@ exports.confirmAuthentication = async (req, res, next) =>{
 }
 // check token before giving access to account 
 exports.protectedRoute = function(req, res, next){
+    console.log(req.headers)
     try{
         let token = (req.headers['authorization']).split(" ")[1];
         if (!token) {
             return res.status(401).json({message: 'Must pass token'});
         }
-        jwt.verify(token, process.env.SECRET_KEY, function(err, user) {
-            console.log(err);
-            
+        jwt.verify(token, process.env.SECRET_KEY, function(err, user) {            
             if (err ){            
                 return next({
                     status:401,
@@ -116,7 +115,7 @@ exports.confirmUser  = function(req, res, next){
         // check if token is valid or if user id decoded
         let decodedId = user._id;
         let paramsId =  req.params.userId;
-        console.log(user._id === req.params.userId );
+        console.log(user._id,req.params.userId );
         
         if (user && decodedId === paramsId){            
             return next();

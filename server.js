@@ -24,6 +24,7 @@ const io = socketIo(server)
 app.use(cors())
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
+app.disable('x-powered-by')
 
 //if in production
 if (process.env.NODE_ENV === 'production') {

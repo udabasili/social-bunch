@@ -71,8 +71,8 @@ export function Login (type, userData){
                     dispatch(removeError())
                     sessionStorage.setItem("validator", response.validator)
                     setRestApiHeader(response.validator)
-                    let currentUser = convertBufferToImage(response.currentUser);
-                    sessionStorage.setItem("userId", currentUser._id);
+                    let currentUser =  response.currentUser
+                    localStorage.setItem("userId", currentUser._id);
                     dispatch(setCurrentUser(currentUser));
                     return currentUser.username
                 })
@@ -102,7 +102,7 @@ export function editUser (userData){
             return restApi("post", `/user/${userId}/profile/edit`, userData)
                 .then(response => {                    
                     dispatch(removeError())
-                    let currentUser = convertBufferToImage(response);
+                    let currentUser = response
                     dispatch(setCurrentUser(currentUser));
                     return resolve({"success":"Data Edited Successfully"})
                 })
@@ -122,17 +122,17 @@ export const verifyUser = async () => {
         return new Promise((resolve, reject)=>{
             return restApi("get", "/authenticate-user")
             .then((response) =>{            
-                let currentUser = convertBufferToImage(response.currentUser)
+                let currentUser = response.currentUser
                 dispatch(setCurrentUser(currentUser));
                 setRestApiHeader(token)
                 sessionStorage.setItem("validator", response.validator)
-                sessionStorage.setItem("userId", currentUser._id)            
+                localStorage.setItem("userId", currentUser._id)            
                 return resolve()
             })
             .catch((error)=>{
                 setRestApiHeader(null)
                 sessionStorage.removeItem("validator")
-                sessionStorage.removeItem("userId")
+                localStorage.removeItem("userId")
                 dispatch(addError("Please Login again"))
                 return reject("")
             })
@@ -147,11 +147,8 @@ export const getAllUsers = () =>{
         return restApi("get", "/users")
             .then((response)=>{    
                 dispatch(removeError())            
-              let users =  response.map(use=>{
-                   return convertBufferToImage(use)
-               })
                
-                dispatch(setAllUsers(users))
+                dispatch(setAllUsers(response))
             })
             .catch((error)=>{
             })
@@ -164,7 +161,6 @@ export const sendFriendRequest =  (addedUserId) =>{
         .then((response)=>{                
             dispatch(removeError())            
                 let currentUser = response
-                currentUser = convertBufferToImage(currentUser)
                 dispatch(setCurrentUser(currentUser))
 
             })
@@ -181,11 +177,7 @@ export const rejectFriendRequest =  (addedUserId) =>{
             .then((response)=>{                
                 dispatch(removeError())            
                 let currentUser = response.filteredUser
-                currentUser = convertBufferToImage(currentUser)
                 let users = response.filteredUsers
-                users =  users.map(users=>{
-                    return convertBufferToImage(users)
-                })
                 dispatch(setAllUsers(users))
                 dispatch(setCurrentUser(currentUser))
                 })
@@ -203,11 +195,8 @@ export const acceptFriendRequest =  (addedUserId) =>{
             .then((response)=>{                
                 dispatch(removeError())            
                 let currentUser = response.filteredUser
-                currentUser = convertBufferToImage(currentUser)
                 let users = response.filteredUsers
-                users =  users.map(users=>{
-                    return convertBufferToImage(users)
-                })
+                
                 dispatch(setAllUsers(users))
                 dispatch(setCurrentUser(currentUser))
                 })

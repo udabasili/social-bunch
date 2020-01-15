@@ -9,7 +9,8 @@ export function TokenHeader(token){
         delete axios.defaults.headers.common["Authorization"];
     }
 }
-export  const userId = sessionStorage.getItem("userId");
+export let userId = localStorage.getItem("userId");
+
 export function restApi(method, path, data){
     return new Promise((resolve, reject) => {
         return axios[method](path, data)
