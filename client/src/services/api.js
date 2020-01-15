@@ -1,5 +1,6 @@
 import axios from "axios";
 
+export let userId = localStorage.getItem("userId");
 
 export function TokenHeader(token){
     if(token){
@@ -9,7 +10,6 @@ export function TokenHeader(token){
         delete axios.defaults.headers.common["Authorization"];
     }
 }
-export let userId = localStorage.getItem("userId");
 
 export function restApi(method, path, data){
     return new Promise((resolve, reject) => {
