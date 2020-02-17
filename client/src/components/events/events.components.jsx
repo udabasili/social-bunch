@@ -16,16 +16,21 @@ import ModalWindow from "../modal-window/modal-window.component";
 
 */
 class Events extends Component {
-
-    state={
+    constructor (props) {
+      super(props);
+      this.state = {
         eventName:"",
         time:"",
         summary:"",
         imageUrl:"",
         date:"",
+        createdBy:props.currentUser.username,
         showModal: false
 
     }
+      
+    }
+    
 
     componentDidMount(){
       //get all events when we load window
