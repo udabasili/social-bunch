@@ -1,11 +1,10 @@
 import { GET_EVENTS } from "../actionType/event.actionType";
 import { removeError, addError } from "./errors.action";
 import { restApi } from "../../services/api";
-import { socket } from "../../services/socketIo";
 import axios from "axios";
 import { startFetching } from "./fetch.actions";
 
-let userId = sessionStorage.getItem("userId");
+const userId = sessionStorage.getItem("userId");
 export const setEvents = (events) =>({
     type: GET_EVENTS,
     payload: events

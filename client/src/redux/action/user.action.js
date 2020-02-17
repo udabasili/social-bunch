@@ -70,7 +70,6 @@ export function Login (type, userData){
                     dispatch(removeError())
                     let currentUser =  response.currentUser
                     sessionStorage.setItem("userId", currentUser._id);
-
                     sessionStorage.setItem("validator", response.validator)
                     setRestApiHeader(response.validator)
                     dispatch(setCurrentUser(currentUser));
