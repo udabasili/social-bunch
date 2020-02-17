@@ -4,7 +4,7 @@ import { restApi } from "../../services/api";
 import axios from "axios";
 import { startFetching } from "./fetch.actions";
 
-let userId = sessionStorage.getItem("userId");
+let userId ;
 
 export const setEvents = (events) =>({
     type: GET_EVENTS,
@@ -27,9 +27,7 @@ export const getAllEvents = () =>{
 
 
 export const createEvent = (event) =>{
-    userId = sessionStorage.getItem("userId");
-    console.log(userId);
-    
+    userId = sessionStorage.getItem("userId");    
     return dispatch =>{
         return restApi ("post", `/user/${userId}/create-event/`, event)
             .then((response)=>{         
@@ -49,6 +47,7 @@ export const createEvent = (event) =>{
 
 
 export const getEventById = async (eventId) =>{
+    userId = sessionStorage.getItem("userId");
     return axios.get(`/user/${userId}/event/${eventId}`)
             .then((response)=>{
                 return response.data.message
@@ -63,6 +62,7 @@ export const getEventById = async (eventId) =>{
 
 
 export const joinEvent = (eventId) =>{    
+    userId = sessionStorage.getItem("userId");
     return dispatch =>{
         dispatch(startFetching())        
         return restApi ("get", `/user/${userId}/event/${eventId}/join`)
@@ -78,6 +78,7 @@ export const joinEvent = (eventId) =>{
 }
 
 export const leaveEvent =  (eventId) =>{
+    userId = sessionStorage.getItem("userId");
     return dispatch =>{
         dispatch(startFetching())
         return restApi ("get", `/user/${userId}/event/${eventId}/leave`)
@@ -93,6 +94,7 @@ export const leaveEvent =  (eventId) =>{
 }
 
 export const deleteEvent = (eventId) =>{
+    userId = sessionStorage.getItem("userId");
     return dispatch =>{
         return restApi ("get",`/user/${userId}/event/${eventId}/delete`)
             .then((response)=>{

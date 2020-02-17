@@ -37,6 +37,7 @@ export const getAllGroups = () => {
 }
 
 export const getGroupMembersById = (groupId) => {
+    userId = sessionStorage.getItem("userId");
     return dispatch =>{
         return new Promise((resolve, reject)=>{
         return restApi ("get", `/user/${userId}/group/${groupId}/`)
@@ -75,6 +76,7 @@ export const createGroup = (group) =>{
 
 
 export const joinGroup =  (groupId) => {
+    userId = sessionStorage.getItem("userId");
     return dispatch =>{
         return restApi ("get", `/user/${userId}/group/${groupId}/join`)
         .then((response)=>{
@@ -91,6 +93,7 @@ export const joinGroup =  (groupId) => {
 
 
 export const leaveGroup =  (groupId) =>{
+    userId = sessionStorage.getItem("userId");
     return dispatch =>{
         return restApi ("get", `/user/${userId}/group/${groupId}/leave`)
             .then((response)=>{
@@ -103,6 +106,7 @@ export const leaveGroup =  (groupId) =>{
 }
 
 export const deleteGroup =  (groupId) =>{
+    userId = sessionStorage.getItem("userId");
     return dispatch =>{        
         return restApi ("get", `/user/${userId}/group/${groupId}/delete`)
             .then((response)=>{

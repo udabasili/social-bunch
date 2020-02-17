@@ -33,8 +33,9 @@ class GroupPage extends Component {
       const {currentUser, groupId } = this.state
       let username = currentUser.username      
       this.props.getGroupMembersById(groupId)
-      socket.emit("join", {username, groupId}, (response) => {        
-        this.setState((prevState) => ({
+      socket.emit("join", {username, groupId}, (response) => {  
+        console.log(response.socket[0].users)      
+        this.setState((prevState) => ({          
           onlineMembers:[...response.socket[0].users]
             })
           )   
