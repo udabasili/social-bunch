@@ -33,6 +33,8 @@ class GroupPage extends Component {
       const {currentUser, groupId } = this.state
       let username = currentUser.username      
       this.props.getGroupMembersById(groupId)
+      console.log(groupId);
+      
       socket.emit("join", {username, groupId}, (response) => {  
         console.log(response.socket[0].users)      
         this.setState((prevState) => ({          
@@ -59,6 +61,8 @@ class GroupPage extends Component {
     setRooms = (username) => {
       this.props.getGroupMembersById(this.state.groupId)
         .then((response) => {
+          console.log(response);
+          
             this.setState((prevState) => ({
               groupMembers:[...response.members]
               })
