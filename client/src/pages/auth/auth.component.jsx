@@ -7,7 +7,10 @@ import {connect} from "react-redux";
 import { removeError } from '../../redux/action/errors.action';
 import validator from "../../components/validator/validator";
 
-
+/**
+  * @desc the login/ signup page
+  * 
+*/
 class Auth extends Component {
     state={
         loggedIn:false,
@@ -57,6 +60,7 @@ class Auth extends Component {
         }
       }))
     }
+    //handle the onchange for register state
     onChangeHandlerRegister = (e) =>{
     const {name, value} = e.target;
     this.setState((prevState)=>({

@@ -4,7 +4,7 @@ import Auth from "./pages/auth/auth.component";
 import GroupPage from "./pages/group/group.component";
 import Chatroom from "./pages/chatroom/chatroom.component";
 import { getAllGroups } from "./redux/action/group.action"
-import {setCurrentUser, verifyUser, getAllUsers } from "./redux/action/user.action";
+import {verifyUser, getAllUsers } from "./redux/action/user.action";
 import PrivateRoute from "./components/protected-route/protected-route";
 import {connect} from "react-redux";
 import ProfilePage from "./pages/profile-pages/profile-pages.component";
@@ -19,7 +19,9 @@ class App extends React.Component {
 
 
   componentDidMount() {
-    verifyUser().then(async()=>{   
+    console.log("here");
+    
+    this.props.verifyUser().then(async()=>{   
         if(sessionStorage.getItem("validator") && this.props.currentUser){  
             this.props.getAllGroups()
             this.props.getAllEvents()
@@ -60,13 +62,14 @@ const mapDispatchToProps = (dispatch) =>({
   getAllEvents: () => dispatch(getAllEvents()),
   getAllGroups : () => dispatch(getAllGroups()),
   getAllUsers : () => dispatch(getAllUsers()),
-  setCurrentUser: user => dispatch(setCurrentUser(user)),
+  verifyUser: () => dispatch(verifyUser())
+
 
 
 })
 
 const mapStateToProps = (state) =>({
-    currentUser:state.user.currentUser
+    currentUser:state.user.currentUser,
  })
 
 

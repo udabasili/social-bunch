@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 /**
   * @desc handles the main container for the messages user sends and receives

@@ -1,6 +1,6 @@
-import  React, {useState} from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaperPlane, faPlaneArrival } from '@fortawesome/free-solid-svg-icons'
+import  React, {useState} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane} from '@fortawesome/free-solid-svg-icons';
 import {connect} from "react-redux";
 import { sendMessageToGroup, sendMessageToPerson } from '../../services/socketIo';
 import { sendMessage } from '../../redux/action/message.action';
@@ -9,21 +9,17 @@ import { sendMessage } from '../../redux/action/message.action';
 /**
   * @desc handles the sending of message to groups or individuals based  props passed
   * @return bool - success or failure
-  * @author Udendu Abasili
 
 */
 
-const ChatSendBox = ({groupId, recipient, currentUser, sendMessage, getMessage, location}) =>  {    
+const ChatSendBox = ({groupId, recipient, currentUser, sendMessage, location}) =>  {    
 
     const [message, setMessage] = useState("") 
     //Submit message to either the group or user based on the props passed
     const onSubmitHandler = (e) =>{
         e.preventDefault()            
-        let date = new Date();        
         if(groupId){ //to group
-            sendMessageToGroup(message, groupId)
-            console.log(message, groupId);
-            
+            sendMessageToGroup(message, groupId)            
         }
         else if (recipient){ //to individual            
             let body = {message, location}
@@ -50,9 +46,7 @@ const ChatSendBox = ({groupId, recipient, currentUser, sendMessage, getMessage, 
                 onChange={(e)=>setMessage(e.target.value)}
                 value={message}
                 placeholder="Send a message" 
-                
                 className="chat-box__input chat_message" required/>
-            
         </form>
     )
 }

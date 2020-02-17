@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react';
 import Video from 'twilio-video';
 import RoomMembers from './room-members.component';
 
+/**
+  * @desc create the room based on the room name and token from the server
+  * @param token and name of room
 
+*/
 
 const Room = ({ roomName, token }) => {
 
@@ -33,10 +37,16 @@ const Room = ({ roomName, token }) => {
     return () => {
         setRoom(currentRoom => {
           if (currentRoom && currentRoom.localParticipant.state === 'connected') {
-            currentRoom.localParticipant.tracks.forEach(track => track.stop());            
             currentRoom.disconnect();
+            currentRoom.localParticipant.tracks.forEach(publication => {
+              publication.track.stop();
+              const attachedElements = publication.track.detach();
+              console.log("unsubscribed from: " + publication.track)
+              attachedElements.forEach(element => element.remove());
+          });
             return null;
           } else {
+
             return currentRoom;
           }
         });

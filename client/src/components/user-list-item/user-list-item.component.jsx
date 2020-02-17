@@ -4,37 +4,27 @@ import { faUserPlus, faEye, faHourglass } from '@fortawesome/free-solid-svg-icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {connect} from "react-redux";
 
-function UserListItem({sendFriendRequest = f => f, user, currentUser}) {   
+function UserListItem({sendFriendRequest = f => f, user, currentUser}) {     
+
     const {_id, userImage, username, friendsRequests} = user;
-    
+    //change the icon shown depending on if the user has been added as a friend, friend request or null
     function checkCondition(){
       if ( friendsRequests ){
         
-        if(friendsRequests.some(request => request.username === username)){
-          console.log(1);
-          
+        if(friendsRequests.some(request => request.username === username)){          
           return <FontAwesomeIcon  icon={faHourglass}/>
-
           }
         } else if ( currentUser.requestsSent.some(request => request.sentTo === username)
         ){
-          console.log(2);
-
           return <FontAwesomeIcon  icon={faHourglass}/>
-
         }
         else if (currentUser.friends.some(friend => friend.userInfo.username === username)||
         currentUser.username === username
         ){
-          console.log(3);
-
           return <div></div>
-
         }
   
       else{
-        console.log(4);
-
         return <FontAwesomeIcon className="friend-request" onClick={()=>sendFriendRequest(_id)} icon={faUserPlus}/>
 
       }
@@ -64,9 +54,9 @@ function UserListItem({sendFriendRequest = f => f, user, currentUser}) {
     
   );
 }
-const mapStateToProps = (state) =>({
-    currentUser:state.user.currentUser,
+  const mapStateToProps = (state) =>({
+      currentUser:state.user.currentUser,
 
   })
   
-  export default connect(mapStateToProps, null)(UserListItem);
+ export default connect(mapStateToProps, null)(UserListItem);

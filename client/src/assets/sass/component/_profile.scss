@@ -1,39 +1,39 @@
+/**USER PROFILE STYLING **/
+.profile {
+    background-color: $color-card-background;
+    width: 20vw;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px;
+    height: 90%;
+    position: relative;
+    padding: 20px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, .21), 0 8px 10px rgba(0, 0, 0, .21) ;
 
-    .profile {
-        background-color: $color-card-background;
-        width: 20vw;
-        text-align: center;
-        border-radius: 10px;
-        margin: 20px;
-        height: 90%;
+    &__image{
+        border-radius: 50%;
+        height: 15rem;
+        width: 15rem;
+        display: flex;
         position: relative;
-        padding: 20px;
-        box-shadow: 0 8px 10px rgba(0, 0, 0, .21), 0 8px 10px rgba(0, 0, 0, .21) ;
-
-        &__image{
-            border-radius: 50%;
-            height: 15rem;
-            width: 15rem;
-            display: flex;
-            position: relative;
-            margin: 3em auto;
-            overflow: hidden;
-            box-shadow: 0 0 0 13px #f0f0f0;
-        }
-        
-        
-        &__image-user {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            top: 0;
-            border-radius: 100px;
-        }
-
-        &__username {
-        font-size: 2rem;
-        font-weight: 600;
-        color: #333;
-        }
+        margin: 3em auto;
+        overflow: hidden;
+        box-shadow: 0 0 0 13px #f0f0f0;
     }
+    
+    
+    &__image-user {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 100px;
+    }
+
+    &__username {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    }
+}

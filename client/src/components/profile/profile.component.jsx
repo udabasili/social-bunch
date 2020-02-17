@@ -5,7 +5,11 @@ import {Link} from "react-router-dom";
 import ModalWindow from "../modal-window/modal-window.component";
 import VideoComponent from "../video-calling/video-component"
 
+/**
+  * @desc show the profile that a particular user
+  * friends list to User Icon as props
 
+*/
 export default class Profile extends Component {
     
     state = {
@@ -16,16 +20,14 @@ export default class Profile extends Component {
         this.setState({showModal: showModal})
     }   
 
-    render() {                
+    render() {                        
         return (
             <div className="profile">
                 { this.props.userData ? 
                     <div>
                         <div className="profile__image">
                             <img 
-                                src={ this.props.userData.image ? 
-                                    `data:image/png;base64,${this.props.userData.image }` :
-                                    this.props.userData.userImage}
+                                src={ this.props.userData.userImage}
                                 className="profile__image-user"/>
                         </div>
                         <h2 className="profile__username">{this.props.userData.username}</h2> 
@@ -59,7 +61,6 @@ export default class Profile extends Component {
                             />
                         </ModalWindow>
                     }
-                         
             </div>
         )
     }

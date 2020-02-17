@@ -15,7 +15,6 @@ import { authEndpoint, clientId, redirectUri, scopes } from "../../components/sp
   * @desc show  all messages between a user and his friend  between past and present
   * friends list to User Icon as props
   * @param props for the toggle button of showing and hiding profile window and current user from redux
-  * @author Udendu Abasili
 
 */
  
@@ -40,6 +39,7 @@ class PrivateMessages extends Component {
     }
 
     componentDidUpdate(prevProps) {
+      //update message list with new message props and scroll to the bottom
         if (this.props.messages !== prevProps.messages) {
             this.setState((prevState) =>({
                 ...prevState,
@@ -47,17 +47,13 @@ class PrivateMessages extends Component {
             }), () =>  this.scrollToBottom()
             )
         }
-        if (this.props.receivedMessage !== prevProps.receivedMessage){
-            console.log(this.props.receivedMessage);
-            
-        }
+
     }
 
     scrollToBottom = () =>{
         this.chatArea.current.scroll(0, this.chatArea.current.scrollHeight)
-
     }
-
+    //add message that is sent to this user to the message list
     setReceivedMessage = (message) =>{      
           this.setState(prevState => ({
             ...prevState,
@@ -97,7 +93,6 @@ class PrivateMessages extends Component {
         let coords = {lat, long}
         this.props.getLocation(coords)
           .then((res)=>{
-            console.log(res)
             this.setState((prevState)=>({
                 ...prevState,
                   location: res
@@ -106,28 +101,7 @@ class PrivateMessages extends Component {
           })
         })
     }
-
-  setMessage = (message) =>{
-    this.setState(prevState => ({
-      ...prevState,
-      messages: [...prevState.messages, message],
-        })
-    ,() =>  this.scrollToBottom())
-    }
-
-
-//   setMessagePerUser = (message, value) => {
-//     let friend = value
-//     this.setState(prevState => ({
-//       ...prevState,
-//       messages: [...message],
-//       friend: value
-//     })
-//     )
-//   }
-
-    // get the current address from the server
-    
+  
     
     render() {
         const {messages} = this.state;
@@ -163,7 +137,6 @@ class PrivateMessages extends Component {
                     location = {this.state.location}/>
                   ))
                     }
-                
               </div>
               <ChatSendBox 
                 location={this.state.location}
@@ -184,7 +157,8 @@ const mapStateToProps = (state) =>({
   
   const mapDispatchToProps = dispatch => ({
     getLocation: (coords) => dispatch(getLocation(coords)) , 
-    getMessages: (userId, recipientId) => dispatch(getMessages(userId, recipientId))
+    getMessages: (userId, recipientId) => dispatch(getMessages(userId, recipientId)),
+    
 
   
   })

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import UserListItem from "../../components/user-list-item/user-list-item.component";
 import { getAllUsers, sendFriendRequest} from '../../redux/action/user.action';
 
+ 
 
 class Users extends Component {
     state={
@@ -16,7 +15,7 @@ class Users extends Component {
     componentDidMount(){
       this.props.getAllUsers()
     }
-
+    //filter the search based on input
     searchUsersHandler = (e) =>{
         this.setState({searchItem:e.target.value },()=>{
             this.setState({filteredUserData: this.props.allUsers.filter((user)=>{
@@ -25,7 +24,6 @@ class Users extends Component {
             })
         })
 
-        
     }
 
     onSubmitHandler = (e) =>{

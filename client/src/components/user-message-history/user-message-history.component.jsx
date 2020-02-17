@@ -8,7 +8,6 @@ import { socket } from '../../services/socketIo';
   * @desc show past messages between a user and his friend
   * friends list to User Icon as props
   * @param props for the toggle button of showing and hiding profile window and current user from redux
-  * @author Udendu Abasili
 
 */
 
@@ -21,7 +20,7 @@ function UserMessageHistory(props) {
           socket.emit("getOnlineFriends",props.currentUser.username, (response)=>{            
               setOnlineFriends(response)
            })
-        }, 2000);
+        }, 100);
         return () => clearInterval(interval);
       }, []);
 
@@ -36,14 +35,14 @@ function UserMessageHistory(props) {
                           className="message">
                         <div className="message__image">
                             <UserIcon 
-                                imageUri={`data:image/png;base64,${friend.userInfo.userImage}`}
+                                imageUri={friend.userInfo.userImage}
                                 username = {friend.userInfo.username} 
                                 onlineUsers = {onlineFriends}
                                 />
                         </div>
                         <div className="message__content">
                             <h2 className="secondary-header">{friend.userInfo.username}</h2>
-                            <p className="message__content__count">{`${friend.messages.length} messages`}</p>
+                            <p className="message__content__count">Show Messages</p>
                         </div>
                         <hr/>
                     </div>

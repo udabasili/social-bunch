@@ -1,3 +1,9 @@
+/**
+  * @desc gets the string that would contain the spotify authentication when user is redirected
+  * from the login window 
+ 
+
+*/
 const hash = window.location.hash
   .substring(1)
   .split("&")

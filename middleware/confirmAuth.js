@@ -26,12 +26,12 @@ exports.confirmAuthentication = async (req, res, next) =>{
             .then((user)=>{
                 if (user) {
                     const filteredData = user.filterUserData()
-
                     return res.status(200).json({
                         status:200,
-                        message:'success',
-                        token:token,
-                        user:filteredData
+                        message:{
+                            validator:token,
+                            currentUser:filteredData
+                        }
                     })   
                 } 
                 else {
@@ -54,7 +54,6 @@ exports.confirmAuthentication = async (req, res, next) =>{
 }
 // check token before giving access to account 
 exports.protectedRoute = function(req, res, next){
-    console.log(req.headers)
     try{
         let token = (req.headers['authorization']).split(" ")[1];
         if (!token) {
@@ -88,9 +87,7 @@ exports.protectedRoute = function(req, res, next){
         })
 
     }
-    catch(error){
-        console.log(error);
-        
+    catch(error){        
         return next({
             status:401,
             message:"unAuthorized User"
@@ -110,8 +107,6 @@ exports.confirmUser  = function(req, res, next){
         return res.status(401).json({message: 'Must pass token'});
     }
     jwt.verify(token, process.env.SECRET_KEY, function(err, user) {
-        console.log("1");
-
         // check if token is valid or if user id decoded
         let decodedId = user._id;
         let paramsId =  req.params.userId;

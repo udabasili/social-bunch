@@ -1,9 +1,13 @@
 import React,{useState, useEffect, useRef} from 'react'
 
+/**
+  * @desc set the video and audio for the users within the room
+  * friends list to User Icon as props
+  * @param the members of the current room
+
+*/
 
 const RoomMembers = ({member}) => {
-  
-
 
   const [videoTracks, setVideoTracks] = useState([]);
   const [audioTracks, setAudioTracks] = useState([]);
@@ -33,7 +37,7 @@ const RoomMembers = ({member}) => {
       }
     };
 
-    const trackUnsubscribed = track => {
+    const trackUnsubscribed = track => {      
       if (track.kind === 'video') {
         setVideoTracks(videoTracks => videoTracks.filter(v => v !== track));
       } else {
@@ -56,6 +60,8 @@ const RoomMembers = ({member}) => {
     if (videoTrack) {
       videoTrack.attach(videoRef.current);
       return () => {
+        console.log(4);
+
         videoTrack.detach();
       };
     }

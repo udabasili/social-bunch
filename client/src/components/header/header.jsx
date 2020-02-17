@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faTimes, faSignOutAlt, faBell, faHome } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faTimes, faSignOutAlt, faHome } from '@fortawesome/free-solid-svg-icons';
 import {connect} from "react-redux";
 import {setCurrentUser, logOut, rejectFriendRequest, acceptFriendRequest } from "../../redux/action/user.action";
 import {withRouter, Link} from "react-router-dom";
@@ -46,7 +46,7 @@ function Header ({currentUser, acceptRequest, rejectRequest, logOut}) {
                         currentUser.friendsRequests.map((friendsRequest) => (
                             <li className="user__notification__item">
                                 <img 
-                                    src={`data:image/png;base64,${friendsRequest.userInfo.userImage}`}
+                                    src={friendsRequest.userInfo.userImage}
                                     alt="your profile" 
                                     className="user__photo"/>
                                 <span>{friendsRequest.userInfo.username}</span>

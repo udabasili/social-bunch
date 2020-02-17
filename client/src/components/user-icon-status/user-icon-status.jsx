@@ -1,9 +1,9 @@
-import React, {useEffect, useState}from 'react'
+import React, {useEffect, useState} from 'react'
 
 export default function UserIcon({imageUri, username, onlineUsers}) {  
   const [isOnline, setIsOnline]  = useState("") 
   const [lastOnline, setLastOnline]  = useState("")  
- 
+
   useEffect(() => {
     
     if (onlineUsers){

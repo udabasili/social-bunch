@@ -18,6 +18,7 @@ import PrivateMessages from '../../components/private-messages/private-messages.
 const SpotifyWebApi = require('spotify-web-api-node');
 let spotify = new SpotifyWebApi();
 
+
 class Chatroom extends Component {
   constructor (props) {
     super(props)
@@ -44,6 +45,7 @@ class Chatroom extends Component {
       }))
     }
 
+    //popup the message window when a new one arrives
     showUserMessagesHandler = (value) => {
       this.setState({
         showUserMessages: true,

@@ -27,21 +27,18 @@ class GroupPage extends Component {
       };
 
     componentDidMount() {
-      socket.emit("join", {username, groupId}, (response) => {  
-        console.log(response.socket[0].users)      
-        this.setState((prevState) => ({          
-          onlineMembers:[...response.socket[0].users]
-            })
-          )   
-        })
       socket.on('groupMessage', this.setMessage)
       socket.on("users", this.users)
       socket.on("updateRoomMemberStatus", this.updateStatus)
       const {currentUser, groupId } = this.state
       let username = currentUser.username      
-      this.props.getGroupMembersById(groupId)
-      console.log(groupId);
-      
+      this.props.getGroupMembersById(groupId)      
+      socket.emit("join", {username, groupId}, (response) => {          
+        this.setState((prevState) => ({          
+          onlineMembers:[...response.socket[0].users]
+            })
+          )   
+        })
       this.setRooms(username)
       
      
@@ -60,24 +57,27 @@ class GroupPage extends Component {
 
     setRooms = (username) => {
       this.props.getGroupMembersById(this.state.groupId)
-        .then((response) => {
-          console.log(response);
-          
+        .then((response) => {          
             this.setState((prevState) => ({
+              ...prevState,
               groupMembers:[...response.members]
               })
             )
         })
       }
 
-    updateStatus = (response) =>{      
-      console.log(response);
+    updateStatus = (response) =>{     
+      this.props.getGroupMembersById(this.state.groupId)
+        .then(res => {
+          this.setState((prevState) => ({
+            ...prevState,
+            onlineMembers:[...response.socket[0].users],
+            groupMembers:[...res.members]
+            })
+          )
+        }
+        )       
       
-      this.setState((prevState) => ({
-        onlineMembers:[...response.socket[0].users]
-
-        })
-      )
         
     }
 
@@ -96,9 +96,7 @@ class GroupPage extends Component {
     }
 
     render() {
-      const {user, messages, groupMembers, onlineMembers, groupId} =this.state
-        console.log(groupMembers, onlineMembers);
-        
+      const {user, messages, groupMembers, onlineMembers, groupId} =this.state        
         return (
             <div className="group">
                 <section className="group__left-section">

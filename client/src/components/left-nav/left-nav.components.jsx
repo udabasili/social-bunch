@@ -8,11 +8,11 @@ const LeftNav = ({navLinkChangeHandler, albums, onChangeHandler}) => {
    const onClickHandle = (value) =>{
     let divArray = Array.from(document.querySelectorAll(".nav-icon__item"))
     navLinkChangeHandler(value)
-    divArray.map(element=>{
+    divArray.map(element=> (
         (element.name === value) ? 
         element.classList.add("active") :
         element.classList.remove("active")
-         }
+         )
         )
     }
     
@@ -21,16 +21,16 @@ const LeftNav = ({navLinkChangeHandler, albums, onChangeHandler}) => {
         <div className="nav-container__logo-box">
         </div>
         <nav className="nav-icon__list">
-        <a className="nav-icon__item active" name="messages" onClick={()=>onClickHandle("messages")}>
+            <a href="#0" className="nav-icon__item active" name="messages" onClick={()=>onClickHandle("messages")}>
                 <FontAwesomeIcon className="nav-icon__icon" icon={faMailBulk} ></FontAwesomeIcon>
             </a>
-            <a  className=" nav-icon__item" name="events" onClick={()=>onClickHandle("events")}  >
+            <a href="#0" className=" nav-icon__item" name="events" onClick={()=>onClickHandle("events")}  >
                 <FontAwesomeIcon className="nav-icon__icon" icon={faCalendar} ></FontAwesomeIcon>
             </a>
-            <a  className="nav-icon__item" name="groups" onClick={()=>onClickHandle("groups")}>
+            <a href="#0" className="nav-icon__item" name="groups" onClick={()=>onClickHandle("groups")}>
                 <FontAwesomeIcon  className="nav-icon__icon" icon={faObjectGroup}></FontAwesomeIcon>
             </a>
-            <a  className="nav-icon__item" name="users" onClick={()=>onClickHandle("users")}>
+            <a href="#0" className="nav-icon__item" name="users" onClick={()=>onClickHandle("users")}>
                 <FontAwesomeIcon  className="nav-icon__icon" icon={faUserFriends}></FontAwesomeIcon>
             </a>
             {albums && (

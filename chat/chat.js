@@ -41,6 +41,8 @@ exports.setRooms = async() =>{
 }
 
 exports.createRoom = async (roomName ) =>{
+    console.log(roomName);
+    
     try {
 
         let socket = await Socket.create({

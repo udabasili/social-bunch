@@ -164,7 +164,6 @@ exports.sendFriendRequest = async function(req, res, next){
     try {
         let senderId = mongoose.Types.ObjectId(req.params.userId);
         let receiverId = mongoose.Types.ObjectId(req.params.addedUserId);
-        console.log(senderId, receiverId)
         let userReceiver = await User.findById(receiverId)
         let userSender = await User.findById(senderId)
         let filteredSenderData = await userSender.filterUserData()

@@ -72,9 +72,13 @@ io.on("connection", (client)=>{
     
 
     //create room
-    client.on("create", (roomName, callback) =>{
+    client.on("create", ({roomName}, callback) =>{
         chat.createRoom(roomName)
-        .then((response)=>callback(response))
+        .then((response)=>{
+            console.log(response);
+            
+            callback(response)}
+            )
 
     })
 
@@ -84,6 +88,8 @@ io.on("connection", (client)=>{
                 
         chat.joinRoom(username, client.id, groupId)
            .then((response) =>{
+               console.log(response);
+               
                 let room = response.socket[0].name
                client.join(room)
                 io.to(room).emit("updateRoomMemberStatus", response)

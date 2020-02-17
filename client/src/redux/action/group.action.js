@@ -42,6 +42,8 @@ export const getGroupMembersById = (groupId) => {
         return new Promise((resolve, reject)=>{
         return restApi ("get", `/user/${userId}/group/${groupId}/`)
             .then((response)=>{
+                console.log(response);
+                
                 dispatch(removeError())
                 dispatch(setRoom(response))
                 return resolve(response)   
@@ -64,7 +66,8 @@ export const createGroup = (group) =>{
                 dispatch(setGroups(response))
             })
             .then(()=>{
-                socket.emit('create', { userId, roomName: group.name }, (error) => {
+                socket.emit('create', {roomName: group.name }, (error) => {
+                    console.log(error)
                 })
             })
             .catch((error)=>{

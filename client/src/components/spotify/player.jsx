@@ -1,16 +1,12 @@
 import React,{useState} from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Player = props => {
   const [minimize, setMinimized] = useState(true)
-  console.log(props);
   
   const minimizeWindow = () =>{
     let spotify =  document.querySelector('.spotify');
     setMinimized(!minimize)
-    if(spotify){
-      console.log(minimize);
-      
+    if(spotify){      
       spotify.style.height = minimize ? "10vh" : "35vh"
       }
   
@@ -19,12 +15,10 @@ const Player = props => {
       <div className="spotify">
         <div className="spotify__row">
           <div className="column middle">
-           
           </div>
           <div className="spotify__column">
             <span onClick={minimizeWindow} className="dot minimize">
             </span>
-            
           </div>
         </div>
         <div className="content">

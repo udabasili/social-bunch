@@ -114,18 +114,19 @@ export function editUser (userData){
 }
 
 //Check if user is authenticated 
-export const verifyUser = async () => { 
+export function verifyUser () { 
     let token = sessionStorage.validator;
     setRestApiHeader(token)
     return dispatch =>{
         return new Promise((resolve, reject)=>{
             return restApi("get", "/authenticate-user")
-            .then((response) =>{            
+            .then((response) =>{                            
                 let currentUser = response.currentUser
                 dispatch(setCurrentUser(currentUser));
-                setRestApiHeader(token)
                 sessionStorage.setItem("validator", response.validator)
-                sessionStorage.setItem("userId", currentUser._id)            
+                sessionStorage.setItem("userId", currentUser._id)     
+                setRestApiHeader(response.validator)
+       
                 return resolve()
             })
             .catch((error)=>{
