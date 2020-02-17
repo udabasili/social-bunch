@@ -92,7 +92,8 @@ class GroupPage extends Component {
 
     render() {
       const {user, messages, groupMembers, onlineMembers, groupId} =this.state
-
+        console.log(groupMembers, onlineMembers);
+        
         return (
             <div className="group">
                 <section className="group__left-section">
