@@ -27,6 +27,13 @@ class GroupPage extends Component {
       };
 
     componentDidMount() {
+      socket.emit("join", {username, groupId}, (response) => {  
+        console.log(response.socket[0].users)      
+        this.setState((prevState) => ({          
+          onlineMembers:[...response.socket[0].users]
+            })
+          )   
+        })
       socket.on('groupMessage', this.setMessage)
       socket.on("users", this.users)
       socket.on("updateRoomMemberStatus", this.updateStatus)
@@ -35,13 +42,6 @@ class GroupPage extends Component {
       this.props.getGroupMembersById(groupId)
       console.log(groupId);
       
-      socket.emit("join", {username, groupId}, (response) => {  
-        console.log(response.socket[0].users)      
-        this.setState((prevState) => ({          
-          onlineMembers:[...response.socket[0].users]
-            })
-          )   
-        })
       this.setRooms(username)
       
      
