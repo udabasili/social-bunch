@@ -3,7 +3,7 @@ mongoose.Promise = Promise;
 require("dotenv").config
 mongoose.set("debug", true)
 if (process.env.NODE_ENV === 'production') {
-    mongoose.connect(process.env.MONGODB_URI, { 
+    mongoose.connect(process.env.MONGOLAB_PURPLE_URI, { 
     useFindAndModify: true, useNewUrlParser: true , useUnifiedTopology: true})
 }
 else{
