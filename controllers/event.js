@@ -9,7 +9,7 @@ exports.createEvent = async (req, res, next) =>{
         event.createdBy = currentUser.username        
         event.save()
         let events = await Event.find()
-        res.status(200).json({
+        return res.status(200).json({
             status:200,
             message:events
             })

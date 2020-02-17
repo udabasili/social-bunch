@@ -55,6 +55,7 @@ export const getGroupMembersById = (groupId) => {
 
 
 export const createGroup = (group) =>{
+    userId = sessionStorage.getItem("userId");
     return dispatch =>{
         return restApi ("post", `/user/${userId}/create-group/`, group)
             .then((response)=>{
