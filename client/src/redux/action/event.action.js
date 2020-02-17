@@ -4,7 +4,7 @@ import { restApi } from "../../services/api";
 import axios from "axios";
 import { startFetching } from "./fetch.actions";
 
-const userId = sessionStorage.getItem("userId");
+let userId = sessionStorage.getItem("userId");
 
 export const setEvents = (events) =>({
     type: GET_EVENTS,
@@ -27,7 +27,9 @@ export const getAllEvents = () =>{
 
 
 export const createEvent = (event) =>{
-    console.log(userId)
+    userId = sessionStorage.getItem("userId");
+    console.log(userId);
+    
     return dispatch =>{
         return restApi ("post", `/user/${userId}/create-event/`, event)
             .then((response)=>{                
