@@ -5,6 +5,7 @@ import axios from "axios";
 import { startFetching } from "./fetch.actions";
 
 const userId = sessionStorage.getItem("userId");
+
 export const setEvents = (events) =>({
     type: GET_EVENTS,
     payload: events
