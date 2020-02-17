@@ -32,7 +32,9 @@ export const createEvent = (event) =>{
     
     return dispatch =>{
         return restApi ("post", `/user/${userId}/create-event/`, event)
-            .then((response)=>{                
+            .then((response)=>{         
+                console.log(response);
+                       
                 dispatch(removeError())            
                     dispatch(setEvents(response))
                 })
