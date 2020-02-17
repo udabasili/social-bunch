@@ -2,7 +2,7 @@ import {
     CURRENT_USER,
     GET_USERS,
     } from "../actionType/user.actionType"
-import { restApi, userId, convertBufferToImage, TokenHeader } from "../../services/api"
+import { restApi, TokenHeader } from "../../services/api"
 import { addError, removeError} from "./errors.action"
 import { setGroups } from "./group.action"
 import { setEvents } from "./event.action"
@@ -10,8 +10,7 @@ import { startFetching } from "./fetch.actions"
 import { startIOConnection, socket } from "../../services/socketIo"
 import axios from "axios";
 
-
-
+let userId = sessionStorage.getItem("userId");
 export const setAllUsers = (users) =>({
     type: GET_USERS,
     payload: users

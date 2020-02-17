@@ -37,7 +37,6 @@
         align-content: center;
         justify-content: center;
         width: 60%;
-        height: 30%;
         margin: 30px auto 0 auto;
 
         &__icon {
@@ -84,7 +83,7 @@
 
     &__label{
         position: absolute;
-        font-size: .9rem;
+        font-size: 1.2rem;
         left: 0;
         top: -1rem;
 

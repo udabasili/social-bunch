@@ -1,8 +1,7 @@
 import io from 'socket.io-client';
-import { userId } from './api';
 
 export const socket =  io.connect("")
-
+let userId = sessionStorage.getItem("userId");
 
 /***CHAT */
 /**start the connection based on the socket name */

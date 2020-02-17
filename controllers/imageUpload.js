@@ -1,19 +1,10 @@
-const util = require('util')
-const Cloud = require('@google-cloud/storage')
-const path = require('path')
+const util = require('util');
+const  DataUri = require('datauri');
+const dataUri = new DataUri();
+const path = require('path');
+const cloudinary = require ('cloudinary');
+const {cloudinaryConfig} = require("../utils/cloudinaryConfig")
 
-
-const serviceKey = path.join(__dirname, '../utils/simply-chart-b0f4e69d71d8.json')
-
-const { Storage } = Cloud
-
-
-const gc = new Storage({
-  keyFilename: serviceKey,
-  projectId: 'simply-chart',
-})
-
-const bucket = gc.bucket("simply-chart")
 /**
  *
  * @param { File } object file object that will be uploaded
@@ -23,27 +14,20 @@ const bucket = gc.bucket("simply-chart")
  *   "originalname" and "buffer" as keys
  */
 
+
 const uploadImage = (file) => new Promise((resolve, reject) => {
   const { originalname, buffer } = file
-  const blob = bucket.file(originalname.replace(/ /g, "_"))
+  const dUri =dataUri.format(path.extname(originalname).toString(), buffer);
+  let imageFile = dUri.content;
+  return cloudinary.v2.uploader.upload(imageFile).then((result) => {
+    const image = result.url;
+    console.log(image);
 
-  const blobStream = blob.createWriteStream({
-    resumable: false
-  })
- 
-  blobStream.on('finish', () => {
-      
-    const publicUrl = `https://storage.googleapis.com/${bucket.name}/${blob.name}`
+    return resolve(image)
+
     
-    
-    resolve(publicUrl)
-  })
-  .on('error', (error) => {
-      console.log(error);
-      
-    reject(`Unable to upload image, something went wrong`)
-  })
-  .end(buffer)
+  }).catch(error=>console.log(error)
+  )
 })
 
 module.exports = uploadImage;

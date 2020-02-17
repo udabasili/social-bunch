@@ -1,7 +1,5 @@
 import axios from "axios";
 
-export let userId = sessionStorage.getItem("userId");
-
 export function TokenHeader(token){
     if(token){
         axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
@@ -22,11 +20,3 @@ export function restApi(method, path, data){
     })
 }
 
-//set src value
-export const convertBufferToImage = (user) =>{
-    
-    let imageUrl = user.userImage
-    imageUrl = "data:image/png;base64," + imageUrl;
-    user.userImage = imageUrl
-    return user
-}

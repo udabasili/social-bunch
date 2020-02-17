@@ -115,7 +115,6 @@ exports.confirmUser  = function(req, res, next){
         // check if token is valid or if user id decoded
         let decodedId = user._id;
         let paramsId =  req.params.userId;
-        console.log(user._id,req.params.userId );
         
         if (user && decodedId === paramsId){            
             return next();

@@ -1,10 +1,10 @@
 import { GET_MESSAGES } from "../actionType/user.actionType";
-import { restApi, userId, convertBufferToImage } from "../../services/api";
+import { restApi} from "../../services/api";
 import { removeError, addError } from "./errors.action";
 import { startFetching } from "./fetch.actions";
 import { setCurrentUser } from "./user.action";
 
-
+let userId = sessionStorage.getItem("userId");
 export const loadMessages = (messages) =>({
     type: GET_MESSAGES,
     payload: messages
@@ -32,7 +32,6 @@ export const sendMessage = (receiverId,body) =>{
                 dispatch(removeError())           
                 dispatch(loadMessages(response.messages));
                 let currentUser = response.filteredUser
-                currentUser = convertBufferToImage(currentUser)
                 dispatch(setCurrentUser(currentUser))
             
             })

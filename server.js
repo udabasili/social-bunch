@@ -2,7 +2,8 @@ const express = require("express")
 const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors")
-const errorHandler = require("./controllers/errorHandler")
+const errorHandler = require("./controllers/errorHandler");
+const cloudinaryConfig = require('./utils/cloudinaryConfig');
 const path = require("path");
 const userRoutes = require("./routes/user")
 const generalRoutes = require("./routes/general")
@@ -11,7 +12,9 @@ const chat = require("./chat/chat");
 const videoChat = require("./video-call/video")
 const mongoConnect = require("./utils/db");
 const authRoute = require("./routes/auth");
-const authenticated = require("./middleware/confirmAuth")
+const authenticated = require("./middleware/confirmAuth");
+const dotenv = require('dotenv');
+dotenv.config();
 const PORT = process.env.PORT || 6000 ;
 
 //socket.io config 
@@ -24,12 +27,12 @@ const io = socketIo(server)
 app.use(cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cloudinaryConfig.cloudinaryConfig);
+
 app.disable('x-powered-by')
 
 //if in production
 app.use(express.static(path.join(__dirname,'/client/build')))
-
-
 
 
 //routes

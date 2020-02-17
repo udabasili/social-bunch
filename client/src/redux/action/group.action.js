@@ -2,12 +2,12 @@ import {
     GET_GROUPS, GET_ROOM, 
     } from "../actionType/group.actionType";
 import { removeError, addError } from "./errors.action";
-import { restApi, userId } from "../../services/api";
+import { restApi } from "../../services/api";
 import { socket } from "../../services/socketIo";
-import axios from "axios";
-import { startFetching } from "./fetch.actions";
 
 
+
+let userId = sessionStorage.getItem("userId");
 
 export const setGroups = (groups) =>({
     type: GET_GROUPS,
