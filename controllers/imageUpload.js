@@ -22,7 +22,10 @@ const uploadImage = (file) => new Promise((resolve, reject) => {
   return cloudinary.v2.uploader.upload(imageFile).then((result) => {
     const image = result.url;
     return resolve(image)
-  }).catch(error)
+
+    
+  }).catch(error=>console.log(error)
+  )
 })
 
 module.exports = uploadImage;

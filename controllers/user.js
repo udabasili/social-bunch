@@ -41,6 +41,8 @@ exports.signUp = async function(req, res, next){
 
         } 
     catch (error) {                
+        console.log(error);
+        
         if (error.code ===11000) {
           error.message = "Sorry, this email/username is taken" ;
         }
