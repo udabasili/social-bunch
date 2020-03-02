@@ -3,7 +3,7 @@ This is a chat app built with  React , Node, SocketIo and Twolio amongst other t
 
 - Video Calling
 - Private Messaging
-- Creating and joining groups
+- Group messaging
 - Authentication
 - Listening to music on spotify
 
