@@ -1,5 +1,5 @@
 # Simply-chat
-This is a chat app built with  React , Node, SocketIo and Twolio among multiple functionalities including:
+This is a chat app built with  React , Node, SocketIo and Twolio amongst other things and offers multiple functionalities such as:
 
 - Video Calling
 - Private Messaging
@@ -15,4 +15,4 @@ This is a chat app built with  React , Node, SocketIo and Twolio among multiple 
 ![Simply Chat](https://user-images.githubusercontent.com/33573587/75646102-d9bc6c00-5c1e-11ea-84b3-9392e7c3543f.png)
 
 ### To Run
-The best way is to visit the heroku website for the deployed website  [Simply Chat](https://simply-chart.appspot.com/).
+The best way is to visit the heroku website for the deployed website  [Simply Chat](http://simplychatapp.herokuapp.com/).
