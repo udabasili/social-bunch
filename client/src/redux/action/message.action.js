@@ -19,7 +19,6 @@ export const getMessages = (userId, recipientId) => {
             dispatch(loadMessages(response))
         })
         .catch(error => {
-            console.log(error.message)
         })
     }
 }

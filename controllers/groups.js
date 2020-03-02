@@ -8,7 +8,10 @@ exports.createGroup = async (req, res, next) =>{
         let groups = await Group.find()
         return res.status(200).json({
             status:200,
-            message:groups
+            message:{
+                groups,
+                groupId: group._id
+            }
         })          
     } 
      catch (error) {

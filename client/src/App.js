@@ -4,7 +4,7 @@ import Auth from "./pages/auth/auth.component";
 import GroupPage from "./pages/group/group.component";
 import Chatroom from "./pages/chatroom/chatroom.component";
 import { getAllGroups } from "./redux/action/group.action"
-import {verifyUser, getAllUsers } from "./redux/action/user.action";
+import {verifyUser, getAllUsers, setRestApiHeader } from "./redux/action/user.action";
 import PrivateRoute from "./components/protected-route/protected-route";
 import {connect} from "react-redux";
 import ProfilePage from "./pages/profile-pages/profile-pages.component";
@@ -12,15 +12,18 @@ import {startIOConnection, socket} from "./services/socketIo";
 import { getAllEvents } from './redux/action/event.action';
 
 
+if (sessionStorage.getItem("validator")) {  
+  setRestApiHeader(sessionStorage.getItem("validator"));
+  
+}
+
 class App extends React.Component {
   constructor() {
     super();
   }
 
 
-  componentDidMount() {
-    console.log("here");
-    
+  componentDidMount() {    
     this.props.verifyUser().then(async()=>{   
         if(sessionStorage.getItem("validator") && this.props.currentUser){  
             this.props.getAllGroups()

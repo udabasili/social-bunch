@@ -19,9 +19,7 @@ export const sendMessageToGroup = (message, groupId) =>{
         groupId: groupId,
         senderId: userId
         }, (error)=>{
-        if(error){
-            console.log(error);
-            
+        if(error){            
         }
     })
 }

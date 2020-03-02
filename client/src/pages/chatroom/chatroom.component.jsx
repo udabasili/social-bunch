@@ -6,6 +6,7 @@ import Profile from "../../components/profile/profile.component";
 import Events from "../../components/events/events.components";
 import Group from "../../components/groups/group.component";
 import Users from "../../components/users/users.component";
+import {isMobile, isBrowser} from 'react-device-detect';
 import hash from "../../components/spotify/hash";
 import { socket } from '../../services/socketIo';
 import ModalWindow from '../../components/modal-window/modal-window.component';
@@ -13,6 +14,8 @@ import VideoComponent from "../../components/video-calling/video-component";
 import {connect} from "react-redux";
 import { getLocation } from '../../redux/action/user.action';
 import PrivateMessages from '../../components/private-messages/private-messages.component';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 
 
 const SpotifyWebApi = require('spotify-web-api-node');
@@ -26,9 +29,14 @@ class Chatroom extends Component {
       currentLink:"messages",
       showUserMessages: false,
       incomingCalling: false,
+      leftSectionStyling:{
+        marginLeft: "9vw",
+        iconType: faMinus
+      },
       calling:null,
       caller: null,
       showModal: false,
+      hideLeftSection: true,
       token: null,
       location:null,
       albums:null, 
@@ -47,14 +55,37 @@ class Chatroom extends Component {
 
     //popup the message window when a new one arrives
     showUserMessagesHandler = (value) => {
-      this.setState({
+      this.setState((prevState) => ({
         showUserMessages: true,
-        friend:value
-      })
+        friend:value,
+      }),this.toggleLeftSection(true))
+
+    }
+
+    toggleLeftSection = (hide) => {
+      let leftMargin = hide;
+      let icon = "";
+      if(hide){
+        leftMargin = "-80vw"
+          icon = faPlus
+      }
+      else{
+        leftMargin = "9vw"
+        icon = faMinus
+      }
+      this.setState((prevState)=>({
+        ...prevState,
+          hideLeftSection:!prevState.hideLeftSection,
+          leftSectionStyling: {
+            marginLeft: leftMargin,
+            iconType: icon
+              }
+          })
+        )
     }
   
   componentDidMount() {
-    socket.on('privateMessage', this.popUpUserProfile)
+    socket.on('privateMessage', this.popUpUserProfile)    
     socket.on('receive', this.receiveVideo)
     let _token = hash.access_token; 
     if (_token && _token !== undefined) {
@@ -113,7 +144,7 @@ class Chatroom extends Component {
     }
 
   navLinkChangeHandler = (value) =>{    
-    this.setState({currentLink: value})
+    this.setState({currentLink: value}, this.toggleLeftSection(false))
   }
 
 
@@ -122,32 +153,43 @@ class Chatroom extends Component {
     switch (this.state.currentLink) {
       case "messages":
         return (
-          <div>
-            <h1 className="primary-header">Contacts</h1>
+          <React.Fragment>
+              <div className="chatroom__left-section__header">
+                <h1 className="primary-header">Contacts</h1>
+                {isMobile && (
+                    <FontAwesomeIcon onClick={() => this.toggleLeftSection(this.state.hideLeftSection)}
+                icon={this.state.leftSectionStyling.iconType}/>)}
+              </div>
             <Contacts showMessages={this.showUserMessagesHandler}/>
             <UserMessageHistory showMessages={this.showUserMessagesHandler}/>
-          </div>
+          </React.Fragment>
         )  
         case "events":
         return (
-          <div>
-            <h1 className="primary-header" >Events</h1>
-            <Events/>
-          </div>
+          <React.Fragment>
+              <div className="chatroom__left-section__header">
+                <h1 className="primary-header" >Events</h1>
+              </div>
+              <Events/>
+          </React.Fragment>
         )
         case "groups":
           return (
-            <div>
-              <h1 className="primary-header" >Group</h1>
+            <React.Fragment>
+              <div className="chatroom__left-section__header">
+                <h1 className="primary-header" >Group</h1>
+              </div>
               <Group/>
-            </div>
+          </React.Fragment>
             ) 
           case "users":
             return (
-              <div>
+              <React.Fragment>
+              <div className="chatroom__left-section__header">
                 <h1 className="primary-header" >Users</h1>
-                <Users/>
               </div>
+              <Users/>
+          </React.Fragment>
                 )  
           default:
             return;
@@ -175,7 +217,7 @@ class Chatroom extends Component {
             albums={this.state.albums}
             navLinkChangeHandler={this.navLinkChangeHandler}  
             className="navigation"/>
-            <div className="chatroom__left-section">
+            <div className="chatroom__left-section" style={isMobile ? this.state.leftSectionStyling : {}}>
               {this.navComponents()}
             </div>
             <div className="chatroom__main-section">
@@ -185,13 +227,16 @@ class Chatroom extends Component {
                 currentUser = {this.props.currentUser}/>
               }
             </div>
-            <div className="chatroom__right-section">
+            {isBrowser && (
+              <div className="chatroom__right-section">
               {this.state.friend &&
                 <Profile userData={this.state.friend}
                   currentUser = {this.props.currentUser}
                 />
               }
             </div>
+            )}
+            
           </main>
       </div>
     )

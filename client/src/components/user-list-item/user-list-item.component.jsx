@@ -46,7 +46,6 @@ function UserListItem({sendFriendRequest = f => f, user, currentUser}) {
                         state: { userData: user}
                         }}
                         >
-                      <FontAwesomeIcon  icon={faEye}/>
                 </Link> 
             </div>
         </div>

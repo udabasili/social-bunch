@@ -21,13 +21,8 @@ const uploadImage = (file) => new Promise((resolve, reject) => {
   let imageFile = dUri.content;
   return cloudinary.v2.uploader.upload(imageFile).then((result) => {
     const image = result.url;
-    console.log(image);
-
     return resolve(image)
-
-    
-  }).catch(error=>console.log(error)
-  )
+  }).catch(error)
 })
 
 module.exports = uploadImage;

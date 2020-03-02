@@ -31,7 +31,6 @@ class Users extends Component {
       const event = this.state
       this.props.addEvent(event)
       this.setState({showModal:false})
-        
     }
     
   render() {

@@ -34,7 +34,6 @@ socketSchema.methods.setRoomsByUser = async function (socketId) {
         return this.save()
         
     } catch (error) {
-        console.log(error);
         
     }
 }

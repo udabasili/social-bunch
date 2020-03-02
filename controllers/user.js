@@ -24,13 +24,23 @@ exports.signUp = async function(req, res, next){
         await newUser.encryptPassword()
         newUser.userImage = imageUrl;
         await newUser.save()
-        return res.status(200).json({
-            status:200,
-            message:"success"
+        user = await User.findOne({
+            email: userData.email
         })
-    } catch (error) {        
-        console.log(error);
+       
+        let generateToken = token(user)
+        const filteredData = user.filterUserData()
+        return res.status(200).json({
+                status:200,
+                message:{
+                validator:generateToken,
+                currentUser:filteredData
+            }
+            })
         
+
+        } 
+    catch (error) {                
         if (error.code ===11000) {
           error.message = "Sorry, this email/username is taken" ;
         }
@@ -86,8 +96,7 @@ exports.signIn = async function (req, res, next) {
 exports.editUser = async function(req, res, next){
     try{
         let updatedUserData = req.body        
-        let userId = mongoose.Types.ObjectId(req.params.userId);
-        
+        let userId = mongoose.Types.ObjectId(req.params.userId); 
         let user = await User.findOneAndUpdate({_id:userId}, 
             {$set:updatedUserData})
         user = await User.findById(userId)        

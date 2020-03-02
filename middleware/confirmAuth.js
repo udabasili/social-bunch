@@ -1,6 +1,5 @@
 const jwt = require("jsonwebtoken");
 const User = require("../model/user");
-const mongoose = require("mongoose");
 
 //confirm token is correct
 exports.confirmAuthentication = async (req, res, next) =>{
@@ -12,7 +11,7 @@ exports.confirmAuthentication = async (req, res, next) =>{
                 message:"unAuthorized User"
                 });
             }
-        jwt.verify(token, process.env.SECRET_KEY, function(err, user) {
+        jwt.verify(token, process.env.SECRET_KEY, async function(err, user) {
         if (err){
             return res.next({
                 status:401,
@@ -43,8 +42,7 @@ exports.confirmAuthentication = async (req, res, next) =>{
             })
             }
         )
-    } catch (error) {
-        
+    } catch (error) {        
          return next({
             status:401,
             message:error.message
@@ -59,43 +57,22 @@ exports.protectedRoute = function(req, res, next){
         if (!token) {
             return res.status(401).json({message: 'Must pass token'});
         }
-        jwt.verify(token, process.env.SECRET_KEY, function(err, user) {            
-            if (err ){            
-                return next({
-                    status:401,
-                    message:"unAuthorized User"
-                })
-            }               
-            return User.findOne({
-                username: user.username
-                })
-                .then((user) =>{
-                    //check if user exists in database
-                    if( user.length === 0 ){
-                        return next({
-                            status:401,
-                            message:"unAuthorized User"
-                        })
-                    }
-                    else{
-                        const filteredData = user.filterUserData()
-                        req.user = filteredData
-                        
-                        next()
-                    }
-                })
-        })
-
-    }
-    catch(error){        
-        return next({
-            status:401,
-            message:"unAuthorized User"
-        })
+        jwt.verify(token, process.env.SECRET_KEY, async function(error, decoded){
+            if (decoded) {
+                next();
+              } else {
+                return next({ status: 401, message: "Please Log In First" });
+              }   
+            })     
+        } catch (error) {            
+             return next({
+                status:401,
+                message:"unAuthorized User"
+            })
+        }
         
     }
-    
-}
+
 
 // check if it is the right user
 
@@ -106,30 +83,31 @@ exports.confirmUser  = function(req, res, next){
     if (!token) {
         return res.status(401).json({message: 'Must pass token'});
     }
-    jwt.verify(token, process.env.SECRET_KEY, function(err, user) {
+    jwt.verify(token, process.env.SECRET_KEY, async function(err, decoded) {
         // check if token is valid or if user id decoded
-        let decodedId = user._id;
+        let decodedId = decoded._id;
         let paramsId =  req.params.userId;
         
-        if (user && decodedId === paramsId){            
+        if (decoded && decodedId === paramsId){     
+            let user = await User.findOne({
+                username: decoded.username
+            })       
+            let filteredData = await user.filterUserData()
+            req.user = filteredData ; 
             return next();
         }               
         else {
-            return  next({
-                        status:401,
-                        message:"unAuthorized User"
-                    })
-                }
-            })
-        }
-
-        catch(error){
-        console.log(error);
-        
+            return next({
+                status:401,
+                message:"unAuthorized User"
+                })
+            }
+        })
+    }
+    catch(error){
         return next({
             status:401,
             message:"unAuthorized User"
             })
-        
         }
     }

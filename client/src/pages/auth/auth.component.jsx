@@ -128,7 +128,7 @@ class Auth extends Component {
         case "register":
           this.props.SignUp(header, this.state.imageFile, userData)
             .then((response) =>{
-                  this.setState({auth: "login"})
+                this.props.history.push("/")
                 })
           break;
         case "login":
@@ -175,20 +175,21 @@ class Auth extends Component {
       <div className="auth-container">
         <form className="form" onSubmit={this.onSubmitHandler} >
         <div className="primary-header form__header">{auth}</div>
-        <div className="alert-error">{
-          errors.message === "Email doesn't exist. Please Register" ? 
-          <div>
-          <span>Email doesn't exist. Please </span>
-          <span 
-            className="switch-auth" 
-            style={{color:"blue", cursor:"pointer"}} 
-            onClick={()=>this.changeAuthState("register")}> Register </span>
+        
+        {(auth === "register") ?
+          <div className="form__inner">
+            <div className="alert-error">{
+            errors.message === "Email doesn't exist. Please Register" ? 
+            <div>
+            <span>Email doesn't exist. Please </span>
+            <span 
+              className="switch-auth" 
+              style={{color:"blue", cursor:"pointer"}} 
+              onClick={()=>this.changeAuthState("register")}> Register </span>
           </div>
            :
-          errors.message
+             errors.message
           }</div>
-        {(auth === "register") ?
-          <div>
             <div className="form__component">
               <i className="form__group__icon"><FontAwesomeIcon icon={faUser}/></i>
               <div className="form__group">
@@ -230,7 +231,7 @@ class Auth extends Component {
                   className="form__input" required/>
                 <label htmlFor="password" className="form__label">
                   <span>Password</span>
-                  <span>(Must be at least 7 characters)</span>
+                  <span>(Must be at least 8 characters)</span>
                   </label>
               </div>
             </div>
@@ -264,7 +265,20 @@ class Auth extends Component {
           </button>
         </div>
       </div> :
-      <div>
+      <div className="form__inner">
+        <div className="alert-error">{
+            errors.message === "Email doesn't exist. Please Register" ? 
+            <div>
+            <span>Email doesn't exist. Please </span>
+            <span 
+              className="switch-auth" 
+              style={{color:"blue", cursor:"pointer"}} 
+              onClick={()=>this.changeAuthState("register")}> Register </span>
+            </div>
+            :
+            errors.message
+          }
+        </div>
         <div className="form__component">
           <i className="form__group__icon">
             <FontAwesomeIcon icon={faEnvelope}/>
@@ -294,13 +308,14 @@ class Auth extends Component {
       </div>
       }
         <input type="submit" className="form-submit-button" value="Submit"/>
-      </form>
         {(auth === "register") &&
         <div className="login-signup">
             <span>Registered Already? </span>
             <span className="switch-auth" onClick={() => this.changeAuthState("login")}>Log In</span>
           </div>
         }
+      </form>
+        
         
       </div>
         

@@ -12,6 +12,8 @@
     .modal-content{
         position: fixed;
         transform: translate(-50%, -50%);
+        max-height: 80%;
+        overflow-y: auto;
         left: 50%;
         top: 50%;
         padding: 2rem;
@@ -24,7 +26,7 @@
         padding: 3em;
 
         .react-calendar{
-            width: 70%;
+            width: 100%;
         }
         
         form{

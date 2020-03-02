@@ -15,16 +15,24 @@ $gray: #92959E;
     overflow-y: auto;
     background-color: $color-card-background;
     box-shadow: 0 8px 10px rgba($color: #000000, $alpha: .2),
-    0 10px 10px rgba($color: #000000, $alpha: .2)
-    ;
+    0 10px 10px rgba($color: #000000, $alpha: .2);
+
+    @include response(phone){
+      box-shadow: none;
+    }
     
     .message-data {
       margin-bottom: 1.5rem;
       font-size: 1.3rem;
+
+      @include response(phone){
+        font-size: 1rem;
+      }
     }
 
     .sender-data{
         text-align: right;
+        
     }
     .receive-data{
       text-align: left;
@@ -44,7 +52,13 @@ $gray: #92959E;
       margin-bottom: 3rem;
       width: 70%;
       position: relative;
-      
+
+      @include response(phone){
+        font-size: 1.2rem;
+        padding: 5px 10px;
+
+      }
+
       &:after {
         bottom: 100%;
         left: 7%;
@@ -63,6 +77,10 @@ $gray: #92959E;
       float: right;
       text-align: left;
       word-break: break-all;
+      
+      @include response(phone){
+        background: rgba($color: #fc3b3b, $alpha: 0.3);
+      }
     }
     
     .receive-message {

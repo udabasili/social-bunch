@@ -74,22 +74,16 @@ io.on("connection", (client)=>{
     //create room
     client.on("create", ({roomName}, callback) =>{
         chat.createRoom(roomName)
-        .then((response)=>{
-            console.log(response);
-            
+        .then((response)=>{            
             callback(response)}
             )
 
     })
 
     //add the user to a room when he loads link
-    client.on("join", ({username, groupId}, callback) =>{ 
-        console.log(username, groupId);
-                
+    client.on("join", ({username, groupId}, callback) =>{                 
         chat.joinRoom(username, client.id, groupId)
-           .then((response) =>{
-               console.log(response);
-               
+           .then((response) =>{               
                 let room = response.socket[0].name
                client.join(room)
                 io.to(room).emit("updateRoomMemberStatus", response)
@@ -101,7 +95,6 @@ io.on("connection", (client)=>{
     
     //user leave group
     client.on("leave", ({username, roomId }, callback) =>{    
-        console.log({username, roomId })     
         chat.leaveRoom(username, roomId )
             .then((response) =>{                
                 let room = response.socket[0].name
@@ -110,14 +103,10 @@ io.on("connection", (client)=>{
             })
         })
     //send message to particular room
-    client.on("messageToGroup", ({message,senderId, groupId}) =>{
-        console.log(message,senderId, groupId);
-        
+    client.on("messageToGroup", ({message,senderId, groupId}) =>{        
         let date = new Date();
         chat.getUser(senderId, groupId)
-            .then((response) =>{      
-                console.log(response);
-                                          
+            .then((response) =>{                                                
                 io.to(response.room).emit('groupMessage', {
                     text: message,
                     createdAt: date.toISOString(),
@@ -145,7 +134,6 @@ io.on("connection", (client)=>{
     })
 
     client.on("voiceCall", ({ calling, caller, room}) =>{     
-        console.log({ calling, caller, room})   
         chat.getUserSocketId(calling)
         .then((response) =>{                             
             client.to(response).emit('receive', {
@@ -180,9 +168,7 @@ io.on("connection", (client)=>{
     client.on("disconnect",  function(){
         chat.logout(client.id)
         .then((data)=>{
-            })
-        console.log(`${client.id} has left the chat`);
-        
+            })        
     })
 })
 

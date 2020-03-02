@@ -8,6 +8,7 @@ import { getGroupMembersById } from '../../redux/action/group.action';
 import { socket, setRooms } from '../../services/socketIo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import {isMobile, isBrowser} from 'react-device-detect';
 
 
 
@@ -99,9 +100,12 @@ class GroupPage extends Component {
       const {user, messages, groupMembers, onlineMembers, groupId} =this.state        
         return (
             <div className="group">
+              {isBrowser &&  (
                 <section className="group__left-section">
-                    <Profile userData={user} groupChat/>
+                  <Profile userData={user} groupChat/>
                 </section>
+                  )
+                }
                 <section className="chatroom__main-section">
                   <div className="chat-container">
                     <div className="chat-area-header">

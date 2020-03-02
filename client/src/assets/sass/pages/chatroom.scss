@@ -3,4 +3,7 @@
     height: 85vh;
     background-color: $color-background ;
     width: 100%;
+    @include response(phone){
+        display: flex;
+    }
 }

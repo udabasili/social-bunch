@@ -1,3 +1,25 @@
+/*Mobile Responsive**/
+
+@mixin response($device) {
+    @if $device == phone { 
+        @media only screen  and (max-width: 600px) {
+            @content
+        
+        };
+    }
+
+    @if $device == tab-port { 
+        @media only screen  and (max-width: 900px) {
+            @content
+        
+        };
+    }
+    @if $device == tab-land {
+        @media only screen and (max-width: 1200px) { @content };   
+    }
+}
+
+/** Topography Mixin*/
 @mixin primary-header {
     font-family: 'Anton', sans-serif;
     font-size: 2rem;

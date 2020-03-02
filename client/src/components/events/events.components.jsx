@@ -26,12 +26,9 @@ class Events extends Component {
         date:"",
         createdBy:props.currentUser.username,
         showModal: false
-
-    }
-      
+      }
     }
     
-
     componentDidMount(){
       //get all events when we load window
       this.props.getAllEvents()

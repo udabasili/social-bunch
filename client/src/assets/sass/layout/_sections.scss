@@ -10,14 +10,27 @@
         width: 35vw;
         overflow: auto;
 
+        @include response(phone){
+            box-shadow: none;
+            width: 100vw;
+            margin-left: - 80vw;
+            margin-right: 1px;
+        }
+
+        &__header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+
         .primary-header{
             text-align: left;
-            padding-left: 10px;
         }
 
         .contact-container{
             width: 100%;
-            height: 40%;
+            height: 25%;
             display: flex;
             overflow: auto;
             border-top: 2px $color-background solid;
@@ -129,6 +142,13 @@
         width: 50vw;
         position: relative;
 
+        @include response(phone){
+            width: 0;
+            flex-grow: 1;
+            flex-shrink: 1;
+            ;
+        }
+
         .chat-container{
             width: 100%;
             height: 100%;
@@ -142,7 +162,12 @@
                 width: 100%;
                 height: 10%;
                 border-bottom: 2px  solid $color-icon ;
-
+                 
+                & > *{
+                    @include response(phone){
+                        display: none;
+                    }
+                }
 
                 .icon{
                     color: $color-icon;
@@ -150,6 +175,8 @@
                     margin: 0 10px;
                     position: relative;
                     cursor: pointer;
+
+                   
                     
                     
 
@@ -185,6 +212,11 @@
 }
 
 .group{
+
+    .chatroom__main-section{
+        width: 90vw;
+        margin-top: 10px;
+    }
     &__right-section{
         border-radius: 10px;
         margin: 20px;
@@ -193,7 +225,13 @@
         position: relative;
         background-color: $color-card-background;
         padding: 20px;
-        box-shadow: 0 8px 10px rgba(0, 0, 0, .21), 0 8px 10px rgba(0, 0, 0, .21) ;;
+        box-shadow: 0 8px 10px rgba(0, 0, 0, .21), 0 8px 10px rgba(0, 0, 0, .21) ;
+
+        @include response(phone){
+            width: 90vw;
+            height: 30%;
+            overflow-y: auto;
+        }
 
     }
 }

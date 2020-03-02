@@ -4,6 +4,10 @@
 
 .w3-bar{
     cursor: pointer;
+    
+    @include response(phone){
+        font-size: .5rem;
+    }
 }
 
 .user-group-status{

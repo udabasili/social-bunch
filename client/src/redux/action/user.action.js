@@ -47,8 +47,14 @@ export const SignUp =  (fileHeader, fileData, jsonData) =>{
     return dispatch =>{
         return new Promise((resolve, reject)=>{
         return axios.post("/auth/register", formData, fileHeader)
-            .then((response) =>{
-                dispatch(removeError())            
+            .then((res) =>{
+                dispatch(removeError())
+                let response = res.data.message
+                let currentUser =  response.currentUser
+                sessionStorage.setItem("userId", currentUser._id);
+                sessionStorage.setItem("validator", response.validator)
+                setRestApiHeader(response.validator)
+                dispatch(setCurrentUser(currentUser));            
                 resolve(response)
             })
             .catch((error) =>{

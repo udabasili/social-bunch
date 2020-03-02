@@ -38,12 +38,14 @@ const ChatSendBox = ({groupId, recipient, currentUser, sendMessage, location}) =
 
     return(
         <form onSubmit={onSubmitHandler} className="chat-box">
+            <input type="hidden" value="something"/>
             <button  type="submit" className="chat-box__icon">
                 <FontAwesomeIcon icon={faPaperPlane}/>  </button>
             <input 
                 type="text"
                 name="chat_message" 
                 onChange={(e)=>setMessage(e.target.value)}
+                autoComplete="new-password"
                 value={message}
                 placeholder="Send a message" 
                 className="chat-box__input chat_message" required/>
