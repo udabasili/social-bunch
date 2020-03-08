@@ -20,4 +20,4 @@ The best way is to visit the heroku website for the deployed website  [Simply Ch
 
 ## Test
 
-Everything is real time so you get the users online status as soon as they log in if they are your friend. Once you create an account you get a sample user added as you friend list. To test with that default user and your account, use email: test@yahoo.com and password is the number 1 typed 8 times.
+Everything is real time so you get a user's online status as soon as they log in, as long as  they are your friend. Once you create an account you get a sample user added as you friend list. To test with that default user and your account, use email: test@yahoo.com and password is the number 1 typed 8 times.
