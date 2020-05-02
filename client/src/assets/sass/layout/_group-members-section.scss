@@ -1,0 +1,52 @@
+.group-user{
+
+    &__list{
+    box-shadow: none;
+
+    }
+
+    &__name{
+
+        &::first-letter{
+            text-transform: uppercase;
+
+        }
+
+    }
+
+    &__item{
+        cursor: pointer;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+
+        @include response(phone){
+            font-size: .5rem;
+        }
+    }
+
+    &__status{
+        width: 12px;
+        order: 3;
+        margin-left: 20px;
+        height: 12px;
+        border-radius: 50%;
+    }
+
+    &__name{
+        font-weight: bolder;
+    }    
+}
+
+
+.online{
+    background-color: greenyellow;
+
+}
+
+.offline{
+    background-color: yellow;
+
+}

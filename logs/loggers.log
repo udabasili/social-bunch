@@ -1,0 +1,145 @@
+Sat, 02 May 2020 21:06:52 GMT | INFO | loggers.log |  test has logged in | 
+Sat, 02 May 2020 21:06:52 GMT | INFO | loggers.log | Socket 8FtVVegpGi2VR7cCAAAC connected | 
+Sat, 02 May 2020 21:06:53 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Sat, 02 May 2020 21:06:53 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Sat, 02 May 2020 21:06:53 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Sat, 02 May 2020 21:06:53 GMT | INFO | loggers.log | test has the socket id set in database | 
+Sat, 02 May 2020 21:07:00 GMT | ERROR | loggers.log | User not registered | 
+Sat, 02 May 2020 21:07:07 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:07:08 GMT | INFO | loggers.log | Socket pHjs_ZY5QavNnxsAAAAD connected | 
+Sat, 02 May 2020 21:07:09 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Sat, 02 May 2020 21:07:09 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Sat, 02 May 2020 21:07:09 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Sat, 02 May 2020 21:07:09 GMT | INFO | loggers.log | admin has left room Sinatra | 
+Sat, 02 May 2020 21:07:09 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Sat, 02 May 2020 21:07:11 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:11 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:11 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:11 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:17 GMT | INFO | loggers.log | admin messaged test | 
+Sat, 02 May 2020 21:07:17 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:17 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:17 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:17 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:17 GMT | INFO | loggers.log | admin send message to test | 
+Sat, 02 May 2020 21:07:23 GMT | INFO | loggers.log | test messaged admin | 
+Sat, 02 May 2020 21:07:23 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:23 GMT | INFO | loggers.log | test send message to admin | 
+Sat, 02 May 2020 21:07:28 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | admin joined a group called Sinatra | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:30 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | admin has joined room Sinatra | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:32 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:46 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Sat, 02 May 2020 21:07:46 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:46 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:46 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:46 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:46 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:46 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:46 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:46 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:46 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:46 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:46 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:46 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:46 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:46 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:46 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:46 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:47 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:47 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:47 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:47 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:47 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:47 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:47 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:47 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | test has joined room Sinatra | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:07:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 

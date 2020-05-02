@@ -1,0 +1,53 @@
+.modal-container{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background: rgba($color: #000000, $alpha: .8);
+    box-shadow: 2px 3px 10px black;
+
+
+    .modal-content{
+        position: fixed;
+        transform: translate(-50%, -50%);
+        max-height: 80%;
+        overflow-y: auto;
+        min-width: 40%;
+        left: 50%;
+        top: 50%;
+        padding: 2rem;
+        background-color: rgba(160, 157, 157, 0.931);
+        border: 3px $color-logo-background solid ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem auto;
+        padding: 3em;
+
+        .react-calendar{
+            width: 100%;
+        }
+        
+        form{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            width: 100%;
+            align-items: center;
+             
+            
+            }
+
+            .close-button{
+                color: red;
+                position: absolute;
+                cursor: pointer;
+                left: 90%;
+                font-size: 30px;
+                top: 0;
+            }
+        }
+    
+}

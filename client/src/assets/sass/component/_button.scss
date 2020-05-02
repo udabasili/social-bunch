@@ -1,0 +1,123 @@
+/*****BUTTON STYLINGS****/
+.btn{
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 20px 50px;
+  top: 60px;
+  font-size: 1.4rem;
+  position: relative;
+  width: 60%;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all .3s;
+  position: relative;
+}
+
+.btn-white{
+  background-color: $color-icon;
+  color: black;
+  font-weight: bold;
+}
+
+.btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(black, .2);/**x, y, blur, color)**/
+}
+.btn:active{
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(black, .2);
+}
+
+/**create the btn effec**/
+.btn::after{
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%; 
+  border-radius: 100px;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn-white::after{
+  background-color: black;
+
+}
+/* when we hover the button show the after element with the styles below added**/
+.btn:hover::after{
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+
+}
+
+
+.form-submit-button{
+    width: 20%;
+    background-color: $color-icon;
+    color: black;
+    padding: 1rem 1.2rem;
+    margin: 2rem auto;
+    position: relative;
+    border-radius: 4px;
+    cursor: pointer;
+
+
+    @include response(phone){
+      width: 20%;
+      display: inline-block;
+      padding: .5rem .7rem ;
+      font-size: 1rem;
+    }
+  
+  
+  &:hover {
+    box-shadow: 2px 2px 10px black;
+
+  }
+}
+
+.add-button{
+  padding: 1rem 4rem;
+  @include removeDefaultButtonStyle;
+  box-shadow: 0px 5px 10px rgba(black, .2), 0px -5px 10px rgba(black, .1);
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid $color-icon;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin: 0 auto;
+  color: $color-icon;
+  font-size: 1.5rem;
+  border-radius: 20px;
+
+  &:focus{
+    opacity: .7;
+  }
+
+  &:hover{
+    transform: scale(1.07);
+  }
+}
+
+.sign-out{
+  display: flex;
+  font-size: 3rem;
+  height: 100%;
+  cursor: pointer;
+  align-items: center;
+
+  svg{
+    font-size:  3rem;
+  }
+  
+  &:focus{
+    opacity: .7;
+  }
+
+  &:hover{
+    transform: scale(1.01);
+  }
+}

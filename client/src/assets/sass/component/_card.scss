@@ -1,0 +1,135 @@
+/**EVENTS AND GROUP CARD STYLING **/
+
+.card{
+    &__container{
+      border-radius: 5px;
+      width: 65%;
+      padding: 2px;
+      height: 30vh;
+      box-shadow: 2px 2px 2px black;
+      background-color: $color-icon;
+      margin: 9%;
+
+      @include response(phone){
+        width: 60%;
+        height: 18vh;
+      }
+      @include response(tab-port){
+        width: 80%;
+        height: 18vh;
+      }
+    }
+    
+    &__content {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    font-size: .6em;
+    background-color: rgb(145, 3, 3);
+    color: white;
+    height: 100%;
+    background-blend-mode: multiply;
+    text-align: center;
+
+    @include response(phone){
+      padding: 4px;
+
+    }
+
+    .close-button{
+      position: absolute;
+      cursor: pointer;
+      top: 3%;
+      left: 85% ;
+      color: white;
+      font-size: 3rem;
+
+      @include response(phone){
+        top: .1%;
+        left: 86% ;
+        font-size: 2rem;
+      }
+    }
+
+    img{
+        display: inline-block;
+        width: 14rem;
+        border-radius: 50%;
+      }
+    }
+    &__join-button {
+        position: absolute;
+        bottom: 3%;
+        padding: 1rem 2.5rem;
+        cursor: pointer;
+        font-weight: bolder;
+        right: 50%;
+        transform: translate(50%,0);
+        background-color: white;
+        color: black;
+        border: 0;
+        height: 4rem;
+        text-align: center;
+        border-radius: 30px;
+        margin-top: 10%;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        z-index: 10;
+
+        @include response(phone){
+          margin: 10px 0;
+          font-size: 1rem;
+
+        }
+
+        &:hover{
+          opacity: .7;
+        }
+        &:focus{
+          outline: none;
+        }
+      }
+
+      &__text-content{
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.5rem;
+        display: flex;
+      
+        @include response(tab-port){
+          font-size: 1.2rem;
+
+        }
+
+        @include response(phone){
+          font-size: 1.3rem;
+        }
+
+        a{
+          text-decoration: none;
+          color: rgb(248, 149, 149)
+        }
+      }
+        
+      &__date-time{
+          margin: 0;
+          font-size: 1.2rem;
+
+          
+
+        span{
+          font-size: 1.4rem;
+          margin: 10px;
+
+          @include response(phone){
+            font-size: 1.3rem;
+          }
+
+          @include response(tab-port){
+            font-size: 1.2rem;
+            margin: 0;
+  
+          }
+        }
+    }
+}

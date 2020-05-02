@@ -1,0 +1,271 @@
+Sat, 02 May 2020 21:09:15 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Sat, 02 May 2020 21:09:15 GMT | INFO | loggers.log | Connected to mongodb | 
+Sat, 02 May 2020 21:09:16 GMT | INFO | loggers.log | Socket E9nBxYKe0a3GacoGAAAA connected | 
+Sat, 02 May 2020 21:09:16 GMT | INFO | loggers.log | Socket zVYgV_dfj6H3UOCRAAAB connected | 
+Sat, 02 May 2020 21:09:17 GMT | INFO | loggers.log | Socket NljYxCA4k4OfzHe2AAAC connected | 
+Sat, 02 May 2020 21:09:19 GMT | INFO | loggers.log | Socket 2rzxfgxHr_JlclxqAAAD connected | 
+Sat, 02 May 2020 21:09:19 GMT | INFO | loggers.log | test has left room Sinatra | 
+Sat, 02 May 2020 21:09:21 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Sat, 02 May 2020 21:09:21 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Sat, 02 May 2020 21:09:21 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Sat, 02 May 2020 21:09:23 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Sat, 02 May 2020 21:09:27 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:09:27 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:27 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:09:27 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:28 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Sat, 02 May 2020 21:09:32 GMT | INFO | loggers.log | Connected to mongodb | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | Connected to mongodb | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log |  test has logged in | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | admin sent test a friend request | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | admin created a new event | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:09:33 GMT | ERROR | loggers.log | unAuthorized User | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | Connected to mongodb | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log |  test has logged in | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | test added admin  | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log | admin joined event called undefined | 
+Sat, 02 May 2020 21:09:33 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | admin joined a group called Sinatra | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | admin left an event called undefined | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | admin left a group called Sinatra | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:34 GMT | ERROR | loggers.log | Cast to ObjectId failed for value "244335" at path "_id" for model "Event" | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:09:34 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:09:34 GMT | ERROR | loggers.log | Cast to ObjectId failed for value "244335" at path "_id" for model "Group" | 
+Sat, 02 May 2020 21:09:36 GMT | INFO | loggers.log | Connected to mongodb | 
+Sat, 02 May 2020 21:09:37 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:09:37 GMT | INFO | loggers.log | Verified User has valid token | 
+Sat, 02 May 2020 21:09:37 GMT | ERROR | loggers.log | unAuthorized User | 
+Sat, 02 May 2020 21:12:06 GMT | INFO | loggers.log | Connected to mongodb | 
+Sat, 02 May 2020 21:12:06 GMT | INFO | loggers.log | Connected to mongodb | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | admin created a new event | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log |  test has logged in | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | Connected to mongodb | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | admin sent test a friend request | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:12:07 GMT | ERROR | loggers.log | unAuthorized User | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | admin joined a group called Sinatra | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log |  test has logged in | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | admin joined event called undefined | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log | test added admin  | 
+Sat, 02 May 2020 21:12:07 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | admin left a group called Sinatra | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | admin left an event called undefined | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:08 GMT | ERROR | loggers.log | Cast to ObjectId failed for value "244335" at path "_id" for model "Group" | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:12:08 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:12:08 GMT | ERROR | loggers.log | Cast to ObjectId failed for value "244335" at path "_id" for model "Event" | 
+Sat, 02 May 2020 21:12:10 GMT | INFO | loggers.log | Connected to mongodb | 
+Sat, 02 May 2020 21:12:10 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:12:10 GMT | INFO | loggers.log | Verified User has valid token | 
+Sat, 02 May 2020 21:12:10 GMT | ERROR | loggers.log | unAuthorized User | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | Connected to mongodb | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | Connected to mongodb | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | admin created a new event | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | admin joined a group called Sinatra | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:14:48 GMT | ERROR | loggers.log | unAuthorized User | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | admin left a group called Sinatra | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | admin joined event called undefined | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:48 GMT | ERROR | loggers.log | Cast to ObjectId failed for value "244335" at path "_id" for model "Group" | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log | admin left an event called undefined | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log | Connected to mongodb | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:49 GMT | ERROR | loggers.log | Cast to ObjectId failed for value "244335" at path "_id" for model "Event" | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log |  test has logged in | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:49 GMT | INFO | loggers.log | admin sent test a friend request | 
+Sat, 02 May 2020 21:14:50 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:14:50 GMT | INFO | loggers.log |  test has logged in | 
+Sat, 02 May 2020 21:14:50 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:14:50 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:50 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 21:14:50 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 21:14:50 GMT | INFO | loggers.log | test added admin  | 
+Sat, 02 May 2020 21:14:51 GMT | INFO | loggers.log | Connected to mongodb | 
+Sat, 02 May 2020 21:14:51 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 21:14:51 GMT | INFO | loggers.log | Verified User has valid token | 
+Sat, 02 May 2020 21:14:51 GMT | ERROR | loggers.log | unAuthorized User | 

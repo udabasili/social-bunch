@@ -1,0 +1,53 @@
+.nav-container{
+    display: flex;
+    position:fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-nav;
+    z-index: 6;
+    margin: 0;
+    top: 0;
+    height: 100vh;
+    width: $left-nav-width;
+    
+    &__logo-box{
+        height: 10.4vh;
+        background-color: firebrick;
+        
+        @include response(phone){
+            height: 8.4vh;
+        }
+
+        @include response(tab-port){
+            height: 6.3vh;
+        }
+    }
+}
+
+.nav-icon{
+    &__list{        
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .active{
+            background-color: $color-background;
+        }
+    }
+
+    &__item{
+        display: flex;
+        font-size: 2rem;
+        color: white;
+        stroke-width: 3px;
+        cursor: pointer;
+        &:hover{
+            background-color: $color-background;
+        }
+    }
+
+    &__icon{
+        margin: 1rem auto;
+    }
+    
+}

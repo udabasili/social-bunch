@@ -1,0 +1,186 @@
+/**AUTH FORM STYLING **/
+
+.form{
+    display: flex;
+    position: relative;
+    text-align: center;
+    width: 40%;
+    flex-direction: column;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    justify-content: center;
+    box-shadow: 2px 2px 10px black;
+
+    @include response(phone){
+        width: 70%
+    }
+
+    @include response(tab-port){
+        width: 70%
+    }
+
+    &__inner{
+        margin-top: 15%;
+    }
+
+    &__header{
+        position: absolute;
+        display: flex;
+        padding: 2rem;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        height: 10%;
+        width: 100%;
+        font-size: 2rem;
+        background-color: $color-nav;
+        color: black;
+        align-self: stretch;
+
+        @include response(phone){
+            font-size: 2.3rem;
+            font-weight: 400;
+
+        }
+    }
+
+    &__component{
+        display: flex;
+        margin: 0px auto;
+        margin-top: 3rem;
+        width: 80%;
+    }
+
+    &__group{
+        position: relative;
+        width: 100%;
+
+        &__icon{
+            margin-right: 30px;
+            @include response(phone) {
+                font-size: 1.5rem;
+            }
+
+            @include response(phone){
+                display: none;
+    
+            }
+        }
+    }
+
+    &__group-image{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 64%;
+        margin: 30px auto 0 auto;
+
+        @include response(phone) {
+            width: 64%;
+            font-size: 1.5rem;
+
+        }
+
+        &__icon {
+            display: flex;
+            height: 100%;
+
+          
+
+            &:first-child{
+                font-size: 20px;
+            }
+        }
+        .image-upload{
+
+            &__input{
+                display: none;
+            }
+
+            &__message{
+                width: 50%;
+                font-size: 1rem;
+            }
+
+            &__button{
+                @include removeDefaultButtonStyle;
+                border: 1px solid gray;
+                padding: 5px 10px;
+                cursor: pointer;
+                font-size: 1rem;
+                color: black;
+                background-color: $color-icon;
+
+                @include response(phone){
+                    padding: 1px 2px;
+                }
+
+                
+            }
+            
+        }
+
+    }
+    
+    &__input{
+        border: none;
+        position: relative;
+        background-color: transparent;
+        border-bottom:3px solid black;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 10px;
+
+        @include response(phone){
+            font-size: 1.1rem;
+        }
+
+        &:focus{
+            outline: none;
+        }
+
+        &::placeholder{
+            color: black;
+        }
+    }
+  
+    &__label{
+        position: absolute;
+        font-size: 1.2rem;
+        left: 0;
+        top: -2.2rem;
+
+        @include response(phone){
+            display: none;
+
+        }
+    }
+    
+}
+
+.login-signup{
+    font-size: 1.3rem;
+    padding: 2rem 0 ;
+
+    @include response(phone){
+        padding: 0 0 2rem 0 ;
+        font-size: 1rem;
+    }
+
+    .switch-auth{
+        color: red;
+        cursor: pointer;
+    }
+}
+
+.alert-error{
+    color: #D8000C;
+    background-color: #FFD2D2;
+    width: 60%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+
+    @include response(phone){
+        margin: 2rem auto;
+        font-size: 1rem;
+    }
+}

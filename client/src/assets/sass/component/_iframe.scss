@@ -1,0 +1,104 @@
+/**SPOTIFY WINDOW STYLING **/
+
+.spotify{
+  width: 20vw;
+  height: 35vh;
+  z-index: 10;
+  font-size: 1em;
+  margin: 0;
+  background-color: $color-background;
+  position: fixed;
+  bottom: 0%;
+  left: 0;
+
+  &__row {
+      padding: 1rem;
+      display: flex;
+      position: relative;
+      align-items: center;
+      background: #f1f1f1;
+      width: 100%;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+
+      &::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+    }
+  
+  &__iframe{
+      font-size: 1em;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      height:100%
+
+  }
+  &__column{    
+    position: relative;
+    left: 80%;
+    display: flex;
+    
+      .dot {
+          margin-left:1.5rem ;
+          height: 3rem;
+          width: 3rem;
+          border-radius: 50%;
+          position: relative;
+          cursor: pointer;
+
+              svg:nth-child(1){
+                  position: absolute;
+                  top: 43%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+              }
+        }
+      
+        .minimize{
+            background-color: yellow;
+            
+        }
+
+        .close{
+          background-color: red;
+          position: relative;
+
+        }
+  }
+
+  .content{
+      width: 100%;
+      position: relative;
+      height: 80%;
+  }
+}
+
+
+
+
+input[type=search] {
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  background-color: white;
+  margin-top: -8px;
+  height: 25px;
+  color: #666;
+  padding: 5px;
+}
+
+.bar {
+  width: 17px;
+  height: 3px;
+  background-color: #aaa;
+  margin: 3px 0;
+  display: block;
+}
+
+.content {
+  padding: 10px;
+}

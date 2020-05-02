@@ -1,0 +1,51 @@
+/*Mobile Responsive**/
+
+@mixin response($device) {
+    @if $device == phone { 
+        @media only screen  and (max-width: 600px) {
+            @content
+        
+        };
+    }
+
+    @if $device == tab-port { 
+        @media only screen and (min-width: 600px) and (max-width: 900px) {
+            @content
+        
+        };
+    }
+    @if $device == tab-land {
+        @media only screen and  (min-width: 900px) and (max-width: 1200px) { @content };   
+    }
+}
+
+/** Topography Mixin*/
+@mixin primary-header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+@mixin secondary-header {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+@mixin paragraph {
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif
+    
+}
+
+@mixin removeDefaultButtonStyle{
+    background-color:transparent;
+    outline: none;
+    border: none;
+    overflow: hidden;
+    position: relative;
+}
