@@ -10,13 +10,15 @@ const path = require('path');
     app.use(cors())
     app.disable('x-powered-by')
 
-    require('./routes')(app);
-    require('./db')()
-   
+
+
 /**FUNCTIONALITY MIDDLEWARE */
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(cloudinaryConfig.cloudinaryConfig);
+
+    require('./routes')(app);
+    require('./db')()
 
 /**STATIC FILES */  
     if (process.env.NODE_ENV === 'production') {
