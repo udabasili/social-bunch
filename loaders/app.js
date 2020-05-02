@@ -17,6 +17,8 @@ const path = require('path');
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(cloudinaryConfig.cloudinaryConfig);
 
+/**ROUTE */
+
     require('./routes')(app);
     require('./db')()
 
