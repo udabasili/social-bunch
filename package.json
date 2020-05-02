@@ -11,11 +11,11 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "start": "set NODE_ENV=production && node server.js",
+    "start": "node server.js",
     "client": "cd client && yarn start",
     "heroku-postbuild": "cd client && yarn && yarn run build",
     "server": "nodemon server.js",
-    "test": "jest --watchAll --verbose --coverage",
+    "test": "jest --watchAll ",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "dependencies": {

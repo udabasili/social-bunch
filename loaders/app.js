@@ -24,7 +24,6 @@ const path = require('path');
             res.sendFile(path.join(__dirname, '../client/build/index.html'))
         })
     }
-
  require('./routes')(app);
  require('./db')()
 

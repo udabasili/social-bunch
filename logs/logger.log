@@ -310,3 +310,68 @@ Sat, 02 May 2020 22:19:01 GMT | INFO | loggers.log | Current User is permitted a
 Sat, 02 May 2020 22:19:01 GMT | INFO | loggers.log | User admin communicated with the server | 
 Sat, 02 May 2020 22:19:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
 Sat, 02 May 2020 22:19:01 GMT | INFO | loggers.log | admin joined event called undefined | 
+Sat, 02 May 2020 22:32:58 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Sat, 02 May 2020 22:32:58 GMT | INFO | loggers.log | Connected to mongodb | 
+Sat, 02 May 2020 22:33:19 GMT | INFO | loggers.log | Socket g1GDABM4UJbQDV_gAAAA connected | 
+Sat, 02 May 2020 22:33:19 GMT | INFO | loggers.log | Socket U3byC670p9I8xxFwAAAB connected | 
+Sat, 02 May 2020 22:33:20 GMT | INFO | loggers.log | Socket u7CQ7_xYiEWTYaRCAAAC connected | 
+Sat, 02 May 2020 22:33:20 GMT | INFO | loggers.log | Socket UfKXUlEf_kYDwXdiAAAD connected | 
+Sat, 02 May 2020 22:33:20 GMT | INFO | loggers.log | rooms successfully created | 
+Sat, 02 May 2020 22:33:30 GMT | INFO | loggers.log |  test has logged in | 
+Sat, 02 May 2020 22:33:31 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Sat, 02 May 2020 22:33:31 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Sat, 02 May 2020 22:33:31 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Sat, 02 May 2020 22:33:31 GMT | INFO | loggers.log | test has the socket id set in database | 
+Sat, 02 May 2020 22:33:43 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Sat, 02 May 2020 22:33:46 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Sat, 02 May 2020 22:33:46 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 22:33:46 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:33:46 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 22:33:46 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:33:46 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 22:33:46 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:33:46 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 22:33:46 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:33:46 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 22:33:46 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:33:46 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 22:33:46 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:33:46 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 22:33:46 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:33:46 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 22:33:46 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:33:46 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 22:33:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:33:47 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 22:33:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:33:47 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 22:33:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:33:47 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 22:33:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:33:47 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 22:33:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:33:47 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 22:33:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:33:47 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 22:33:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:33:47 GMT | INFO | loggers.log | User test communicated with the server | 
+Sat, 02 May 2020 22:33:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:33:48 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Sat, 02 May 2020 22:34:58 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Sat, 02 May 2020 22:34:58 GMT | INFO | loggers.log | Connected to mongodb | 
+Sat, 02 May 2020 22:34:58 GMT | INFO | loggers.log | Socket ol1q6Ocpa4E6xm5pAAAA connected | 
+Sat, 02 May 2020 22:34:59 GMT | INFO | loggers.log | Socket 9FsfA6FUbRWbih_rAAAB connected | 
+Sat, 02 May 2020 22:34:59 GMT | INFO | loggers.log | Socket -H8Qzh9ZQrglW8mOAAAC connected | 
+Sat, 02 May 2020 22:35:00 GMT | INFO | loggers.log | Socket NLvGEmS7J9QX3pGkAAAD connected | 
+Sat, 02 May 2020 22:35:35 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Sat, 02 May 2020 22:35:35 GMT | INFO | loggers.log | Connected to mongodb | 
+Sat, 02 May 2020 22:35:35 GMT | INFO | loggers.log | Socket Nl8J-hRUbhUyVYZjAAAA connected | 
+Sat, 02 May 2020 22:35:36 GMT | INFO | loggers.log | Socket vCcIG39cgDmBMfE3AAAB connected | 
+Sat, 02 May 2020 22:35:36 GMT | INFO | loggers.log | Socket vMH28bLdll3acN-MAAAC connected | 
+Sat, 02 May 2020 22:35:36 GMT | INFO | loggers.log | Socket pF49qp9IxBrQh45bAAAD connected | 
+Sat, 02 May 2020 22:37:19 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Sat, 02 May 2020 22:37:19 GMT | INFO | loggers.log | Socket wuXmFA1vYBCPhLCQAAAA connected | 
+Sat, 02 May 2020 22:37:19 GMT | INFO | loggers.log | Connected to mongodb | 
+Sat, 02 May 2020 22:37:19 GMT | INFO | loggers.log | Socket gcOK0DvRWM-UhKWtAAAB connected | 
+Sat, 02 May 2020 22:37:19 GMT | INFO | loggers.log | Socket eXBt_Xj2tocvcM1EAAAC connected | 
+Sat, 02 May 2020 22:37:19 GMT | INFO | loggers.log | Socket 4Y9L0aUcni34nuUzAAAD connected | 
