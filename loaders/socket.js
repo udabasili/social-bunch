@@ -47,7 +47,6 @@ function setUserSocketIdEvent(socket, io){
 function createRoomEvent(socket){
     socket.on('create', async ({roomName}, callback) =>{
         await services.ChatService.createRoom(roomName)
-        callback(response)
         }
     )
 }

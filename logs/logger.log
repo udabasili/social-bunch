@@ -269,3 +269,44 @@ Sat, 02 May 2020 21:14:51 GMT | INFO | loggers.log | Connected to mongodb |
 Sat, 02 May 2020 21:14:51 GMT | INFO | loggers.log |  admin has logged in | 
 Sat, 02 May 2020 21:14:51 GMT | INFO | loggers.log | Verified User has valid token | 
 Sat, 02 May 2020 21:14:51 GMT | ERROR | loggers.log | unAuthorized User | 
+Sat, 02 May 2020 22:15:18 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Sat, 02 May 2020 22:15:18 GMT | INFO | loggers.log | Connected to mongodb | 
+Sat, 02 May 2020 22:17:19 GMT | INFO | loggers.log | Socket Yp0D3qhnjJH8-EMCAAAA connected | 
+Sat, 02 May 2020 22:17:19 GMT | INFO | loggers.log | Socket LYvaOt2ylZT3sSXTAAAB connected | 
+Sat, 02 May 2020 22:17:21 GMT | INFO | loggers.log | rooms successfully created | 
+Sat, 02 May 2020 22:17:50 GMT | INFO | loggers.log |  admin has logged in | 
+Sat, 02 May 2020 22:17:50 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Sat, 02 May 2020 22:17:50 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Sat, 02 May 2020 22:17:50 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Sat, 02 May 2020 22:17:50 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Sat, 02 May 2020 22:18:04 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Sat, 02 May 2020 22:18:06 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Sat, 02 May 2020 22:18:24 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 22:18:24 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:18:24 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 22:18:24 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:18:24 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 22:18:24 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:18:25 GMT | INFO | loggers.log | admin created a new event | 
+Sat, 02 May 2020 22:18:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 22:18:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:18:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 22:18:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:18:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 22:18:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:18:25 GMT | INFO | loggers.log | admin joined event called undefined | 
+Sat, 02 May 2020 22:18:42 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Sat, 02 May 2020 22:19:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 22:19:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:19:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 22:19:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:19:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 22:19:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:19:01 GMT | INFO | loggers.log | admin created a new event | 
+Sat, 02 May 2020 22:19:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 22:19:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:19:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 22:19:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:19:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Sat, 02 May 2020 22:19:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Sat, 02 May 2020 22:19:01 GMT | INFO | loggers.log | admin joined event called undefined | 

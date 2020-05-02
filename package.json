@@ -11,7 +11,7 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "set NODE_ENV=production && node server.js",
     "client": "cd client && yarn start",
     "heroku-postbuild": "cd client && yarn && yarn run build",
     "server": "nodemon server.js",
