@@ -10,7 +10,9 @@ const path = require('path');
     app.use(cors())
     app.disable('x-powered-by')
 
-
+    require('./routes')(app);
+    require('./db')()
+   
 /**FUNCTIONALITY MIDDLEWARE */
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
@@ -24,8 +26,6 @@ const path = require('path');
             res.sendFile(path.join(__dirname, '../client/build/index.html'))
         })
     }
- require('./routes')(app);
- require('./db')()
 
 
 
