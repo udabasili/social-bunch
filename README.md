@@ -25,3 +25,5 @@ In terms of usage, as soon as you create a new account, you get the admin user a
 ### Testing
 
 full jest testing was conducted and the report can be found in the test.json file.
+the logs folder also contains a comprehensive details of what the server notes down during the client's interaction
+
