@@ -7,7 +7,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 function App() {
   return (
-    <div>
+    <React.Fragment>
       <Provider store={store}>
         <PersistGate  persistor={persistor}>
           <Router>
@@ -15,8 +15,7 @@ function App() {
           </Router>
         </PersistGate>
       </Provider>
-
-    </div>
+    </React.Fragment>
   );
 }
 

@@ -19,55 +19,54 @@ if (sessionStorage.getItem("validator")) {
   
 
 class MainRouter extends React.Component {
-    componentDidMount(){
-      setOnlineUsers((response=>{
-        setAllUsersStatus(response.users, response.usersStatus)
-          }
-        ))
-      setRooms()
-      if (sessionStorage.getItem("validator")) {  
-        this.props.verifyUser()
-        .then()
-        .catch(res => this.props.history.push('/auth/login'))
-        connectOnAuth(this.props.currentUser.username)
-      } 
+  componentDidMount(){
+    setOnlineUsers((response=>{
+      setAllUsersStatus(response.users, response.usersStatus)
     }
-
-    componentWillUnmount(){
-      unRegisterSetOnlineUsers()
-      UnRegisterSetUserInfo()
-    }
-  
-    render(){
-        const {currentUser, isAuthenticated} = this.props
-
-        return (
-            <React.Fragment>
-            <Header/>
-            <Switch>
-            <PrivateRoute currentUser={currentUser} exact path="/" component={Chatroom} />
-            <Route  exact path="/auth/login" render={props =>(
-              localStorage.getItem("validator") && isAuthenticated ?
-                <Redirect to="/"/> :
-                <Auth auth="login" {...props}/>  
-              )
-            }/>
-            <Route  exact path="/auth/register" render={props =>(
-              localStorage.getItem("validator") && isAuthenticated ?
-                <Redirect to="/"/> :
-                <Auth auth="register" {...props}/>  
-              )
-            }/>
-          <PrivateRoute exact currentUser={currentUser} path="/group/:groupId" component={GroupPage} />
-          <PrivateRoute exact currentUser={currentUser} path="/user/:userId/profile" component={ProfilePage} />
-          <Route path="/404" component={NotFoundPage} />
-          <Redirect to="/404" />
-            </Switch>
-            </React.Fragment>
-        
-        );
-    }
+  ))
+      
+  setRooms()
+    if (sessionStorage.getItem("validator")) {  
+      this.props.verifyUser()
+      .then()
+      .catch(res => this.props.history.push('/auth/login'))
+      connectOnAuth(this.props.currentUser.username)
+    } 
   }
+
+  componentWillUnmount(){
+    unRegisterSetOnlineUsers()
+    UnRegisterSetUserInfo()
+  }
+  
+  render(){
+        const {currentUser, isAuthenticated} = this.props
+  return (
+    <React.Fragment>
+      <Header/>
+      <Switch>
+        <PrivateRoute currentUser={currentUser} exact path="/" component={Chatroom} />
+        <Route  exact path="/auth/login" render={props =>(
+          sessionStorage.getItem("validator") && isAuthenticated ?
+            <Redirect to="/"/> :
+            <Auth auth="login" {...props}/>  
+          )
+        }/>
+        <Route  exact path="/auth/register" render={props =>(
+          sessionStorage.getItem("validator") && isAuthenticated ?
+            <Redirect to="/"/> :
+            <Auth auth="register" {...props}/>  
+          )
+      }/>
+        <PrivateRoute exact currentUser={currentUser} path="/group/:groupId" component={GroupPage} />
+        <PrivateRoute exact currentUser={currentUser} path="/user/:userId/profile" component={ProfilePage} />
+        <Route path="/404" component={NotFoundPage} />
+        <Redirect to="/404" />
+      </Switch>
+    </React.Fragment>
+      );
+  }
+}
   
   const mapStateToProps = (state) =>({
     currentUser:state.user.currentUser,

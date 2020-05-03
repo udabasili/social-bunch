@@ -1,4 +1,7 @@
-
+#root{
+  width: 100vw;
+  height: 100vh;
+}
 *, 
 *::after,
 *::before{
@@ -9,6 +12,7 @@
 
 html{
   font-size:  62.5%;
+
 
   @include response(phone) {
       font-size: 50%;
@@ -27,6 +31,8 @@ html{
 body{
     font-family: 'Lato', sans-serif;
     font-weight: 400;
+    height: 100vh;
+    width: 100vw;
     line-height: 1.7;
 }
 

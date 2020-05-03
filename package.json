@@ -15,7 +15,7 @@
     "client": "cd client && yarn start",
     "heroku-postbuild": "cd client && yarn && yarn run build",
     "server": "nodemon server.js",
-    "test": "jest --watchAll ",
+    "test": "jest --watchAll --verbose --coverage",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "dependencies": {

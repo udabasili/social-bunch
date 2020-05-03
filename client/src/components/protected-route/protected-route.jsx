@@ -11,12 +11,9 @@ import {connect} from "react-redux";
 const PrivateRoute = ({ component: Component, currentUser, ...rest }) => {    
     return (
     <Route {...rest} render={(props) => (
-       sessionStorage.getItem("validator") && currentUser
-        ? 
-        <div>
-            <Component currentUser={currentUser} {...props} />
-        </div>
-        : <Redirect to={{
+       sessionStorage.getItem("validator") && currentUser? 
+       <Component currentUser={currentUser} {...props} /> : 
+       <Redirect to={{
             pathname:"/auth/login",
             state:{from: props.location}
             }}

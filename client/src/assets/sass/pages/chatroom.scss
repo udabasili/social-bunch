@@ -1,6 +1,6 @@
 .chatroom{
     display: flex;
-    height: 90vh;
+    height: 100%;
     background-color: $color-background ;
     width: 100%;
     @include response(phone){

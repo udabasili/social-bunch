@@ -37,7 +37,7 @@
             border-bottom: 4px $color-background solid;
 
             @include response(phone){
-                height: 15%;
+                height: 20%;
 
             }
 
@@ -52,6 +52,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+
             }
 
             &__username{
@@ -65,6 +66,7 @@
             display: flex;
             text-align: left;
             flex-direction: column;
+            min-height: 100%;
 
             .list-group-item-info{
                 text-align: center;
@@ -134,7 +136,6 @@
     }
 
     &__main-section{
-        height: 99%;
         width: 50vw;
         position: relative;
 
@@ -211,6 +212,7 @@
 
     .chatroom__main-section{
         width: 90vw;
+        height: 90%;
         margin-top: 10px;
     }
     &__right-section{

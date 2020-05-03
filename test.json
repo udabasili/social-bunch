@@ -1,0 +1,234 @@
+{
+    "numFailedTestSuites":0,
+    "numFailedTests":0,
+    "numPassedTestSuites":4,
+    "numPassedTests":12,
+    "numPendingTestSuites":0,
+    "numPendingTests":0,
+    "numRuntimeErrorTestSuites":0,
+    "numTodoTests":0,
+    "numTotalTestSuites":4,
+    "numTotalTests":12,
+    "openHandles":[
+ 
+    ],
+    "snapshot":{
+       "added":0,
+       "didUpdate":false,
+       "failure":false,
+       "filesAdded":0,
+       "filesRemoved":0,
+       "filesRemovedList":[
+ 
+       ],
+       "filesUnmatched":0,
+       "filesUpdated":0,
+       "matched":0,
+       "total":0,
+       "unchecked":0,
+       "uncheckedKeysByFile":[
+ 
+       ],
+       "unmatched":0,
+       "updated":0
+    },
+    "startTime":1588492042470,
+    "success":true,
+    "testResults":[
+       {
+          "assertionResults":[
+             {
+                "ancestorTitles":[
+                   "Group Route testing",
+                   "GET /user/:userId/group/"
+                ],
+                "failureMessages":[
+ 
+                ],
+                "fullName":"Group Route testing GET /user/:userId/group/ should return 200 and an array of groups if user joined group successfully",
+                "location":null,
+                "status":"passed",
+                "title":"should return 200 and an array of groups if user joined group successfully"
+             },
+             {
+                "ancestorTitles":[
+                   "Group Route testing",
+                   "GET /user/:userId/group/"
+                ],
+                "failureMessages":[
+ 
+                ],
+                "fullName":"Group Route testing GET /user/:userId/group/ should return 200 and an array of groups if user left group successfully",
+                "location":null,
+                "status":"passed",
+                "title":"should return 200 and an array of groups if user left group successfully"
+             },
+             {
+                "ancestorTitles":[
+                   "Group Route testing",
+                   "GET /user/:userId/group/"
+                ],
+                "failureMessages":[
+ 
+                ],
+                "fullName":"Group Route testing GET /user/:userId/group/ should return 505 if group Id is invalid",
+                "location":null,
+                "status":"passed",
+                "title":"should return 505 if group Id is invalid"
+             }
+          ],
+          "endTime":1588492072898,
+          "message":"",
+          "name":"C:\\Users\\DJETHA\\eclipse-workspace\\Application\\Web\\simply-chat\\test\\group.test.js",
+          "startTime":1588492047342,
+          "status":"passed",
+          "summary":""
+       },
+       {
+          "assertionResults":[
+             {
+                "ancestorTitles":[
+                   "User and Message Route testing",
+                   "Friend route"
+                ],
+                "failureMessages":[
+ 
+                ],
+                "fullName":"User and Message Route testing Friend route should return 200 if userA successfully sends request to userB ",
+                "location":null,
+                "status":"passed",
+                "title":"should return 200 if userA successfully sends request to userB "
+             },
+             {
+                "ancestorTitles":[
+                   "User and Message Route testing",
+                   "Friend route"
+                ],
+                "failureMessages":[
+ 
+                ],
+                "fullName":"User and Message Route testing Friend route should return 200 if userB accepts userA friend request",
+                "location":null,
+                "status":"passed",
+                "title":"should return 200 if userB accepts userA friend request"
+             }
+          ],
+          "endTime":1588492074050,
+          "message":"",
+          "name":"C:\\Users\\DJETHA\\eclipse-workspace\\Application\\Web\\simply-chat\\test\\user.test.js",
+          "startTime":1588492048968,
+          "status":"passed",
+          "summary":""
+       },
+       {
+          "assertionResults":[
+             {
+                "ancestorTitles":[
+                   "Event Route testing",
+                   "POST /user/:userId"
+                ],
+                "failureMessages":[
+ 
+                ],
+                "fullName":"Event Route testing POST /user/:userId should return 200 since userId is valid",
+                "location":null,
+                "status":"passed",
+                "title":"should return 200 since userId is valid"
+             },
+             {
+                "ancestorTitles":[
+                   "Event Route testing",
+                   "POST /user/:userId"
+                ],
+                "failureMessages":[
+ 
+                ],
+                "fullName":"Event Route testing POST /user/:userId should return 401 since userId is invalid",
+                "location":null,
+                "status":"passed",
+                "title":"should return 401 since userId is invalid"
+             },
+             {
+                "ancestorTitles":[
+                   "Event Route testing",
+                   "GET /user/:userId/event/"
+                ],
+                "failureMessages":[
+ 
+                ],
+                "fullName":"Event Route testing GET /user/:userId/event/ should return 200 and an array of events if user joined event successfully",
+                "location":null,
+                "status":"passed",
+                "title":"should return 200 and an array of events if user joined event successfully"
+             },
+             {
+                "ancestorTitles":[
+                   "Event Route testing",
+                   "GET /user/:userId/event/"
+                ],
+                "failureMessages":[
+ 
+                ],
+                "fullName":"Event Route testing GET /user/:userId/event/ should return 200 and an array of events if user left event successfully",
+                "location":null,
+                "status":"passed",
+                "title":"should return 200 and an array of events if user left event successfully"
+             },
+             {
+                "ancestorTitles":[
+                   "Event Route testing",
+                   "GET /user/:userId/event/"
+                ],
+                "failureMessages":[
+ 
+                ],
+                "fullName":"Event Route testing GET /user/:userId/event/ should return 505 if event Id is invalid",
+                "location":null,
+                "status":"passed",
+                "title":"should return 505 if event Id is invalid"
+             }
+          ],
+          "endTime":1588492074346,
+          "message":"",
+          "name":"C:\\Users\\DJETHA\\eclipse-workspace\\Application\\Web\\simply-chat\\test\\event.test.js",
+          "startTime":1588492048826,
+          "status":"passed",
+          "summary":""
+       },
+       {
+          "assertionResults":[
+             {
+                "ancestorTitles":[
+                   "auth middleware"
+                ],
+                "failureMessages":[
+ 
+                ],
+                "fullName":"auth middleware should return 200 if correct token is provided",
+                "location":null,
+                "status":"passed",
+                "title":"should return 200 if correct token is provided"
+             },
+             {
+                "ancestorTitles":[
+                   "auth middleware"
+                ],
+                "failureMessages":[
+ 
+                ],
+                "fullName":"auth middleware should return 401 if false token is provided",
+                "location":null,
+                "status":"passed",
+                "title":"should return 401 if false token is provided"
+             }
+          ],
+          "endTime":1588492076254,
+          "message":"",
+          "name":"C:\\Users\\DJETHA\\eclipse-workspace\\Application\\Web\\simply-chat\\test\\auth.test.js",
+          "startTime":1588492073139,
+          "status":"passed",
+          "summary":""
+       }
+    ],
+    "wasInterrupted":false
+ }

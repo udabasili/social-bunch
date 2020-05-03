@@ -3,10 +3,11 @@
     background-color: $color-background;
     max-width: 100vw;
     position: relative;
-    height: 85vh;
+    height: 100%;
 
     @include response(phone){
         flex-direction: column;
         align-items: center;
     }
+
 }

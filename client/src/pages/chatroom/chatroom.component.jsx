@@ -77,7 +77,7 @@ class Chatroom extends Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         <main className='chatroom'>
             <ChatroomLeftSection
               setFriendHandler = {this.setFriendHandler} />
@@ -98,7 +98,7 @@ class Chatroom extends Component {
             </div>
             )}
           </main>
-      </div>
+      </React.Fragment>
     )
   }
 }

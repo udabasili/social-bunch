@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1588454091961" clover="3.2.0">
-  <project timestamp="1588454091961" name="All files">
+<coverage generated="1588492517080" clover="3.2.0">
+  <project timestamp="1588492517080" name="All files">
     <metrics statements="685" coveredstatements="398" conditionals="81" coveredconditionals="25" methods="107" coveredmethods="48" elements="873" coveredelements="471" complexity="0" loc="685" ncloc="685" packages="6" files="29" classes="29"/>
     <package name="api.middlewares">
       <metrics statements="53" coveredstatements="45" conditionals="20" coveredconditionals="14" methods="7" coveredmethods="7"/>
@@ -315,17 +315,17 @@
         <line num="6" count="4" type="stmt"/>
         <line num="10" count="4" type="stmt"/>
         <line num="11" count="4" type="stmt"/>
-        <line num="15" count="4" type="stmt"/>
         <line num="16" count="4" type="stmt"/>
         <line num="17" count="4" type="stmt"/>
-        <line num="20" count="4" type="cond" truecount="1" falsecount="1"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="28" count="4" type="stmt"/>
-        <line num="29" count="4" type="stmt"/>
-        <line num="33" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="26" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="36" count="4" type="stmt"/>
       </file>
       <file name="cloudinary.js" path="C:\Users\DJETHA\eclipse-workspace\Application\Web\simply-chat\loaders\cloudinary.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>

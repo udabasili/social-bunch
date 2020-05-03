@@ -7,7 +7,7 @@
     z-index: 6;
     margin: 0;
     top: 0;
-    height: 100vh;
+    height: 100%;
     width: $left-nav-width;
     
     &__logo-box{
@@ -15,7 +15,7 @@
         background-color: firebrick;
         
         @include response(phone){
-            height: 8.4vh;
+            height: 10vh;
         }
 
         @include response(tab-port){

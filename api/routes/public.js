@@ -7,7 +7,6 @@ route.get('/events', async (req, res, next) =>{
     try {
         let events= await Model.Event.find({})
         logger('info', 'All Events gotten  from Event Model in database')
-        console.log(events)
         return res.status(200).json({
             status:200,
             message:events
@@ -21,7 +20,6 @@ route.get('/events', async (req, res, next) =>{
 route.get('/groups', async (req, res, next)  => {
     try {
         const groups = await Model.Group.find();
-        console.log(groups)
         logger('info', 'All Groups gotten from Group Model in database')
         return res.status(200).json({
             status:200,

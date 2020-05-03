@@ -11,8 +11,8 @@
       margin: 9%;
 
       @include response(phone){
-        width: 60%;
-        height: 18vh;
+        width: 65%;
+        height: 20vh;
       }
       @include response(tab-port){
         width: 80%;
