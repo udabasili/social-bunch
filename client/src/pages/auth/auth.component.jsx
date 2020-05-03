@@ -303,6 +303,7 @@ class Auth extends Component {
           <div className='form__group'>
             <input 
               type='email'  
+              placeholder= {isMobile ? "Email": ""}
               onChange={this.onChangeHandlerLogin}
               value={loginData.email}
               name='email' 
@@ -316,6 +317,7 @@ class Auth extends Component {
             <input 
               type='password' 
               name='password' 
+              placeholder= {isMobile ? "Password": ""}
               onChange={this.onChangeHandlerLogin}
               value={loginData.password}
               className='form__input' required/>
