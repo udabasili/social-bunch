@@ -1,6 +1,6 @@
 # Simply-chat
 
-This is a chat app built with  React , Node, SocketIo and Twolio amongst other things and offers multiple functionalities such as:
+This is a chat app built with  React , Node, SocketIo amongst other things and offers multiple functionalities such as:
 
 - Private Messaging
 - Group messaging
