@@ -5,7 +5,6 @@ This is a chat app built with  React , Node, SocketIo amongst other things and o
 - Private Messaging
 - Group messaging
 - Authentication
-- Listening to music on spotify
 
 ### main page
 
