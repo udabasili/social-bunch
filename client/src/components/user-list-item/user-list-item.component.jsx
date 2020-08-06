@@ -59,7 +59,7 @@ function UserListItem({sendFriendRequest = f => f, user, currentUser}) {
   
   return (
     <tr>
-			<td>
+		<td>
         <img src={userImage}  className="user__image" />
         <p  class="user__name">{username}</p>
 			</td>

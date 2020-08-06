@@ -1,12 +1,18 @@
 import React from 'react';
 import {Redirect} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faPhone, faIndustry, faInfo } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faPhone, faIndustry, faInfo, faTimes } from '@fortawesome/free-solid-svg-icons'
 import ContentEditable from 'react-contenteditable';
 import { editUser } from '../../redux/action/user.action';
 import {connect} from 'react-redux';
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 class ProfilePage extends React.PureComponent {
+
+  closeHandler = () => {
+    document.querySelector(".alert").style.display = 'none';
+  }
   constructor(props) {
     super(props);
     this.state = {
@@ -121,63 +127,87 @@ class ProfilePage extends React.PureComponent {
       occupation} = this.state.user;
       const {currentUser} = this.props;
 
-  return (
-    this.props.history.location.state.userData ?
-      <div className='user-profile'>
-        <div className='user-profile__row'>
-          <div className='user-profile__third'>
-            <div className='user-profile__card'>
-              <div className='user-profile__display'>
-                <img 
-                  src={userImage} 
-                  className='user-profile__display__image'
-                  alt='Avatar'/>
-                <div className='user-profile__display__user' >
-                  <input type='hidden' name='id' value={_id}/>
-                  <h2>{username}</h2>
-                </div>
+  return this.props.history.location.state.userData ? (
+    <div className="user-profile">
+      <div className="user-profile__row">
+        <div className="user-profile__third">
+          <div className="user-profile__card">
+            <div className="user-profile__display">
+              <LazyLoadImage
+                alt={userImage}
+                effect="blur"
+                wrapperClassName="user-profile__display__image"
+                src={userImage}
+                className="user-profile__display__image"
+              />
+              <div className="user-profile__display__user">
+                <input type="hidden" name="id" value={_id} />
+                <h2>{username}</h2>
               </div>
-              <div className='user-profile__information'>
+            </div>
+            <div className="user-profile__information">
               <div>Joined: {joined} </div>
-                <div><FontAwesomeIcon icon={faHome}/>
+              <div>
+                <FontAwesomeIcon icon={faHome} />
                 <ContentEditable
-                    html={location}
-                    disabled={!(currentUser.username === username)} 
-                    onChange={this.onChangeLocationHandler} 
-                  /></div>
-                <div>
-                  <FontAwesomeIcon icon={faPhone}/>
-                    <ContentEditable
-                    html={telephone}
-                    disabled={!(currentUser.username === username)} 
-                    onChange={this.onChangeTelephoneHandler} 
-                  /></div>
-                <div><FontAwesomeIcon icon={faIndustry}/><ContentEditable
-                    html={occupation}
-                    disabled={!(currentUser.username === username)} 
-                    onChange={this.onChangeOccupationHandler} 
-                  /></div>
+                  html={location}
+                  disabled={!(currentUser.username === username)}
+                  onChange={this.onChangeLocationHandler}
+                />
+              </div>
+              <div>
+                <FontAwesomeIcon icon={faPhone} />
+                <ContentEditable
+                  html={telephone}
+                  disabled={!(currentUser.username === username)}
+                  onChange={this.onChangeTelephoneHandler}
+                />
+              </div>
+              <div>
+                <FontAwesomeIcon icon={faIndustry} />
+                <ContentEditable
+                  html={occupation}
+                  disabled={!(currentUser.username === username)}
+                  onChange={this.onChangeOccupationHandler}
+                />
               </div>
             </div>
           </div>
-          <div className='user-profile__two-third'>
-          {this.state.success && 
-            <div className='alert-success'>{this.state.success}</div>}
-            <div className='user-profile__bio'>
-              <h2 className=''> <FontAwesomeIcon icon={faInfo}/> Bio</h2>
-              <ContentEditable
-                className='user-profile__bio__content' 
-                html={ bio}
-                disabled={!(currentUser.username === username)} 
-                onChange={this.onChangeBioHandler} 
+        </div>
+        <div className="user-profile__two-third">
+          {this.state.success && (
+            <div className="alert">
+              <div className="alert__message"> {this.state.success}</div>
+              <FontAwesomeIcon
+                className="alert__close-button"
+                onClick={this.closeHandler}
+                icon={faTimes}
               />
-              <div className='form-button' onClick={this.onSubmitHandler} >Submit</div> 
-            </div>   
+            </div>
+          )}
+          <div className="user-profile__bio">
+            <h2 className="">
+              {" "}
+              <FontAwesomeIcon icon={faInfo} /> Bio
+            </h2>
+            <ContentEditable
+              className="user-profile__bio__content"
+              html={bio}
+              disabled={!(currentUser.username === username)}
+              onChange={this.onChangeBioHandler}
+            />
+            {currentUser._id === _id && (
+              <div className="form-button" onClick={this.onSubmitHandler}>
+                Submit
+              </div>
+            )}
           </div>
         </div>
-      </div> :
-      <Redirect to='/'/>
-      )
+      </div>
+    </div>
+  ) : (
+    <Redirect to="/" />
+  );
   }
 }
 

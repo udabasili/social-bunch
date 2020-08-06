@@ -30,11 +30,8 @@ import {connect} from 'react-redux';
                     }
                 </span>
                 <span className='message-data-time' >
-                {timeSplit}
-                </span> &nbsp; &nbsp;
-                <span className='message-data-time' >
-                {date}
-                </span> &nbsp; &nbsp;
+                    {date} {timeSplit} 
+                </span>
             </div>
             <div className= {`message ${   message.createdBy === currentUser.username ? 'send-message'
             : 'receive-message' }`}>

@@ -1,9 +1,9 @@
 .group{
     display: flex;
-    background-color: $color-background;
-    max-width: 100vw;
+    max-width: 100%;
     position: relative;
-    height: 100%;
+    height: 85%;
+
 
     @include response(phone){
         flex-direction: column;

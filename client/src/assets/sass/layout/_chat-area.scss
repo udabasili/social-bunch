@@ -1,9 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 
-$green: #86BB71;
-$blue: #94C2ED;
-$orange: #E38968;
-$gray: #92959E;
+
 
 
 .chat-area {
@@ -19,19 +15,27 @@ $gray: #92959E;
 
   @include response(phone){
     box-shadow: none;
+    height: 85%;
   }
   
   .message-data {
     margin-bottom: 1.5rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    align-items: center;
+    text-transform: capitalize;
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
 
     @include response(phone){
       font-size: 1rem;
+      margin-bottom: 0;
     }
   }
 
   .sender-data{
-      text-align: right;
+    width: 100%;
+      justify-content: right;
       
   }
   .receive-data{
@@ -39,9 +43,12 @@ $gray: #92959E;
 }
   
   .message-data-time {
-    color: lighten($gray, 8%);
+    color: lighten(gray, 8%);
     padding-left: 1rem;
     font-size: 1rem;
+    @include response(phone){
+      font-size: .85rem;
+    }
   }
   
   .message {      
@@ -49,12 +56,14 @@ $gray: #92959E;
     padding: 18px 20px;
     line-height: 2.5rem;
     font-size: 1.5rem;
+    border-radius: 5px;
     margin-bottom: 3rem;
-    width: 70%;
+    width: 60%;
     position: relative;
 
     @include response(phone){
       font-size: 1.2rem;
+      width: 80%;
       padding: 5px 10px;
 
     }
@@ -73,18 +82,16 @@ $gray: #92959E;
   }
   
   .send-message {
-    background: $color-icon;
+    background: white;
     float: right;
     text-align: left;
     word-break: break-all;
     
-    @include response(phone){
-      background: rgba($color: #fc3b3b, $alpha: 0.3);
-    }
+   
   }
   
   .receive-message {
-    background: $blue;
+    background-color: $color-primary-light;
     word-break: break-all;
     float: left;
     text-align: left;
@@ -109,36 +116,48 @@ $gray: #92959E;
 //Chat send Box
 
 .chat-box{
-  width: 100%;
+  width: 95%;
   display: flex;
   align-items: center;
   height: 10%;
   position: absolute;
   top: 100%;
   transform: translateY(-100%);
-  background: #fff;
+  background-color: #fff;
   justify-content: space-between;
   border-top: 1px solid gray;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 
+    @include response(phone){
+      height: 7%;
+      width: 100%;
+    }
+
   a {
-      
-  display: inline-block;
-  text-align: center;
+    display: inline-block;
+    text-align: center;
   }
 
   &__icon {
       width: 35px;
       cursor: pointer;
-      color: $color-icon;
+      color: $color-primary-dark;
       @include removeDefaultButtonStyle;
-
       height: 35px;
       font-size: 20px;
       box-shadow: none;
       order: 2;
-      margin-right: 30px;
+      margin: 0 20px;
+
+      @include response(phone){
+        margin-left: 10px;
+        width: 20px;
+      }
+
+      svg{
+        font-size: 2rem;
+      }
   }
   
   &__input{
@@ -148,20 +167,29 @@ $gray: #92959E;
       width: 90%;
       height: 100%;
       padding-left: 3rem;
-      font-size: 1.4rem;
+      font-size: 1.8rem;
       font-family: 'Roboto';
       color: #4b4b4b;            
-      border: 1px solid $color-icon;
+      border: 1px solid $color-primary-dark;
       outline: none;
+
+      &:required{
+        box-shadow: none;
+        outline: none;
+      }
+
+      @include response(phone){
+        font-size: 1.4rem;
+      }
       
 
   }
 
   &__submit{
       margin-left: 0;
-      color: $color-icon;
+      color: $color-primary-dark;
       font-size: 2rem;
-      border-left: 1px solid $color-icon;
+      border-left: 1px solid $color-primary-dark;
       position: relative;
       border: 1px solid black;
       cursor: pointer;

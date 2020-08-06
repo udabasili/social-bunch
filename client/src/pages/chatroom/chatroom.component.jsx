@@ -19,88 +19,95 @@ import { getOnlineUsers,
 
 
 class Chatroom extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      showUserMessages: false,
-      showModal: false,
-      messages: new Array(0),
-      location:null,
-      room:null,
-      friend:null
-    };
+	constructor (props) {
+		super(props)
+		this.state = {
+		showUserMessages: false,
+		showModal: false,
+		messages: new Array(0),
+		location:null,
+		room:null,
+		friend:null
+		};
     }
 
-  receiveMessageHandler = (message) =>{    
-    this.setState(prevState => ({
-      ...prevState,
-      showUserMessages: true,
-      friend: message.senderProfile
-    })
-  )}
 
-  setFriendHandler = (user) =>{
-    this.setState((prevState, props)=>({
-      ...prevState,
-      showUserMessages: true,
-      friend:user
-    }))
-  }
+	componentDidMount() {
+		setOnlineUsers(this.setOnlineUsersHandler)
+		changeOnlineUsers(this.updateOnlineUsers)
+		getOnlineUsers()
+		receivePrivateMessage(this.receiveMessageHandler)
+		this.props.getAllGroups()
+		this.props.getAllEvents()
+		this.props.getAllUsers()
+	}
 
-  setOnlineUsersHandler = ({users, usersStatus}) => {    
-    this.props.setOnlineUsers(users,usersStatus)
-  }
 
-  updateOnlineUsers =()=> {
-    getOnlineUsers()
-  }
-  
-  componentDidMount() {
-    setOnlineUsers(this.setOnlineUsersHandler)
-    changeOnlineUsers(this.updateOnlineUsers)
-    getOnlineUsers()    
-    receivePrivateMessage(this.receiveMessageHandler)
-    this.props.getAllGroups()
-    this.props.getAllEvents()
-    this.props.getAllUsers()
-  }
+	componentWillUnmount() {
+		unRegisterReceivePrivateMessage()
+		unRegisterSetOnlineUsers()
+	}
+	/**
+	 * Hnadles the sending of message through socket
+	 * @param {string} message 
+	 */
+	receiveMessageHandler = (message)  => {    
+		this.setState(prevState => ({
+		...prevState,
+		showUserMessages: true,
+		friend: message.senderProfile
+		})
+	)}
 
-    
-  componentWillUnmount(){
-    unRegisterReceivePrivateMessage()
-    unRegisterSetOnlineUsers()
-  }
+	/**
+	 * Shows messages of the friend clicked from the friend list
+	 * @param {*} user 
+	 */
+	setFriendHandler  = (user) => {
+		this.setState((prevState, props)=>({
+		...prevState,
+		showUserMessages: true,
+		friend:user
+		}))
+	}
 
-  navLinkChangeHandler = (value) => {    
-    this.setState({currentLink: value}, this.toggleLeftSection(false))
-  }
+	/**
+	 * set the status of users to show who is online
+	 * @param {*} user
+	 */
+	setOnlineUsersHandler = ({users, usersStatus}) => {    
+		this.props.setOnlineUsers(users,usersStatus)
+	}
 
-  render() {
-    return (
-      <React.Fragment>
-        <main className='chatroom'>
-            <ChatroomLeftSection
-              setFriendHandler = {this.setFriendHandler} />
-            <div className='chatroom__main-section'>
-              { this.state.friend && this.state.showUserMessages &&
-                <PrivateMessages 
-                  recipient= {this.state.friend}
-                  currentUser = {this.props.currentUser}/>
-              }
-            </div>
-            {isBrowser && (
-              <div className='chatroom__right-section'>
-              {this.state.friend &&
-                <Profile userData={this.state.friend}
-                  currentUser = {this.props.currentUser}
-                />
-              }
-            </div>
-            )}
-          </main>
-      </React.Fragment>
-    )
-  }
+	/**
+	 * Get online users 
+	 */
+	updateOnlineUsers =()=> {
+		getOnlineUsers()
+	}
+	
+
+	navLinkChangeHandler = (value) => {    
+		this.setState({currentLink: value}, this.toggleLeftSection(false))
+	}
+
+	render() {
+		return (
+			<React.Fragment>
+				<main className='chatroom'>
+					<ChatroomLeftSection
+					setFriendHandler = {this.setFriendHandler} />
+					<div className='chatroom__main-section'>
+					{ this.state.friend && this.state.showUserMessages &&
+						<PrivateMessages 
+						recipient= {this.state.friend}
+						currentUser = {this.props.currentUser}/>
+					}
+					</div>
+				</main>
+			</React.Fragment>
+		)
+	}
 }
 
 const mapStateToProps = (state) =>({

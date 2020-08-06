@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux';
 import { receivePrivateMessage, unRegisterReceivePrivateMessage } from '../../services/socketIo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationArrow, faMusic } from '@fortawesome/free-solid-svg-icons';
+import { faLocationArrow, faMusic, faUser } from '@fortawesome/free-solid-svg-icons';
 import  ChatMessenger  from '../chat-messages/chat-messages.component';
 import ChatSendBox from '../chat-send-box/chat-send-box.component';
 import { getMessages } from '../../redux/action/message.action';
 import { getLocation } from '../../redux/action/user.action';
+import { Link } from 'react-router-dom';
 
 /**
   * Handles messages between two users
@@ -19,7 +20,6 @@ class PrivateMessages extends Component {
 		this.state ={
 		  currentUser:props.currentUser,
 		  location:null,
-		  switchButton:{location:false},
 		  messages:props.messages
 		}
 	}
@@ -72,77 +72,72 @@ class PrivateMessages extends Component {
 	 * activate the get location with geolocation api when turned on
 	 * @param {*} type 
 	 */
-	switchButton = (type) => {      
-		this.setState((prevState)=>({
-		...prevState,
-		switchButton:{
-			...prevState.switchButton,[type]: !prevState.switchButton[type]
-		}
-		}), ()=> {
-		if(this.state.switchButton[type]){
-			this.getUserLocation() 
-		}
-		else{
-			this.setState((prevState)=>({
-			...prevState,
-				location: null
-			}))
-		}
-		})
-	}
-
+	
 
 	getUserLocation = () => {
 		if (!navigator.geolocation) {
 			return alert("Sorry this browser doesn't support geolocation")
 		}    
 
-	navigator.geolocation.getCurrentPosition((position)=>{
-		let lat = position.coords.latitude
-		let long = position.coords.longitude
-		let coords = {lat, long}
-		this.props.getLocation(coords)
-		  .then((res)=>{
-			this.setState((prevState)=>({
-				...prevState,
-				  location: res
-				})
-			)
-		  })
-		})
+		navigator.geolocation.getCurrentPosition((position)=>{
+			let lat = position.coords.latitude
+			let long = position.coords.longitude
+			let coords = {lat, long}
+			this.props.getLocation(coords)
+			.then((res)=>{
+				this.setState((prevState)=>({
+					...prevState,
+					location: res
+					})
+				)
+			})
+			})
 	}
   
 	
 	render() {
 		const {messages} = this.state;
 		const {recipient} = this.props;
+		console.log(recipient)
 		return (
 			<div className='chat-container'>
 			<div className='chat-area-header'>
-				<div className='icon'>
-					<div className={this.state.switchButton['location'] ? '' : 'strike' }>
-					</div>
+				<div className="user">
+					<img
+							src={recipient.image || recipient.userImage}
+						alt="your profile"
+						className="user__photo" />
+					<div className="user__username">{recipient.username}</div>
+				</div>
+				<div className='icons'>
+						<Link
+							to={{
+								pathname: `/user/${recipient._id}/profile`,
+								state: { userData: recipient }
+							}}
+						>
+							<FontAwesomeIcon
+								className='icon'
+								icon={faUser} />
+						</Link>
 					<FontAwesomeIcon 
-						onClick={()=>this.switchButton('location' )} 
+						className='icon'
+						onClick={()=>this.getUserLocation()} 
 						icon={faLocationArrow}/>
 				</div>
-				<div className='icon'>
-					<div>
-					</div>
-				</div>
-				</div>
-				<div className='chat-area' ref={this.chatArea}>
+			</div>
+			<div className='chat-area' ref={this.chatArea}>
 				{ messages &&
 				messages.map((message) =>(
 					<ChatMessenger message={message}
 					location = {this.state.location}/>
 					))
 					}
-				</div>
-				<ChatSendBox 
+			</div>
+			<ChatSendBox 
 				location={this.state.location}
 				recipient={recipient}/>
-			</div>
+		</div>
 	  )
 	}
 }

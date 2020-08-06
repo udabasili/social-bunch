@@ -38,6 +38,10 @@ class Group extends Component {
         this.setState({date: date})
     }
 
+    /**
+     * show or hide modal component
+     * @param {string} showModal 
+     */
     toggleModal = (showModal) =>{
       this.setState({showModal: showModal},
         ()=>this.props.getAllGroups())
@@ -61,51 +65,49 @@ class Group extends Component {
     }
     
 
-  render() {
-    const{
-      allGroups, 
-      currentUser,
-      joinGroup,
-      leaveGroup } = this.props
+  	render() {
+		const {
+		allGroups, 
+		currentUser,
+		joinGroup,
+		leaveGroup } = this.props
     const {name, category} = this.state;
     
     return (
       <div className='event'>  
         <button className='add-button' onClick={()=> this.toggleModal(true) } >Add</button>
-        {allGroups && 
+        { allGroups && 
         <div>
         <hr style={{marginTop:'20px'}}/>
           <p className='list-group-item-info'> Click on title after joining to enter Room</p>
           <ul className='event__list'>
             {allGroups.map((group, i)=>(
-              <div key={i} className='card__container'>
-                <div className='card__content'>
-                    <div className='card__text-content'>
+              <div key={i} className='card'>
                     {
                       group.members.includes(currentUser.username) ?
                         <Link  
                           to={`/group/${group._id}`} 
                           onClick={this.getGroupMembersById(group._id)}>
-                            <h1 className='primary-header'>{group.name}</h1>
+                            <h1 className='card__header'>{group.name}</h1>
                         </Link>:
-                        <h1 className='primary-header'>{group.name}</h1>
+						<h1 className='card__header'>{group.name}</h1>
                     }
-                      <h3 className='card__date-time'>
-                        <span>{`Category : ${group.category}`}</span>
-                      </h3>
-                    </div>
-                    { group.members.includes(currentUser.username) ?
-                    <button className='card__join-button' onClick={() =>leaveGroup(group._id)}>
-                          Leave
-                        </button>                        
-                        : <button className='card__join-button' onClick={() =>joinGroup(group._id)}>
-                          <span >Join</span>
-                        </button>
-                    }
-                </div>
-              </div>
-            ))
-          }
+					<div className="card__details">
+						<div className="card__item">
+							<span className="label">Category: </span>
+							<span className="data"> {group.category} </span>
+						</div>
+						{group.members.includes(currentUser.username) ?
+							<button className='form-submit-button' onClick={() => leaveGroup(group._id)}>
+								Leave
+							</button> :
+							<button className='form-submit-button' onClick={() => joinGroup(group._id)}>
+								<span >Join</span>
+							</button>
+						}
+					</div>
+				</div>
+			))}
         </ul>
         </div>
         }

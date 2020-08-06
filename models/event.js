@@ -7,10 +7,6 @@ const eventSchema = new Schema({
         type:String,
         required:true,
     },
-    imageUrl:{
-        type:String,
-        required:true
-    },
     date:{
         type:Date,
         required:true,

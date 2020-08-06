@@ -1,6 +1,6 @@
 import React from 'react';
 import {Switch, Route, withRouter, Redirect} from "react-router-dom"
-import Auth from "./pages/auth/auth.component";
+import Auth from "./pages/auth-page.component";
 import GroupPage from "./pages/group/group.component";
 import Chatroom from "./pages/chatroom/chatroom.component";
 import {setRestApiHeader, setAllUsersStatus, verifyUser, setCurrentUser, } from "./redux/action/user.action";
@@ -9,7 +9,7 @@ import {connect} from "react-redux";
 import ProfilePage from "./pages/profile-pages/profile-pages.component";
 import {connectOnAuth, setRooms, unRegisterSetOnlineUsers, setOnlineUsers, setUserInfo, UnRegisterSetUserInfo} from "./services/socketIo";
 import NotFoundPage from './components/not-found/not-found';
-import Header from './components/header/header';
+import Navigation from './components/navigation/navigation';
 const io = require('socket.io-client')
 export const socket = io.connect('')
 
@@ -41,9 +41,12 @@ class MainRouter extends React.Component {
   
   render(){
         const {currentUser, isAuthenticated} = this.props
+        console.log(isAuthenticated)
   return (
     <React.Fragment>
-      <Header/>
+      {
+        sessionStorage.getItem("validator") && isAuthenticated && < Navigation />
+      }
       <Switch>
         <PrivateRoute currentUser={currentUser} exact path="/" component={Chatroom} />
         <Route  exact path="/auth/login" render={props =>(

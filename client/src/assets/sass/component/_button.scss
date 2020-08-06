@@ -14,7 +14,7 @@
 }
 
 .btn-white{
-  background-color: $color-icon;
+  background-color: $color-primary-dark;
   color: black;
   font-weight: bold;
 }
@@ -55,26 +55,35 @@
 
 
 .form-submit-button{
-    width: 20%;
-    background-color: $color-icon;
+    @include removeDefaultButtonStyle;
+    background-color: $color-primary-dark;
+    font-weight: bolder;
     color: black;
-    padding: 1rem 1.2rem;
+    padding: 1.5rem 3rem;
     margin: 2rem auto;
     position: relative;
+    border: 2px solid blue($color: #000000);
     border-radius: 4px;
+    box-shadow: 0 1.4rem 4rem rgba(128, 128, 128, 0.336) ;
     cursor: pointer;
+
+    &:disabled{
+      border: 1px solid #999999;
+      background-color: #cccccc;
+      color: #666666;
+      pointer-events: none;
+    }
 
 
     @include response(phone){
-      width: 20%;
       display: inline-block;
-      padding: .5rem .7rem ;
-      font-size: 1rem;
+      padding: 2rem 3rem ;
+      font-size: 1.5rem;
     }
   
   
   &:hover {
-    box-shadow: 2px 2px 10px black;
+    color: white;
 
   }
 }
@@ -83,13 +92,13 @@
   padding: 1rem 4rem;
   @include removeDefaultButtonStyle;
   box-shadow: 0px 5px 10px rgba(black, .2), 0px -5px 10px rgba(black, .1);
-  background-color: transparent;
+  background-color: white;
   cursor: pointer;
-  border: 2px solid $color-icon;
+  border: 2px solid $color-primary-dark;
   text-transform: uppercase;
   font-weight: bolder;
   margin: 0 auto;
-  color: $color-icon;
+  color: $color-primary-dark;
   font-size: 1.5rem;
   border-radius: 20px;
 

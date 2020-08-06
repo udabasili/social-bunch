@@ -1,5 +1,8 @@
 /*****Colors*******/ 
-$color-card-background: white;
+$color-primary-light: #06ff7a;
+$color-primary-dark: #0EBD60;
+$color-card-background: #CAD1C9;
+$color-secondary: #FFCF79;
 $color-button:rgb(5, 255, 5);
 $color-nav-header:white;
 $color-nav:rgb(255, 81, 104);
@@ -13,4 +16,7 @@ $color-tertiary-header: black;
 
 /*****DIMENSION*******/ 
 
-$left-nav-width: 9vw;
+$left-nav-width: 10%;
+
+/**OTHERS**/
+$box-shadow: 0 1.5rem 4rem rgba(0,0,0,.15)

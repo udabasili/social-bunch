@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import {connect} from "react-redux";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function UserIcon({imageUri, username, onlineUsers}) {  
   const [isOnline, setIsOnline]  = useState("") 
@@ -23,12 +25,9 @@ function UserIcon({imageUri, username, onlineUsers}) {
   return (
     <div className="user-icon">
       <div className="user-icon__photo-border">
-        <img 
-          src={imageUri}
-          alt="your profile" 
-          className="user-icon__photo"/>
+        <LazyLoadImage alt={imageUri} effect="blur" src={imageUri} className='user-icon__photo' />
       </div>
-        <div className={isOnline ?  "online" : "offline"}></div>
+      <div className={isOnline ? "online" : "offline"}></div>
     </div>
   );
 }

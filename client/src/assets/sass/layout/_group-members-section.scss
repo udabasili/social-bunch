@@ -1,7 +1,19 @@
 .group-user{
 
+    
+
     &__list{
-    box-shadow: none;
+        background-color: #CAD1C9;
+        margin: 0 auto;
+        padding: 2rem;
+        width: 80%;
+        height: 100%;
+        border-radius: 10px;
+        box-shadow: $box-shadow;
+
+        @include response(phone){
+            height: 80%;
+        }
 
     }
 
@@ -15,7 +27,6 @@
     }
 
     &__item{
-        cursor: pointer;
         font-size: 1.5rem;
         display: flex;
         justify-content: space-between;

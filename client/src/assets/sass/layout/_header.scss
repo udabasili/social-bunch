@@ -1,84 +1,6 @@
 .navigation{
 
-    &__list {
-        list-style-type: none;
-        margin: 0;
-        display: flex;        
-        overflow: hidden;
-        justify-content: flex-end;
-        padding: 4px;
-        background-color: $color-icon;
-        }
-      
-      &__item {
-        float: right;
-        font-size: 1.5rem;
-
-        &:first-child{
-            float: left;
-        }
-      }
-      
-      &__item a, .dropbtn {
-        display: inline-block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-
-      &__link{
-        display: inline-block;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-
-        &:hover{
-            background-color: rgb(44, 6, 6);
-
-        }
-      }
-
-      &__list-001{
-        display: inline-block;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-      }
-      
-      &__item a:hover,  &__dropdown:hover .dropbtn {
-        color: black;
-      }
-
-      &__dropdown{
-        align-self: center;
-      }
-      
-      &__item.dropdown {
-        display: inline-block;
-      }
-    
-
-
-    &__home{
-        display: flex;
-        background-color: #fa1b39;
-        font-size: 3rem;
-        width: 9vw;
-        height: 100%;
-        text-align: center;
-        justify-content: center;
-        cursor: pointer;
-        color: white;
-        align-items: center;
-
-        @include response(phone){
-            padding: 10px;
-            width: 20vw;
-
-
-        }
-    }
+   
 }
 .user{
     display: flex;
@@ -104,7 +26,7 @@
     &__notification{
 
         &__header{
-            background-color: $color-icon;
+            background-color: $color-primary-dark;
             margin-top: 0;
             width: 100%;
             font-size: 2rem;

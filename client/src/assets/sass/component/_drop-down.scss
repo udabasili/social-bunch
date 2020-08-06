@@ -5,21 +5,23 @@
     min-width: 300px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    right: 10px;
+    right: 25vw;
     overflow: auto;
     height: 50vh;
-    top: 10.3%;
+    top: 15vh;
 
-    @include response(phone) {
-        top: 8.3%;
-        height: 40vh;
+    @include response(phone){
+        right: 5vw;
     }
-    @include response(tab-port) { 
-        top: 6.3%;
-        height: 40vh;
 
-
+    @include response(tab-port) {
+        right: 5vw;
     }
+
+    @include response(tab-land) {
+        right: 25vw;
+    }
+
 
     &__header{
         background-color:#000000;

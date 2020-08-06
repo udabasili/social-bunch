@@ -4,10 +4,11 @@
     &__left-section{
         background-color:  $color-card-background;
         height: 100%;
+        text-align: center;
         margin-right: 2rem;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, .15);
         margin-left: $left-nav-width;
-        width: 35vw;
+        width: 35%;
         overflow: auto;
 
         @include response(phone){
@@ -17,15 +18,29 @@
             margin-right: 1px;
         }
 
+        @include response(tab-port) {
+            box-shadow: none;
+            width: 100vw;
+            margin-left: - 82vw;
+            margin-right: 1px;
+        }
+
+        
+
         &__header{
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            padding: 1rem;
+            align-items: center;
+            padding: .5rem;
+
+            .switch{
+                font-size: 2.5rem;
+            }
         }
 
         .primary-header{
-            text-align: left;
+            text-align: center;
+            padding: 0 2rem;
         }
 
         .contact-container{
@@ -38,6 +53,11 @@
 
             @include response(phone){
                 height: 20%;
+
+            }
+
+            @include response(tab-port) {
+                height: 15%;
 
             }
 
@@ -78,12 +98,11 @@
             }
 
             &__input{
-                width: 70%;
-                margin-left: 10px;
+                width: 100%;
+                height: 3rem;
             }
 
             &__label{
-                margin-left: 10px;
 
 
             }
@@ -112,10 +131,9 @@
 
                 &__input{
                     width: 80%;
-                    border-bottom: 1px grey solid;
+                    border: 2px solid black;
                     position: relative;
-
-                    height: 100%;
+                    height: 60%;
                     background-color: white;
 
                     &:focus{
@@ -126,7 +144,7 @@
                 &__icon{
                     top: -5px;
                     position: relative;
-                    background-color: $color-icon;
+                    background-color: $color-primary-dark;
                     font-size: 1.8em;
                     
                 }
@@ -136,7 +154,7 @@
     }
 
     &__main-section{
-        width: 50vw;
+        width: 65%;
         position: relative;
 
         @include response(phone){
@@ -146,19 +164,31 @@
             ;
         }
 
+        @include response(tab-port) {
+            width: 0;
+            flex-grow: 1;
+            flex-shrink: 1;
+            ;
+        }
+
         .chat-container{
-            width: 100%;
+            width: 95%;
             height: 100%;
+
+            @include response(phone) {
+                width: 100%;
+
+            }
 
             .chat-area-header{
                 display: flex;
                 z-index: 4;
-                justify-content: flex-end;
-                background-color: white;
+                justify-content: space-between;
+                background-color: $color-primary-dark;
                 align-items: center;
                 width: 100%;
                 height: 10%;
-                border-bottom: 2px  solid $color-icon ;
+                border-bottom: 2px  solid $color-primary-dark ;
                  
                 & > *{
                     @include response(phone){
@@ -167,31 +197,33 @@
                 }
 
                 .icon{
-                    color: $color-icon;
+                    color: white;
                     font-size: 2rem;
-                    margin: 0 10px;
+                    margin: 0 .5rem;
                     position: relative;
                     cursor: pointer;
 
-                   
-                    
-                    
-
-                    &:hover{
+                    &:hover {
                         opacity: .5;
-                        transform: scale(1.5);
+                        transform: scale(1.1);
                     }
+                }
 
-                    .strike {
-                        position: absolute;
-                        width: 150%;
-                        height: .2rem;
-                        background-color: black;
-                        transform: translate(-50%, -50%);
-                        top: 50%;
-                        left: 0;
-                        border: 1px solid black;
-                        transform: rotate(45deg);
+                .icons{
+                    display: flex;
+                    align-items: center;
+                    padding: 2rem;
+                }
+
+                .user{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding: 2rem;
+
+                    &__username{
+                        text-transform: capitalize;
+                        font-size: 1.8rem;
                     }
                 }
             }
@@ -201,7 +233,7 @@
             background-color:  transparent;
             margin-left: 20px;
             height: 100%;
-            width: 30vw;
+            width: 80%;
         }
 
     }
@@ -210,26 +242,47 @@
 
 .group{
 
-    .chatroom__main-section{
-        width: 90vw;
+    &__left-section {
+        width: 40%;
+        text-align: center;
         height: 90%;
-        margin-top: 10px;
-    }
-    &__right-section{
-        border-radius: 10px;
-        margin: 20px;
-        height: 90%;
-        width: 30vw;
-        position: relative;
-        background-color: $color-card-background;
-        padding: 20px;
-        box-shadow: 0 8px 10px rgba(0, 0, 0, .21), 0 8px 10px rgba(0, 0, 0, .21) ;
+        margin: 0 auto;
 
         @include response(phone){
-            width: 90vw;
-            height: 30%;
-            overflow-y: auto;
+            height: 40%;
+            width: 100%;
+            margin: 2% auto;
+            order: 2;
         }
 
+        .primary-header {
+            @include response(phone) {
+                font-size: 1.4rem;
+            }
+        }
     }
+
+    .chatroom__main-section {
+        width: 50%;
+        height: 90%;
+
+        @include response(phone) {
+            height: 50%;
+            width: 90%;
+            margin: 2% auto;
+            order: 1;
+        }
+    }
+
+
+    &__label {
+        float: left;
+        margin: 1rem 0;
+        font-size: 1.5rem;
+    }
+
+    &__input {
+        height: 3rem;
+    }
+   
 }

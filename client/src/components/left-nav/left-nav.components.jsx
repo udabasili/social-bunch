@@ -17,8 +17,6 @@ const LeftNav = ({navLinkChangeHandler}) => {
     
     return (
         <div className='nav-container'>
-            <div className='nav-container__logo-box'>
-            </div>
             <nav className='nav-icon__list'>
                 <a href='#0' className='nav-icon__item active' name='messages' onClick={()=>onClickHandle('messages')}>
                     <FontAwesomeIcon className='nav-icon__icon' icon={faMailBulk} ></FontAwesomeIcon>

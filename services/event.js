@@ -25,6 +25,7 @@ class EventService {
         event.createdBy = this.currentUser.username        
         event = await event.save()        
         const events = await Models.Event.find()
+        logger('info', `${this.currentUser.username} created event called ${event.eventName}`)
         return {event, events};
     }
 
@@ -37,7 +38,7 @@ class EventService {
         await event.attenders.push(this.currentUser.username);
         await event.save();
         let allEvents = await Models.Event.find();
-        logger('info', `${this.currentUser.username} joined event called ${event.name}`)
+        logger('info', `${this.currentUser.username} joined event called ${event.eventName}`)
         return allEvents
     }
 
@@ -50,7 +51,7 @@ class EventService {
         await event.removeAttender(this.currentUser.username);
         await event.save();
         let allEvents = await Models.Event.find();
-        logger('info', `${this.currentUser.username} left an event called ${event.name}`)
+        logger('info', `${this.currentUser.username} left an event called ${event.eventName}`)
         return allEvents
     }
 
@@ -59,7 +60,9 @@ class EventService {
      * @return {Object} allEvents
      */
     async deleteEvent(){
+        const event = await Models.Event.findById(this.eventId)
         await Models.Event.findByIdAndRemove(this.eventId)
+        logger('info', `${event.eventName} event deleted`)
         let allEvents = await Models.Event.find()
         return allEvents
         

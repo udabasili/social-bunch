@@ -22,7 +22,6 @@ class Events extends Component {
         eventName:'',
         time:'',
         summary:'',
-        imageUrl:'',
         date:'',
         createdBy:props.currentUser.username,
         showModal: false
@@ -59,7 +58,6 @@ class Events extends Component {
         eventName:'',
         time:'',
         summary:'',
-        imageUrl:'',
         date:'',
         }
       ))
@@ -82,32 +80,36 @@ class Events extends Component {
         {allEvents && 
           <ul className='event__list'>
             {allEvents.map((event)=>(
-              <div className='card__container'>
-                <div className='card__content' 
-                  style={{backgroundImage:`url(${event.imageUrl})`, backgroundSize:'contain'}}>
+              <div className='card'>
                   { event.createdBy === currentUser.username &&
                     <FontAwesomeIcon 
                       onClick = {()=>deleteEvent(event._id)}
                       className='close-button icon-custom'
                       icon={faTimes}/>
                     }
-                    <div className='card__text-content'>
-                      <h1 className='primary-header'>{event.eventName}</h1>
-                      <h3 className='card__date-time'>
-                        <span>Time : {event.time}</span>
-                        <span>Date : {event.date.split('T')[0]}</span>
-                      </h3>
-                      <div className='card__created-by'>CreatedBy: {event.createdBy}</div>
-                    </div>
-                    { event.attenders.includes(currentUser.username) ?
-                    <button className='card__join-button' onClick={() =>leaveEvent(event._id)}>
-                          Leave 
-                        </button>                        
-                        : <button className='card__join-button' onClick={() =>joinEvent(event._id)}>
-                          <span >Join </span>
+						<h1 className='card__header'>{event.eventName}</h1>
+					<div className="card__details">
+						<div className="card__item">
+							<span className="label">Date : </span>
+							<span className="data">{event.date.split('T')[0]}</span>
+						</div>
+						<div className="card__item">
+							<span className="label">Time : </span>
+							<span className="data">{event.time }</span>
+						</div><div className="card__item">
+							<span className="label">Created By : </span>
+							<span className="data">{event.createdBy}</span>
+						</div>
+						{event.attenders.includes(currentUser.username) ?
+							<button className='form-submit-button' onClick={() => leaveEvent(event._id)}>
+								Leave
                         </button>
-                    }
-                  </div>
+							: <button className='form-submit-button' onClick={() => joinEvent(event._id)}>
+								<span >Join </span>
+							</button>
+						}
+					</div>
+					
                 </div>
             ))
           }
@@ -129,8 +131,6 @@ class Events extends Component {
                   className='event__input' 
                   name='time' 
                   onChange={this.onChangeHandle} required/>
-                <label className='event__label' for='time' required>ImageUrl</label>
-                <input type='text' className='event__input' name='imageUrl' onChange={this.onChangeHandle} required/>
                 <input type='submit' className='form-submit-button' value='Submit'/>
               </form>
           </ModalWindow>

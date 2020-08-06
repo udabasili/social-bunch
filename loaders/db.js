@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const logger = require('../loaders/logger')
 const config = require('../config')
 const mongodbOptions = { 
-  useFindAndModify: true, 
+  useFindAndModify: false, 
   useCreateIndex: true,
   useNewUrlParser: true , 
   useUnifiedTopology: true}

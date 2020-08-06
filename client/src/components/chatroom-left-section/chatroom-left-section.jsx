@@ -6,9 +6,8 @@ import Group from '../groups/group.component';
 import Users from '../users/users.component';
 import Events from '../events/events.components';
 import {connect} from 'react-redux';
-import {isMobile} from 'react-device-detect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
+import { faPlusCircle, faMinusCircle } from '@fortawesome/free-solid-svg-icons';
 import { getMessages } from '../../redux/action/message.action';
 
 
@@ -18,10 +17,10 @@ class ChatroomLeftSection extends React.PureComponent {
     this.state = {
       currentLink:'messages',
       showUserMessages: false,
-      isMobile:isMobile,
+      isMobile: window.innerWidth <= 900 ? true : false,
       leftSectionStyling:{
-        marginLeft: '9vw',
-        iconType: faMinus,
+        marginLeft: '10vw',
+        iconType: faMinusCircle,
         cursor: 'pointer'
       },
       hideLeftSection: false,
@@ -40,7 +39,7 @@ class ChatroomLeftSection extends React.PureComponent {
     setIsMobile = () =>{
       this.setState((prevState) => ({
         ...prevState,
-        isMobile: window.innerWidth <= 600
+        isMobile: window.innerWidth <= 900
       }))
     }
 
@@ -49,11 +48,11 @@ class ChatroomLeftSection extends React.PureComponent {
       let icon = '';
       if(hide){
         leftMargin = '-82vw'
-        icon = faPlus
+        icon = faPlusCircle
       }
       else{
-        leftMargin = '9vw'
-        icon = faMinus
+        leftMargin = '10vw'
+        icon = faMinusCircle
       }
       this.setState((prevState)=>({
         ...prevState,
@@ -67,9 +66,7 @@ class ChatroomLeftSection extends React.PureComponent {
         )
     }
  
-    showUserMessagesHandler = (friend) => {   
-      console.log(friend);
-      
+    showUserMessagesHandler = (friend) => {         
       this.props.getMessages(this.props.currentUser._id, friend._id)
           .then(() => {
             this.props.setFriendHandler(friend)
@@ -101,7 +98,7 @@ class ChatroomLeftSection extends React.PureComponent {
               <div className='chatroom__left-section__header'>
                 <h1 className='primary-header'>Contacts</h1>
                 {this.state.isMobile && (
-                    <FontAwesomeIcon size='1x' onClick={() => {
+                <FontAwesomeIcon color='#0EBD60' className='switch' onClick={() => {
                       this.toggleLeftSection(!this.state.hideLeftSection)}
                     }
                 icon={this.state.leftSectionStyling.iconType}/>)}
@@ -116,7 +113,7 @@ class ChatroomLeftSection extends React.PureComponent {
               <div className='chatroom__left-section__header'>
                 <h1 className='primary-header'>Events</h1>
                 {this.state.isMobile && (
-                    <FontAwesomeIcon size='2x' onClick={() => {
+                <FontAwesomeIcon color='#0EBD60' className='switch' onClick={() => {
                       this.toggleLeftSection(!this.state.hideLeftSection)}
                     }
                 icon={this.state.leftSectionStyling.iconType}/>)}
@@ -130,7 +127,7 @@ class ChatroomLeftSection extends React.PureComponent {
             <div className='chatroom__left-section__header'>
                 <h1 className='primary-header'>Groups</h1>
                 {this.state.isMobile && (
-                    <FontAwesomeIcon size='2x' onClick={() => {
+                <FontAwesomeIcon color='#0EBD60' className='switch' onClick={() => {
                       this.toggleLeftSection(!this.state.hideLeftSection)}
                     }
                 icon={this.state.leftSectionStyling.iconType}/>)}
@@ -144,7 +141,7 @@ class ChatroomLeftSection extends React.PureComponent {
           <div className='chatroom__left-section__header'>
                 <h1 className='primary-header'>Users</h1>
                 {this.state.isMobile && (
-                    <FontAwesomeIcon size='2x' onClick={() => {
+                <FontAwesomeIcon color='#0EBD60' className='switch' onClick={() => {
                       this.toggleLeftSection(!this.state.hideLeftSection)}
                     }
                 icon={this.state.leftSectionStyling.iconType}/>)}

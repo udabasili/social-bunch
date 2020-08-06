@@ -1,5 +1,4 @@
 #root{
-  width: 100vw;
   height: 100vh;
 }
 *, 
@@ -13,7 +12,6 @@
 html{
   font-size:  62.5%;
 
-
   @include response(phone) {
       font-size: 50%;
   }
@@ -24,16 +22,16 @@ html{
       font-size: 50%;
   }
   @include response(big-desktop) {
-      font-size: 75%;
+      font-size: 55%;
   }
 
 }
 body{
-    font-family: 'Lato', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     height: 100vh;
-    width: 100vw;
     line-height: 1.7;
+    background-color: rgb(236, 231, 231);
 }
 
 ::-webkit-scrollbar {

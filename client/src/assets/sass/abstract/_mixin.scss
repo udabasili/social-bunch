@@ -17,6 +17,14 @@
     @if $device == tab-land {
         @media only screen and  (min-width: 900px) and (max-width: 1200px) { @content };   
     }
+
+    @if $device == big-desktop {
+        @media only screen and (min-width: 1200px) {
+            @content
+        }
+
+        ;
+    }
 }
 
 /** Topography Mixin*/
