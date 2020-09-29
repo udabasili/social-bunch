@@ -7411,3 +7411,661 @@ Thu, 06 Aug 2020 00:13:20 GMT | INFO | loggers.log | User admin communicated wit
 Thu, 06 Aug 2020 00:13:20 GMT | INFO | loggers.log | Current User is permitted access to this route | 
 Thu, 06 Aug 2020 00:13:20 GMT | INFO | loggers.log | User admin communicated with the server | 
 Thu, 06 Aug 2020 00:13:20 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:05:31 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 28 Sep 2020 23:05:32 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 28 Sep 2020 23:07:23 GMT | INFO | loggers.log | Socket 7C5ypo7P3d7TvqdKAAAA connected | 
+Mon, 28 Sep 2020 23:07:23 GMT | INFO | loggers.log | Socket 6EPcBPPMawHQfmB1AAAB connected | 
+Mon, 28 Sep 2020 23:07:24 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 28 Sep 2020 23:09:04 GMT | ERROR | loggers.log | Email/Password is incorrect | 
+Mon, 28 Sep 2020 23:09:10 GMT | ERROR | loggers.log | Email/Password is incorrect | 
+Mon, 28 Sep 2020 23:09:11 GMT | ERROR | loggers.log | Email/Password is incorrect | 
+Mon, 28 Sep 2020 23:09:14 GMT | ERROR | loggers.log | Email/Password is incorrect | 
+Mon, 28 Sep 2020 23:09:15 GMT | ERROR | loggers.log | Email/Password is incorrect | 
+Mon, 28 Sep 2020 23:09:22 GMT | INFO | loggers.log |  qqq has logged in | 
+Mon, 28 Sep 2020 23:09:22 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:09:22 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:09:22 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 28 Sep 2020 23:09:23 GMT | INFO | loggers.log | qqq has the socket id set in database | 
+Mon, 28 Sep 2020 23:09:26 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:09:29 GMT | INFO | loggers.log | Socket 7C5ypo7P3d7TvqdKAAAA disconnected | 
+Mon, 28 Sep 2020 23:09:29 GMT | INFO | loggers.log | Socket 6EPcBPPMawHQfmB1AAAB disconnected | 
+Mon, 28 Sep 2020 23:09:29 GMT | INFO | loggers.log | qqq has logged out | 
+Mon, 28 Sep 2020 23:09:30 GMT | INFO | loggers.log | Socket Fu6aNdujLR4NgVw-AAAC connected | 
+Mon, 28 Sep 2020 23:09:30 GMT | INFO | loggers.log | Socket UMlw4QvyMNvBX6teAAAD connected | 
+Mon, 28 Sep 2020 23:09:30 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:09:30 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:09:30 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 28 Sep 2020 23:09:31 GMT | INFO | loggers.log | Verified User has valid token | 
+Mon, 28 Sep 2020 23:09:31 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 28 Sep 2020 23:09:31 GMT | INFO | loggers.log | qqq has the socket id set in database | 
+Mon, 28 Sep 2020 23:09:33 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:09:34 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 28 Sep 2020 23:09:59 GMT | INFO | loggers.log | Socket Fu6aNdujLR4NgVw-AAAC disconnected | 
+Mon, 28 Sep 2020 23:09:59 GMT | INFO | loggers.log | qqq has logged out | 
+Mon, 28 Sep 2020 23:12:01 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 28 Sep 2020 23:12:02 GMT | INFO | loggers.log | Socket SzvNdj5QqVbt-SOwAAAA connected | 
+Mon, 28 Sep 2020 23:12:02 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 28 Sep 2020 23:12:57 GMT | INFO | loggers.log | New User  admin has been added | 
+Mon, 28 Sep 2020 23:12:58 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:12:58 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:12:58 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 28 Sep 2020 23:12:58 GMT | INFO | loggers.log | Socket 7Hv1eWQxP-0RggyLAAAB connected | 
+Mon, 28 Sep 2020 23:13:01 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Mon, 28 Sep 2020 23:13:10 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:15:22 GMT | INFO | loggers.log | Socket 7Hv1eWQxP-0RggyLAAAB disconnected | 
+Mon, 28 Sep 2020 23:15:53 GMT | INFO | loggers.log | New User  admin has been added | 
+Mon, 28 Sep 2020 23:15:53 GMT | INFO | loggers.log | Socket A8M3hqjRXPlfBOjxAAAC connected | 
+Mon, 28 Sep 2020 23:15:53 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:15:53 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:15:53 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 28 Sep 2020 23:15:54 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Mon, 28 Sep 2020 23:16:34 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 28 Sep 2020 23:16:34 GMT | INFO | loggers.log | Socket DVAf04LkeMxl7DHkAAAA connected | 
+Mon, 28 Sep 2020 23:16:34 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 28 Sep 2020 23:16:34 GMT | INFO | loggers.log | Socket zA9E5q13wM5jMnwcAAAB connected | 
+Mon, 28 Sep 2020 23:16:40 GMT | INFO | loggers.log | Socket zA9E5q13wM5jMnwcAAAB disconnected | 
+Mon, 28 Sep 2020 23:17:19 GMT | ERROR | loggers.log | filw is not defined | 
+Mon, 28 Sep 2020 23:17:31 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 28 Sep 2020 23:17:31 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 28 Sep 2020 23:17:31 GMT | INFO | loggers.log | Socket CtxRhsXhI_7KL5muAAAA connected | 
+Mon, 28 Sep 2020 23:17:44 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 28 Sep 2020 23:17:44 GMT | INFO | loggers.log | Socket aq0dGqWzKjMBj5KAAAAA connected | 
+Mon, 28 Sep 2020 23:17:44 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 28 Sep 2020 23:17:51 GMT | INFO | loggers.log | New User  admin has been added | 
+Mon, 28 Sep 2020 23:17:52 GMT | INFO | loggers.log | Socket MrYtH9joUv1J9WKHAAAB connected | 
+Mon, 28 Sep 2020 23:17:52 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:17:52 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 28 Sep 2020 23:17:52 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:17:54 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Mon, 28 Sep 2020 23:18:58 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 28 Sep 2020 23:18:58 GMT | INFO | loggers.log | Socket CF_sHYEsD8aeraqUAAAA connected | 
+Mon, 28 Sep 2020 23:18:58 GMT | INFO | loggers.log | Socket bw_YX6lyqTL8scReAAAB connected | 
+Mon, 28 Sep 2020 23:18:58 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 28 Sep 2020 23:19:09 GMT | INFO | loggers.log | Socket CF_sHYEsD8aeraqUAAAA disconnected | 
+Mon, 28 Sep 2020 23:19:35 GMT | INFO | loggers.log | New User  admin has been added | 
+Mon, 28 Sep 2020 23:19:36 GMT | INFO | loggers.log | Socket KcZmBfAlV_I_vMQkAAAC connected | 
+Mon, 28 Sep 2020 23:19:36 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:19:36 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:19:36 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 28 Sep 2020 23:19:39 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Mon, 28 Sep 2020 23:20:04 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 28 Sep 2020 23:20:04 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 28 Sep 2020 23:20:04 GMT | INFO | loggers.log | Socket TiEM_q7OFIAPt_CdAAAA connected | 
+Mon, 28 Sep 2020 23:20:07 GMT | INFO | loggers.log | Socket 2kPQ3VS0KN-kejNgAAAB connected | 
+Mon, 28 Sep 2020 23:20:10 GMT | INFO | loggers.log | Socket 2kPQ3VS0KN-kejNgAAAB disconnected | 
+Mon, 28 Sep 2020 23:20:52 GMT | INFO | loggers.log | New User  admin1 has been added | 
+Mon, 28 Sep 2020 23:20:52 GMT | INFO | loggers.log | Socket d0CawdmFRjtq_inkAAAC connected | 
+Mon, 28 Sep 2020 23:20:52 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:20:53 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:20:53 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 28 Sep 2020 23:20:55 GMT | INFO | loggers.log | admin1 has the socket id set in database | 
+Mon, 28 Sep 2020 23:21:50 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 28 Sep 2020 23:21:50 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 28 Sep 2020 23:21:50 GMT | INFO | loggers.log | Socket 49qiNIN0pXDRtFu3AAAA connected | 
+Mon, 28 Sep 2020 23:21:50 GMT | INFO | loggers.log | Socket AL1URXWepx6vkPsGAAAB connected | 
+Mon, 28 Sep 2020 23:21:54 GMT | INFO | loggers.log | Socket AL1URXWepx6vkPsGAAAB disconnected | 
+Mon, 28 Sep 2020 23:22:31 GMT | INFO | loggers.log | New User  admin001 has been added | 
+Mon, 28 Sep 2020 23:22:32 GMT | INFO | loggers.log | Socket Q7d0sCSmGBIwALxzAAAC connected | 
+Mon, 28 Sep 2020 23:22:32 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:22:32 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 28 Sep 2020 23:22:32 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:22:34 GMT | INFO | loggers.log | admin001 has the socket id set in database | 
+Mon, 28 Sep 2020 23:23:06 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:23:06 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:23:08 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:23:33 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 28 Sep 2020 23:23:43 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:23:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:23:43 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:23:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:23:43 GMT | INFO | loggers.log | admin001 sent admin1 a friend request | 
+Mon, 28 Sep 2020 23:23:47 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:23:50 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:23:59 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:23:59 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:23:59 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:23:59 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:33 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:24:35 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 28 Sep 2020 23:24:36 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:24:38 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:38 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:38 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:38 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:38 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:38 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:38 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:38 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:38 GMT | INFO | loggers.log | admin001 joined a group called Gro | 
+Mon, 28 Sep 2020 23:24:38 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:38 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:38 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:38 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:38 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:38 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:38 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:38 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:39 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:39 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:39 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:39 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:39 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:39 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:39 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:39 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | admin001 has joined room Gro | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:40 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:46 GMT | INFO | loggers.log | admin001 has left room Gro | 
+Mon, 28 Sep 2020 23:24:51 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:24:51 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:24:51 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 28 Sep 2020 23:24:54 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:54 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:58 GMT | INFO | loggers.log | admin001 messaged admin | 
+Mon, 28 Sep 2020 23:24:59 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:24:59 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:24:59 GMT | INFO | loggers.log | admin001 send message to admin | 
+Mon, 28 Sep 2020 23:25:15 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:25:19 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:19 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:25:19 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:19 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:19 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:19 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:19 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:19 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:19 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:20 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:20 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:20 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:20 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:20 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:20 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:20 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:20 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:20 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:20 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:20 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:20 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:20 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:20 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:20 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:20 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:20 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:23 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:44 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | admin001 has joined room Gro | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:25:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:25:53 GMT | INFO | loggers.log | admin001 has left room Gro | 
+Mon, 28 Sep 2020 23:25:54 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:25:54 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:25:54 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 28 Sep 2020 23:29:11 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:34:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:34:55 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 28 Sep 2020 23:38:13 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:50:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:50:58 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:08 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:51:08 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:51:08 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 28 Sep 2020 23:51:10 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:51:13 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:52:16 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:52:16 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:52:17 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:52:17 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:53:03 GMT | INFO | loggers.log | Socket VhPbpKf5XT6q9ol1AAAD connected | 
+Mon, 28 Sep 2020 23:53:03 GMT | INFO | loggers.log | Socket owLCqc40Z9NQlQMhAAAE connected | 
+Mon, 28 Sep 2020 23:53:04 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 28 Sep 2020 23:53:19 GMT | ERROR | loggers.log | Email/Password is incorrect | 
+Mon, 28 Sep 2020 23:53:20 GMT | INFO | loggers.log |  admin has logged in | 
+Mon, 28 Sep 2020 23:53:21 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:53:21 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:53:21 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 28 Sep 2020 23:53:21 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Mon, 28 Sep 2020 23:53:27 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:53:27 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:53:27 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:53:27 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:53:29 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:53:29 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:53:35 GMT | INFO | loggers.log | admin messaged admin001 | 
+Mon, 28 Sep 2020 23:53:35 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:53:35 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:53:35 GMT | INFO | loggers.log | admin send message to admin001 | 
+Mon, 28 Sep 2020 23:56:59 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:57:03 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:03 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:03 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:03 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:03 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:03 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:03 GMT | INFO | loggers.log | admin joined event called dd | 
+Mon, 28 Sep 2020 23:57:05 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:05 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:05 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:57:05 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:05 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:05 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:05 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:05 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:05 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:05 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:05 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:05 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:05 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:05 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:05 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:05 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:05 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:06 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:06 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:06 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:06 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:06 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:06 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:06 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:06 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:06 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:06 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:06 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:06 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:06 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:06 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:06 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:06 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | admin has joined room Gro | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:09 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:22 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | admin001 has joined room Gro | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | User admin001 communicated with the server | 
+Mon, 28 Sep 2020 23:57:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:26 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:26 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:26 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:26 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:26 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:26 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 28 Sep 2020 23:57:26 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 28 Sep 2020 23:57:26 GMT | INFO | loggers.log | Current User is permitted access to this route | 

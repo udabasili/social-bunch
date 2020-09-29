@@ -11,7 +11,7 @@ const storage = cloudinaryStorage({
 	cloudinary: cloudinary,
 	folder: 'snagged',
 	filename: function (req, file, cb) {
-		cb(undefined, `${file.originalname}`);
+		cb(undefined, `${file.originalname.split('.'[0])}`);
 	}
 });
 
@@ -31,6 +31,7 @@ route.post('/register', cpUpload, async function(req, res, next){
 				throw new Error('please error upload an image')
 			}
 			const imageUrl = req.files.file[0].url; 
+			console.log(file)
 			let userData= JSON.parse(req.body.data);
 			const User = new services.AuthService(userData, imageUrl);
 			const {newUser, generatedToken} = await User.SignUp();
