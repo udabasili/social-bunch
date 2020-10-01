@@ -32,7 +32,7 @@
         text-transform: uppercase;
 
         @include response(phone){
-            font-size: 2rem;
+            font-size: 1.3rem;
         }
 
     }
@@ -312,6 +312,21 @@
     height: 100%;
     width: $left-nav-width;
 
+
+    @include response(phone){
+        flex-direction: row;
+        width: 100%;
+        position: relative;
+        height: 10vh;
+    }
+
+    @include response(tab-port) {
+        flex-direction: row;
+        width: 100%;
+        position: relative;
+        height: 10vh;
+    }
+
    
 }
 
@@ -322,9 +337,32 @@
         margin-top: 15vh;
         flex-direction: column;
 
+        @include response(phone) {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            flex-direction: row;
+           margin-top: 0;
+        }
+
+        @include response(tab-port) {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            flex-direction: row;
+            margin-top: 0;
+        }
+
         .active {
             background-color: $color-background;
             color: $color-primary-dark;
+
+            @include response(phone){
+                background-color: black;
+            }
+
+            @include response(tab-port) {
+                background-color: black;
+            }
+           
         }
     }
 
@@ -335,6 +373,16 @@
         stroke-width: 3px;
         cursor: pointer;
         padding: 1rem 3rem;
+
+        @include response(phone){
+            align-items: center;
+            padding: 0;
+        }
+
+        @include response(tab-port) {
+            align-items: center;
+            padding: 0;
+        }
 
     }
 

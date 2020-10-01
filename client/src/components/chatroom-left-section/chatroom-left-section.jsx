@@ -19,7 +19,7 @@ class ChatroomLeftSection extends React.PureComponent {
       showUserMessages: false,
       isMobile: window.innerWidth <= 900 ? true : false,
       leftSectionStyling:{
-        marginLeft: '10vw',
+        marginLeft: '0',
         iconType: faMinusCircle,
         cursor: 'pointer'
       },
@@ -47,11 +47,11 @@ class ChatroomLeftSection extends React.PureComponent {
       let leftMargin = hide;
       let icon = '';
       if(hide){
-        leftMargin = '-82vw'
+        leftMargin = '-92vw'
         icon = faPlusCircle
       }
       else{
-        leftMargin = '10vw'
+        leftMargin = '0'
         icon = faMinusCircle
       }
       this.setState((prevState)=>({

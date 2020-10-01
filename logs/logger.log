@@ -8069,3 +8069,632 @@ Mon, 28 Sep 2020 23:57:26 GMT | INFO | loggers.log | User admin communicated wit
 Mon, 28 Sep 2020 23:57:26 GMT | INFO | loggers.log | Current User is permitted access to this route | 
 Mon, 28 Sep 2020 23:57:26 GMT | INFO | loggers.log | User admin communicated with the server | 
 Mon, 28 Sep 2020 23:57:26 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:04:52 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Thu, 01 Oct 2020 02:04:52 GMT | INFO | loggers.log | Connected to mongodb | 
+Thu, 01 Oct 2020 02:06:00 GMT | INFO | loggers.log | Socket Z8Yae3LWBAxUNph6AAAA connected | 
+Thu, 01 Oct 2020 02:06:01 GMT | INFO | loggers.log | Socket Vz3HQpu3Lv7krurWAAAB connected | 
+Thu, 01 Oct 2020 02:06:02 GMT | INFO | loggers.log | rooms successfully created | 
+Thu, 01 Oct 2020 02:06:15 GMT | INFO | loggers.log |  admin has logged in | 
+Thu, 01 Oct 2020 02:06:15 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 02:06:15 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 02:06:15 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Thu, 01 Oct 2020 02:06:16 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Thu, 01 Oct 2020 02:06:16 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:06:16 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:06:16 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:06:16 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:16:24 GMT | INFO | loggers.log | Socket Vz3HQpu3Lv7krurWAAAB disconnected | 
+Thu, 01 Oct 2020 02:16:24 GMT | INFO | loggers.log | Socket Z8Yae3LWBAxUNph6AAAA disconnected | 
+Thu, 01 Oct 2020 02:16:24 GMT | INFO | loggers.log | admin has logged out | 
+Thu, 01 Oct 2020 02:16:25 GMT | INFO | loggers.log | Socket UH-1t7cmhzAOQ0JPAAAC connected | 
+Thu, 01 Oct 2020 02:16:26 GMT | INFO | loggers.log | Socket SWegfp9hyFFWfFY6AAAD connected | 
+Thu, 01 Oct 2020 02:16:26 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 02:16:26 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Thu, 01 Oct 2020 02:16:26 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 02:16:26 GMT | INFO | loggers.log | Verified User has valid token | 
+Thu, 01 Oct 2020 02:16:27 GMT | INFO | loggers.log | rooms successfully created | 
+Thu, 01 Oct 2020 02:16:27 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Thu, 01 Oct 2020 02:18:22 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:28 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:34 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:18:35 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:18:36 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 02:20:59 GMT | INFO | loggers.log | Socket UH-1t7cmhzAOQ0JPAAAC disconnected | 
+Thu, 01 Oct 2020 02:20:59 GMT | INFO | loggers.log | Socket SWegfp9hyFFWfFY6AAAD disconnected | 
+Thu, 01 Oct 2020 02:20:59 GMT | INFO | loggers.log | admin has logged out | 
+Thu, 01 Oct 2020 02:21:01 GMT | INFO | loggers.log | Socket PQCVIn9xOLBwAqtLAAAE connected | 
+Thu, 01 Oct 2020 02:21:01 GMT | INFO | loggers.log | Socket 1a4C8BnDX798bKhSAAAF connected | 
+Thu, 01 Oct 2020 02:21:01 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 02:21:01 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 02:21:01 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Thu, 01 Oct 2020 02:21:01 GMT | INFO | loggers.log | Verified User has valid token | 
+Thu, 01 Oct 2020 02:21:02 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Thu, 01 Oct 2020 02:21:02 GMT | INFO | loggers.log | rooms successfully created | 
+Thu, 01 Oct 2020 02:29:33 GMT | INFO | loggers.log | Socket 1a4C8BnDX798bKhSAAAF disconnected | 
+Thu, 01 Oct 2020 02:29:33 GMT | INFO | loggers.log | Socket PQCVIn9xOLBwAqtLAAAE disconnected | 
+Thu, 01 Oct 2020 02:29:33 GMT | INFO | loggers.log | admin has logged out | 
+Thu, 01 Oct 2020 02:29:34 GMT | INFO | loggers.log | Socket oGrctmkpr7yv2VDYAAAG connected | 
+Thu, 01 Oct 2020 02:29:34 GMT | INFO | loggers.log | Socket wCt4eT0SJVAiHXJxAAAH connected | 
+Thu, 01 Oct 2020 02:29:34 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 02:29:34 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 02:29:34 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Thu, 01 Oct 2020 02:29:34 GMT | INFO | loggers.log | Verified User has valid token | 
+Thu, 01 Oct 2020 02:29:37 GMT | INFO | loggers.log | rooms successfully created | 
+Thu, 01 Oct 2020 02:29:37 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Thu, 01 Oct 2020 02:29:39 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:29:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:29:44 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 02:34:13 GMT | INFO | loggers.log | Socket oGrctmkpr7yv2VDYAAAG disconnected | 
+Thu, 01 Oct 2020 02:34:13 GMT | INFO | loggers.log | Socket wCt4eT0SJVAiHXJxAAAH disconnected | 
+Thu, 01 Oct 2020 02:34:13 GMT | INFO | loggers.log | admin has logged out | 
+Thu, 01 Oct 2020 02:34:14 GMT | INFO | loggers.log | Socket UO1rQRVuzv-sl5RFAAAI connected | 
+Thu, 01 Oct 2020 02:34:14 GMT | INFO | loggers.log | Socket UYq6YPcAHGfRDYSRAAAJ connected | 
+Thu, 01 Oct 2020 02:34:14 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 02:34:14 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 02:34:14 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Thu, 01 Oct 2020 02:34:14 GMT | INFO | loggers.log | Verified User has valid token | 
+Thu, 01 Oct 2020 02:34:16 GMT | INFO | loggers.log | rooms successfully created | 
+Thu, 01 Oct 2020 02:34:16 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Thu, 01 Oct 2020 02:34:29 GMT | INFO | loggers.log | Socket UYq6YPcAHGfRDYSRAAAJ disconnected | 
+Thu, 01 Oct 2020 02:34:29 GMT | INFO | loggers.log | Socket UO1rQRVuzv-sl5RFAAAI disconnected | 
+Thu, 01 Oct 2020 02:34:29 GMT | INFO | loggers.log | admin has logged out | 
+Thu, 01 Oct 2020 02:34:30 GMT | INFO | loggers.log | Socket HP3nX3WT7Ix6v0hSAAAK connected | 
+Thu, 01 Oct 2020 02:34:30 GMT | INFO | loggers.log | Socket IesciyeeU7adbJnTAAAL connected | 
+Thu, 01 Oct 2020 02:34:30 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 02:34:30 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 02:34:30 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Thu, 01 Oct 2020 02:34:30 GMT | INFO | loggers.log | Verified User has valid token | 
+Thu, 01 Oct 2020 02:34:31 GMT | INFO | loggers.log | rooms successfully created | 
+Thu, 01 Oct 2020 02:34:31 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Thu, 01 Oct 2020 02:38:21 GMT | INFO | loggers.log | Socket HP3nX3WT7Ix6v0hSAAAK disconnected | 
+Thu, 01 Oct 2020 02:38:21 GMT | INFO | loggers.log | Socket IesciyeeU7adbJnTAAAL disconnected | 
+Thu, 01 Oct 2020 02:38:21 GMT | INFO | loggers.log | admin has logged out | 
+Thu, 01 Oct 2020 02:38:28 GMT | INFO | loggers.log | Socket qcso9c3RQOyY1d11AAAM connected | 
+Thu, 01 Oct 2020 02:38:28 GMT | INFO | loggers.log | Socket -IRJn37MZyvhw9w0AAAN connected | 
+Thu, 01 Oct 2020 02:38:28 GMT | INFO | loggers.log | Socket qcso9c3RQOyY1d11AAAM disconnected | 
+Thu, 01 Oct 2020 02:38:29 GMT | INFO | loggers.log | Socket -IRJn37MZyvhw9w0AAAN disconnected | 
+Thu, 01 Oct 2020 02:38:30 GMT | INFO | loggers.log | Socket rLsfYV0mREPoT0CkAAAO connected | 
+Thu, 01 Oct 2020 02:38:30 GMT | INFO | loggers.log | Socket KrseXJRtEjdLPWALAAAP connected | 
+Thu, 01 Oct 2020 02:38:30 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 02:38:30 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 02:38:30 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Thu, 01 Oct 2020 02:38:30 GMT | INFO | loggers.log | Verified User has valid token | 
+Thu, 01 Oct 2020 02:38:32 GMT | INFO | loggers.log | rooms successfully created | 
+Thu, 01 Oct 2020 02:38:32 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Thu, 01 Oct 2020 02:38:47 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:38:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:38:47 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:38:47 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:43:06 GMT | INFO | loggers.log | Socket KrseXJRtEjdLPWALAAAP disconnected | 
+Thu, 01 Oct 2020 02:43:06 GMT | INFO | loggers.log | Socket rLsfYV0mREPoT0CkAAAO disconnected | 
+Thu, 01 Oct 2020 02:43:06 GMT | INFO | loggers.log | admin has logged out | 
+Thu, 01 Oct 2020 02:43:07 GMT | INFO | loggers.log | Socket n9cAYo1nQ3Yq9gtTAAAQ connected | 
+Thu, 01 Oct 2020 02:43:07 GMT | INFO | loggers.log | Socket _wjoyjVYp77aqj0OAAAR connected | 
+Thu, 01 Oct 2020 02:43:07 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 02:43:07 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 02:43:07 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Thu, 01 Oct 2020 02:43:07 GMT | INFO | loggers.log | Verified User has valid token | 
+Thu, 01 Oct 2020 02:43:09 GMT | INFO | loggers.log | rooms successfully created | 
+Thu, 01 Oct 2020 02:43:09 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Thu, 01 Oct 2020 02:47:28 GMT | INFO | loggers.log | Socket _wjoyjVYp77aqj0OAAAR disconnected | 
+Thu, 01 Oct 2020 02:47:28 GMT | INFO | loggers.log | Socket n9cAYo1nQ3Yq9gtTAAAQ disconnected | 
+Thu, 01 Oct 2020 02:47:28 GMT | INFO | loggers.log | admin has logged out | 
+Thu, 01 Oct 2020 02:47:29 GMT | INFO | loggers.log | Socket WQYCPzQxJ15o1RNsAAAS connected | 
+Thu, 01 Oct 2020 02:47:29 GMT | INFO | loggers.log | Socket CyVaWci-Wo94qzb3AAAT connected | 
+Thu, 01 Oct 2020 02:47:29 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 02:47:29 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 02:47:29 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Thu, 01 Oct 2020 02:47:29 GMT | INFO | loggers.log | Verified User has valid token | 
+Thu, 01 Oct 2020 02:47:31 GMT | INFO | loggers.log | rooms successfully created | 
+Thu, 01 Oct 2020 02:47:31 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Thu, 01 Oct 2020 02:48:13 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:48:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:48:24 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:48:24 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 02:48:24 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 02:48:24 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:11:07 GMT | INFO | loggers.log | Socket CyVaWci-Wo94qzb3AAAT disconnected | 
+Thu, 01 Oct 2020 03:11:07 GMT | INFO | loggers.log | Socket WQYCPzQxJ15o1RNsAAAS disconnected | 
+Thu, 01 Oct 2020 03:11:07 GMT | INFO | loggers.log | admin has logged out | 
+Thu, 01 Oct 2020 03:11:09 GMT | INFO | loggers.log | Socket Mg0gDMvMUNSO7foLAAAU connected | 
+Thu, 01 Oct 2020 03:11:09 GMT | INFO | loggers.log | Socket q3WZeKGOrwJYUjwjAAAV connected | 
+Thu, 01 Oct 2020 03:11:20 GMT | INFO | loggers.log | Socket jqR8ah1WR9Ke1eVyAAAW connected | 
+Thu, 01 Oct 2020 03:11:20 GMT | INFO | loggers.log | Socket Kh8KzCR0uu_fqKbRAAAX connected | 
+Thu, 01 Oct 2020 03:11:21 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 03:11:21 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 03:11:21 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Thu, 01 Oct 2020 03:11:21 GMT | INFO | loggers.log | Verified User has valid token | 
+Thu, 01 Oct 2020 03:11:23 GMT | INFO | loggers.log | rooms successfully created | 
+Thu, 01 Oct 2020 03:11:23 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Thu, 01 Oct 2020 03:11:39 GMT | INFO | loggers.log | Socket Mg0gDMvMUNSO7foLAAAU disconnected | 
+Thu, 01 Oct 2020 03:11:39 GMT | INFO | loggers.log | Socket q3WZeKGOrwJYUjwjAAAV disconnected | 
+Thu, 01 Oct 2020 03:11:55 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:11:55 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:11:55 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:11:55 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:12:27 GMT | INFO | loggers.log | Socket jqR8ah1WR9Ke1eVyAAAW disconnected | 
+Thu, 01 Oct 2020 03:12:27 GMT | INFO | loggers.log | Socket Kh8KzCR0uu_fqKbRAAAX disconnected | 
+Thu, 01 Oct 2020 03:12:27 GMT | INFO | loggers.log | admin has logged out | 
+Thu, 01 Oct 2020 03:12:29 GMT | INFO | loggers.log | Socket 39Z2GShHEP4CYKh9AAAY connected | 
+Thu, 01 Oct 2020 03:12:29 GMT | INFO | loggers.log | Socket AhqFdzFwzbL7a7txAAAZ connected | 
+Thu, 01 Oct 2020 03:12:29 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 03:12:29 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 03:12:29 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Thu, 01 Oct 2020 03:12:29 GMT | INFO | loggers.log | Verified User has valid token | 
+Thu, 01 Oct 2020 03:12:32 GMT | INFO | loggers.log | rooms successfully created | 
+Thu, 01 Oct 2020 03:12:32 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Thu, 01 Oct 2020 03:12:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:12:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:12:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:12:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:15:14 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:15:14 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:15:31 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 03:16:50 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:52 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Thu, 01 Oct 2020 03:16:53 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:53 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:53 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:53 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:53 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 03:16:53 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:53 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:53 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:53 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:53 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:53 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:53 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:53 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:53 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:53 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:53 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:53 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:54 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:54 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:54 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:54 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:54 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:54 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:54 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:54 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:16:54 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:16:55 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 03:16:58 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:01 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:03 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:17:08 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 03:17:18 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:17:18 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:19:34 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:19:34 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:10 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 03:21:11 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:11 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:11 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 03:21:11 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:11 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:11 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:11 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:11 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:11 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:11 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:11 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:11 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:11 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:11 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:11 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:11 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:11 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:12 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:12 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:12 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:12 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:12 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:12 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:12 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:12 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:12 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:12 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:12 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:12 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:12 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:12 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:12 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:12 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:13 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Thu, 01 Oct 2020 03:21:14 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 03:21:18 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:18 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:22 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:47 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:49 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:50 GMT | INFO | loggers.log | admin has joined room Gro | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:21:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:25:23 GMT | INFO | loggers.log | Socket 39Z2GShHEP4CYKh9AAAY disconnected | 
+Thu, 01 Oct 2020 03:25:23 GMT | INFO | loggers.log | Socket AhqFdzFwzbL7a7txAAAZ disconnected | 
+Thu, 01 Oct 2020 03:25:23 GMT | INFO | loggers.log | admin has logged out | 
+Thu, 01 Oct 2020 03:25:25 GMT | INFO | loggers.log | Socket -nMAIw7sTHK8qVqeAAAa connected | 
+Thu, 01 Oct 2020 03:25:25 GMT | INFO | loggers.log | Socket myrXhQ_uEufCY7KTAAAb connected | 
+Thu, 01 Oct 2020 03:25:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:25:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:25:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:25:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:25:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:25:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:25:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:25:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:25:25 GMT | INFO | loggers.log | Verified User has valid token | 
+Thu, 01 Oct 2020 03:25:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:25:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:25:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:25:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:25:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:25:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:25:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:25:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:25:26 GMT | INFO | loggers.log | admin has joined room Gro | 
+Thu, 01 Oct 2020 03:25:26 GMT | INFO | loggers.log | rooms successfully created | 
+Thu, 01 Oct 2020 03:25:26 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Thu, 01 Oct 2020 03:25:27 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:25:27 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:25:27 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:25:27 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:25:27 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:25:27 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:25:27 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:25:27 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:15 GMT | INFO | loggers.log | admin has left room Gro | 
+Thu, 01 Oct 2020 03:28:15 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 03:28:15 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Thu, 01 Oct 2020 03:28:15 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Thu, 01 Oct 2020 03:28:17 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:17 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:17 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:17 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:19 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Thu, 01 Oct 2020 03:28:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:19 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:19 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:20 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:20 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:20 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:20 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:20 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:20 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:20 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:20 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:20 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:20 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:20 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:20 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:20 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:20 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:20 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:20 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | admin has joined room Gro | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | User admin communicated with the server | 
+Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | Current User is permitted access to this route | 

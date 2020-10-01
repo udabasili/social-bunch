@@ -14,15 +14,19 @@
         @include response(phone){
             box-shadow: none;
             width: 100vw;
-            margin-left: - 82vw;
-            margin-right: 1px;
+            position: relative;
+            margin-right: 0;
+            z-index: 10;
+            margin-left: 0;
         }
 
         @include response(tab-port) {
-            box-shadow: none;
-            width: 100vw;
-            margin-left: - 82vw;
-            margin-right: 1px;
+             box-shadow: none;
+             width: 100vw;
+             position: relative;
+             margin-right: 0;
+             z-index: 10;
+             margin-left: 0;
         }
 
         
@@ -158,14 +162,22 @@
         position: relative;
 
         @include response(phone){
-            width: 0;
+            width: 90%;
+            position: absolute;
+            right: 0;
+            height: 74vh;
+            top: 25vh;
             flex-grow: 1;
             flex-shrink: 1;
-            ;
+            
         }
 
         @include response(tab-port) {
-            width: 0;
+            width: 90%;
+            position: absolute;
+            right: 0;
+            height: 74vh;
+            top: 25vh;
             flex-grow: 1;
             flex-shrink: 1;
             ;
@@ -266,11 +278,24 @@
         width: 50%;
         height: 90%;
 
+
         @include response(phone) {
             height: 50%;
             width: 90%;
+            position: static;
             margin: 2% auto;
             order: 1;
+        }
+
+        @include response(tab-port) {
+            width: 90%;
+            position: static;
+            margin: 2% auto;
+            order: 1;
+        }
+
+        .chat-box{
+            position: static;
         }
     }
 
