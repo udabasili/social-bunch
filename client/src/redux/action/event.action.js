@@ -3,6 +3,7 @@ import { removeError } from "./errors.action";
 import { restApi } from "../../services/api";
 import axios from "axios";
 import { startFetching } from "./fetch.actions";
+import { toast } from 'react-toastify';
 
 
 export const setEvents = (events) =>({
@@ -32,8 +33,10 @@ export const createEvent = (event) =>{
                 dispatch(removeError())    
                 dispatch(joinEvent(response.eventId))        
                 dispatch(setEvents(response.events))
+                toast.success(`New event created`)
             })
             .catch((error)=>{
+                toast.error('Something went wrong. Try again later')
             }
         )
     }
@@ -53,17 +56,19 @@ export const getEventById = async (eventId) =>{
 
 
 export const joinEvent = (eventId) =>{    
-    let userId = sessionStorage.getItem("userId");
-    console.log(userId);
-    
+    let userId = sessionStorage.getItem("userId");    
     return dispatch =>{
         dispatch(startFetching())        
         return restApi ("get", `/user/${userId}/event/${eventId}/join`)
             .then((response)=>{
                 dispatch(removeError())            
                 dispatch(setEvents(response))
+                toast.success(`You have successfully joined event `)
+
             })
             .catch((error)=>{
+                toast.error('Something went wrong. Try again later')
+
             }
         )
     
@@ -78,9 +83,12 @@ export const leaveEvent =  (eventId) =>{
         .then((response)=>{
             dispatch(removeError())            
             dispatch(setEvents(response))
+            toast.success(`You have successfully left event `)
+
         })
         .catch((error)=>{
-            
+            toast.error('Something went wrong. Try again later')
+
         })
     
     }
@@ -93,8 +101,12 @@ export const deleteEvent = (eventId) =>{
             .then((response)=>{
                 dispatch(removeError())            
                 dispatch(setEvents(response))
+                toast.success(`You have successfully deleted event `)
+
             })
             .catch((error)=>{
+                toast.error('Something went wrong. Try again later')
+
                 }
             )
     }

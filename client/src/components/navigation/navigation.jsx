@@ -1,8 +1,7 @@
 import React,{useState} from "react";
 import {connect} from "react-redux";
-import {setCurrentUser, logOut, rejectFriendRequest, acceptFriendRequest } from "../../redux/action/user.action";
+import {setCurrentUser, logOut,  addFriend } from "../../redux/action/user.action";
 import {withRouter, Link} from "react-router-dom";
-import NotificationIcon from "../notification-icon/notification-icon";
 import {ReactComponent as Logo} from '../../assets/images/comment.svg'
 /**
   * @desc header handling notifications and log out actions
@@ -12,7 +11,7 @@ import {ReactComponent as Logo} from '../../assets/images/comment.svg'
   * @author Udendu Abasili
 
 */
-function Navigation ({currentUser, acceptRequest, rejectRequest,isAuthenticated, logOut}) {
+function Navigation ({currentUser, logOut}) {
     
     const clickHandler = () => {
     
@@ -29,55 +28,16 @@ function Navigation ({currentUser, acceptRequest, rejectRequest,isAuthenticated,
             <nav className="navigation">
                 <div className="logo-box">
                     <Logo className='logo'/>
-                    <span className='app-name'>Simply Chat</span>
+                    <Link to="/" className='app-name'>
+                        Simply Chat
+                    </Link>
                 </div>
                 <div class="navigation__dropdown">
                     <a href="javascript:void(0)"
                         onClick={toggleDropDownHandler}
                         class="navigation__link-001">
-                        <NotificationIcon
-                            toggleDropDown={toggleDropDownHandler}
-                            showDropDown={showDropDown}
-                            friendsRequestCount={
-                                currentUser.friendsRequests ?
-                                    currentUser.friendsRequests.length :
-                                    0
-                            }
-                        />
+                        
                     </a>
-                    {showDropDown &&
-                        <div className="dropdown">
-                            <div className="dropdown__header">
-                                <p>Friend Requests</p>
-                            </div>
-                            {currentUser.friendsRequests ?
-                                currentUser.friendsRequests.map((friendsRequest) => (
-                                    <div className="user-request-list">
-                                        <img src={friendsRequest.userInfo.userImage}
-                                            alt="your profile"
-                                            className="user-request-list__image" />
-                                        <p className="user-request-list__name">
-                                                <b>{friendsRequest.userInfo.username}</b> 
-                                                <br /></p>
-                                        <div className="button-block">
-                                            <div
-                                                onClick={() => acceptRequest(friendsRequest.userInfo._id)}
-                                                className="accept">
-                                                Accept
-                                            </div>
-                                            <div
-                                                onClick={() => rejectRequest(friendsRequest.userInfo._id)}
-                                                className="reject">
-                                                Reject
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))
-                                :
-                                <div>No new Requests</div>
-                            }
-                        </div>
-                    }
                 </div>
                 <input type='checkbox' className='navigation__checkbox' id='toggle' />
                 <label className='navigation__button' htmlFor='toggle'>
@@ -116,8 +76,7 @@ const mapStateToProps = (state) =>({
  })
 
  const mapDispatchToProps = dispatch =>({
-    acceptRequest: (addedUserId) => dispatch(acceptFriendRequest(addedUserId)),
-    rejectRequest: (addedUserId) => dispatch(rejectFriendRequest(addedUserId)),
+    addFriend: (addedUserId) => dispatch(addFriend(addedUserId)),
     setCurrentUser: user => dispatch(setCurrentUser(user)),
     logOut : () => dispatch(logOut())
  })

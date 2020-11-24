@@ -1,5 +1,75 @@
 /**USERS LIST CARD STYLING **/
+.user{
+  &__list{
 
+  }
+
+  &__item{
+    height: 10vh;
+    width: 97%;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__image{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    overflow: hidden;
+
+    .image{
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__details{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    align-items: flex-start;
+  }
+
+  &__name{
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+
+  &__button{
+    &,
+    &:link,
+    &:visited{
+      text-decoration: none;
+      padding: 1.3rem 1rem;
+      width: 13rem;
+      font-size: 1.6rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      color: white;
+      display: inline-block;
+    }
+  }
+
+  &__buttons{
+    display: flex;
+    width: 100%;
+
+    .add{
+      margin-right: 1rem;
+      background-color: $color-primary-dark;
+    }
+    .prof{
+      background-color: black;
+
+    }
+  }
+
+}
 .user-list{
   border-collapse: collapse;
   margin: 0 auto;
@@ -19,43 +89,43 @@
     }
   }
 }
-.user{
+// .user{
 
 
-  &__image{
-    position: relative;
-    max-width: 6rem;
-    float: left;
-    margin-right: 15px;
-  }
+//   &__image{
+//     position: relative;
+//     max-width: 6rem;
+//     float: left;
+//     margin-right: 15px;
+//   }
 
-  &__name{
-    display: block;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    padding-top: 3px;
-    text-align: left;
-  }
+//   &__name{
+//     display: block;
+//     font-size: 1.5rem;
+//     text-transform: uppercase;
+//     padding-top: 3px;
+//     text-align: left;
+//   }
 
-  &__button {
-    margin: 0 5px;
-    font-size: 1.125em;
+//   &__button {
+//     margin: 0 5px;
+//     font-size: 1.125em;
 
-    &:hover{
-      text-decoration: none;
-      color: #2aa493;
-    }
+//     &:hover{
+//       text-decoration: none;
+//       color: #2aa493;
+//     }
 
-    .danger {
-      color: #fe635f;
+//     .danger {
+//       color: #fe635f;
 
-      &:hover {
-        color: #dd504c;
-      }
-    }
-  }
+//       &:hover {
+//         color: #dd504c;
+//       }
+//     }
+//   }
   
-}
+// }
 
 
 

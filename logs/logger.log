@@ -8698,3 +8698,1369 @@ Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | User admin communicated wit
 Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | Current User is permitted access to this route | 
 Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | User admin communicated with the server | 
 Thu, 01 Oct 2020 03:28:21 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 21:38:52 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 23 Nov 2020 21:38:56 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 23 Nov 2020 21:42:17 GMT | INFO | loggers.log | Socket P7N7MHmqCEhTn_0iAAAA connected | 
+Mon, 23 Nov 2020 21:42:17 GMT | INFO | loggers.log | Socket M5rCZstJcnnu8fIKAAAB connected | 
+Mon, 23 Nov 2020 21:42:22 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 21:48:55 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 23 Nov 2020 21:48:55 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 23 Nov 2020 21:48:55 GMT | INFO | loggers.log | Socket 9xldLpIVmpfDhxVjAAAA connected | 
+Mon, 23 Nov 2020 21:48:55 GMT | INFO | loggers.log | Socket Fyei94Nl3HP2qHlrAAAB connected | 
+Mon, 23 Nov 2020 21:53:39 GMT | INFO | loggers.log | Socket Fyei94Nl3HP2qHlrAAAB disconnected | 
+Mon, 23 Nov 2020 21:53:41 GMT | INFO | loggers.log | Socket 5fSGwMMK9t44M9QvAAAC connected | 
+Mon, 23 Nov 2020 21:55:25 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 23 Nov 2020 21:55:25 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 23 Nov 2020 21:55:27 GMT | INFO | loggers.log | Socket jhhoJebob8NIQ5UQAAAA connected | 
+Mon, 23 Nov 2020 21:55:27 GMT | INFO | loggers.log | Socket fgkYdhsNUjkWVp0KAAAB connected | 
+Mon, 23 Nov 2020 21:55:28 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 21:56:12 GMT | INFO | loggers.log | New User  user has been added | 
+Mon, 23 Nov 2020 21:56:12 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 21:56:12 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 21:56:12 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 21:56:13 GMT | INFO | loggers.log | user has the socket id set in database | 
+Mon, 23 Nov 2020 21:56:30 GMT | INFO | loggers.log | Socket jhhoJebob8NIQ5UQAAAA disconnected | 
+Mon, 23 Nov 2020 21:56:30 GMT | INFO | loggers.log | user has logged out | 
+Mon, 23 Nov 2020 22:01:38 GMT | INFO | loggers.log | Socket fgkYdhsNUjkWVp0KAAAB disconnected | 
+Mon, 23 Nov 2020 22:01:40 GMT | INFO | loggers.log | Socket y-19iQLX_LX3Ndo_AAAC connected | 
+Mon, 23 Nov 2020 22:01:40 GMT | INFO | loggers.log | Socket BHbNlSeejrKTdSUyAAAD connected | 
+Mon, 23 Nov 2020 22:01:41 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 22:01:54 GMT | ERROR | loggers.log | User not registered | 
+Mon, 23 Nov 2020 22:02:02 GMT | ERROR | loggers.log | User not registered | 
+Mon, 23 Nov 2020 22:02:04 GMT | ERROR | loggers.log | User not registered | 
+Mon, 23 Nov 2020 22:02:33 GMT | INFO | loggers.log | Socket y-19iQLX_LX3Ndo_AAAC disconnected | 
+Mon, 23 Nov 2020 22:02:33 GMT | INFO | loggers.log | Socket BHbNlSeejrKTdSUyAAAD disconnected | 
+Mon, 23 Nov 2020 22:02:34 GMT | INFO | loggers.log | Socket Va6kwG5ED07G7V3kAAAE connected | 
+Mon, 23 Nov 2020 22:02:34 GMT | INFO | loggers.log | Socket nFB64z0cSj6GwfHwAAAF connected | 
+Mon, 23 Nov 2020 22:02:35 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 22:02:43 GMT | INFO | loggers.log | Socket nFB64z0cSj6GwfHwAAAF disconnected | 
+Mon, 23 Nov 2020 22:02:43 GMT | INFO | loggers.log | Socket Va6kwG5ED07G7V3kAAAE disconnected | 
+Mon, 23 Nov 2020 22:02:44 GMT | INFO | loggers.log | Socket PIkJ4aGxH57dp8IlAAAG connected | 
+Mon, 23 Nov 2020 22:02:44 GMT | INFO | loggers.log | Socket xYTmCbiNquDx8G8AAAAH connected | 
+Mon, 23 Nov 2020 22:02:45 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 22:02:56 GMT | ERROR | loggers.log | Email/Password is incorrect | 
+Mon, 23 Nov 2020 22:03:14 GMT | INFO | loggers.log | Socket PIkJ4aGxH57dp8IlAAAG disconnected | 
+Mon, 23 Nov 2020 22:03:14 GMT | INFO | loggers.log | Socket xYTmCbiNquDx8G8AAAAH disconnected | 
+Mon, 23 Nov 2020 22:03:15 GMT | INFO | loggers.log | Socket Q5HfrenqusQUHds6AAAI connected | 
+Mon, 23 Nov 2020 22:03:15 GMT | INFO | loggers.log | Socket bkwmJDNxMj8KdBTKAAAJ connected | 
+Mon, 23 Nov 2020 22:03:16 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 22:05:19 GMT | INFO | loggers.log | Socket Q5HfrenqusQUHds6AAAI disconnected | 
+Mon, 23 Nov 2020 22:05:19 GMT | INFO | loggers.log | Socket bkwmJDNxMj8KdBTKAAAJ disconnected | 
+Mon, 23 Nov 2020 22:05:22 GMT | INFO | loggers.log | Socket 47zsUlMtcoMUp3CyAAAK connected | 
+Mon, 23 Nov 2020 22:05:22 GMT | INFO | loggers.log | Socket 2GMusJkS8i2Of8hZAAAL connected | 
+Mon, 23 Nov 2020 22:05:25 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 22:05:36 GMT | INFO | loggers.log | Socket 2GMusJkS8i2Of8hZAAAL disconnected | 
+Mon, 23 Nov 2020 22:05:36 GMT | INFO | loggers.log | Socket 47zsUlMtcoMUp3CyAAAK disconnected | 
+Mon, 23 Nov 2020 22:05:38 GMT | INFO | loggers.log | Socket bZvhe_VL3pjLc9kNAAAM connected | 
+Mon, 23 Nov 2020 22:05:38 GMT | INFO | loggers.log | Socket a23vU2HmdJ_-nQPPAAAN connected | 
+Mon, 23 Nov 2020 22:05:39 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 22:09:14 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 23 Nov 2020 22:09:14 GMT | INFO | loggers.log | Socket WElsLCIEjZLzykKzAAAA connected | 
+Mon, 23 Nov 2020 22:09:14 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 23 Nov 2020 22:09:14 GMT | INFO | loggers.log | Socket _b2H6jsx8FS5yQkXAAAB connected | 
+Mon, 23 Nov 2020 22:09:14 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 22:09:20 GMT | ERROR | loggers.log | Email/Password is incorrect | 
+Mon, 23 Nov 2020 22:09:23 GMT | INFO | loggers.log | Socket WElsLCIEjZLzykKzAAAA disconnected | 
+Mon, 23 Nov 2020 22:09:23 GMT | INFO | loggers.log | Socket _b2H6jsx8FS5yQkXAAAB disconnected | 
+Mon, 23 Nov 2020 22:09:24 GMT | INFO | loggers.log | Socket 4HsQjG_Ezlm0EygJAAAC connected | 
+Mon, 23 Nov 2020 22:09:24 GMT | INFO | loggers.log | Socket 4IZSbB9zBNvQmmJfAAAD connected | 
+Mon, 23 Nov 2020 22:09:25 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 22:09:30 GMT | ERROR | loggers.log | User not registered | 
+Mon, 23 Nov 2020 22:10:08 GMT | ERROR | loggers.log | Sorry, this email/username is taken | 
+Mon, 23 Nov 2020 22:10:15 GMT | INFO | loggers.log | New User  test has been added | 
+Mon, 23 Nov 2020 22:10:16 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 22:10:16 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 22:10:16 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 22:10:16 GMT | INFO | loggers.log | test has the socket id set in database | 
+Mon, 23 Nov 2020 22:10:20 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 22:10:22 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 22:10:23 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 22:10:24 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 22:10:25 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 22:10:38 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 22:10:38 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 22:10:38 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 22:10:43 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 22:10:44 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 22:10:45 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 22:11:09 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 23 Nov 2020 22:11:09 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 23 Nov 2020 22:11:09 GMT | INFO | loggers.log | Socket KCUU4m8baEizJUuHAAAA connected | 
+Mon, 23 Nov 2020 22:11:10 GMT | INFO | loggers.log | Socket fr2yPlixBaQFcTsLAAAB connected | 
+Mon, 23 Nov 2020 22:11:20 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 22:11:23 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 22:11:24 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 22:11:44 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 22:11:44 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 22:11:44 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 22:15:32 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 22:15:34 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 22:15:35 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 22:15:41 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 22:15:42 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 22:15:45 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 22:15:51 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 22:15:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 22:15:51 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 22:15:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 22:15:51 GMT | INFO | loggers.log | test sent user a friend request | 
+Mon, 23 Nov 2020 22:15:55 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 22:15:56 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 22:15:57 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 22:49:32 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 22:49:33 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 22:49:33 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 22:50:28 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 23 Nov 2020 22:50:28 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 23 Nov 2020 22:50:30 GMT | INFO | loggers.log | Socket QWRHvIxpaG-NJ-DqAAAA connected | 
+Mon, 23 Nov 2020 22:50:31 GMT | INFO | loggers.log | Socket 4Z4JvjojqtXL1LQuAAAB connected | 
+Mon, 23 Nov 2020 22:52:14 GMT | INFO | loggers.log | Socket QWRHvIxpaG-NJ-DqAAAA disconnected | 
+Mon, 23 Nov 2020 22:52:14 GMT | INFO | loggers.log | Socket 4Z4JvjojqtXL1LQuAAAB disconnected | 
+Mon, 23 Nov 2020 22:52:16 GMT | INFO | loggers.log | Socket uaLirwRq4duFnqlBAAAC connected | 
+Mon, 23 Nov 2020 22:52:16 GMT | INFO | loggers.log | Socket M3MwNxjuxsHuCZ24AAAD connected | 
+Mon, 23 Nov 2020 22:52:16 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 22:52:16 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 22:52:16 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 22:52:16 GMT | INFO | loggers.log | Verified User has valid token | 
+Mon, 23 Nov 2020 22:52:17 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 22:52:17 GMT | INFO | loggers.log | test has the socket id set in database | 
+Mon, 23 Nov 2020 22:53:55 GMT | INFO | loggers.log | Socket M3MwNxjuxsHuCZ24AAAD disconnected | 
+Mon, 23 Nov 2020 22:53:55 GMT | INFO | loggers.log | Socket uaLirwRq4duFnqlBAAAC disconnected | 
+Mon, 23 Nov 2020 22:53:55 GMT | INFO | loggers.log | test has logged out | 
+Mon, 23 Nov 2020 22:53:57 GMT | INFO | loggers.log | Socket wCOx66gjXKoAuvkZAAAE connected | 
+Mon, 23 Nov 2020 22:53:57 GMT | INFO | loggers.log | Socket r0QlROjjnvR0mbLAAAAF connected | 
+Mon, 23 Nov 2020 22:53:58 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 22:53:58 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 22:53:58 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 22:53:58 GMT | INFO | loggers.log | Verified User has valid token | 
+Mon, 23 Nov 2020 22:53:59 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 22:53:59 GMT | INFO | loggers.log | test has the socket id set in database | 
+Mon, 23 Nov 2020 22:54:06 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 22:54:06 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 22:54:07 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 22:57:30 GMT | INFO | loggers.log | Socket r0QlROjjnvR0mbLAAAAF disconnected | 
+Mon, 23 Nov 2020 22:57:32 GMT | INFO | loggers.log | Socket QxubrcDOY_5-fIiGAAAG connected | 
+Mon, 23 Nov 2020 22:58:14 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 23 Nov 2020 22:58:14 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 23 Nov 2020 22:58:15 GMT | INFO | loggers.log | Socket GDtBcH5mY4pBHDcsAAAA connected | 
+Mon, 23 Nov 2020 22:58:15 GMT | INFO | loggers.log | Socket 3I1gbWIDpiFqqgM8AAAB connected | 
+Mon, 23 Nov 2020 22:58:25 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 23 Nov 2020 22:58:25 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 23 Nov 2020 22:58:26 GMT | INFO | loggers.log | Socket KG5LGZ6R3Kufco2_AAAA connected | 
+Mon, 23 Nov 2020 22:58:26 GMT | INFO | loggers.log | Socket DSSyRPdv1Kldg6_rAAAB connected | 
+Mon, 23 Nov 2020 22:58:27 GMT | INFO | loggers.log | Socket KG5LGZ6R3Kufco2_AAAA disconnected | 
+Mon, 23 Nov 2020 22:58:29 GMT | INFO | loggers.log | Socket qj3Hkz5Yo3Ga_-o7AAAC connected | 
+Mon, 23 Nov 2020 22:58:29 GMT | INFO | loggers.log | Socket 73jGd0h2kOkOPcXtAAAD connected | 
+Mon, 23 Nov 2020 22:58:30 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 22:58:30 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 22:58:30 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 22:58:30 GMT | INFO | loggers.log | Verified User has valid token | 
+Mon, 23 Nov 2020 22:58:31 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 22:58:31 GMT | INFO | loggers.log | test has the socket id set in database | 
+Mon, 23 Nov 2020 22:58:56 GMT | INFO | loggers.log | Socket DSSyRPdv1Kldg6_rAAAB disconnected | 
+Mon, 23 Nov 2020 23:04:04 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 23 Nov 2020 23:04:04 GMT | INFO | loggers.log | Socket -JJDKkrVbMfhZHBzAAAA connected | 
+Mon, 23 Nov 2020 23:04:04 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 23 Nov 2020 23:04:04 GMT | INFO | loggers.log | Socket 0KywE7kM9NPm3618AAAB connected | 
+Mon, 23 Nov 2020 23:04:05 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 23:04:05 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 23:04:05 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 23:04:05 GMT | INFO | loggers.log | Verified User has valid token | 
+Mon, 23 Nov 2020 23:04:06 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 23:04:06 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 23:04:06 GMT | INFO | loggers.log | test has the socket id set in database | 
+Mon, 23 Nov 2020 23:04:32 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 23 Nov 2020 23:04:33 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 23 Nov 2020 23:04:33 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 23:04:33 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 23:04:33 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 23:04:33 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 23:04:33 GMT | INFO | loggers.log | Verified User has valid token | 
+Mon, 23 Nov 2020 23:04:33 GMT | INFO | loggers.log | Socket -d35KlK-fsbopuYNAAAA connected | 
+Mon, 23 Nov 2020 23:04:34 GMT | INFO | loggers.log | Socket pUbwn9m9IYAwnEgRAAAB connected | 
+Mon, 23 Nov 2020 23:04:34 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 23:04:34 GMT | INFO | loggers.log | test has the socket id set in database | 
+Mon, 23 Nov 2020 23:06:05 GMT | INFO | loggers.log | Socket pUbwn9m9IYAwnEgRAAAB disconnected | 
+Mon, 23 Nov 2020 23:06:05 GMT | INFO | loggers.log | Socket -d35KlK-fsbopuYNAAAA disconnected | 
+Mon, 23 Nov 2020 23:06:05 GMT | INFO | loggers.log | test has logged out | 
+Mon, 23 Nov 2020 23:06:06 GMT | INFO | loggers.log | Socket EKhcHgC75VvnbPr-AAAC connected | 
+Mon, 23 Nov 2020 23:06:06 GMT | INFO | loggers.log | Socket T9Ajfw2LUuDsHb5-AAAD connected | 
+Mon, 23 Nov 2020 23:06:07 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 23:06:07 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 23:06:07 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 23:06:07 GMT | INFO | loggers.log | Verified User has valid token | 
+Mon, 23 Nov 2020 23:06:08 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 23:06:08 GMT | INFO | loggers.log | test has the socket id set in database | 
+Mon, 23 Nov 2020 23:06:09 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 23:06:12 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:06:12 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:06:12 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:06:12 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:06:12 GMT | INFO | loggers.log | test added admin  | 
+Mon, 23 Nov 2020 23:06:23 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 23:06:29 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:06:29 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:06:29 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:06:29 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:06:29 GMT | INFO | loggers.log | test added admin001  | 
+Mon, 23 Nov 2020 23:09:53 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 23:09:54 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 23:09:55 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 23:10:00 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 23:10:02 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 23:10:04 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 23:10:14 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:10:14 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:10:14 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:10:14 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:10:23 GMT | INFO | loggers.log | test messaged admin | 
+Mon, 23 Nov 2020 23:10:23 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:10:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:10:23 GMT | INFO | loggers.log | test send message to admin | 
+Mon, 23 Nov 2020 23:10:42 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:10:42 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:10:45 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:10:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:10:51 GMT | INFO | loggers.log | test messaged admin001 | 
+Mon, 23 Nov 2020 23:10:51 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:10:51 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:10:51 GMT | INFO | loggers.log | test send message to admin001 | 
+Mon, 23 Nov 2020 23:11:04 GMT | INFO | loggers.log | test messaged admin001 | 
+Mon, 23 Nov 2020 23:11:04 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:11:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:11:04 GMT | INFO | loggers.log | test send message to admin001 | 
+Mon, 23 Nov 2020 23:12:33 GMT | INFO | loggers.log | Socket EKhcHgC75VvnbPr-AAAC disconnected | 
+Mon, 23 Nov 2020 23:12:33 GMT | INFO | loggers.log | Socket T9Ajfw2LUuDsHb5-AAAD disconnected | 
+Mon, 23 Nov 2020 23:12:33 GMT | INFO | loggers.log | test has logged out | 
+Mon, 23 Nov 2020 23:12:35 GMT | INFO | loggers.log | Socket ZtZm8aVxEhiLhsyfAAAE connected | 
+Mon, 23 Nov 2020 23:12:35 GMT | INFO | loggers.log | Socket JXHsVb3xESlDSAR4AAAF connected | 
+Mon, 23 Nov 2020 23:12:35 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 23:12:35 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 23:12:35 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 23:12:35 GMT | INFO | loggers.log | Verified User has valid token | 
+Mon, 23 Nov 2020 23:12:37 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 23:12:37 GMT | INFO | loggers.log | test has the socket id set in database | 
+Mon, 23 Nov 2020 23:13:09 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 23:13:09 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 23:13:11 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 23:16:29 GMT | INFO | loggers.log | Socket 5G7ULDbu-UewiL5RAAAG connected | 
+Mon, 23 Nov 2020 23:16:29 GMT | INFO | loggers.log | Socket R8gaVXVYbW8s5NMvAAAH connected | 
+Mon, 23 Nov 2020 23:16:30 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 23:16:32 GMT | INFO | loggers.log |  admin has logged in | 
+Mon, 23 Nov 2020 23:16:33 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 23:16:33 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 23:16:33 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 23:16:33 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Mon, 23 Nov 2020 23:16:40 GMT | INFO | loggers.log | Socket 5G7ULDbu-UewiL5RAAAG disconnected | 
+Mon, 23 Nov 2020 23:16:40 GMT | INFO | loggers.log | admin has logged out | 
+Mon, 23 Nov 2020 23:16:45 GMT | INFO | loggers.log |  admin has logged in | 
+Mon, 23 Nov 2020 23:16:46 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 23:16:46 GMT | INFO | loggers.log | Socket aV3z_vucpXO7oETeAAAI connected | 
+Mon, 23 Nov 2020 23:16:46 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 23:16:46 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 23:16:46 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Mon, 23 Nov 2020 23:16:50 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 23 Nov 2020 23:16:50 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:16:50 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 23 Nov 2020 23:16:50 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:17:00 GMT | INFO | loggers.log | admin messaged admin1 | 
+Mon, 23 Nov 2020 23:17:00 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 23 Nov 2020 23:17:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:17:00 GMT | INFO | loggers.log | admin send message to admin1 | 
+Mon, 23 Nov 2020 23:17:24 GMT | INFO | loggers.log | admin messaged admin1 | 
+Mon, 23 Nov 2020 23:17:24 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 23 Nov 2020 23:17:24 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:17:24 GMT | INFO | loggers.log | admin send message to admin1 | 
+Mon, 23 Nov 2020 23:17:37 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 23:17:37 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 23:17:37 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 23:17:55 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 23:18:05 GMT | INFO | loggers.log | Socket aV3z_vucpXO7oETeAAAI disconnected | 
+Mon, 23 Nov 2020 23:18:05 GMT | INFO | loggers.log | admin has logged out | 
+Mon, 23 Nov 2020 23:18:35 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:18:35 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:18:35 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:18:35 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:18:37 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:18:37 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:18:38 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:18:38 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:18:38 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:18:38 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:18:40 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:18:40 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:18:41 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:18:41 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:18:43 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:18:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:18:47 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 23:18:48 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 23:18:49 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 23:29:10 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 23 Nov 2020 23:29:10 GMT | INFO | loggers.log | Socket pEIilhLGJ6Jwwy2OAAAA connected | 
+Mon, 23 Nov 2020 23:29:10 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 23 Nov 2020 23:29:11 GMT | INFO | loggers.log | Socket jJes17HXGT9mbHNSAAAB connected | 
+Mon, 23 Nov 2020 23:29:11 GMT | INFO | loggers.log | Socket iOjBZ86_8RUYVtMAAAAC connected | 
+Mon, 23 Nov 2020 23:29:51 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 23 Nov 2020 23:29:51 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 23 Nov 2020 23:29:51 GMT | INFO | loggers.log | Socket XTHUesiX2yYyxPKlAAAA connected | 
+Mon, 23 Nov 2020 23:29:52 GMT | INFO | loggers.log | Socket 0UQKBFSLCIz-IfkRAAAB connected | 
+Mon, 23 Nov 2020 23:29:52 GMT | INFO | loggers.log | Socket pdHQHk1sjebR6iDGAAAC connected | 
+Mon, 23 Nov 2020 23:29:58 GMT | INFO | loggers.log |  admin has logged in | 
+Mon, 23 Nov 2020 23:29:59 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 23:29:59 GMT | INFO | loggers.log | Socket aa32RS_L9tFJSps5AAAD connected | 
+Mon, 23 Nov 2020 23:29:59 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 23:29:59 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 23:29:59 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Mon, 23 Nov 2020 23:30:03 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 23 Nov 2020 23:30:03 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:30:03 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 23 Nov 2020 23:30:03 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:30:12 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 23 Nov 2020 23:30:12 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:30:24 GMT | INFO | loggers.log | admin messaged test | 
+Mon, 23 Nov 2020 23:30:24 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 23 Nov 2020 23:30:24 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:30:24 GMT | INFO | loggers.log | admin send message to test | 
+Mon, 23 Nov 2020 23:30:39 GMT | INFO | loggers.log | admin messaged test | 
+Mon, 23 Nov 2020 23:30:39 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 23 Nov 2020 23:30:39 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:30:39 GMT | INFO | loggers.log | admin send message to test | 
+Mon, 23 Nov 2020 23:34:02 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 23 Nov 2020 23:34:02 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 23 Nov 2020 23:34:02 GMT | INFO | loggers.log | Socket WsSlSEhsUZMqsrMhAAAA connected | 
+Mon, 23 Nov 2020 23:34:02 GMT | INFO | loggers.log | Socket irHerSOZY5glHX2JAAAB connected | 
+Mon, 23 Nov 2020 23:34:03 GMT | INFO | loggers.log | Socket kUhVsEMG_ZpsxlbsAAAC connected | 
+Mon, 23 Nov 2020 23:34:03 GMT | INFO | loggers.log | Socket 1d-bAaGJ83-q1KaCAAAD connected | 
+Mon, 23 Nov 2020 23:34:14 GMT | INFO | loggers.log | Socket WsSlSEhsUZMqsrMhAAAA disconnected | 
+Mon, 23 Nov 2020 23:34:14 GMT | INFO | loggers.log | Socket irHerSOZY5glHX2JAAAB disconnected | 
+Mon, 23 Nov 2020 23:34:16 GMT | INFO | loggers.log | Socket 278cL-YDRal5_FCtAAAE connected | 
+Mon, 23 Nov 2020 23:34:16 GMT | INFO | loggers.log | Socket MZrMEyiSivgF2nXAAAAF connected | 
+Mon, 23 Nov 2020 23:34:16 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 23:34:16 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 23:34:16 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 23:34:16 GMT | INFO | loggers.log | Verified User has valid token | 
+Mon, 23 Nov 2020 23:34:18 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 23:34:19 GMT | INFO | loggers.log | test has the socket id set in database | 
+Mon, 23 Nov 2020 23:34:39 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Mon, 23 Nov 2020 23:34:39 GMT | INFO | loggers.log | Socket RV0EOJRdgx4HdEU3AAAA connected | 
+Mon, 23 Nov 2020 23:34:39 GMT | INFO | loggers.log | Connected to mongodb | 
+Mon, 23 Nov 2020 23:34:39 GMT | INFO | loggers.log | Socket wk6IKuCtflZns2bsAAAB connected | 
+Mon, 23 Nov 2020 23:34:39 GMT | INFO | loggers.log | Socket vtxeNZy9NT_g8KZuAAAC connected | 
+Mon, 23 Nov 2020 23:34:39 GMT | INFO | loggers.log | Socket w4xNqYVeibC4ANp9AAAD connected | 
+Mon, 23 Nov 2020 23:34:44 GMT | INFO | loggers.log | Socket wk6IKuCtflZns2bsAAAB disconnected | 
+Mon, 23 Nov 2020 23:34:44 GMT | INFO | loggers.log | Socket vtxeNZy9NT_g8KZuAAAC disconnected | 
+Mon, 23 Nov 2020 23:34:45 GMT | INFO | loggers.log | Socket RqHmYB8FPs6Kix6iAAAE connected | 
+Mon, 23 Nov 2020 23:34:45 GMT | INFO | loggers.log | Socket CNgcxBqhdPzVB_8wAAAF connected | 
+Mon, 23 Nov 2020 23:34:45 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 23:34:45 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 23:34:45 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 23:34:46 GMT | INFO | loggers.log | Verified User has valid token | 
+Mon, 23 Nov 2020 23:34:47 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 23:34:47 GMT | INFO | loggers.log | test has the socket id set in database | 
+Mon, 23 Nov 2020 23:35:40 GMT | INFO | loggers.log | Socket RqHmYB8FPs6Kix6iAAAE disconnected | 
+Mon, 23 Nov 2020 23:35:40 GMT | INFO | loggers.log | Socket CNgcxBqhdPzVB_8wAAAF disconnected | 
+Mon, 23 Nov 2020 23:35:40 GMT | INFO | loggers.log | test has logged out | 
+Mon, 23 Nov 2020 23:35:42 GMT | INFO | loggers.log | Socket J_3S6lEzWNi4b1IuAAAG connected | 
+Mon, 23 Nov 2020 23:35:42 GMT | INFO | loggers.log | Socket qVv32MsQ6BfGG0JRAAAH connected | 
+Mon, 23 Nov 2020 23:35:43 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 23:35:43 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 23:35:43 GMT | INFO | loggers.log | Verified User has valid token | 
+Mon, 23 Nov 2020 23:35:43 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 23:35:47 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 23:35:47 GMT | INFO | loggers.log | test has the socket id set in database | 
+Mon, 23 Nov 2020 23:37:30 GMT | INFO | loggers.log | admin messaged test | 
+Mon, 23 Nov 2020 23:37:30 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 23 Nov 2020 23:37:30 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:37:30 GMT | INFO | loggers.log | admin send message to test | 
+Mon, 23 Nov 2020 23:37:30 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:37:30 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:38:43 GMT | INFO | loggers.log | Socket RV0EOJRdgx4HdEU3AAAA disconnected | 
+Mon, 23 Nov 2020 23:38:44 GMT | INFO | loggers.log | Socket J_3S6lEzWNi4b1IuAAAG disconnected | 
+Mon, 23 Nov 2020 23:38:44 GMT | INFO | loggers.log | Socket qVv32MsQ6BfGG0JRAAAH disconnected | 
+Mon, 23 Nov 2020 23:38:44 GMT | INFO | loggers.log | test has logged out | 
+Mon, 23 Nov 2020 23:38:45 GMT | INFO | loggers.log | Socket t3VBcAdOknjqzaHBAAAI connected | 
+Mon, 23 Nov 2020 23:38:45 GMT | INFO | loggers.log | Socket LkUa9G1j05t4GhTYAAAJ connected | 
+Mon, 23 Nov 2020 23:38:45 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 23:38:45 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 23:38:46 GMT | INFO | loggers.log | Verified User has valid token | 
+Mon, 23 Nov 2020 23:38:46 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 23:38:46 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 23:38:46 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Mon, 23 Nov 2020 23:38:46 GMT | INFO | loggers.log | Socket eLDDCPoXZct0laM-AAAK connected | 
+Mon, 23 Nov 2020 23:38:46 GMT | INFO | loggers.log | Socket 3uX1IicE-qembfS9AAAL connected | 
+Mon, 23 Nov 2020 23:38:47 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 23:38:47 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 23:38:47 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 23:38:47 GMT | INFO | loggers.log | Verified User has valid token | 
+Mon, 23 Nov 2020 23:38:49 GMT | INFO | loggers.log | rooms successfully created | 
+Mon, 23 Nov 2020 23:38:49 GMT | INFO | loggers.log | test has the socket id set in database | 
+Mon, 23 Nov 2020 23:38:57 GMT | INFO | loggers.log | Socket w4xNqYVeibC4ANp9AAAD disconnected | 
+Mon, 23 Nov 2020 23:38:58 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:38:58 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:38:58 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:38:58 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:39:03 GMT | INFO | loggers.log | test messaged admin | 
+Mon, 23 Nov 2020 23:39:03 GMT | INFO | loggers.log | User test communicated with the server | 
+Mon, 23 Nov 2020 23:39:03 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:39:03 GMT | INFO | loggers.log | test send message to admin | 
+Mon, 23 Nov 2020 23:39:03 GMT | INFO | loggers.log | User admin communicated with the server | 
+Mon, 23 Nov 2020 23:39:03 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Mon, 23 Nov 2020 23:44:10 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Mon, 23 Nov 2020 23:44:22 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Mon, 23 Nov 2020 23:44:22 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Mon, 23 Nov 2020 23:44:22 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 07:04:16 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 07:04:18 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 07:04:19 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 07:04:22 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 07:04:23 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 07:04:25 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 07:04:26 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 07:04:27 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 07:07:05 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 07:07:19 GMT | INFO | loggers.log | Socket t3VBcAdOknjqzaHBAAAI disconnected | 
+Tue, 24 Nov 2020 07:07:20 GMT | INFO | loggers.log | admin has logged out | 
+Tue, 24 Nov 2020 07:07:23 GMT | INFO | loggers.log |  admin has logged in | 
+Tue, 24 Nov 2020 07:07:24 GMT | INFO | loggers.log | Socket Ucln8AWq6ZH2-4oQAAAM connected | 
+Tue, 24 Nov 2020 07:07:24 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 07:07:24 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 07:07:24 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 07:07:25 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Tue, 24 Nov 2020 07:07:29 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 07:07:29 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 07:07:30 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 07:07:30 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 07:07:32 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 07:07:32 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 07:07:43 GMT | INFO | loggers.log | admin messaged test | 
+Tue, 24 Nov 2020 07:07:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 07:07:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 07:07:43 GMT | INFO | loggers.log | admin send message to test | 
+Tue, 24 Nov 2020 07:07:44 GMT | INFO | loggers.log | User test communicated with the server | 
+Tue, 24 Nov 2020 07:07:44 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 07:08:37 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 07:08:39 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 07:08:40 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 07:08:42 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 07:08:49 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 07:09:53 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 07:09:54 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 07:10:02 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 07:14:30 GMT | INFO | loggers.log | User test communicated with the server | 
+Tue, 24 Nov 2020 07:14:30 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 07:14:31 GMT | INFO | loggers.log | User test communicated with the server | 
+Tue, 24 Nov 2020 07:14:31 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 07:14:33 GMT | INFO | loggers.log | User test communicated with the server | 
+Tue, 24 Nov 2020 07:14:33 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 07:14:40 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 07:15:02 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 07:15:05 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 07:16:55 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 07:17:03 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 07:17:05 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 07:28:13 GMT | INFO | loggers.log | Socket eLDDCPoXZct0laM-AAAK disconnected | 
+Tue, 24 Nov 2020 07:28:13 GMT | INFO | loggers.log | Socket 3uX1IicE-qembfS9AAAL disconnected | 
+Tue, 24 Nov 2020 07:28:13 GMT | INFO | loggers.log | test has logged out | 
+Tue, 24 Nov 2020 07:28:19 GMT | INFO | loggers.log | Socket G6bS_3TRb9y8TLT6AAAN connected | 
+Tue, 24 Nov 2020 07:28:19 GMT | INFO | loggers.log | Socket uMrYEyzorhBlYRkIAAAO connected | 
+Tue, 24 Nov 2020 07:28:19 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 07:28:19 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 07:28:19 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 07:28:19 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 07:28:23 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 07:28:23 GMT | INFO | loggers.log | test has the socket id set in database | 
+Tue, 24 Nov 2020 07:28:24 GMT | INFO | loggers.log | Socket YlabNSZY8B0f3oyIAAAP connected | 
+Tue, 24 Nov 2020 07:28:24 GMT | INFO | loggers.log | Socket VmbMjqOzwgRpUoqWAAAQ connected | 
+Tue, 24 Nov 2020 07:28:24 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 07:28:24 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 07:28:24 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 07:28:24 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 07:28:26 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 07:28:27 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 07:28:27 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Tue, 24 Nov 2020 07:28:32 GMT | INFO | loggers.log | Socket LkUa9G1j05t4GhTYAAAJ disconnected | 
+Tue, 24 Nov 2020 07:28:48 GMT | INFO | loggers.log | Socket Ucln8AWq6ZH2-4oQAAAM disconnected | 
+Tue, 24 Nov 2020 07:30:37 GMT | INFO | loggers.log | Socket uMrYEyzorhBlYRkIAAAO disconnected | 
+Tue, 24 Nov 2020 07:30:37 GMT | INFO | loggers.log | Socket G6bS_3TRb9y8TLT6AAAN disconnected | 
+Tue, 24 Nov 2020 07:30:37 GMT | INFO | loggers.log | test has logged out | 
+Tue, 24 Nov 2020 07:30:38 GMT | INFO | loggers.log | Socket YlabNSZY8B0f3oyIAAAP disconnected | 
+Tue, 24 Nov 2020 07:30:38 GMT | INFO | loggers.log | admin has logged out | 
+Tue, 24 Nov 2020 07:30:40 GMT | INFO | loggers.log | Socket QpqEErDqe8fDC4qHAAAR connected | 
+Tue, 24 Nov 2020 07:30:40 GMT | INFO | loggers.log | Socket HwcPaI2vas3EPR9CAAAS connected | 
+Tue, 24 Nov 2020 07:30:40 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 07:30:40 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 07:30:40 GMT | INFO | loggers.log | Socket xCoUWIGVyKUoFgJzAAAT connected | 
+Tue, 24 Nov 2020 07:30:40 GMT | INFO | loggers.log | Socket 1xugmqhNaYVInHUbAAAU connected | 
+Tue, 24 Nov 2020 07:30:41 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 07:30:41 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 07:30:41 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 07:30:41 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Tue, 24 Nov 2020 07:30:41 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 07:30:41 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 07:30:41 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 07:30:41 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 07:30:43 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 07:30:44 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 07:30:44 GMT | INFO | loggers.log | test has the socket id set in database | 
+Tue, 24 Nov 2020 07:31:01 GMT | INFO | loggers.log | Socket VmbMjqOzwgRpUoqWAAAQ disconnected | 
+Tue, 24 Nov 2020 07:34:32 GMT | INFO | loggers.log | Socket HwcPaI2vas3EPR9CAAAS disconnected | 
+Tue, 24 Nov 2020 07:34:33 GMT | INFO | loggers.log | Socket oCyOchGFVox4oEHHAAAV connected | 
+Tue, 24 Nov 2020 07:34:33 GMT | INFO | loggers.log | Socket n8VT2yNoWFXkGigOAAAW connected | 
+Tue, 24 Nov 2020 07:34:33 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 07:34:34 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 07:34:34 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 07:34:34 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 07:34:34 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 07:34:34 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Tue, 24 Nov 2020 07:34:34 GMT | INFO | loggers.log | Socket xCoUWIGVyKUoFgJzAAAT disconnected | 
+Tue, 24 Nov 2020 07:34:34 GMT | INFO | loggers.log | Socket 1xugmqhNaYVInHUbAAAU disconnected | 
+Tue, 24 Nov 2020 07:34:34 GMT | INFO | loggers.log | test has logged out | 
+Tue, 24 Nov 2020 07:34:37 GMT | INFO | loggers.log | Socket rfzzR3Y9-5v_fnNoAAAX connected | 
+Tue, 24 Nov 2020 07:34:37 GMT | INFO | loggers.log | Socket Xat1xVzTEP2mUpxLAAAY connected | 
+Tue, 24 Nov 2020 07:34:37 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 07:34:37 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 07:34:37 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 07:34:37 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 07:34:39 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 07:34:39 GMT | INFO | loggers.log | test has the socket id set in database | 
+Tue, 24 Nov 2020 07:34:40 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 07:34:58 GMT | INFO | loggers.log | Socket QpqEErDqe8fDC4qHAAAR disconnected | 
+Tue, 24 Nov 2020 07:41:32 GMT | INFO | loggers.log | Socket Xat1xVzTEP2mUpxLAAAY disconnected | 
+Tue, 24 Nov 2020 07:41:32 GMT | INFO | loggers.log | Socket rfzzR3Y9-5v_fnNoAAAX disconnected | 
+Tue, 24 Nov 2020 07:41:32 GMT | INFO | loggers.log | test has logged out | 
+Tue, 24 Nov 2020 07:41:34 GMT | INFO | loggers.log | Socket oCyOchGFVox4oEHHAAAV disconnected | 
+Tue, 24 Nov 2020 07:41:34 GMT | INFO | loggers.log | admin has logged out | 
+Tue, 24 Nov 2020 07:41:35 GMT | INFO | loggers.log | Socket QlVNm1qeUhYlDiBwAAAZ connected | 
+Tue, 24 Nov 2020 07:41:35 GMT | INFO | loggers.log | Socket NDNVYz1P7hg_AcEeAAAa connected | 
+Tue, 24 Nov 2020 07:41:36 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 07:41:36 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 07:41:36 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 07:41:36 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 07:41:36 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 07:41:36 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Tue, 24 Nov 2020 07:41:37 GMT | INFO | loggers.log | Socket CcSWQZcyQbfZnw6TAAAb connected | 
+Tue, 24 Nov 2020 07:41:37 GMT | INFO | loggers.log | Socket uHyNVLMFc9SmQpVUAAAc connected | 
+Tue, 24 Nov 2020 07:41:37 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 07:41:37 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 07:41:37 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 07:41:37 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 07:41:39 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 07:41:39 GMT | INFO | loggers.log | test has the socket id set in database | 
+Tue, 24 Nov 2020 07:41:40 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 07:41:49 GMT | INFO | loggers.log | Socket n8VT2yNoWFXkGigOAAAW disconnected | 
+Tue, 24 Nov 2020 08:06:23 GMT | INFO | loggers.log | Socket CcSWQZcyQbfZnw6TAAAb disconnected | 
+Tue, 24 Nov 2020 08:06:23 GMT | INFO | loggers.log | Socket uHyNVLMFc9SmQpVUAAAc disconnected | 
+Tue, 24 Nov 2020 08:06:24 GMT | INFO | loggers.log | test has logged out | 
+Tue, 24 Nov 2020 08:06:25 GMT | INFO | loggers.log | Socket s48Ecq_5Wcva1_TRAAAd connected | 
+Tue, 24 Nov 2020 08:06:25 GMT | INFO | loggers.log | Socket QlVNm1qeUhYlDiBwAAAZ disconnected | 
+Tue, 24 Nov 2020 08:06:25 GMT | INFO | loggers.log | admin has logged out | 
+Tue, 24 Nov 2020 08:06:27 GMT | INFO | loggers.log | Socket X-6Zt6W_jVNZmo9rAAAe connected | 
+Tue, 24 Nov 2020 08:06:27 GMT | INFO | loggers.log | Socket f_9Srg9za1FUTTufAAAf connected | 
+Tue, 24 Nov 2020 08:06:27 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:06:27 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:06:27 GMT | INFO | loggers.log | Socket R5H22LaoQ8T6R--lAAAg connected | 
+Tue, 24 Nov 2020 08:06:27 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:06:27 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 08:06:28 GMT | INFO | loggers.log | Socket zJ7DFDbjlIa59ENcAAAh connected | 
+Tue, 24 Nov 2020 08:06:28 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:06:28 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Tue, 24 Nov 2020 08:06:28 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:06:28 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 08:06:28 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:06:28 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:06:31 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:06:32 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:06:32 GMT | INFO | loggers.log | test has the socket id set in database | 
+Tue, 24 Nov 2020 08:06:35 GMT | INFO | loggers.log | Socket NDNVYz1P7hg_AcEeAAAa disconnected | 
+Tue, 24 Nov 2020 08:06:54 GMT | INFO | loggers.log | Socket s48Ecq_5Wcva1_TRAAAd disconnected | 
+Tue, 24 Nov 2020 08:06:55 GMT | INFO | loggers.log | Socket R5H22LaoQ8T6R--lAAAg disconnected | 
+Tue, 24 Nov 2020 08:06:55 GMT | INFO | loggers.log | Socket zJ7DFDbjlIa59ENcAAAh disconnected | 
+Tue, 24 Nov 2020 08:06:55 GMT | INFO | loggers.log | test has logged out | 
+Tue, 24 Nov 2020 08:06:57 GMT | INFO | loggers.log | Socket tmOKHaODPylUS9SEAAAi connected | 
+Tue, 24 Nov 2020 08:06:57 GMT | INFO | loggers.log | Socket Au4SbA-6MRQvoIocAAAj connected | 
+Tue, 24 Nov 2020 08:06:57 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:06:57 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:06:57 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:06:57 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 08:06:58 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:06:58 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Tue, 24 Nov 2020 08:06:59 GMT | INFO | loggers.log | Socket zTqH-YLTmXcfFfVuAAAk connected | 
+Tue, 24 Nov 2020 08:06:59 GMT | INFO | loggers.log | Socket mSJ7Apgl7_1-ha5WAAAl connected | 
+Tue, 24 Nov 2020 08:07:00 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:07:00 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:07:00 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:07:00 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 08:07:03 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:07:03 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:07:03 GMT | INFO | loggers.log | test has the socket id set in database | 
+Tue, 24 Nov 2020 08:07:23 GMT | INFO | loggers.log | Socket f_9Srg9za1FUTTufAAAf disconnected | 
+Tue, 24 Nov 2020 08:07:24 GMT | INFO | loggers.log | Socket X-6Zt6W_jVNZmo9rAAAe disconnected | 
+Tue, 24 Nov 2020 08:08:32 GMT | INFO | loggers.log | Socket tmOKHaODPylUS9SEAAAi disconnected | 
+Tue, 24 Nov 2020 08:08:32 GMT | INFO | loggers.log | admin has logged out | 
+Tue, 24 Nov 2020 08:08:34 GMT | INFO | loggers.log | Socket zTqH-YLTmXcfFfVuAAAk disconnected | 
+Tue, 24 Nov 2020 08:08:34 GMT | INFO | loggers.log | Socket mSJ7Apgl7_1-ha5WAAAl disconnected | 
+Tue, 24 Nov 2020 08:08:34 GMT | INFO | loggers.log | Socket oWWjdIUzhltzFYzbAAAm connected | 
+Tue, 24 Nov 2020 08:08:34 GMT | INFO | loggers.log | test has logged out | 
+Tue, 24 Nov 2020 08:08:34 GMT | INFO | loggers.log | Socket NBu1pWZW07cfxlvFAAAn connected | 
+Tue, 24 Nov 2020 08:08:35 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:08:35 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:08:35 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:08:35 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 08:08:36 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:08:36 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Tue, 24 Nov 2020 08:08:36 GMT | INFO | loggers.log | Socket eVc69DRtQKML0OkQAAAo connected | 
+Tue, 24 Nov 2020 08:08:37 GMT | INFO | loggers.log | Socket INjjokHIM2gEx6YbAAAp connected | 
+Tue, 24 Nov 2020 08:08:37 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:08:37 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:08:37 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:08:37 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 08:08:41 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:08:41 GMT | INFO | loggers.log | test has the socket id set in database | 
+Tue, 24 Nov 2020 08:08:41 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:08:43 GMT | INFO | loggers.log | Socket Au4SbA-6MRQvoIocAAAj disconnected | 
+Tue, 24 Nov 2020 08:12:17 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:12:18 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:14:14 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:14:15 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:14:16 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:15:44 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:15:46 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:15:50 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:17:07 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:17:10 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:17:11 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:17:31 GMT | INFO | loggers.log | User test communicated with the server | 
+Tue, 24 Nov 2020 08:17:31 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:17:31 GMT | INFO | loggers.log | User test communicated with the server | 
+Tue, 24 Nov 2020 08:17:31 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:17:35 GMT | INFO | loggers.log | User test communicated with the server | 
+Tue, 24 Nov 2020 08:17:35 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:17:35 GMT | INFO | loggers.log | User test communicated with the server | 
+Tue, 24 Nov 2020 08:17:35 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:18:25 GMT | INFO | loggers.log | Socket oWWjdIUzhltzFYzbAAAm disconnected | 
+Tue, 24 Nov 2020 08:18:25 GMT | INFO | loggers.log | admin has logged out | 
+Tue, 24 Nov 2020 08:18:26 GMT | INFO | loggers.log | Socket PIq11shU650g3jTUAAAq connected | 
+Tue, 24 Nov 2020 08:18:26 GMT | INFO | loggers.log | Socket A720XwjYeAAxZZIoAAAr connected | 
+Tue, 24 Nov 2020 08:18:26 GMT | INFO | loggers.log | Socket INjjokHIM2gEx6YbAAAp disconnected | 
+Tue, 24 Nov 2020 08:18:26 GMT | INFO | loggers.log | Socket eVc69DRtQKML0OkQAAAo disconnected | 
+Tue, 24 Nov 2020 08:18:26 GMT | INFO | loggers.log | test has logged out | 
+Tue, 24 Nov 2020 08:18:27 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:18:27 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:18:27 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:18:27 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 08:18:27 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:18:27 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Tue, 24 Nov 2020 08:18:32 GMT | INFO | loggers.log | Socket knLTjXYVmhyILiLdAAAs connected | 
+Tue, 24 Nov 2020 08:18:32 GMT | INFO | loggers.log | Socket CpdxY25pjzdWuQcgAAAt connected | 
+Tue, 24 Nov 2020 08:18:34 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:18:35 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:18:35 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:18:35 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 08:18:35 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:18:36 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:18:36 GMT | INFO | loggers.log | test has the socket id set in database | 
+Tue, 24 Nov 2020 08:18:46 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:18:46 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:18:46 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:18:48 GMT | INFO | loggers.log | Socket NBu1pWZW07cfxlvFAAAn disconnected | 
+Tue, 24 Nov 2020 08:18:48 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:18:58 GMT | INFO | loggers.log | User test communicated with the server | 
+Tue, 24 Nov 2020 08:18:58 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:18:58 GMT | INFO | loggers.log | User test communicated with the server | 
+Tue, 24 Nov 2020 08:18:58 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:19:14 GMT | INFO | loggers.log | User test communicated with the server | 
+Tue, 24 Nov 2020 08:19:14 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:19:15 GMT | INFO | loggers.log | User test communicated with the server | 
+Tue, 24 Nov 2020 08:19:15 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:19:16 GMT | INFO | loggers.log | User test communicated with the server | 
+Tue, 24 Nov 2020 08:19:16 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:19:19 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:19:44 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:19:45 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:20:31 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:33:23 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Tue, 24 Nov 2020 08:33:23 GMT | INFO | loggers.log | Connected to mongodb | 
+Tue, 24 Nov 2020 08:33:24 GMT | INFO | loggers.log | Socket AGwb80d2Ju3HbhH_AAAA connected | 
+Tue, 24 Nov 2020 08:33:26 GMT | INFO | loggers.log | Socket fj9gSOtHMeOtM8Y5AAAB connected | 
+Tue, 24 Nov 2020 08:34:05 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Tue, 24 Nov 2020 08:34:05 GMT | INFO | loggers.log | Socket pQeOQdT5cm7S-AM6AAAA connected | 
+Tue, 24 Nov 2020 08:34:05 GMT | INFO | loggers.log | Socket ZOXlPNTn8jIO3yqyAAAB connected | 
+Tue, 24 Nov 2020 08:34:05 GMT | INFO | loggers.log | Connected to mongodb | 
+Tue, 24 Nov 2020 08:34:05 GMT | INFO | loggers.log | Socket IpFlSiUsYdAKQ-jLAAAC connected | 
+Tue, 24 Nov 2020 08:34:05 GMT | INFO | loggers.log | Socket rVeebG42Pbe-wSPUAAAD connected | 
+Tue, 24 Nov 2020 08:34:05 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:34:06 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:34:18 GMT | INFO | loggers.log |  admin has logged in | 
+Tue, 24 Nov 2020 08:34:19 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:34:19 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:34:19 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:34:19 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Tue, 24 Nov 2020 08:34:23 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:34:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:26 GMT | INFO | loggers.log | dd event deleted | 
+Tue, 24 Nov 2020 08:34:32 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:32 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:32 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:32 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:32 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:32 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:32 GMT | INFO | loggers.log | admin left an event called jjjkkk | 
+Tue, 24 Nov 2020 08:34:39 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:39 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:39 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:39 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:39 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:39 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:39 GMT | INFO | loggers.log | admin joined event called jjjkkk | 
+Tue, 24 Nov 2020 08:34:42 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:42 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:42 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:42 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:42 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:42 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:42 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:42 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:42 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:42 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:42 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:34:42 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:42 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:42 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:42 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:42 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:42 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:43 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:43 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:44 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:44 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:44 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:44 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:44 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:44 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:44 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:34:44 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:34:44 GMT | INFO | loggers.log | admin left a group called Gro | 
+Tue, 24 Nov 2020 08:34:46 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | admin joined a group called New group | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | room New group has been created | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:00 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:10 GMT | INFO | loggers.log | admin has joined room New group | 
+Tue, 24 Nov 2020 08:35:10 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:10 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:10 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:10 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:10 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:10 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:10 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:10 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:10 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:10 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:10 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:10 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:10 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:10 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:10 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:10 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:10 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:10 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:10 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:10 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:11 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:11 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:35:11 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:35:11 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:36:19 GMT | INFO | loggers.log | Socket rVeebG42Pbe-wSPUAAAD disconnected | 
+Tue, 24 Nov 2020 08:36:20 GMT | INFO | loggers.log | Socket ZOXlPNTn8jIO3yqyAAAB disconnected | 
+Tue, 24 Nov 2020 08:36:20 GMT | INFO | loggers.log | Socket IpFlSiUsYdAKQ-jLAAAC disconnected | 
+Tue, 24 Nov 2020 08:36:20 GMT | INFO | loggers.log | admin has logged out | 
+Tue, 24 Nov 2020 08:36:21 GMT | INFO | loggers.log | Socket lwlyP4b2yh6TxgmMAAAE connected | 
+Tue, 24 Nov 2020 08:36:22 GMT | INFO | loggers.log | Socket S-ef--kGS0cJBxsUAAAF connected | 
+Tue, 24 Nov 2020 08:36:22 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:36:25 GMT | INFO | loggers.log | Socket pRGEX7_WvzeO46jVAAAG connected | 
+Tue, 24 Nov 2020 08:36:25 GMT | INFO | loggers.log | Socket W-aF3hOrz6D6hk_1AAAH connected | 
+Tue, 24 Nov 2020 08:36:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:36:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:36:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:36:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:36:25 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 08:36:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:36:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:36:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:36:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:36:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:36:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:36:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:36:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:36:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:36:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:36:25 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:36:25 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:36:28 GMT | INFO | loggers.log | admin has joined room New group | 
+Tue, 24 Nov 2020 08:36:29 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:36:29 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:36:29 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:36:29 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:36:29 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:36:29 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:36:29 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:36:29 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Tue, 24 Nov 2020 08:36:29 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:36:29 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:36:41 GMT | INFO | loggers.log | Socket pQeOQdT5cm7S-AM6AAAA disconnected | 
+Tue, 24 Nov 2020 08:38:04 GMT | INFO | loggers.log | admin has left room New group | 
+Tue, 24 Nov 2020 08:38:04 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:38:04 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:38:05 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:39:15 GMT | ERROR | loggers.log | Sorry, this email/username is taken | 
+Tue, 24 Nov 2020 08:39:25 GMT | INFO | loggers.log | New User  user1 has been added | 
+Tue, 24 Nov 2020 08:39:26 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:39:26 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:39:26 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:39:26 GMT | INFO | loggers.log | user1 has the socket id set in database | 
+Tue, 24 Nov 2020 08:39:27 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:39:43 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:39:44 GMT | INFO | loggers.log | Socket W-aF3hOrz6D6hk_1AAAH disconnected | 
+Tue, 24 Nov 2020 08:39:44 GMT | INFO | loggers.log | Socket pRGEX7_WvzeO46jVAAAG disconnected | 
+Tue, 24 Nov 2020 08:39:44 GMT | INFO | loggers.log | admin has logged out | 
+Tue, 24 Nov 2020 08:39:46 GMT | INFO | loggers.log | Socket ksHJs-RXAoxwktRQAAAI connected | 
+Tue, 24 Nov 2020 08:39:46 GMT | INFO | loggers.log | Socket LnxXmg_EIYbpihquAAAJ connected | 
+Tue, 24 Nov 2020 08:39:46 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:39:46 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:39:46 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:39:46 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 08:39:49 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:39:49 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Tue, 24 Nov 2020 08:39:50 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:41:22 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:41:23 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:41:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:41:23 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:41:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:41:23 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:41:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:41:23 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:41:23 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:41:24 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:41:28 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:41:32 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:41:32 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:41:32 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:41:32 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:42:14 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:42:14 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:42:14 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:42:14 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:43:28 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Tue, 24 Nov 2020 08:43:28 GMT | INFO | loggers.log | Socket wwy4Sk01PErwzFoWAAAA connected | 
+Tue, 24 Nov 2020 08:43:28 GMT | INFO | loggers.log | Connected to mongodb | 
+Tue, 24 Nov 2020 08:43:30 GMT | INFO | loggers.log | Socket eZlsxjl9tdj7BONaAAAB connected | 
+Tue, 24 Nov 2020 08:43:38 GMT | INFO | loggers.log |  admin has logged in | 
+Tue, 24 Nov 2020 08:43:38 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:43:38 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:43:38 GMT | INFO | loggers.log | Socket Ahuom8fNxtD-Uwf_AAAC connected | 
+Tue, 24 Nov 2020 08:43:38 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:43:39 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:43:39 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Tue, 24 Nov 2020 08:43:40 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Tue, 24 Nov 2020 08:43:40 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:43:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:43:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:43:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:43:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:44:21 GMT | INFO | loggers.log | Socket Ahuom8fNxtD-Uwf_AAAC disconnected | 
+Tue, 24 Nov 2020 08:44:21 GMT | INFO | loggers.log | admin has logged out | 
+Tue, 24 Nov 2020 08:44:40 GMT | ERROR | loggers.log | Email/Password is incorrect | 
+Tue, 24 Nov 2020 08:44:48 GMT | INFO | loggers.log |  qqq has logged in | 
+Tue, 24 Nov 2020 08:44:49 GMT | INFO | loggers.log | Socket CqNMaJPVz1o8WOgNAAAD connected | 
+Tue, 24 Nov 2020 08:44:49 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:44:49 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:44:49 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:44:49 GMT | INFO | loggers.log | qqq has the socket id set in database | 
+Tue, 24 Nov 2020 08:44:50 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:45:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:45:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:45:48 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 24 Nov 2020 08:45:48 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:46:02 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Tue, 24 Nov 2020 08:46:02 GMT | INFO | loggers.log | Socket OXeE4S8UNkdpIo0cAAAA connected | 
+Tue, 24 Nov 2020 08:46:03 GMT | INFO | loggers.log | Connected to mongodb | 
+Tue, 24 Nov 2020 08:46:03 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:46:03 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 08:46:03 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:46:03 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:46:04 GMT | INFO | loggers.log | Socket 8nkTd2ce39t7Rp9oAAAB connected | 
+Tue, 24 Nov 2020 08:46:05 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:46:05 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:46:05 GMT | INFO | loggers.log | Socket H6H1xdaJctbCW9oAAAAC connected | 
+Tue, 24 Nov 2020 08:46:06 GMT | INFO | loggers.log | Socket algHKeCvxzJ-VpLbAAAD connected | 
+Tue, 24 Nov 2020 08:46:06 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:46:06 GMT | INFO | loggers.log | qqq has the socket id set in database | 
+Tue, 24 Nov 2020 08:46:07 GMT | INFO | loggers.log | User qqq communicated with the server | 
+Tue, 24 Nov 2020 08:46:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:46:07 GMT | INFO | loggers.log | User qqq communicated with the server | 
+Tue, 24 Nov 2020 08:46:07 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:46:46 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Tue, 24 Nov 2020 08:46:46 GMT | INFO | loggers.log | Socket z4Xu2ysLgqLhjTH-AAAA connected | 
+Tue, 24 Nov 2020 08:46:46 GMT | INFO | loggers.log | Socket WpjCTVCl2I_vFZ28AAAB connected | 
+Tue, 24 Nov 2020 08:46:46 GMT | INFO | loggers.log | Connected to mongodb | 
+Tue, 24 Nov 2020 08:46:48 GMT | INFO | loggers.log | Socket AteFpHSzvmQBRlluAAAC connected | 
+Tue, 24 Nov 2020 08:46:48 GMT | INFO | loggers.log | Socket es9k13XQbPMk8sDjAAAD connected | 
+Tue, 24 Nov 2020 08:46:53 GMT | INFO | loggers.log | User qqq communicated with the server | 
+Tue, 24 Nov 2020 08:46:53 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:46:53 GMT | INFO | loggers.log | User qqq communicated with the server | 
+Tue, 24 Nov 2020 08:46:53 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:46:53 GMT | INFO | loggers.log | qqq added user  | 
+Tue, 24 Nov 2020 08:46:57 GMT | INFO | loggers.log | User qqq communicated with the server | 
+Tue, 24 Nov 2020 08:46:57 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:46:57 GMT | INFO | loggers.log | User qqq communicated with the server | 
+Tue, 24 Nov 2020 08:46:57 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:46:58 GMT | INFO | loggers.log | qqq added user1  | 
+Tue, 24 Nov 2020 08:50:31 GMT | INFO | loggers.log | Socket z4Xu2ysLgqLhjTH-AAAA disconnected | 
+Tue, 24 Nov 2020 08:50:32 GMT | INFO | loggers.log | Socket fNoh1XmOh1T3g0iVAAAE connected | 
+Tue, 24 Nov 2020 08:50:32 GMT | INFO | loggers.log | Socket CZrZN4J24Et8yGiFAAAF connected | 
+Tue, 24 Nov 2020 08:50:33 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:50:33 GMT | INFO | loggers.log | Socket es9k13XQbPMk8sDjAAAD disconnected | 
+Tue, 24 Nov 2020 08:50:33 GMT | INFO | loggers.log | Socket AteFpHSzvmQBRlluAAAC disconnected | 
+Tue, 24 Nov 2020 08:50:37 GMT | INFO | loggers.log | Socket KpucRXnZzmFnDTJmAAAG connected | 
+Tue, 24 Nov 2020 08:50:37 GMT | INFO | loggers.log | Socket 8qVSnZgvJkjbTyD0AAAH connected | 
+Tue, 24 Nov 2020 08:50:37 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:50:37 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:50:38 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 08:50:38 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:50:38 GMT | INFO | loggers.log | Socket WpjCTVCl2I_vFZ28AAAB disconnected | 
+Tue, 24 Nov 2020 08:50:41 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:50:41 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:50:41 GMT | INFO | loggers.log | qqq has the socket id set in database | 
+Tue, 24 Nov 2020 08:50:42 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:50:43 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:50:50 GMT | INFO | loggers.log | User qqq communicated with the server | 
+Tue, 24 Nov 2020 08:50:50 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:50:50 GMT | INFO | loggers.log | User qqq communicated with the server | 
+Tue, 24 Nov 2020 08:50:50 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:50:50 GMT | INFO | loggers.log | qqq added admin  | 
+Tue, 24 Nov 2020 08:51:26 GMT | INFO | loggers.log |  user1 has logged in | 
+Tue, 24 Nov 2020 08:51:26 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:51:26 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:51:26 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:51:27 GMT | INFO | loggers.log | user1 has the socket id set in database | 
+Tue, 24 Nov 2020 08:51:31 GMT | INFO | loggers.log | User user1 communicated with the server | 
+Tue, 24 Nov 2020 08:51:31 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:51:31 GMT | INFO | loggers.log | User user1 communicated with the server | 
+Tue, 24 Nov 2020 08:51:31 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:51:42 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:51:43 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:51:45 GMT | INFO | loggers.log | User user1 communicated with the server | 
+Tue, 24 Nov 2020 08:51:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:51:45 GMT | INFO | loggers.log | User user1 communicated with the server | 
+Tue, 24 Nov 2020 08:51:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:51:45 GMT | INFO | loggers.log | User user1 communicated with the server | 
+Tue, 24 Nov 2020 08:51:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:51:45 GMT | INFO | loggers.log | User user1 communicated with the server | 
+Tue, 24 Nov 2020 08:51:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:51:45 GMT | INFO | loggers.log | user1 joined a group called Gro | 
+Tue, 24 Nov 2020 08:51:45 GMT | INFO | loggers.log | User user1 communicated with the server | 
+Tue, 24 Nov 2020 08:51:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:51:45 GMT | INFO | loggers.log | User user1 communicated with the server | 
+Tue, 24 Nov 2020 08:51:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:51:45 GMT | INFO | loggers.log | User user1 communicated with the server | 
+Tue, 24 Nov 2020 08:51:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:51:45 GMT | INFO | loggers.log | User user1 communicated with the server | 
+Tue, 24 Nov 2020 08:51:45 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:51:46 GMT | INFO | loggers.log | User user1 communicated with the server | 
+Tue, 24 Nov 2020 08:51:46 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:51:46 GMT | INFO | loggers.log | User user1 communicated with the server | 
+Tue, 24 Nov 2020 08:51:46 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:51:46 GMT | INFO | loggers.log | User user1 communicated with the server | 
+Tue, 24 Nov 2020 08:51:46 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:51:46 GMT | INFO | loggers.log | User user1 communicated with the server | 
+Tue, 24 Nov 2020 08:51:46 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:51:47 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:51:53 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:52:00 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:52:00 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:52:00 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:52:21 GMT | INFO | loggers.log | user1 messaged qqq | 
+Tue, 24 Nov 2020 08:52:21 GMT | INFO | loggers.log | User user1 communicated with the server | 
+Tue, 24 Nov 2020 08:52:21 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:52:21 GMT | INFO | loggers.log | user1 send message to qqq | 
+Tue, 24 Nov 2020 08:52:21 GMT | INFO | loggers.log | User qqq communicated with the server | 
+Tue, 24 Nov 2020 08:52:21 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 24 Nov 2020 08:52:33 GMT | INFO | loggers.log | Socket KpucRXnZzmFnDTJmAAAG disconnected | 
+Tue, 24 Nov 2020 08:52:33 GMT | INFO | loggers.log | qqq has logged out | 
+Tue, 24 Nov 2020 08:54:07 GMT | INFO | loggers.log | Socket 8qVSnZgvJkjbTyD0AAAH disconnected | 
+Tue, 24 Nov 2020 08:54:08 GMT | INFO | loggers.log | Socket 5-fzlf--ONc5SPtjAAAI connected | 
+Tue, 24 Nov 2020 08:54:08 GMT | INFO | loggers.log | Socket ys4U1N2HAPFZrNtsAAAJ connected | 
+Tue, 24 Nov 2020 08:54:13 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:54:52 GMT | INFO | loggers.log | Socket CZrZN4J24Et8yGiFAAAF disconnected | 
+Tue, 24 Nov 2020 08:54:56 GMT | INFO | loggers.log | Socket ctqdABXFZEME2MYpAAAK connected | 
+Tue, 24 Nov 2020 08:54:56 GMT | INFO | loggers.log | Socket vPH1PP2DU_P94OmeAAAL connected | 
+Tue, 24 Nov 2020 08:54:56 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:54:56 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:54:56 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:54:56 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 08:54:56 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:54:56 GMT | INFO | loggers.log | user1 has the socket id set in database | 
+Tue, 24 Nov 2020 08:54:57 GMT | INFO | loggers.log | Socket ioLgi0t6dFKX67XdAAAM connected | 
+Tue, 24 Nov 2020 08:54:57 GMT | INFO | loggers.log | Socket 3A5WlbuNTHy7ytLQAAAN connected | 
+Tue, 24 Nov 2020 08:54:58 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:54:58 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:54:58 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:54:58 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 08:54:58 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:54:58 GMT | INFO | loggers.log | user1 has the socket id set in database | 
+Tue, 24 Nov 2020 08:54:59 GMT | INFO | loggers.log | Socket ys4U1N2HAPFZrNtsAAAJ disconnected | 
+Tue, 24 Nov 2020 08:54:59 GMT | INFO | loggers.log | Socket 5-fzlf--ONc5SPtjAAAI disconnected | 
+Tue, 24 Nov 2020 08:55:02 GMT | INFO | loggers.log | Socket QDfMJHvQGq4boSbAAAAO connected | 
+Tue, 24 Nov 2020 08:55:03 GMT | INFO | loggers.log | Socket hqcSzxkLxhjdIVsGAAAP connected | 
+Tue, 24 Nov 2020 08:55:08 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:55:16 GMT | INFO | loggers.log | Socket fNoh1XmOh1T3g0iVAAAE disconnected | 
+Tue, 24 Nov 2020 08:55:19 GMT | INFO | loggers.log | Socket QDfMJHvQGq4boSbAAAAO disconnected | 
+Tue, 24 Nov 2020 08:55:19 GMT | INFO | loggers.log | Socket hqcSzxkLxhjdIVsGAAAP disconnected | 
+Tue, 24 Nov 2020 08:55:21 GMT | INFO | loggers.log | Socket ygYQl5ZFv46HjgTeAAAQ connected | 
+Tue, 24 Nov 2020 08:55:21 GMT | INFO | loggers.log | Socket lAaZaVfVof0aM99DAAAR connected | 
+Tue, 24 Nov 2020 08:55:26 GMT | INFO | loggers.log | Socket vPH1PP2DU_P94OmeAAAL disconnected | 
+Tue, 24 Nov 2020 08:55:26 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:55:26 GMT | INFO | loggers.log | Socket ctqdABXFZEME2MYpAAAK disconnected | 
+Tue, 24 Nov 2020 08:55:46 GMT | INFO | loggers.log | Socket 3A5WlbuNTHy7ytLQAAAN disconnected | 
+Tue, 24 Nov 2020 08:55:47 GMT | INFO | loggers.log | Socket 1IOktSPzSecKrlBQAAAS connected | 
+Tue, 24 Nov 2020 08:55:48 GMT | INFO | loggers.log | Socket 2cWYerG085RLqp1vAAAT connected | 
+Tue, 24 Nov 2020 08:55:48 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:55:48 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:55:48 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:55:48 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 08:55:49 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:55:49 GMT | INFO | loggers.log | user1 has the socket id set in database | 
+Tue, 24 Nov 2020 08:55:50 GMT | INFO | loggers.log | Socket ygYQl5ZFv46HjgTeAAAQ disconnected | 
+Tue, 24 Nov 2020 08:55:50 GMT | INFO | loggers.log | Socket lAaZaVfVof0aM99DAAAR disconnected | 
+Tue, 24 Nov 2020 08:55:52 GMT | INFO | loggers.log | Socket SuoFea2K55GXrGeoAAAU connected | 
+Tue, 24 Nov 2020 08:55:52 GMT | INFO | loggers.log | Socket Vv_E_CYp0sIhcnLkAAAV connected | 
+Tue, 24 Nov 2020 08:55:56 GMT | INFO | loggers.log | Socket ioLgi0t6dFKX67XdAAAM disconnected | 
+Tue, 24 Nov 2020 08:55:58 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:56:32 GMT | INFO | loggers.log | Socket 2cWYerG085RLqp1vAAAT disconnected | 
+Tue, 24 Nov 2020 08:56:33 GMT | INFO | loggers.log | Socket zkg4jjFKJl_TxE1pAAAW connected | 
+Tue, 24 Nov 2020 08:56:34 GMT | INFO | loggers.log | Socket oD23XH0O0Aqa07T4AAAX connected | 
+Tue, 24 Nov 2020 08:56:34 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 08:56:34 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 08:56:34 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 08:56:34 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 08:56:34 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 08:56:34 GMT | INFO | loggers.log | user1 has the socket id set in database | 
+Tue, 24 Nov 2020 08:56:36 GMT | INFO | loggers.log | Socket Vv_E_CYp0sIhcnLkAAAV disconnected | 
+Tue, 24 Nov 2020 08:56:36 GMT | INFO | loggers.log | Socket SuoFea2K55GXrGeoAAAU disconnected | 
+Tue, 24 Nov 2020 08:56:39 GMT | INFO | loggers.log | Socket Jax8m8mVs-gPLbeqAAAY connected | 
+Tue, 24 Nov 2020 08:56:39 GMT | INFO | loggers.log | Socket h3uXcGqf5-A9dQJ-AAAZ connected | 
+Tue, 24 Nov 2020 08:56:43 GMT | INFO | loggers.log | Socket 1IOktSPzSecKrlBQAAAS disconnected | 
+Tue, 24 Nov 2020 08:56:43 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 09:00:09 GMT | INFO | loggers.log | Socket oD23XH0O0Aqa07T4AAAX disconnected | 
+Tue, 24 Nov 2020 09:00:10 GMT | INFO | loggers.log | Socket h3uXcGqf5-A9dQJ-AAAZ disconnected | 
+Tue, 24 Nov 2020 09:00:10 GMT | INFO | loggers.log | Socket Jax8m8mVs-gPLbeqAAAY disconnected | 
+Tue, 24 Nov 2020 09:00:11 GMT | INFO | loggers.log | Socket 7v8e_dGv7WLomTmeAAAa connected | 
+Tue, 24 Nov 2020 09:00:11 GMT | INFO | loggers.log | Socket L7FQMVmWK4xOfzOuAAAb connected | 
+Tue, 24 Nov 2020 09:00:12 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 09:00:12 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 09:00:12 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 09:00:12 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 09:00:12 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 09:00:12 GMT | INFO | loggers.log | user1 has the socket id set in database | 
+Tue, 24 Nov 2020 09:00:19 GMT | INFO | loggers.log | Socket wSnRRUHECrOcbtv8AAAc connected | 
+Tue, 24 Nov 2020 09:00:20 GMT | INFO | loggers.log | Socket __jkOKzoejIQBkqqAAAd connected | 
+Tue, 24 Nov 2020 09:00:20 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 09:00:26 GMT | INFO | loggers.log | Socket zkg4jjFKJl_TxE1pAAAW disconnected | 
+Tue, 24 Nov 2020 09:05:28 GMT | INFO | loggers.log | Socket 7v8e_dGv7WLomTmeAAAa disconnected | 
+Tue, 24 Nov 2020 09:05:28 GMT | INFO | loggers.log | user1 has logged out | 
+Tue, 24 Nov 2020 09:05:31 GMT | INFO | loggers.log | Socket hH3g7GuddSuj6UA5AAAe connected | 
+Tue, 24 Nov 2020 09:05:31 GMT | INFO | loggers.log | Socket vdytvKh1R1mMjv_6AAAf connected | 
+Tue, 24 Nov 2020 09:05:31 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 09:05:31 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 09:05:32 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 09:05:32 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 09:05:32 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 09:05:32 GMT | INFO | loggers.log | user1 has the socket id set in database | 
+Tue, 24 Nov 2020 09:05:42 GMT | INFO | loggers.log | Socket __jkOKzoejIQBkqqAAAd disconnected | 
+Tue, 24 Nov 2020 09:05:42 GMT | INFO | loggers.log | Socket wSnRRUHECrOcbtv8AAAc disconnected | 
+Tue, 24 Nov 2020 09:05:46 GMT | INFO | loggers.log | Socket L7FQMVmWK4xOfzOuAAAb disconnected | 
+Tue, 24 Nov 2020 09:06:27 GMT | INFO | loggers.log | Socket hH3g7GuddSuj6UA5AAAe disconnected | 
+Tue, 24 Nov 2020 09:06:27 GMT | INFO | loggers.log | user1 has logged out | 
+Tue, 24 Nov 2020 09:06:27 GMT | INFO | loggers.log | Socket vdytvKh1R1mMjv_6AAAf disconnected | 
+Tue, 24 Nov 2020 09:07:15 GMT | INFO | loggers.log | Socket jWECaWZaZg0zkjFTAAAg connected | 
+Tue, 24 Nov 2020 09:07:15 GMT | INFO | loggers.log | Socket Aafzm-sn_bbWasg5AAAh connected | 
+Tue, 24 Nov 2020 09:07:15 GMT | INFO | loggers.log | Socket ZdK8Qiq8x3GFw2itAAAi connected | 
+Tue, 24 Nov 2020 09:07:15 GMT | INFO | loggers.log | Socket KGtVgO796GglFpU3AAAj connected | 
+Tue, 24 Nov 2020 09:07:15 GMT | INFO | loggers.log | Socket RCyJQwZQDK2Kze52AAAk connected | 
+Tue, 24 Nov 2020 09:07:15 GMT | INFO | loggers.log | Socket Qn9sxeoF1TSYRO9OAAAl connected | 
+Tue, 24 Nov 2020 09:07:16 GMT | INFO | loggers.log | Socket 4pQgBjDr6Xe9nfZvAAAm connected | 
+Tue, 24 Nov 2020 09:07:16 GMT | INFO | loggers.log | Socket RXSok2VvFHgvouVOAAAn connected | 
+Tue, 24 Nov 2020 09:07:45 GMT | INFO | loggers.log | Socket jWECaWZaZg0zkjFTAAAg disconnected | 
+Tue, 24 Nov 2020 09:07:45 GMT | INFO | loggers.log | Socket Aafzm-sn_bbWasg5AAAh disconnected | 
+Tue, 24 Nov 2020 09:07:45 GMT | INFO | loggers.log | Socket ZdK8Qiq8x3GFw2itAAAi disconnected | 
+Tue, 24 Nov 2020 09:07:45 GMT | INFO | loggers.log | Socket KGtVgO796GglFpU3AAAj disconnected | 
+Tue, 24 Nov 2020 09:07:46 GMT | INFO | loggers.log | Socket 4pQgBjDr6Xe9nfZvAAAm disconnected | 
+Tue, 24 Nov 2020 09:07:46 GMT | INFO | loggers.log | Socket RXSok2VvFHgvouVOAAAn disconnected | 
+Tue, 24 Nov 2020 09:10:24 GMT | INFO | loggers.log | Socket AEZSngpSjao6CSWjAAAo connected | 
+Tue, 24 Nov 2020 09:10:24 GMT | INFO | loggers.log | Socket nSku5X5obizi2TQoAAAp connected | 
+Tue, 24 Nov 2020 09:10:25 GMT | INFO | loggers.log | Socket ABTKOp3CVdgEc6HYAAAq connected | 
+Tue, 24 Nov 2020 09:10:25 GMT | INFO | loggers.log | Socket qCkAdqWy2qh86f0fAAAr connected | 
+Tue, 24 Nov 2020 09:10:30 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 09:10:54 GMT | INFO | loggers.log | Socket AEZSngpSjao6CSWjAAAo disconnected | 
+Tue, 24 Nov 2020 09:10:54 GMT | INFO | loggers.log | Socket nSku5X5obizi2TQoAAAp disconnected | 
+Tue, 24 Nov 2020 09:11:47 GMT | INFO | loggers.log | Socket ABTKOp3CVdgEc6HYAAAq disconnected | 
+Tue, 24 Nov 2020 09:11:48 GMT | INFO | loggers.log | Socket S3zt5fZ38YHuFES7AAAs connected | 
+Tue, 24 Nov 2020 09:13:43 GMT | INFO | loggers.log | Socket RCyJQwZQDK2Kze52AAAk disconnected | 
+Tue, 24 Nov 2020 09:13:43 GMT | INFO | loggers.log | Socket Qn9sxeoF1TSYRO9OAAAl disconnected | 
+Tue, 24 Nov 2020 09:13:45 GMT | INFO | loggers.log | Socket XVOaJgE8Bv2Y1LW9AAAt connected | 
+Tue, 24 Nov 2020 09:13:47 GMT | INFO | loggers.log | Socket _7jeqI22wZ-JgJ8mAAAu connected | 
+Tue, 24 Nov 2020 09:13:57 GMT | INFO | loggers.log | Socket qCkAdqWy2qh86f0fAAAr disconnected | 
+Tue, 24 Nov 2020 09:13:58 GMT | INFO | loggers.log | Socket S3zt5fZ38YHuFES7AAAs disconnected | 
+Tue, 24 Nov 2020 09:14:02 GMT | INFO | loggers.log | Socket l_Q3bsItG0gzMP1tAAAv connected | 
+Tue, 24 Nov 2020 09:14:02 GMT | INFO | loggers.log | Socket AMmtYWgqvhKp058FAAAw connected | 
+Tue, 24 Nov 2020 09:18:29 GMT | INFO | loggers.log | Socket XVOaJgE8Bv2Y1LW9AAAt disconnected | 
+Tue, 24 Nov 2020 09:18:37 GMT | INFO | loggers.log | Socket _7jeqI22wZ-JgJ8mAAAu disconnected | 
+Tue, 24 Nov 2020 10:08:35 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Tue, 24 Nov 2020 10:08:36 GMT | INFO | loggers.log | Connected to mongodb | 
+Tue, 24 Nov 2020 10:08:52 GMT | INFO | loggers.log | Socket F7KfSRVqMfbR8gyEAAAA connected | 
+Tue, 24 Nov 2020 10:08:52 GMT | INFO | loggers.log | Socket WHyR065rjoksneZaAAAB connected | 
+Tue, 24 Nov 2020 10:09:10 GMT | INFO | loggers.log | Socket F7KfSRVqMfbR8gyEAAAA disconnected | 
+Tue, 24 Nov 2020 10:09:22 GMT | INFO | loggers.log | Socket WHyR065rjoksneZaAAAB disconnected | 
+Tue, 24 Nov 2020 10:09:30 GMT | INFO | loggers.log | Socket aSeSMFQzFYM2obw-AAAC connected | 
+Tue, 24 Nov 2020 10:10:00 GMT | INFO | loggers.log | Socket aSeSMFQzFYM2obw-AAAC disconnected | 
+Tue, 24 Nov 2020 10:10:08 GMT | INFO | loggers.log | Socket wIvoecKQyc1xrljjAAAD connected | 
+Tue, 24 Nov 2020 10:10:08 GMT | INFO | loggers.log | Socket vOx27jE1q7mqgFL_AAAE connected | 
+Tue, 24 Nov 2020 10:10:18 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 10:10:38 GMT | INFO | loggers.log | Socket vOx27jE1q7mqgFL_AAAE disconnected | 
+Tue, 24 Nov 2020 10:10:48 GMT | INFO | loggers.log | Socket wIvoecKQyc1xrljjAAAD disconnected | 
+Tue, 24 Nov 2020 10:12:05 GMT | INFO | loggers.log | Socket lSusufJAmiUexZ5oAAAF connected | 
+Tue, 24 Nov 2020 10:12:10 GMT | INFO | loggers.log | Socket mZDV97ZZV2uSYVTdAAAG connected | 
+Tue, 24 Nov 2020 10:12:36 GMT | INFO | loggers.log | Socket lSusufJAmiUexZ5oAAAF disconnected | 
+Tue, 24 Nov 2020 10:12:41 GMT | INFO | loggers.log | Socket mZDV97ZZV2uSYVTdAAAG disconnected | 
+Tue, 24 Nov 2020 10:12:47 GMT | INFO | loggers.log | Socket 4TC30Q1JB0X9uQEqAAAH connected | 
+Tue, 24 Nov 2020 10:12:49 GMT | INFO | loggers.log | Socket w3o1Kz_XTrBKP8JlAAAI connected | 
+Tue, 24 Nov 2020 10:13:25 GMT | INFO | loggers.log |  admin has logged in | 
+Tue, 24 Nov 2020 10:13:26 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 10:13:26 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 10:13:26 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 10:13:27 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Tue, 24 Nov 2020 10:13:33 GMT | INFO | loggers.log | Socket w3o1Kz_XTrBKP8JlAAAI disconnected | 
+Tue, 24 Nov 2020 10:13:33 GMT | INFO | loggers.log | admin has logged out | 
+Tue, 24 Nov 2020 10:14:07 GMT | INFO | loggers.log | Socket 4TC30Q1JB0X9uQEqAAAH disconnected | 
+Tue, 24 Nov 2020 10:16:55 GMT | INFO | loggers.log | Socket lfuEqh_gkEOpa4JvAAAJ connected | 
+Tue, 24 Nov 2020 10:16:56 GMT | INFO | loggers.log | Socket UBgCYcyVvEYVkJ2VAAAK connected | 
+Tue, 24 Nov 2020 10:16:58 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 10:17:47 GMT | INFO | loggers.log | Socket svRsrg0NWrP_4rO7AAAL connected | 
+Tue, 24 Nov 2020 10:18:43 GMT | INFO | loggers.log | Socket svRsrg0NWrP_4rO7AAAL disconnected | 
+Tue, 24 Nov 2020 10:18:43 GMT | INFO | loggers.log | New User  first has been added | 
+Tue, 24 Nov 2020 10:18:45 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 10:18:45 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 10:18:45 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 10:18:50 GMT | INFO | loggers.log | first has the socket id set in database | 
+Tue, 24 Nov 2020 10:19:13 GMT | INFO | loggers.log | Socket UBgCYcyVvEYVkJ2VAAAK disconnected | 
+Tue, 24 Nov 2020 10:19:14 GMT | INFO | loggers.log | Socket 12xWH1-Vl6GndBYCAAAM connected | 
+Tue, 24 Nov 2020 10:19:19 GMT | INFO | loggers.log | Socket 0H1luiTcLNBfyUr9AAAN connected | 
+Tue, 24 Nov 2020 10:21:33 GMT | INFO | loggers.log | New User  second has been added | 
+Tue, 24 Nov 2020 10:21:33 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 10:21:33 GMT | INFO | loggers.log | Socket CEoA0on3nJ7UbIgAAAAO connected | 
+Tue, 24 Nov 2020 10:21:33 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 10:21:33 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 10:21:41 GMT | INFO | loggers.log | second has the socket id set in database | 
+Tue, 24 Nov 2020 10:21:54 GMT | INFO | loggers.log | Socket lfuEqh_gkEOpa4JvAAAJ disconnected | 
+Tue, 24 Nov 2020 10:21:54 GMT | INFO | loggers.log | first has logged out | 
+Tue, 24 Nov 2020 10:21:56 GMT | INFO | loggers.log | Socket TErWyNrJOKvrcKKUAAAP connected | 
+Tue, 24 Nov 2020 11:27:05 GMT | INFO | loggers.log | Socket 0H1luiTcLNBfyUr9AAAN disconnected | 
+Tue, 24 Nov 2020 11:27:08 GMT | INFO | loggers.log | Socket CEoA0on3nJ7UbIgAAAAO disconnected | 
+Tue, 24 Nov 2020 11:27:09 GMT | INFO | loggers.log | second has logged out | 
+Tue, 24 Nov 2020 11:27:38 GMT | INFO | loggers.log | Socket vKG2YluRpdejwcE1AAAQ connected | 
+Tue, 24 Nov 2020 11:27:38 GMT | INFO | loggers.log | Socket j0UgMGrq2jD5yh_XAAAR connected | 
+Tue, 24 Nov 2020 11:28:08 GMT | INFO | loggers.log | Socket vKG2YluRpdejwcE1AAAQ disconnected | 
+Tue, 24 Nov 2020 11:28:08 GMT | INFO | loggers.log | Socket j0UgMGrq2jD5yh_XAAAR disconnected | 
+Tue, 24 Nov 2020 11:28:13 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 11:28:18 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 11:28:20 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 11:28:20 GMT | INFO | loggers.log | Socket 0JQOKozwB8Vlhw_NAAAS connected | 
+Tue, 24 Nov 2020 11:28:20 GMT | INFO | loggers.log | Socket 2eOIG6VRCMxnoJVOAAAT connected | 
+Tue, 24 Nov 2020 11:28:21 GMT | INFO | loggers.log | Socket rwG-FoQ-ZWJSTx4fAAAU connected | 
+Tue, 24 Nov 2020 11:28:21 GMT | INFO | loggers.log | Socket TDfS-WMwnV9rhki9AAAV connected | 
+Tue, 24 Nov 2020 11:28:21 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 11:28:50 GMT | INFO | loggers.log | Socket 0JQOKozwB8Vlhw_NAAAS disconnected | 
+Tue, 24 Nov 2020 11:28:50 GMT | INFO | loggers.log | Socket 2eOIG6VRCMxnoJVOAAAT disconnected | 
+Tue, 24 Nov 2020 11:28:56 GMT | INFO | loggers.log | Socket rwG-FoQ-ZWJSTx4fAAAU disconnected | 
+Tue, 24 Nov 2020 11:28:57 GMT | INFO | loggers.log | Socket TDfS-WMwnV9rhki9AAAV disconnected | 
+Tue, 24 Nov 2020 11:32:16 GMT | INFO | loggers.log | Socket kmH_0Cg6h38h3SXKAAAW connected | 
+Tue, 24 Nov 2020 11:32:17 GMT | INFO | loggers.log | Socket 9mDFOrKlvMQ1jZ3UAAAX connected | 
+Tue, 24 Nov 2020 11:32:17 GMT | INFO | loggers.log | Socket ow_qa5tNXAJLsPN1AAAY connected | 
+Tue, 24 Nov 2020 11:32:17 GMT | INFO | loggers.log | Socket C_ADDSk_ilz5TLIZAAAZ connected | 
+Tue, 24 Nov 2020 11:32:17 GMT | INFO | loggers.log | Socket GGAXvP2kfjB4VSdsAAAa connected | 
+Tue, 24 Nov 2020 11:32:17 GMT | INFO | loggers.log | Socket MGxaR9F9Bon02oCmAAAb connected | 
+Tue, 24 Nov 2020 11:32:17 GMT | INFO | loggers.log | Socket Eo32XLmtCZ7LK4X2AAAc connected | 
+Tue, 24 Nov 2020 11:32:17 GMT | INFO | loggers.log | Socket zEm9I3kzY0ZHU9k_AAAd connected | 
+Tue, 24 Nov 2020 11:32:17 GMT | INFO | loggers.log | Socket qaM9wontKLRfBPcPAAAe connected | 
+Tue, 24 Nov 2020 11:32:17 GMT | INFO | loggers.log | Socket JBOMj0AHFAOgp_CtAAAf connected | 
+Tue, 24 Nov 2020 11:32:17 GMT | INFO | loggers.log | Socket a3ChVJBzKQexY1LVAAAg connected | 
+Tue, 24 Nov 2020 11:32:17 GMT | INFO | loggers.log | Socket dVMA-pgWTuug1_1EAAAh connected | 
+Tue, 24 Nov 2020 11:32:17 GMT | INFO | loggers.log | Socket 4l1qB2e8PQ4oFHryAAAi connected | 
+Tue, 24 Nov 2020 11:32:17 GMT | INFO | loggers.log | Socket LyAgRCzHIYmHQQ7WAAAj connected | 
+Tue, 24 Nov 2020 11:32:17 GMT | INFO | loggers.log | Socket CVfQoNAXKnV-KVMDAAAk connected | 
+Tue, 24 Nov 2020 11:32:17 GMT | INFO | loggers.log | Socket ae38MZzp9gnrI3pkAAAl connected | 
+Tue, 24 Nov 2020 11:32:30 GMT | INFO | loggers.log | Socket fnVvveRhw9i0GraUAAAm connected | 
+Tue, 24 Nov 2020 11:32:30 GMT | INFO | loggers.log | Socket RV5xAKuttWvawM8pAAAn connected | 
+Tue, 24 Nov 2020 11:32:46 GMT | INFO | loggers.log | Socket kmH_0Cg6h38h3SXKAAAW disconnected | 
+Tue, 24 Nov 2020 11:32:47 GMT | INFO | loggers.log | Socket 9mDFOrKlvMQ1jZ3UAAAX disconnected | 
+Tue, 24 Nov 2020 11:32:47 GMT | INFO | loggers.log | Socket ow_qa5tNXAJLsPN1AAAY disconnected | 
+Tue, 24 Nov 2020 11:32:47 GMT | INFO | loggers.log | Socket C_ADDSk_ilz5TLIZAAAZ disconnected | 
+Tue, 24 Nov 2020 11:32:47 GMT | INFO | loggers.log | Socket GGAXvP2kfjB4VSdsAAAa disconnected | 
+Tue, 24 Nov 2020 11:32:47 GMT | INFO | loggers.log | Socket MGxaR9F9Bon02oCmAAAb disconnected | 
+Tue, 24 Nov 2020 11:32:47 GMT | INFO | loggers.log | Socket Eo32XLmtCZ7LK4X2AAAc disconnected | 
+Tue, 24 Nov 2020 11:32:47 GMT | INFO | loggers.log | Socket zEm9I3kzY0ZHU9k_AAAd disconnected | 
+Tue, 24 Nov 2020 11:32:47 GMT | INFO | loggers.log | Socket qaM9wontKLRfBPcPAAAe disconnected | 
+Tue, 24 Nov 2020 11:32:47 GMT | INFO | loggers.log | Socket JBOMj0AHFAOgp_CtAAAf disconnected | 
+Tue, 24 Nov 2020 11:32:47 GMT | INFO | loggers.log | Socket a3ChVJBzKQexY1LVAAAg disconnected | 
+Tue, 24 Nov 2020 11:32:47 GMT | INFO | loggers.log | Socket dVMA-pgWTuug1_1EAAAh disconnected | 
+Tue, 24 Nov 2020 11:32:47 GMT | INFO | loggers.log | Socket 4l1qB2e8PQ4oFHryAAAi disconnected | 
+Tue, 24 Nov 2020 11:32:47 GMT | INFO | loggers.log | Socket LyAgRCzHIYmHQQ7WAAAj disconnected | 
+Tue, 24 Nov 2020 11:32:47 GMT | INFO | loggers.log | Socket CVfQoNAXKnV-KVMDAAAk disconnected | 
+Tue, 24 Nov 2020 11:32:47 GMT | INFO | loggers.log | Socket ae38MZzp9gnrI3pkAAAl disconnected | 
+Tue, 24 Nov 2020 11:33:02 GMT | INFO | loggers.log | Socket RV5xAKuttWvawM8pAAAn disconnected | 
+Tue, 24 Nov 2020 11:33:06 GMT | INFO | loggers.log | Socket 2-6DHrnkntXnKy3KAAAo connected | 
+Tue, 24 Nov 2020 11:34:25 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Tue, 24 Nov 2020 11:34:25 GMT | INFO | loggers.log | Connected to mongodb | 
+Tue, 24 Nov 2020 11:34:33 GMT | INFO | loggers.log | Socket tzSSUWv7KjwEdOfNAAAA connected | 
+Tue, 24 Nov 2020 11:34:33 GMT | INFO | loggers.log | Socket 10N9KAr5HectdGoZAAAB connected | 
+Tue, 24 Nov 2020 11:34:33 GMT | INFO | loggers.log | Socket s2cw79fa17FTdO6wAAAC connected | 
+Tue, 24 Nov 2020 11:34:33 GMT | INFO | loggers.log | Socket FdlAdN82mL7ut7uJAAAD connected | 
+Tue, 24 Nov 2020 11:34:33 GMT | INFO | loggers.log | Socket yxEhLMVzCjhbUQyAAAAE connected | 
+Tue, 24 Nov 2020 11:34:33 GMT | INFO | loggers.log | Socket yxwApY9zjo7F-sRNAAAF connected | 
+Tue, 24 Nov 2020 11:34:33 GMT | INFO | loggers.log | Socket jyfJCp0TlkRNiMQPAAAG connected | 
+Tue, 24 Nov 2020 11:34:33 GMT | INFO | loggers.log | Socket 0EMOuTFZVbCJD3csAAAH connected | 
+Tue, 24 Nov 2020 11:34:46 GMT | INFO | loggers.log | Socket yxEhLMVzCjhbUQyAAAAE disconnected | 
+Tue, 24 Nov 2020 11:35:00 GMT | INFO | loggers.log | Socket eDuHKyIL1Nb9nyJBAAAI connected | 
+Tue, 24 Nov 2020 11:35:00 GMT | INFO | loggers.log | Socket b23-NEq-p39pDjFMAAAJ connected | 
+Tue, 24 Nov 2020 11:35:01 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 11:35:01 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 11:35:01 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 11:35:02 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 11:35:02 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 11:35:02 GMT | INFO | loggers.log | first has the socket id set in database | 
+Tue, 24 Nov 2020 11:35:03 GMT | INFO | loggers.log | Socket tzSSUWv7KjwEdOfNAAAA disconnected | 
+Tue, 24 Nov 2020 11:35:03 GMT | INFO | loggers.log | Socket 10N9KAr5HectdGoZAAAB disconnected | 
+Tue, 24 Nov 2020 11:35:03 GMT | INFO | loggers.log | Socket s2cw79fa17FTdO6wAAAC disconnected | 
+Tue, 24 Nov 2020 11:35:03 GMT | INFO | loggers.log | Socket FdlAdN82mL7ut7uJAAAD disconnected | 
+Tue, 24 Nov 2020 11:35:03 GMT | INFO | loggers.log | Socket yxwApY9zjo7F-sRNAAAF disconnected | 
+Tue, 24 Nov 2020 11:35:03 GMT | INFO | loggers.log | Socket jyfJCp0TlkRNiMQPAAAG disconnected | 
+Tue, 24 Nov 2020 11:35:03 GMT | INFO | loggers.log | Socket 0EMOuTFZVbCJD3csAAAH disconnected | 
+Tue, 24 Nov 2020 11:35:25 GMT | INFO | loggers.log | Socket 6yfda8Hnb3LJNVmCAAAK connected | 
+Tue, 24 Nov 2020 11:35:25 GMT | INFO | loggers.log | Socket Co6CD2mV5s2osf0YAAAL connected | 
+Tue, 24 Nov 2020 11:35:55 GMT | INFO | loggers.log | Socket 6yfda8Hnb3LJNVmCAAAK disconnected | 
+Tue, 24 Nov 2020 11:35:55 GMT | INFO | loggers.log | Socket Co6CD2mV5s2osf0YAAAL disconnected | 
+Tue, 24 Nov 2020 11:35:57 GMT | INFO | loggers.log | Socket s1wCWlnpR3UTgcNgAAAM connected | 
+Tue, 24 Nov 2020 11:35:57 GMT | INFO | loggers.log | Socket nXfjoqnIwsOSrglGAAAN connected | 
+Tue, 24 Nov 2020 11:35:58 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 11:35:58 GMT | INFO | loggers.log | Verified User has valid token | 
+Tue, 24 Nov 2020 11:35:58 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 11:35:58 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 11:35:59 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 24 Nov 2020 11:35:59 GMT | INFO | loggers.log | second has the socket id set in database | 
+Tue, 24 Nov 2020 11:36:30 GMT | INFO | loggers.log | Socket s1wCWlnpR3UTgcNgAAAM disconnected | 
+Tue, 24 Nov 2020 11:36:30 GMT | INFO | loggers.log | second has logged out | 
+Tue, 24 Nov 2020 11:37:27 GMT | INFO | loggers.log | New User  third has been added | 
+Tue, 24 Nov 2020 11:37:27 GMT | INFO | loggers.log | Socket nEHESs9ldRsuFakOAAAO connected | 
+Tue, 24 Nov 2020 11:37:27 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 11:37:27 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 11:37:27 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 11:37:28 GMT | INFO | loggers.log | third has the socket id set in database | 
+Tue, 24 Nov 2020 11:37:44 GMT | INFO | loggers.log | Socket nXfjoqnIwsOSrglGAAAN disconnected | 
+Tue, 24 Nov 2020 11:37:54 GMT | INFO | loggers.log | Socket GusZSttwvCE3N1YAAAAP connected | 
+Tue, 24 Nov 2020 11:38:29 GMT | INFO | loggers.log | Socket nEHESs9ldRsuFakOAAAO disconnected | 
+Tue, 24 Nov 2020 11:38:29 GMT | INFO | loggers.log | third has logged out | 
+Tue, 24 Nov 2020 11:45:04 GMT | INFO | loggers.log | New User  fift has been added | 
+Tue, 24 Nov 2020 11:45:05 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 11:45:05 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 11:45:05 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 11:45:05 GMT | INFO | loggers.log | Socket sCqN1yawfEOIUFbKAAAQ connected | 
+Tue, 24 Nov 2020 11:45:05 GMT | INFO | loggers.log | fift has the socket id set in database | 
+Tue, 24 Nov 2020 11:45:14 GMT | INFO | loggers.log | Socket sCqN1yawfEOIUFbKAAAQ disconnected | 
+Tue, 24 Nov 2020 11:45:14 GMT | INFO | loggers.log | fift has logged out | 
+Tue, 24 Nov 2020 11:45:52 GMT | INFO | loggers.log | New User  seventh has been added | 
+Tue, 24 Nov 2020 11:45:52 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 11:45:52 GMT | INFO | loggers.log | Socket Q74UDoJ8eLMNmFrfAAAR connected | 
+Tue, 24 Nov 2020 11:45:52 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 11:45:52 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 11:45:53 GMT | INFO | loggers.log | seventh has the socket id set in database | 
+Tue, 24 Nov 2020 14:33:26 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 14:33:29 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 14:33:31 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 24 Nov 2020 14:33:36 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 24 Nov 2020 14:33:37 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 24 Nov 2020 14:33:41 GMT | INFO | loggers.log | All Users gotten from User Model in database | 

@@ -92,6 +92,18 @@ export const getOnlineUsers = () => {
     socket.emit("getOnlineUsers");
 }
 
+export const getAllUsers = () => {
+    socket.emit("allUsers");
+}
+
+export const setAllUsersHandler = (allUsersHandler) => {
+    socket.on("setAllUsers", allUsersHandler);
+}
+
+export const UnRegisterSetAllUsersHandler = (allUsersHandler) => {
+    socket.off("setAllUsers");
+}
+
 export const unRegisterSetOnlineUsers = () => {
     socket.off("onlineUsers");
 }

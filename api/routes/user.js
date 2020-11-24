@@ -21,14 +21,14 @@ route.post('/profile/edit', async function(req, res, next){
     }     
 })
 
-route.get('/send-friend-request/:addedUserId', async function(req, res, next){
+route.get('/add-friend/:addedUserId', async function(req, res, next){
     try {
         const UserService = new services.UserService(
             req.currentUser, 
             req.params.userId, 
             req.params.addedUserId
         )
-        const {currentUser, filteredOtherUserData} = await UserService.sendFriendRequest();
+        const {currentUser, filteredOtherUserData} = await UserService.addFriend();
         return res.status(200).json({
             status:200,
             message:{
@@ -43,49 +43,6 @@ route.get('/send-friend-request/:addedUserId', async function(req, res, next){
     }
 })
 
-route.get('/accept-friend-request/:addedUserId',  async function(req, res, next){
-    try {
-        const UserService = new services.UserService(
-            req.currentUser, 
-            req.params.userId, 
-            req.params.addedUserId
-        )
-        const {currentUser, filteredUsers} = await UserService.addFriend()
-        return res.status(200).json({
-            status:200,
-            message:{
-                currentUser,
-                filteredUsers
-            }
-        })
-    }  
-    catch (error) {
-        return next(error)
-    }      
-})
-
-route.get('/reject-friend-request/:addedUserId', async function(req, res, next){
-    try {
-        const UserService = new services.UserService(
-            req.currentUser, 
-            req.params.userId, 
-            req.params.addedUserId
-        )
-        const {currentUser, filteredUsers} = await UserService.rejectFriendRequest()
-        return res.status(200).json({
-            status:200,
-            message:{
-                currentUser,
-                filteredUsers
-            }
-        })
-        
-    }  
-    catch (error) {
-        return next(error)
-    }     
-    
-})
 
 route.post('/get-location', async (req, res, next) => {    
     const api = config.googleApi;

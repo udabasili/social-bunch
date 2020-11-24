@@ -10,6 +10,7 @@ import { setEvents } from './event.action';
 import { startFetching } from './fetch.actions';
 import {disconnectSocket, getOnlineUsers, updateUserInfo } from '../../services/socketIo';
 import axios from 'axios';
+import {  toast } from 'react-toastify';
 
 
 export const setAllUsers = (users) =>({
@@ -41,6 +42,7 @@ export const logOut = () =>{
         dispatch(setGroups(null))
         dispatch(setEvents(null))
         getOnlineUsers()
+        toast.success('User logged out')
     }
 }
 
@@ -148,6 +150,7 @@ export function verifyUser () {
                 dispatch(setAllUsersStatus([],[]))
                 dispatch(setGroups(null))
                 dispatch(setEvents(null))
+                toast.error('Please login again')
                 dispatch(addError('Please Login again'))
                 return reject()
             })
@@ -169,59 +172,29 @@ export const getAllUsers = () =>{
 }
 
 
-export const sendFriendRequest =  (addedUserId) =>{
-    let userId = sessionStorage.getItem('userId');
-    console.log(userId)
-    return dispatch =>{
-        return restApi('get', `/user/${userId}/send-friend-request/${addedUserId}`)
-        .then((response)=>{                
-            dispatch(removeError())            
-                let currentUser = response.currentUser;
-                let otherUser = response.otherUser;
-                updateUserInfo(otherUser)
-                dispatch(setCurrentUser(currentUser));
-                dispatch(setAllUsers(currentUser))
-                getOnlineUsers()        
-            })
-            .catch((error)=>{                
-            })
-    }
-}
 
-export const rejectFriendRequest =  (addedUserId) =>{
-    let userId = sessionStorage.getItem('userId');
-    return dispatch =>{
-        return restApi('get', `/user/${userId}/reject-friend-request/${addedUserId}`)
-            .then((response)=>{                
-                dispatch(removeError())            
-                let currentUser = response.currentUser
-                let users = response.filteredUsers
-                dispatch(setAllUsers(users))
-                dispatch(setCurrentUser(currentUser))
-                getOnlineUsers()        
 
-            })
-            .catch((error)=>{
-            }
-        )
-    }
-}
-
-export const acceptFriendRequest =  (addedUserId) =>{   
+export const addFriend =  (addedUserId) =>{   
     let userId = sessionStorage.getItem('userId'); 
     return dispatch =>{
-        dispatch(startFetching());
-        return restApi('get', `/user/${userId}/accept-friend-request/${addedUserId}`)
-            .then((response)=>{                
+        console.log(userId)
+        return restApi('get', `/user/${userId}/add-friend/${addedUserId}`)
+            .then((response)=>{  
+                console.log(userId)
+              
                 dispatch(removeError())            
                 let currentUser = response.currentUser
                 let users = response.filteredUsers
                 dispatch(setAllUsers(users))
                 dispatch(setCurrentUser(currentUser))
                 getOnlineUsers()        
+                toast.success("New Friend Added")
 
                 })
             .catch((error)=>{
+                toast.error("Something wrong happened. Please try again later")
+
+                console.log(error)
             })
     }
 }

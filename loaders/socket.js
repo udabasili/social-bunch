@@ -34,7 +34,8 @@ function getAllOnlineUsersEvent(socket, io) {
  * @param {*} socket 
  */
 function setUserSocketIdEvent(socket, io){
-    socket.on('login',async ({username},callback) => {    
+    socket.on('login',async ({username},callback) => {   
+        console.log(username,socket.id) 
         await services.ChatService.setUserSocketId(username, socket.id)
         io.emit('changeOnlineUsers')
     })
@@ -134,6 +135,15 @@ function currentUserOnlineFiendsEvent(socket){
     })
 }
 
+function setAllUser(socket){
+    socket.on('allUsers', async() =>{
+        const allUsers = await services.ChatService.getAllUsers()
+        console.log(allUsers.length)
+        socket.broadcast.emit('setAllUsers',{
+            allUsers
+        })
+    })
+}
 function updateParticularUsersData(socket, io) {
     socket.on('updateUserData', async ({userData}) =>{
         if(userData.socketId) {
@@ -166,6 +176,8 @@ sockets.init = function (server) {
         groupMessageEvent(socket, io)
         currentUserOnlineFiendsEvent(socket)
         updateParticularUsersData(socket, io)
+        setAllUser(socket)
+        
 
         socket.on('disconnect', function () {
             onDisconnect(socket, io);

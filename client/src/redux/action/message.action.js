@@ -3,6 +3,7 @@ import { restApi} from "../../services/api";
 import { removeError, addError } from "./errors.action";
 import { startFetching } from "./fetch.actions";
 import { setCurrentUser } from "./user.action";
+import { toast } from 'react-toastify';
 
 export const loadMessages = (messages) =>({
     type: GET_MESSAGES,
@@ -15,7 +16,6 @@ export const getMessages = (userId, recipientId) => {
         return new Promise((resolve, reject)=>{
             return restApi("get",`/user/${userId}/messages/${recipientId}`)
                 .then(response =>{       
-                    console.log(response)     
                     dispatch(loadMessages(response))            
                     return resolve()
                 })

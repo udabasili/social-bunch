@@ -3,13 +3,24 @@ import {Switch, Route, withRouter, Redirect} from "react-router-dom"
 import Auth from "./pages/auth-page.component";
 import GroupPage from "./pages/group/group.component";
 import Chatroom from "./pages/chatroom/chatroom.component";
-import {setRestApiHeader, setAllUsersStatus, verifyUser, setCurrentUser, } from "./redux/action/user.action";
+import {setRestApiHeader, setAllUsersStatus, verifyUser, setCurrentUser, setAllUsers, } from "./redux/action/user.action";
 import PrivateRoute from "./components/protected-route/protected-route";
 import {connect} from "react-redux";
 import ProfilePage from "./pages/profile-pages/profile-pages.component";
-import {connectOnAuth, setRooms, unRegisterSetOnlineUsers, setOnlineUsers, setUserInfo, UnRegisterSetUserInfo} from "./services/socketIo";
+import {
+  connectOnAuth, 
+  setRooms, 
+  unRegisterSetOnlineUsers, 
+  setOnlineUsers,  
+  UnRegisterSetAllUsersHandler,
+  setAllUsersHandler, 
+  UnRegisterSetUserInfo} from "./services/socketIo";
 import NotFoundPage from './components/not-found/not-found';
 import Navigation from './components/navigation/navigation';
+import { removeError } from './redux/action/errors.action';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const io = require('socket.io-client')
 export const socket = io.connect('')
 
@@ -20,11 +31,12 @@ if (sessionStorage.getItem("validator")) {
 
 class MainRouter extends React.Component {
   componentDidMount(){
-    setOnlineUsers((response=>{
-      setAllUsersStatus(response.users, response.usersStatus)
-    }
-  ))
-      
+    this.props.removeError()
+      setOnlineUsers((response=>{
+        setAllUsersStatus(response.users, response.usersStatus)
+      }
+    ))
+  setAllUsersHandler(this.setAllUsers)
   setRooms()
     if (sessionStorage.getItem("validator")) {  
       this.props.verifyUser()
@@ -37,16 +49,30 @@ class MainRouter extends React.Component {
   componentWillUnmount(){
     unRegisterSetOnlineUsers()
     UnRegisterSetUserInfo()
+    UnRegisterSetAllUsersHandler()
   }
   
+  setAllUsers = (users) =>{
+    this.props.setAllUsers(users)
+    toast.success('A new user has been added')
+  }
+
+
+  
   render(){
-        const {currentUser, isAuthenticated} = this.props
-        console.log(isAuthenticated)
+    const {currentUser, isAuthenticated, history, removeError} = this.props
+    history.listen(() => removeError())
+
   return (
     <React.Fragment>
+
       {
         sessionStorage.getItem("validator") && isAuthenticated && < Navigation />
       }
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+      />
       <Switch>
         <PrivateRoute currentUser={currentUser} exact path="/" component={Chatroom} />
         <Route  exact path="/auth/login" render={props =>(
@@ -80,7 +106,10 @@ class MainRouter extends React.Component {
 const mapDispatchToProps = (dispatch) =>({
   setAllUsersStatus: (users, usersStatus) => dispatch(setAllUsersStatus(users, usersStatus)),
   verifyUser: () => dispatch(verifyUser()),
-  setCurrentUser:(user) => dispatch(setCurrentUser(user))
+  setCurrentUser:(user) => dispatch(setCurrentUser(user)),
+  removeError: () => dispatch(removeError()),
+  setAllUsers: (users) => dispatch(setAllUsers(users))
+
 
 })
   

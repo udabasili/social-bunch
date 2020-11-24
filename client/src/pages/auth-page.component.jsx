@@ -1,23 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component, PureComponent } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faKey, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import {Login, SignUp } from '../redux/action/user.action';
+import {Login, SignUp, setAllUsers } from '../redux/action/user.action';
 import {withRouter, NavLink} from 'react-router-dom';
 import {connect} from 'react-redux';
 import { removeError } from '../redux/action/errors.action';
 import validator from '../components/validator/validator';
-import { getOnlineUsers, connectOnAuth, startIOConnection } from '../services/socketIo';
+import { getOnlineUsers, connectOnAuth, startIOConnection, getAllUsers } from '../services/socketIo';
 import {isMobile} from 'react-device-detect';
 import { ReactComponent as Logo } from '../assets/images/comment.svg'
 import AuthImage from '../assets/images/alexander-andrews-JYGnB9gTCls-unsplash.jpg'
+import Loader from '../components/loader.component';
+
 /**
  * Class representing authentication form for user
  */
-class Auth extends Component {
+class Auth extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
 		loggedIn:false,
+		isLoading: false,
 		disableSubmitButton: true,
         auth: props.auth || 'register',
         error:null,
@@ -134,6 +137,10 @@ class Auth extends Component {
    * @param {*} e 
    */
   onSubmitHandler = (e) =>{
+	  this.setState(prevState =>({
+		  ...prevState,
+		  isLoading: true
+	  }))
     let userData = {
         username:this.state.registerData.username.value,
         email:this.state.registerData.email.value,
@@ -156,17 +163,39 @@ class Auth extends Component {
           .then((response) =>{
             startIOConnection()
             getOnlineUsers()
-            connectOnAuth(response)
+			connectOnAuth(response)
+			getAllUsers()
+			  this.setState(prevState => ({
+				  ...prevState,
+				  isLoading: false
+			  }))
             this.props.history.push('/')
-          })
+		  })
+		  .catch((error) =>{
+			  this.setState(prevState => ({
+				  ...prevState,
+				  isLoading: false
+			  }))
+		  })
         break;
       case 'login':
         this.props.Login(this.state.auth, this.state.loginData).then((response)=>{
           startIOConnection()
           getOnlineUsers()
-          connectOnAuth(response)
+		  connectOnAuth(response)
+			  .catch((error) => {
+				  this.setState(prevState => ({
+					  ...prevState,
+					  isLoading: false
+				  }))
+			  })
           this.props.history.push('/')
-        })
+		}).catch((error) => {
+			this.setState(prevState => ({
+				...prevState,
+				isLoading: false
+			}))
+		})
           
         break;
       default:
@@ -202,12 +231,12 @@ class Auth extends Component {
   }
 
   render() {
-    const { errors, history } = this.props;
-	const {auth, registerData, loginData, isMobile, disableSubmitButton, imageUploaded } = this.state;
+    const { errors } = this.props;
+	const {auth, registerData, loginData, isMobile, disableSubmitButton, isLoading } = this.state;
 
-	history.listen(()=>this.props.removeError() )
     return (
 		<div className='auth-page'>
+			{isLoading && <Loader/>}
 			<div className="auth-page__left-section">
 				<div className="auth-page__header">
 					<Logo className='logo' />
@@ -379,4 +408,13 @@ const mapStateToProp = state =>({
   errors : state.errors
 })
 
-export default withRouter(connect(mapStateToProp, {Login, removeError, SignUp})(Auth))
+
+const mapDispatchToProps = (dispatch) => ({
+	Login: (auth, loginData) => dispatch(Login(auth, loginData)),
+	removeError: () =>dispatch(removeError()),
+	SignUp: (header, imageFile, userData) => dispatch(SignUp(header, imageFile, userData)),
+	setAllUsers: (users) => dispatch(setAllUsers(users))
+
+})
+
+export default withRouter(connect(mapStateToProp,mapDispatchToProps)(Auth))

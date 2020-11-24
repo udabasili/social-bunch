@@ -13,11 +13,11 @@
 	margin: 6%;
 
 	@include response(phone){
-	width: 60%;
+		width: 80%;
 	}
 	
 	@include response(tab-port){
-	width: 50%;
+		width: 70%;
 	}
 
 	 @include response(tab-land) {

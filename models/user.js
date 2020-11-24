@@ -3,71 +3,56 @@ const bcrypt = require('bcrypt');
 const Schema = mongoose.Schema;
 const Joi = require('joi');
 const userSchema = new Schema({
-        username:{
-            type: String,
-            required:true,
-            unique:true
-        },
-        socketId:{
-            type: String
-        },
-        email:{
-            type:String,
-            required:true,
-            unique:true
-        },
-        password:{
-            type:String,
-            required:true,
-        },
-        userImage:{
-            type:String,
-        },
-        bio:{
-            type:String
-        },
-        phoneNumber:{
-            type:String
-        },
-        occupation:{
-            type:String
-        },
-        location:{
-            type:String
-        },
-        lastOnline:{
-            type:Date
-        },
-        isAdmin:{
-            type:Boolean
-        },
-
-        friends:[
-            {
-                userInfo:{},
-                messages:[]
-            }
-        ],
-        friendsRequests:[
-            {
-                userInfo:{},
-                status:{
-                type: String
-            }
-            }
-        ],
-        requestsSent:[{
-            sentTo:{
-                type: String
-            },
-            status:{
-                type: String
-            }
-        }]
+    username:{
+        type: String,
+        required:true,
+        unique:true
     },
-    {
-        timestamps:true
-    })
+    socketId:{
+        type: String
+    },
+    email:{
+        type:String,
+        required:true,
+        unique:true
+    },
+    password:{
+        type:String,
+        required:true,
+    },
+    userImage:{
+        type:String,
+    },
+    bio:{
+        type:String
+    },
+    phoneNumber:{
+        type:String
+    },
+    occupation:{
+        type:String
+    },
+    location:{
+        type:String
+    },
+    lastOnline:{
+        type:Date
+    },
+    isAdmin:{
+        type:Boolean
+    },
+
+    friends:[
+        {
+            userInfo:{},
+            messages:[]
+        }
+    ],
+    
+},
+{
+    timestamps:true
+})
 
 userSchema.methods.encryptPassword =  async function(req, res, next){
     try {
@@ -122,51 +107,6 @@ userSchema.methods.addFriend = async function(friend) {
     
 }
 
-userSchema.methods.removeFriendRequest = async function(sender) {
-    try {
-        let updatedFriendRequestList = [...this.friendsRequests]
-        let updatedRequestSent = [...this.requestsSent]
-        //check if friend already exists 
-        updatedFriendRequestList = updatedFriendRequestList.filter((friend)=>(
-            friend.userInfo._id.toString() !== sender._id.toString()
-        ))
-        updatedRequestSent = updatedRequestSent.filter((friend)=>(
-            friend.userInfo._id.toString() !== sender._id.toString()
-        ))
-        this.friendsRequests = updatedFriendRequestList;
-        this.requestsSent = updatedRequestSent
-        return this.save()
-
-    } catch (error) {
-        
-        return (error)   
-    }
-    
-}
-
-userSchema.methods.sendFriendRequest = async function(sender) {
-    try {
-        let updatedFriendRequestList = [...this.friendsRequests]
-        let existingFriendRequest = updatedFriendRequestList.findIndex((friend)=>(
-            friend.userInfo._id.toString() === sender._id.toString()
-        ))
-        if (existingFriendRequest !== -1){
-            return;
-        }
- 
-        updatedFriendRequestList.push({
-            userInfo:sender,
-            status:'pending'
-        })
-
-        this.friendsRequests = updatedFriendRequestList;
-        return this.save()
-
-    } catch (error) {        
-        return (error)   
-    }
-    
-}
 
 userSchema.methods.saveMessage = function(user, message, type) {
     try {

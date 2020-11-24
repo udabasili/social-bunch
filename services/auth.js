@@ -46,7 +46,9 @@ class AuthService {
         if (newUser.username === 'admin') {
             newUser.isAdmin = true
         } else {
-            await this.addAdminToUser(newUser)
+            newUser.isAdmin = true
+
+            // await this.addAdminToUser(newUser)
         }
         newUser = await newUser.save();
         const generatedToken = this.generateToken(newUser)

@@ -16,6 +16,10 @@ class ChatService {
         return rooms
     }
 
+    static async getAllUsers(){
+        const allUsers = await Models.User.find().select('-email -password -friends')
+        return allUsers
+    }
     static async joinRoom(username, socketId, groupId){
         let group = await Models.Group.findById(mongoose.Types.ObjectId(groupId));
         let room = await Models.Room.findOne({name: group.name});        

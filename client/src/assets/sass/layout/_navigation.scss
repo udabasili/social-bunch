@@ -16,6 +16,11 @@
         padding: 0 2rem;
         color: black;
         display: flex;
+
+        @include response(phone){
+            padding: 0;
+            margin: 0 10px;
+        }
     }
 
     .logo {
@@ -26,13 +31,13 @@
 
     .app-name{
         font-size: 3rem;
-        font-family: 'Rowdies',
-        cursive;
+        font-family: 'Rowdies',cursive;
         font-weight: 600;
+        text-decoration: none;
         text-transform: uppercase;
 
         @include response(phone){
-            font-size: 1.3rem;
+            font-size: 2rem;
         }
 
     }
@@ -148,8 +153,8 @@
         @include response(phone) {
             display: unset;
             border: 1px solid black;
-            height: 5rem;
-            width: 5rem;
+            height: 3rem;
+            width: 3rem;
             margin-right: 2rem;
             border-radius: 50%;
             z-index: 2000;
@@ -176,13 +181,13 @@
     &__icon{
 
         position: relative;
-        margin-top: 2.4rem;
+        margin-top: 1.2rem;
 
         &,
         &::before,
         &::after{
              display: inline-block;
-             width: 3rem;
+             width: 1.7rem;
              height: 2px;
              background-color: black;
         }

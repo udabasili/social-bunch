@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
 import UserListItem from "../../components/user-list-item/user-list-item.component";
-import { getAllUsers, sendFriendRequest} from '../../redux/action/user.action';
+import { getAllUsers, addFriend} from '../../redux/action/user.action';
 
 class Users extends Component {
 
@@ -43,22 +43,22 @@ class Users extends Component {
               onChange={this.searchUsersHandler}
               className="search-box__input" ></input>
         </div> 
-			  	<table class="user-list">
+			  	<div class="user__list">
             {(filteredUserData && searchItem)  &&
               filteredUserData.map((user, i)=>(
                 <UserListItem key={i} 
-                  sendFriendRequest={this.props.sendFriendRequest} 
+                  addFriend={this.props.addFriend} 
                   user={user} />
                 ))
               }
-          </table>
+          </div>
         </div>
     );
   }
 }
 const mapDispatchToProps = (dispatch) =>({
   getAllUsers: () => dispatch(getAllUsers()),
-  sendFriendRequest: (addedUserId) => dispatch(sendFriendRequest(addedUserId))
+  addFriend: (addedUserId) => dispatch(addFriend(addedUserId))
 
 })
 
