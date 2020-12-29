@@ -8,15 +8,14 @@ This is a chat app built with  React , Node, SocketIo amongst other things and o
 
 ### main page
 
-![Simply-chat sample](https://user-images.githubusercontent.com/33573587/72227768-ae01fb80-3576-11ea-9c45-893c6c9bf21a.png
-)
+
+![SimplyChat](https://user-images.githubusercontent.com/33573587/103261715-ddbd3580-4978-11eb-99de-8b7db1f01d2b.png)
 
 ## Private chat
 
 ![image1](https://user-images.githubusercontent.com/33573587/103261714-ddbd3580-4978-11eb-95ad-c5804e5e2006.png)
 ### group chat section
-
-![SimplyChat](https://user-images.githubusercontent.com/33573587/103261715-ddbd3580-4978-11eb-99de-8b7db1f01d2b.png)
+![image](https://user-images.githubusercontent.com/33573587/103261712-dbf37200-4978-11eb-8107-1b91a0d07291.png)
 ### To Run
 
 The best way is to visit the heroku website for the deployed website  [Simply Chat](http://www.simplychats.live/).
