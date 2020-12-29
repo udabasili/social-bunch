@@ -23,6 +23,11 @@ const path = require('path');
     require('./db')()
 
 /**STATIC FILES */  
+process.on('unhandledRejection', error => {
+    // Won't execute
+    console.log('unhandledRejection', error.message);
+});
+
     if (process.env.NODE_ENV === 'production') {
         app.use(express.static(__dirname));
         app.use(express.static(path.join(__dirname,'../client/build')))

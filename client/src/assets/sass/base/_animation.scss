@@ -7,3 +7,27 @@
         transform: rotate(360deg);
     }
 }
+
+
+@keyframes growingLoader{
+    0%{
+        background-color: #000;
+        height: 4rem;
+        width: 4rem;
+    }
+
+    49%{
+        background-color: #000;
+    }
+    60%{
+        background-color:transparent;
+    }
+
+    90%{
+        background-color:transparent;
+    }
+
+    90%{
+        background-color:transparent;
+    }
+}

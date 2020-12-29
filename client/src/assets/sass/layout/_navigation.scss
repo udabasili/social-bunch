@@ -5,6 +5,7 @@
     position: relative;
     height: 15vh;
     z-index: 20;
+    border-bottom: 2px solid $color-primary-dark;
     justify-content: space-between;
     padding: 0;
 
@@ -52,6 +53,7 @@
             background-color: $color-primary-light;
             align-items: center;
             right: 0;
+            justify-content: center;
             width: 100vw;
             height: 100vh;
             top: 15vh;
@@ -91,13 +93,15 @@
             color: black;
             font-size: 2rem;
             text-align: center;
-            font-weight: bold;
+            font-weight: 500;
             padding: 14px 30px;
             text-decoration: none;
+            font-family: 'Rowdies',cursive;
             text-transform: uppercase;
 
             @include response(phone) {
                 display: block;
+                font-size: 4rem;
                 padding: 1rem 3rem;
                 text-decoration: none;
                 text-transform: uppercase;
@@ -108,7 +112,8 @@
 
             @include response(tab-port) {
                 display: block;
-                font-size: 2rem;
+                font-size: 4rem;
+                font-weight: bolder;
                 padding: 1rem 3rem;
                 text-decoration: none;
                 text-transform: uppercase;
@@ -158,20 +163,23 @@
             margin-right: 2rem;
             border-radius: 50%;
             z-index: 2000;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             cursor: pointer;
 
         }
 
         @include response(tab-port) {
-            display: unset;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             border: 1px solid black;
             height: 5rem;
             width: 5rem;
             margin-right: 2rem;
             border-radius: 50%;
             z-index: 2000;
-            text-align: center;
             cursor: pointer;
 
         }
@@ -181,7 +189,6 @@
     &__icon{
 
         position: relative;
-        margin-top: 1.2rem;
 
         &,
         &::before,
@@ -190,6 +197,10 @@
              width: 1.7rem;
              height: 2px;
              background-color: black;
+
+             @include response(tab-port){
+                 width: 2.5rem;
+             }
         }
         &::before,
         &::after{
@@ -335,11 +346,36 @@
    
 }
 
-.nav-icon {
+.side-nav {
+     display: flex;
+    flex-direction: column;
+    background-color: $color-primary-dark;
+    z-index: 6;
+    margin: 0;
+    top: 0;
+    height: 100%;
+    width: $left-nav-width;
+
+
+    @include response(phone){
+        flex-direction: row;
+        border-bottom: 2px solid $color-primary-dark;
+        width: 100%;
+        position: relative;
+        height: 10%;
+    }
+
+    @include response(tab-port) {
+        flex-direction: row;
+        border-bottom: 2px solid $color-primary-dark;
+        width: 100%;
+        position: relative;
+        height: 10%;
+    }
+    
     &__list {
         width: 100%;
         display: flex;
-        margin-top: 15vh;
         flex-direction: column;
 
         @include response(phone) {
@@ -357,7 +393,7 @@
         }
 
         .active {
-            background-color: $color-background;
+            background-color: white;
             color: $color-primary-dark;
 
             @include response(phone){

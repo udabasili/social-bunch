@@ -1,5 +1,6 @@
 const loggerFunction = require('./logger')
-const services = require('../services')
+const services = require('../services');
+const { User } = require('../models');
 const sockets = {};
 
 /**
@@ -8,8 +9,14 @@ const sockets = {};
  */
 function setRoomEvent(socket) {
     socket.on('setRooms', async () => { 
-        const result = await services.ChatService.setRooms()    
-        loggerFunction('info', result)
+        try {
+            const result = await services.ChatService.setRooms()
+            loggerFunction('info', result)
+        } catch (error) {
+            return next(error)
+
+        }
+        
     })
 }
 
@@ -19,12 +26,18 @@ function setRoomEvent(socket) {
  */
 function getAllOnlineUsersEvent(socket, io) {
     socket.on('getOnlineUsers', async ()=>{  
-        const {users, onlineUsers} = await services.ChatService.getOnlineUsers()    
+        try {
+            const { users, onlineUsers } = await services.ChatService.getOnlineUsers()
             io.emit('onlineUsers', {
                 users,
                 usersStatus: onlineUsers
                 }
             )
+        } catch (error) {
+            return next(error)
+
+        }
+        
          ;
     })
 }
@@ -35,9 +48,14 @@ function getAllOnlineUsersEvent(socket, io) {
  */
 function setUserSocketIdEvent(socket, io){
     socket.on('login',async ({username},callback) => {   
-        console.log(username,socket.id) 
-        await services.ChatService.setUserSocketId(username, socket.id)
-        io.emit('changeOnlineUsers')
+        try {
+            await services.ChatService.setUserSocketId(username, socket.id)
+            io.emit('changeOnlineUsers')
+        } catch (error) {
+            return next(error)
+
+        }
+        
     })
 }
 
@@ -47,7 +65,13 @@ function setUserSocketIdEvent(socket, io){
  */
 function createRoomEvent(socket){
     socket.on('create', async ({roomName}, callback) =>{
-        await services.ChatService.createRoom(roomName)
+        try {
+            await services.ChatService.createRoom(roomName)
+
+        } catch (error) {
+            return next(error)
+
+        }
         }
     )
 }
@@ -58,11 +82,18 @@ function createRoomEvent(socket){
  * @param {Object} io 
  */
 function enterRoomEvent(socket, io){
-    socket.on('enter', async ({username, roomId}) =>{     
-        const room = await services.ChatService.joinRoom(username, socket.id, roomId)
-        socket.join(room[0].name)
-        io.to(room[0].name).emit('updateRoomMemberStatus', room[0]) 
-        socket.to(room).emit('updateRoomMemberStatus', room)               
+    socket.on('enter', async ({username, roomId}) =>{    
+        try {
+            const room = await services.ChatService.joinRoom(username, socket.id, roomId)
+            socket.join(room[0].name)
+            io.to(room[0].name).emit('updateRoomMemberStatus', room[0])
+            socket.to(room).emit('updateRoomMemberStatus', room)   
+
+        } catch (error) {
+            return next(error)
+
+        } 
+                    
               
     })
 }
@@ -74,9 +105,16 @@ function enterRoomEvent(socket, io){
  */
 function exitRoomEvent(socket){
     socket.on('exit', async ({username, roomId}) =>{     
-        const room = await services.ChatService.leaveRoom(username, roomId)
-        socket.leave(room[0].name)
-        socket.to(room[0].name).emit('updateRoomMemberStatus', room[0])               
+        try {
+            const room = await services.ChatService.leaveRoom(username, roomId)
+            socket.leave(room[0].name)
+            socket.to(room[0].name).emit('updateRoomMemberStatus', room[0])   
+
+        } catch (error) {
+            return next(error)
+
+        } 
+                    
     })
 }
 
@@ -86,18 +124,27 @@ function exitRoomEvent(socket){
  * @param {Object} io 
  */
 function privateMessageEvent(socket, io){
-    socket.on('messageUser', async ({message,receiver,sender,location}, callback) =>{
+    socket.on('messageUser', async ({ message, receiver, sender, location, chatId}, callback) =>{
         let date = new Date();
-        const {userSender, socketId} = await services.ChatService.getUserSocketId(receiver, sender)
-        io.to(socketId).emit('privateMessage', {
-            text: message,
-            createdAt: date.toISOString(),
-            createdBy: sender,
-            senderProfile: userSender,
-            sentTo: receiver,
-            location
-        })     
-        callback()
+            // const { userSender, socketId } = await services.ChatService.getUserSocketId(receiver, sender)
+        const MessageService = new services.MessageService(sender, receiver)
+            const messages = await MessageService.getMessagesBetweenUsers();
+            io.emit('privateMessage', {
+                messages,
+                receiver,
+                sender
+            })
+            // const { userSender, socketId } = await services.ChatService.getUserSocketId(receiver, sender)
+            // io.emit('privateMessage', {
+            //     text: message,
+            //     createdAt: date.toISOString(),
+            //     createdBy: sender,
+            //     senderProfile: userSender,
+            //     sentTo: receiver,
+            //     location
+            // })
+
+        
         }
     )
 }
@@ -109,14 +156,21 @@ function privateMessageEvent(socket, io){
  */
 function groupMessageEvent(socket, io){
     socket.on('messageToGroup', async ({message,senderId, groupId}) =>{ 
-        let date = new Date();
-        const {room, username} = await services.ChatService.getRoomInfo(senderId, groupId)
-        io.in(room.name).emit('groupMessage', {
+        try {
+            let date = new Date();
+            const { room, username } = await services.ChatService.getRoomInfo(senderId, groupId)
+            io.in(room.name).emit('groupMessage', {
                 text: message,
                 createdAt: date.toISOString(),
                 groupName: room,
                 createdBy: username,
-        })
+            })
+
+        } catch (error) {
+            return next(error)
+
+        } 
+        
     })       
 }
 
@@ -127,23 +181,45 @@ function groupMessageEvent(socket, io){
  */
 function currentUserOnlineFiendsEvent(socket){
     socket.on('getOnlineFriends', async (username, callback)=>{
-        const onlineFriends = await services.ChatService.currentUserOnlineFriends(
-            senderId, 
-            groupId
-        )
-        callback(onlineFriends)
+        try {
+            const onlineFriends = await services.ChatService.currentUserOnlineFriends(
+                senderId,
+                groupId
+            )
+            callback(onlineFriends)
+        } catch (error) {
+            return next(error)
+
+        } 
+       
     })
 }
 
-function setAllUser(socket){
+function setAllUser(socket,io){
     socket.on('allUsers', async() =>{
-        const allUsers = await services.ChatService.getAllUsers()
-        console.log(allUsers.length)
-        socket.broadcast.emit('setAllUsers',{
-            allUsers
-        })
+        try {
+            const allUsers = await services.ChatService.getAllUsers()
+            console.log(allUsers.length)
+            io.emit('setAllUsers', {
+                allUsers
+            })
+        } catch (error) {
+            return next(error)
+
+        } 
+        
     })
 }
+
+
+function newUserAdded(socket, io) {
+    socket.on('newUser', async () => {
+            // const allUsers = await User.findOne('')
+            socket.broadcast.emit('newUserAdded')
+        })
+
+}
+
 function updateParticularUsersData(socket, io) {
     socket.on('updateUserData', async ({userData}) =>{
         if(userData.socketId) {
@@ -176,7 +252,8 @@ sockets.init = function (server) {
         groupMessageEvent(socket, io)
         currentUserOnlineFiendsEvent(socket)
         updateParticularUsersData(socket, io)
-        setAllUser(socket)
+        setAllUser(socket, io)
+        newUserAdded(socket, io)
         
 
         socket.on('disconnect', function () {

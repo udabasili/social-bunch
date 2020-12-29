@@ -1,0 +1,321 @@
+.chat {
+
+    width: 100%;
+
+    @include response(phone){
+        height: 100%;
+        width: 100%;
+    }
+
+    @include response(tab-port){
+        height: 100%;
+        width: 60%;
+    }
+    
+
+    &__header{
+        display: flex;
+        z-index: 4;
+        justify-content: space-between;
+        background-color: #10ad5a;
+        align-items: center;
+        width: 100%;
+        height: 10%;
+        border-bottom: 2px solid #10ad5a;
+
+         @include response(phone){
+            height: 10%;
+        }
+
+        @include response(tab-port){
+            height: 14%;
+        }
+
+        .user{
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            margin: 0 2rem ;
+            width: unset;
+           
+            &__photo{
+                border-radius:50%;
+                width: 5rem;
+                margin-right: 1rem;
+                height: 5rem;
+                 @include response(phone){
+                    width: 3rem;
+                    height: 3rem;
+                }   
+
+            }
+
+            &__detail{
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+
+                .username{
+                    font-weight: bold;
+                    text-transform: capitalize;
+
+                }
+                .status{
+                    @include response(phone){
+                        display: none;
+                    }
+                }
+
+
+            }
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+            padding: 2rem;
+
+            a{
+                padding: 2rem;
+            }
+        }
+
+    }
+    &__messages {
+        padding: 3rem 3rem 2rem;
+        width: 100%;
+        height: 80%;
+        position: relative;
+        bottom: 0;
+        overflow-y: auto;
+        background-color: $color-card-background;
+      
+        @include response(phone){
+            height: 80%;
+        }
+
+        @include response(tab-port){
+            height: 76.5%;
+        }
+
+        .message-data {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            align-items: center;
+            text-transform: capitalize;
+            width: 70%;
+            display: flex;
+            justify-content: flex-start;
+
+            @include response(phone){
+            font-size: 1rem;
+            margin-bottom: 0;
+            }
+        }
+
+        .sender-data{
+            width: 100%;
+            justify-content: flex-end;
+            
+        }
+        .receive-data{
+            text-align: left;
+        }
+  
+        .message-data-time {
+            color: lighten(gray, 8%);
+            padding-left: 1rem;
+            font-size: 1rem;
+            @include response(phone){
+            font-size: .85rem;
+            }
+        }
+  
+    .message {      
+        color: black;
+        padding: 18px 20px;
+        line-height: 2.5rem;
+        font-size: 1.5rem;
+        border-radius: 5px;
+        margin-bottom: 3rem;
+        width: 60%;
+        position: relative;
+
+        @include response(phone){
+        font-size: 1.2rem;
+        width: 80%;
+        padding: 5px 10px;
+
+        }
+
+    &:after {
+      bottom: 100%;
+      left: 7%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      border-width: 10px;
+      margin-left: -10px;
+    }
+  }
+  
+  .send-message {
+    background: white;
+    float: right;
+    text-align: left;
+    word-break: break-all;
+    
+   
+  }
+  
+  .receive-message {
+    background-color: $color-primary-light;
+    word-break: break-all;
+    float: left;
+    text-align: left;
+    
+  }
+  
+}
+  
+}
+
+.clearfix{
+  list-style-type: none;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+
+//Chat send Box
+
+.chat-box{
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 10% 70% 20%;
+  align-items: center;
+  height: 10%;
+  background-color: $color-primary-dark;
+
+    @include response(phone){
+      height: 10%;
+    }
+
+    @include response(tab-port){
+      height: 10%;
+    }
+
+    &__icon {
+        
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+        color: white;
+        @include removeDefaultButtonStyle;
+        font-size: 20px;
+        box-shadow: none;
+
+        @include response(phone){
+            margin-left: 10px;
+            width: 20px;
+        }
+
+        svg{
+            font-size: 2rem;
+        }
+    }
+
+    .submit{
+        background-color: white;
+        border-radius: 50%;
+        width: 6rem;
+        color: black;
+        height: 6rem;
+
+         @include response(phone){
+             width: 3rem;
+            color: black;
+            height: 3rem;
+        }
+
+        @include response(tab-port){
+             width: 3rem;
+            color: black;
+            height: 3rem;
+        }
+    }
+
+    .add{
+        background-color: transparent;
+    }
+  
+  &__input{
+      position: relative;
+      text-align: left;
+      outline: none;
+      width: 100%;
+      padding: 1rem;
+      height: 100%;
+      font-size: 1.8rem;
+      font-family: 'Roboto';
+      color: #4b4b4b;            
+      border: 1px solid $color-primary-dark;
+      outline: none;
+
+      &:required{
+        box-shadow: none;
+        outline: none;
+      }
+
+      @include response(phone){
+        font-size: 1.4rem;
+      }
+      
+
+  }
+
+  &__submit{
+      margin-left: 0;
+      color: $color-primary-dark;
+      font-size: 2rem;
+      border-left: 1px solid $color-primary-dark;
+      position: relative;
+      border: 1px solid black;
+      cursor: pointer;
+      background-color: white;
+      height: 90%;
+
+
+
+      & > *{
+          font-size: 3rem;
+
+      }
+  }
+}
+
+
+ .chat-container{
+            width: 95%;
+            height: 100%;
+
+            @include response(phone) {
+                width: 100%;
+
+            }
+
+           
+
+        }

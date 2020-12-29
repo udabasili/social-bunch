@@ -1,9 +1,7 @@
 import { GET_MESSAGES } from "../actionType/user.actionType";
 import { restApi} from "../../services/api";
-import { removeError, addError } from "./errors.action";
 import { startFetching } from "./fetch.actions";
-import { setCurrentUser } from "./user.action";
-import { toast } from 'react-toastify';
+import { sendPrivateMessage } from "../../services/socketIo";
 
 export const loadMessages = (messages) =>({
     type: GET_MESSAGES,
@@ -12,12 +10,12 @@ export const loadMessages = (messages) =>({
 
 
 export const getMessages = (userId, recipientId) => {    
+    console.log(userId, recipientId)
     return dispatch =>{
         return new Promise((resolve, reject)=>{
             return restApi("get",`/user/${userId}/messages/${recipientId}`)
                 .then(response =>{       
-                    dispatch(loadMessages(response))            
-                    return resolve()
+                    return resolve(response)
                 })
                 .catch(error => {            
                     return reject()
@@ -32,10 +30,7 @@ export const sendMessage = (receiverId,body) =>{
         dispatch(startFetching())
         return restApi("post", `/user/${userId}/send-message/${receiverId}`, body)
             .then((response)=>{
-                dispatch(removeError())
-                dispatch(loadMessages(response.messages));
-                let currentUser = response.currentUser
-                dispatch(setCurrentUser(currentUser))
+                sendPrivateMessage(body.message, userId, receiverId, null, body.chatId)
             })
             .catch((error)=>{
                 }

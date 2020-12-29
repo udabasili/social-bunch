@@ -36,7 +36,7 @@ export const createEvent = (event) =>{
                 toast.success(`New event created`)
             })
             .catch((error)=>{
-                toast.error('Something went wrong. Try again later')
+                toast.error(error.response.data.message)
             }
         )
     }

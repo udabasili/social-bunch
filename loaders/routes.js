@@ -5,6 +5,7 @@ const middleware = require('../api/middlewares');
  * This handles setting
  * @param {*} app 
  */
+
 module.exports = function(app) {
     app.use('/auth/',routes.authRoute);
     app.get('/authenticate-user', middleware.authHandler.confirmAuthentication)

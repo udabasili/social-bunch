@@ -1,0 +1,29 @@
+.event{
+    height: max-content;
+    display: flex;
+    margin: 2rem 0;
+    flex-direction: column;
+
+    @include response(phone){
+        height: max-content;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        @include response(phone){
+            height: max-content;
+            margin: 2rem auto;
+            height: 90vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: scroll;
+        }
+    }
+}
+

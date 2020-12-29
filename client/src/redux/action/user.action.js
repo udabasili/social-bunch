@@ -7,8 +7,7 @@ import { restApi, TokenHeader } from '../../services/api';
 import { addError, removeError} from './errors.action';
 import { setGroups } from './group.action';
 import { setEvents } from './event.action';
-import { startFetching } from './fetch.actions';
-import {disconnectSocket, getOnlineUsers, updateUserInfo } from '../../services/socketIo';
+import {disconnectSocket, getOnlineUsers } from '../../services/socketIo';
 import axios from 'axios';
 import {  toast } from 'react-toastify';
 
@@ -68,7 +67,7 @@ export const SignUp =  (fileHeader, fileData, jsonData) =>{
                 sessionStorage.setItem('validator', response.validator)               
                 setRestApiHeader(response.validator)
                 dispatch(setCurrentUser(currentUser));    
-                resolve(currentUser.username)
+                resolve(currentUser)
             })
             .catch((error) =>{
                 console.log(error.response.data)
@@ -119,7 +118,7 @@ export function editUser (userData){
                 })
                
                 .catch((error)=>{                    
-                    return reject('Something went Wrong. Try Again Later')
+                    return reject(error.response)
                 })
         })
     }
@@ -171,6 +170,20 @@ export const getAllUsers = () =>{
     }
 }
 
+//Get all the users registered
+export const getUser = (userId) => {
+    let currentUserId = sessionStorage.getItem('userId'); 
+    return restApi('get', `/user/${currentUserId}/profile/${userId}`)
+        .then((response) => {
+            return response
+        })
+        .catch((error) => {
+            console.log(error.response)
+            return error.response.data.message
+        })
+    
+}
+
 
 
 
@@ -178,7 +191,7 @@ export const addFriend =  (addedUserId) =>{
     let userId = sessionStorage.getItem('userId'); 
     return dispatch =>{
         console.log(userId)
-        return restApi('get', `/user/${userId}/add-friend/${addedUserId}`)
+        return restApi('post', `/user/${userId}/add-friend/${addedUserId}`)
             .then((response)=>{  
                 console.log(userId)
               
@@ -199,13 +212,33 @@ export const addFriend =  (addedUserId) =>{
     }
 }
 
+export const removeFriend = (removedFriendId) => {
+    let userId = sessionStorage.getItem('userId');
+    return dispatch => {
+        return restApi('post', `/user/${userId}/remove-friend/${removedFriendId}`)
+            .then((response) => {
+                dispatch(removeError())
+                let currentUser = response.currentUser
+                let users = response.filteredUsers
+                dispatch(setAllUsers(users))
+                dispatch(setCurrentUser(currentUser))
+                getOnlineUsers()
+                toast.success("Friend Removed")
+
+            })
+            .catch((error) => {
+                toast.error("Something wrong happened. Please try again later")
+
+                console.log(error)
+            })
+    }
+}
 
 
 export const getLocation = (coords) =>{
-    let userId = sessionStorage.getItem('userId');
     return dispatch =>{
     return new Promise((resolve, reject) =>{
-        return restApi('post', `/user/${userId}/get-location`, coords)
+        return restApi('post', `/api/get-location`, coords)
             .then((result) => {                
                 dispatch(removeError())
                 resolve(result)

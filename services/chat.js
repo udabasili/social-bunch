@@ -131,7 +131,8 @@ class ChatService {
         })
         let userSender = await Models.User.findOne({
             username: sender
-        })        
+        })     
+   
         const filteredData = await userSender.filterUserData()
         logger('info', `${sender} messaged ${receiver}`)                
 

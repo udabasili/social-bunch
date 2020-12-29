@@ -27,14 +27,15 @@ const confirmAuthentication = async (req, res, next) =>{
                     message:"unAuthorized User"
                 })
             }
-        const userRecord = await User.findOne({ username: user.username})
-        if (!userRecord) {
+        const currentUser = await User.findById(user._id)
+            .select('-email -password')
+            .populate('friends', ['_id', 'username', 'userImage'])
+        if (!currentUser) {
             return next({
                 status:401,
                 message:"unAuthorized User"
             })
         }
-        const currentUser = userRecord.filterUserData();
         logger('info', 'Verified User has valid token');
         return res.status(200).json({
             status:200,

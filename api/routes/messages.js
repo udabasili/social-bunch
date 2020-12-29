@@ -8,13 +8,13 @@ route.post('/send-message/:receiverId', async function(req, res, next){
             req.params.userId,
             req.params.receiverId,
             req.body.message,
-            req.body.location
+            req.body.location,
+            req.body.chatId
         )
-        const {messages, currentUser} = await MessageService.createMessage();
+        const {currentUser} = await MessageService.createMessage();
         return res.status(200).json({
             status:200,
             message:{
-                messages,
                 currentUser
                 }    
             })    
@@ -32,7 +32,7 @@ route.get('/messages/:recipientId', async (req, res, next) => {
             req.params.userId,
             req.params.recipientId,
         )
-        const messages = await MessageService.getMessagesBetweenUsers() ;     
+        const messages = await MessageService.getMessagesBetweenUsers() ;    
         return res.status(200).json({
             status:200,
             message:messages,

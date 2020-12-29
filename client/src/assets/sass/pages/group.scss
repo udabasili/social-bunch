@@ -1,20 +1,28 @@
 .group{
+    height: max-content;
     display: flex;
-    max-width: 100%;
-    position: relative;
-    height: 85%;
-
+    margin: 2rem 0;
+    flex-direction: column;
 
     @include response(phone){
-        flex-direction: column;
-        align-items: center;
+        height: max-content;
     }
 
-    .chat__main-section{
-        @include response(phone) {
-            position: static;
+    &__list{
+         display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        @include response(phone){
+            height: max-content;
+            margin: 2rem auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: scroll;
         }
         
     }
-
 }

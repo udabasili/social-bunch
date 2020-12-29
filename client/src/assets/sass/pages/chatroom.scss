@@ -1,15 +1,24 @@
 .chatroom{
     display: flex;
-    height: 85vh;
-    width: 100%;
+    height: 100%;
+    width: 60%;
+    margin: 0 auto;
 
     @include response(phone){
         display: flex;
         flex-direction: column;
+        height: 80%;
+        width: 100%;
+        align-items: center;
     }
 
     @include response(tab-port) {
         display: flex;
         flex-direction: column;
+        height: 80%;
+        width: 100%;
+        align-items: center;
     }
+
+
 }

@@ -56,19 +56,18 @@ export const disconnectSocket = () => {
 /**PRIVATE MESSAGES **/
 
 export const connectOnAuth = (username) => {
-    socket.emit("login", {username:username})
+    socket.emit("login", {username})
 }
 
-export const sendPrivateMessage =  (message, sender, receiver, location) =>{      
+export const sendPrivateMessage = (message, sender, receiver, location, chatId) =>{    
+    console.log(sender, receiver)  
     return socket.emit("messageUser", {
        message,
        sender,
        receiver,
-       location
-       }, (response)=>{
-           
-       return response
-   })
+       location,
+        chatId
+       })
 }
 
 export const receivePrivateMessage = (receiveMessageHandler) => {
@@ -96,16 +95,31 @@ export const getAllUsers = () => {
     socket.emit("allUsers");
 }
 
-export const setAllUsersHandler = (allUsersHandler) => {
+export const setAllUsersListener = (allUsersHandler) => {
     socket.on("setAllUsers", allUsersHandler);
 }
 
-export const UnRegisterSetAllUsersHandler = (allUsersHandler) => {
+export const newUserAlert = (newUserHandler) => {
+    socket.emit("newUser", newUserHandler);
+}
+
+export const newUserListener = (newUserHandler) => {
+    socket.on("newUserAdded", newUserHandler);
+}
+export const UnRegisternewUserListener = () => {
+    socket.off("newUserAdded");
+}
+
+export const UnRegistersetAllUsersListener = (allUsersHandler) => {
     socket.off("setAllUsers");
 }
 
 export const unRegisterSetOnlineUsers = () => {
     socket.off("onlineUsers");
+}
+
+export const UnRegisterChangeOnlineUsers = () => {
+    socket.off("changeOnlineUsers");
 }
 
 export const sendMessageToGroup = (message, groupId) =>{    

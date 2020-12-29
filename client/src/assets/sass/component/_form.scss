@@ -96,13 +96,37 @@
     &__input{
         border: none;
         position: relative;
-        background-color: transparent;
+        background-color: white;
         border:3px solid $color-primary-dark;
         width: 100%;
         height: 7vh;
         margin-bottom: 10px;
-        padding: 0;
+        padding: 10px;
         font-size: 1.6rem;
+
+        @include response(phone){
+            font-size: 1.5rem;
+        }
+
+        &:focus{
+            outline: none;
+        }
+
+        &::placeholder{
+            color: black;
+        }
+    }
+
+    &__textarea{
+        border: none;
+        position: relative;
+        background-color: transparent;
+        border:3px solid $color-primary-dark;
+        margin: 20px 0;
+        padding: 10px;
+        font-size: 1.6rem;
+        width: 100%;
+        background-color: white;
 
         @include response(phone){
             font-size: 1.5rem;
@@ -122,11 +146,6 @@
         font-size: 1.2rem;
         left: 0;
         top: -2.2rem;
-
-        @include response(phone){
-            display: none;
-
-        }
     }
     
 }

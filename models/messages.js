@@ -9,7 +9,9 @@ const messageSchema = new Schema(
         createdBy:{
             type:String,
         },
-
+        chatId:{
+            type: String
+        },
         location:{
             type:String
         }

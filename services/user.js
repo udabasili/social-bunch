@@ -17,30 +17,67 @@ const logger = require('../loaders/logger');
 
 
     async editUser(){      
-        await Models.User.findOneAndUpdate({_id:this.currentUserId}, 
-            {$set:this.currentUserRecord})
-        const updatedUser = await Models.User.findById(this.currentUserId);      
-        const currentUser = await updatedUser.filterUserData();
-        logger('info', `${this.currentUserRecord.username} edited his/her profile`)
+        const updatedUser = await Models.User.findOneAndUpdate({_id:this.currentUserId}, 
+            { $set: this.currentUserRecord }, { new: true })
+            .select('-email -password')
+            .populate('friends', [ '_id' , 'username' , 'userImage'])
+        logger('info', `${updatedUser.username} edited his/her profile`)
 
-        return currentUser;
+        return updatedUser;
     
     }
 
+    static async getUserData(userId) {
+        let result = await Models.User.findOne({_id: mongoose.Types.ObjectId(userId)})
+            .select('-email -password -friends')
+         return result;
+
+     }
+
     async addFriend (){
-        let currentUser = await Models.User.findById(this.currentUserId);
-        let otherUser = await Models.User.findById(this.otherUserId);
-        let filteredOtherUserData = await otherUser.filterUserData();
-        console.log('success')
-        await currentUser.addFriend(filteredOtherUserData)
-        await otherUser.addFriend(this.currentUserRecord);
-        const users = await Models.User.find();
-        currentUser = await Models.User.findById(this.currentUserId);
-        currentUser = await currentUser.filterUserData();
-        const filteredUsers =  await Models.User.filterData(users);
+        let currentUser = await Models.User.findByIdAndUpdate(this.currentUserId, {
+            $push: {
+                friends :this.otherUserId
+            }
+        }, { new: true }).populate('friends', ['_id', 'username', 'userImage']).select('-email -password')
+        let otherUser = await Models.User.findByIdAndUpdate(this.otherUserId, {
+            $push: {
+                friends: this.currentUserId
+            }
+        }, { new: true }).select('_id username socketId userImage')
+
+        const filteredUsers = await Models.User.find().select('_id username userImage')
         logger('info', `${currentUser.username} added ${otherUser.username} `)
         return {currentUser, filteredUsers}
     }   
+
+    async removeFriends(){
+        let currentUser = await Models.User.findByIdAndUpdate(this.currentUserId,{
+            $pull:{
+                friends: this.otherUserId
+            }
+        },
+        {new: true}
+        
+        ).populate('friends', ['_id', 'username' , 'userImage']).select('-email -password ')
+        let otherUser = await Models.User.findByIdAndUpdate(this.otherUserId, {
+            $pull: {
+                friends: this.currentUserId
+            }
+        },
+            { new: true }
+
+        )
+
+        const filteredUsers = await Models.User.find().select('_id username userImage')
+        logger('info', `${currentUser.username} removed ${otherUser.username} `)
+        return { currentUser, filteredUsers }
+
+
+
+    }
+
+    
 
 }
 

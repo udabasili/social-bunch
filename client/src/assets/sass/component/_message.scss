@@ -1,0 +1,48 @@
+.messages{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 63%;
+
+    @include response(phone){
+        display: none;
+    }
+
+    @include response(tab-port){
+        display: none;
+    }
+}
+
+.message{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid gray;
+    padding: 4rem 4rem;
+    cursor: pointer;
+
+    &__image{
+
+        .user-icon{
+            margin-top: 0;
+        }
+    }
+
+    &__text{
+        text-align: left;
+        cursor: pointer;
+
+        .username{
+            font-size: inherit;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size:2.3rem;
+        }
+
+        .label{
+            font-size: 1rem;
+        }
+
+    }
+}
+
+

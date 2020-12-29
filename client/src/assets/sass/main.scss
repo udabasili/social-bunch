@@ -14,24 +14,25 @@
 
 //component
 @import "./component/card";
+@import "./component/chat";
 @import "./component/button";
-@import "./component/iframe";
 @import "./component/user-list-item";
 @import "./component/form";
 @import "./component/contact-list";
-@import "./component/medial-object";
+@import "./component/message";
 @import "./component/modal";
 @import "./component/profile";
 @import "./component/icon-custom";
 @import "./component/notification";
 @import "./component/drop-down";
 @import "./component/loader";
+@import "./component/contacts";
+@import "./component/message";
 
 //layout
 @import "./layout/header";
 @import "./layout/navigation";
 @import "./layout/sections";
-@import "./layout/chat-area";
 @import "./layout/user-profile";
 @import "./layout/group-members-section";
 
@@ -41,3 +42,7 @@
 @import "./pages/group.scss";
 @import "./pages/profile.scss";
 @import "./pages/not-found.scss";
+@import "./pages/home.scss";
+@import "./pages/events.scss";
+@import "./pages/users.scss";
+@import "./pages/groupchat.scss";

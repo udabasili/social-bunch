@@ -6,7 +6,7 @@
 
   &__item{
     height: 10vh;
-    width: 97%;
+    width: 90%;
     margin: 2rem auto;
     display: flex;
     align-items: center;
@@ -43,13 +43,13 @@
     &:link,
     &:visited{
       text-decoration: none;
-      padding: 1.3rem 1rem;
-      width: 13rem;
-      font-size: 1.6rem;
+      padding: .6rem 0;
+      width: 9rem;
+      font-size: 1.4rem;
       cursor: pointer;
       margin-top: 1rem;
       font-weight: bold;
-      border-radius: 10px;
+      border-radius: 3px;
       color: white;
       display: inline-block;
     }
@@ -58,14 +58,25 @@
   &__buttons{
     display: flex;
     width: 100%;
+    align-items: center;
 
     .add{
       margin-right: 1rem;
       background-color: $color-primary-dark;
     }
-    .prof{
+    .profile-button{
       background-color: black;
+      margin-left: 2rem;
 
+    }
+
+    .null{
+      background-color: black;
+      cursor: not-allowed;
+    }
+
+    .remove{
+      background-color: red;
     }
   }
 

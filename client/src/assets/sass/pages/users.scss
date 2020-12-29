@@ -1,0 +1,13 @@
+
+.users {
+	height: 76.5vh;
+	display: flex;
+	margin: 2rem 0;
+	flex-direction: column;
+
+	
+    @include response(phone){
+		height: max-content;
+		min-height: 76.5vh;
+    }
+}

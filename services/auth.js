@@ -21,7 +21,6 @@ class AuthService {
         const u = {
             username: user.username,
             _id: user._id.toString(),
-            imageUrl: user.imageUrl
         };
         return jwt.sign(u, config.secretKey, {
            expiresIn: 60 * 60 * 24 
@@ -32,38 +31,60 @@ class AuthService {
         let adminUser  = await Models.User.findOne({
             isAdmin:true
         })
-        let filteredAdminUser = await adminUser.filterUserData()
-        let filteredCurrentUser = await currentUser.filterUserData()
-        await adminUser.addFriend(filteredCurrentUser)
-        await currentUser.addFriend(filteredAdminUser)
+        if (!adminUser){
+            adminUser = new Models.User({
+                username: 'admin',
+                userImage: 'https://images.unsplash.com/photo-1582266255765-fa5cf1a1d501?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+                isAdmin: true,
+                email: 'admin@yahoo.com',
+                password: '09090909'
+
+            })
+            await adminUser.encryptPassword()
+
+
+            adminUser = await adminUser.save()
+        }
+        currentUser = await Models.User.findByIdAndUpdate(currentUser._id, {
+            $push: {
+                friends: adminUser._id
+            }
+        }, { new: true }).populate('friends', '_id username userImage').select('_id username userImage')
+        adminUser = await Models.User.findByIdAndUpdate(adminUser._id, {
+            $push: {
+                friends: currentUser._id
+            }
+        }, { new: true }).select('_id username userImage')
     }
 
     async SignUp() {
-        let newUser = await Models.User.create(this.user);
+        let newUser = await Models.User.create({...this.user, userImage: this.imageUrl});
         await newUser.encryptPassword()
-        newUser.userImage = this.imageUrl;
         newUser = await newUser.save();
         if (newUser.username === 'admin') {
             newUser.isAdmin = true
         } else {
             await this.addAdminToUser(newUser)
         }
-        newUser = await newUser.save();
+        newUser = await newUser.save()
         const generatedToken = this.generateToken(newUser)
-        newUser = await newUser.filterUserData()
+        newUser = await  Models.User.findById(newUser._id)
+            .select('_id username userImage')
+            .populate('friends', ['_id', 'username', 'userImage'])
         return {newUser, generatedToken}
     }
 
     async SignIn() {
         const {email, password} = this.user;
-        const userRecord = await Models.User.findOne({email})
-        if (!userRecord){
+        let currentUser = await Models.User.findOne({email})
+            .populate('friends', ['_id', 'username', 'userImage'])
+        if (!currentUser){
             throw new Error('User not registered');
         }
-        let isMatched = await userRecord.comparePassword(password);        
+        let isMatched = await currentUser.comparePassword(password);        
         if(isMatched){
-            const generatedToken = this.generateToken(userRecord);
-            const currentUser = userRecord.filterUserData();
+            currentUser = currentUser.filterUserData()
+            const generatedToken = this.generateToken(currentUser);
             return {currentUser, generatedToken}
         }
         else {

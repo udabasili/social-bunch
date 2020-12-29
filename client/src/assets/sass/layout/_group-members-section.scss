@@ -2,62 +2,7 @@
 
     
 
-    &__list{
-        background-color: #CAD1C9;
-        margin: 0 auto;
-        padding: 2rem;
-        width: 80%;
-        height: 100%;
-        border-radius: 10px;
-        box-shadow: $box-shadow;
-
-        @include response(phone){
-            height: 80%;
-        }
-
-    }
-
-    &__name{
-
-        &::first-letter{
-            text-transform: uppercase;
-
-        }
-
-    }
-
-    &__item{
-        font-size: 1.5rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 5px;
-
-        @include response(phone){
-            font-size: 1rem;
-        }
-    }
-
-    &__status{
-        width: 12px;
-        order: 3;
-        margin-left: 20px;
-        height: 12px;
-        border-radius: 50%;
-    }
-
-    &__name{
-        font-weight: bolder;
-    }    
+   
 }
 
 
-.online{
-    background-color: greenyellow;
-
-}
-
-.offline{
-    background-color: yellow;
-
-}

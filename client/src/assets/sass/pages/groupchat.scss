@@ -1,0 +1,136 @@
+.groupchat{
+    display: grid;
+    grid-template-columns: [full-start] minmax(6rem, 1fr) 
+        [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+        [center-end] minmax(6rem, 1fr) [full-end];
+    height: 85vh;
+
+    &__members{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        grid-column: center-start / col-end 3;
+
+        @include response(phone){
+            display: none;
+            grid-column: full-start / col-end 2;
+
+        }
+         @include response(tab-port){
+            display: none;
+            grid-column: full-start / col-end 2;
+
+        }
+    }
+
+      &__list{
+        background-color:white;
+        margin: 0 auto;
+        padding: 2rem;
+        width: 80%;
+        flex-grow: 1;
+        border-radius: 10px;
+        box-shadow: $box-shadow;
+
+        @include response(phone){
+            border-radius: unset;
+            margin: 0;
+            width: 100%;
+        }
+
+        @include response(tab-port){
+            border-radius: unset;
+            margin: 0;
+            width: 100%;
+        }
+
+        
+
+    }
+
+    &__name{
+
+        &::first-letter{
+            text-transform: uppercase;
+
+        }
+
+    }
+
+    &__item{
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+
+        
+        .online{
+            background-color: rgb(106, 255, 7);
+
+        }
+
+        .offline{
+            background-color: yellow;
+
+        }
+
+        @include response(phone){
+            font-size: 1rem;
+        }
+        @include response(tab-port){
+            font-size: 1rem;
+        }
+    }
+
+    &__status{
+        width: 12px;
+        order: 3;
+        margin-left: 20px;
+        height: 12px;
+        border-radius: 50%;
+    }
+
+    &__name{
+        font-weight: bolder;
+    }   
+
+    &__chat{
+        background-color: gold;
+        grid-column: col-end 3 / center-end;
+
+        @include response(phone){
+            grid-column: full-start / full-end ;
+
+        }
+
+        @include response(tab-port){
+            grid-column: full-start / full-end ;
+            justify-self: center;
+
+
+        }
+
+        .chat__header{
+            justify-content: space-between;
+            border-bottom: none;
+
+            .username, .logout{
+                font-size: 3rem;
+            }
+
+            .logout{
+                color: red;
+                cursor: pointer;
+                background-color: black;
+                height: 100%;
+                font-size: 1rem;
+                width: 7rem;
+            }
+        }
+    
+    }
+
+
+
+}

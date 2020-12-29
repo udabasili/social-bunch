@@ -22,8 +22,13 @@ const userSchema = new Schema({
     },
     userImage:{
         type:String,
+        required: [true, 'You must upload an image'],
+
     },
     bio:{
+        type:String
+    },
+    dateOfBirth:{
         type:String
     },
     phoneNumber:{
@@ -39,15 +44,15 @@ const userSchema = new Schema({
         type:Date
     },
     isAdmin:{
-        type:Boolean
+        type:Boolean,
+        default: false
     },
 
-    friends:[
-        {
-            userInfo:{},
-            messages:[]
-        }
-    ],
+    friends:[{
+        type: Schema.ObjectId,
+        ref: 'User'
+    }]
+
     
 },
 {
@@ -65,17 +70,11 @@ userSchema.methods.encryptPassword =  async function(req, res, next){
     
 }
 
-userSchema.methods.comparePassword = async function (userConfirmPassword, next) {
-    try {
-        
+userSchema.methods.comparePassword = async function (userConfirmPassword) {  
         let passwordCheck = await bcrypt.compare(userConfirmPassword, this.password)                
         return passwordCheck;
-
-    } catch (error) {
-        return next(error)
-
-    }
 }
+
 userSchema.methods.uploadImage =  function(imageBuffer){
     try {
         this.userImage = imageBuffer

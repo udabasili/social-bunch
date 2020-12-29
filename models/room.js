@@ -31,17 +31,24 @@ roomSchema.methods.setRoomsByUser = async function (socketId) {
         this.socketId = socketId;
         return this.save()
     } catch (error) {
-        
+        return next(error)
+
     }
 }
 
 
 
 roomSchema.methods.leaveRoom = async function(username){
-    let users = [...this.users]
-    users = users.filter((user)=> user.username !== username)
-    this.users = users;
-    return this.save()
+    try {
+        let users = [...this.users]
+        users = users.filter((user) => user.username !== username)
+        this.users = users;
+        return this.save()
+    } catch (error) {
+        return next(error)
+
+    }
+    
 }
 
 module.exports = mongoose.model('Room', roomSchema)
