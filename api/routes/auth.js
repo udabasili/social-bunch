@@ -9,7 +9,7 @@ const logger = require('../../loaders/logger');
 
 const storage = cloudinaryStorage({
 	cloudinary: cloudinary,
-	folder: 'snagged',
+	folder: 'simplychat',
 	filename: function (req, file, cb) {
 		cb(undefined, `${file.originalname.split('.'[0])}`);
 	}

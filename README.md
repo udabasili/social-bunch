@@ -11,10 +11,12 @@ This is a chat app built with  React , Node, SocketIo amongst other things and o
 ![Simply-chat sample](https://user-images.githubusercontent.com/33573587/72227768-ae01fb80-3576-11ea-9c45-893c6c9bf21a.png
 )
 
+## Private chat
+
+![image1](https://user-images.githubusercontent.com/33573587/103261714-ddbd3580-4978-11eb-95ad-c5804e5e2006.png)
 ### group chat section
 
-![Simply Chat](https://user-images.githubusercontent.com/33573587/75646102-d9bc6c00-5c1e-11ea-84b3-9392e7c3543f.png)
-
+![SimplyChat](https://user-images.githubusercontent.com/33573587/103261715-ddbd3580-4978-11eb-99de-8b7db1f01d2b.png)
 ### To Run
 
 The best way is to visit the heroku website for the deployed website  [Simply Chat](http://www.simplychats.live/).

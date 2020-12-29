@@ -37,7 +37,7 @@ class AuthService {
                 userImage: 'https://images.unsplash.com/photo-1582266255765-fa5cf1a1d501?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
                 isAdmin: true,
                 email: 'admin@yahoo.com',
-                password: '09090909'
+                password: '11111111'
 
             })
             await adminUser.encryptPassword()
