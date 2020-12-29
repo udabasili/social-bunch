@@ -76,20 +76,21 @@
         font-size: 1.6rem;
 
         @include response(phone){
-            margin: .6rem;
+            margin: 1rem;
         }
 
         @include response(tab-port){
-            margin: .6rem;
+            margin: 1rem;
         }
 
         .label{
-            font-weight: bold;
+            font-weight: bolder;
             padding: 1rem;
+            text-transform: capitalize;
         }
 
         .value{
-            text-transform: lowercase;
+            text-transform: capitalize;
         }
 
     }
@@ -97,6 +98,17 @@
     &__list{
         grid-column: 1 / -1;
         justify-self: center;
+
+        @include response(tab-port){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+         @include response(phone){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+         
          
 
 
@@ -118,6 +130,7 @@
             grid-column: full-start / full-end;
             margin: 0;
             align-self: flex-start;
+            height: max-content;
 
         }
 

@@ -7,6 +7,16 @@
     justify-content: center;
     align-items: center;
 
+    @include response(phone){
+        margin: 3rem auto;
+        width: 90%;
+    }
+
+    @include response(tab-port){
+        margin: 3rem 0;
+        width: 95%;
+    }
+
 
     
 }

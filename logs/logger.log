@@ -25194,3 +25194,99 @@ Tue, 29 Dec 2020 04:30:29 GMT | INFO | loggers.log | User admin communicated wit
 Tue, 29 Dec 2020 04:30:29 GMT | INFO | loggers.log | Current User is permitted access to this route | 
 Tue, 29 Dec 2020 04:30:35 GMT | INFO | loggers.log | Socket 0xLmvsB8Nw4Xmz6CAAAi disconnected | 
 Tue, 29 Dec 2020 04:30:35 GMT | INFO | loggers.log | Socket U3utsXllb6TjthSBAAAj disconnected | 
+Tue, 29 Dec 2020 06:09:46 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Tue, 29 Dec 2020 06:09:46 GMT | INFO | loggers.log | Connected to mongodb | 
+Tue, 29 Dec 2020 06:13:36 GMT | INFO | loggers.log | Socket l13XC5oZoj38HJnkAAAA connected | 
+Tue, 29 Dec 2020 06:13:36 GMT | INFO | loggers.log | Socket Fg7FCXY2HOh8Q9beAAAB connected | 
+Tue, 29 Dec 2020 06:13:37 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 29 Dec 2020 06:13:52 GMT | INFO | loggers.log |  admin has logged in | 
+Tue, 29 Dec 2020 06:13:52 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 29 Dec 2020 06:13:52 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 29 Dec 2020 06:13:52 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 29 Dec 2020 06:13:53 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Tue, 29 Dec 2020 06:13:53 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Tue, 29 Dec 2020 06:14:03 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:04 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:05 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:05 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:05 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:05 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:05 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:05 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:05 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:05 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:05 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:05 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:05 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:05 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:05 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:05 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:05 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:05 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:05 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:12 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:12 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:14:12 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:14:12 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:19:46 GMT | INFO | loggers.log | Serving is running on PORT 8081 | 
+Tue, 29 Dec 2020 06:19:47 GMT | INFO | loggers.log | Socket eSyVo6AMUS60q2jVAAAA connected | 
+Tue, 29 Dec 2020 06:19:47 GMT | INFO | loggers.log | Connected to mongodb | 
+Tue, 29 Dec 2020 06:19:48 GMT | INFO | loggers.log | Socket CStdCfQsloH87gWUAAAB connected | 
+Tue, 29 Dec 2020 06:19:49 GMT | INFO | loggers.log | Socket Oq0zzS85OduyOAhRAAAC connected | 
+Tue, 29 Dec 2020 06:19:49 GMT | INFO | loggers.log | All Groups gotten from Group Model in database | 
+Tue, 29 Dec 2020 06:19:49 GMT | INFO | loggers.log | All Events gotten  from Event Model in database | 
+Tue, 29 Dec 2020 06:19:49 GMT | INFO | loggers.log | All Users gotten from User Model in database | 
+Tue, 29 Dec 2020 06:19:50 GMT | INFO | loggers.log | rooms successfully created | 
+Tue, 29 Dec 2020 06:19:50 GMT | INFO | loggers.log | admin has the socket id set in database | 
+Tue, 29 Dec 2020 06:19:56 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:19:56 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:19:56 GMT | INFO | loggers.log | User admin communicated with the server | 
+Tue, 29 Dec 2020 06:19:56 GMT | INFO | loggers.log | Current User is permitted access to this route | 
+Tue, 29 Dec 2020 06:20:16 GMT | INFO | loggers.log | Socket eSyVo6AMUS60q2jVAAAA disconnected | 
