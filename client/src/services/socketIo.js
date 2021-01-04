@@ -78,7 +78,6 @@ export const unRegisterReceivePrivateMessage =() =>{
     socket.off('receiveVideoCall')
 }
 
-/**GROUP MESSAGING**/
 export const changeOnlineUsers = (changeOnlineUsersHandler) => {
     socket.on("changeOnlineUsers", changeOnlineUsersHandler);
 }

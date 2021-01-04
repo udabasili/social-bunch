@@ -150,18 +150,23 @@ class ChatService {
         }
     }
     static async setUserSocketId(username, socketId){
-        let user = await Models.User.findOne({
-            username: username
-        })        
-        user.socketId = socketId;
-        await user.save()
-        logger('info', `${username} has the socket id set in database`)                
+        try{
+             let user = await Models.User.findOne({
+            username
+            })        
+            user.socketId = socketId;
+            await user.save()
+            logger('info', `${username} has the socket id set in database`)    
+        }catch(error){
+            console.log(error)
+        }
+                   
 
     }
 
     static async getOnlineUsers(){
-        const users = await Models.User.find();
-        const filteredData =  await Models.User.filterData(users);
+        const users  = await Models.User.find().select('_id username userImage')
+        logger('info', 'All Users gotten from User Model in database')
         let onlineUsers = await Models.User.find({'socketId':{$ne: null}});
         onlineUsers = users.map(user => ({
             username:user.username,
@@ -171,7 +176,7 @@ class ChatService {
         )
         
         return {
-            users: filteredData,
+            users,
             onlineUsers
         }
     }

@@ -8,10 +8,10 @@ import ChatSendBox from './chat-send-box.component';
 import { getMessages } from '../redux/action/message.action';
 import { getLocation } from '../redux/action/user.action';
 import { Link } from 'react-router-dom';
-import { IoIosDocument, IoIosCamera } from "react-icons/io";
-import { MdKeyboardVoice } from "react-icons/md";
+import { IoIosCloseCircle, IoIosCamera } from "react-icons/io";
 import { toast } from 'react-toastify';
 import { toggleDropdown } from '../redux/action/notification.action';
+
 /**
   * Handles messages between two users
 */
@@ -156,7 +156,9 @@ class PrivateMessages extends PureComponent {
 	
 	render() {
 		const {messages, image} = this.state;
-		const {recipient, makeVideoCall} = this.props;
+		const {recipient, makeVideoCall, isMobile, usersStatus, hideUsersforMobileHandler, } = this.props;
+		let currentUserStatus = usersStatus.find(user => user.username === recipient.username).isOnline || false
+		
 		return (
 			<div className='chat'>
 			<div className='chat__header'>
@@ -167,7 +169,7 @@ class PrivateMessages extends PureComponent {
 						className="user__photo" />
 					<div className="user__detail">
 						<span className="username">{recipient.username}</span>
-						<span className="status">{recipient.username}</span>
+						<span className="status">{currentUserStatus ? "Online" : 'Offline'}</span>
 					</div>
 				</div>
 				<div className='icons'>
@@ -179,6 +181,7 @@ class PrivateMessages extends PureComponent {
 								</p>
 						}
 					</div>
+				
 					<input style={{display: 'none'}} 
 						type='file' 
 						accept='image/*' 
@@ -194,6 +197,13 @@ class PrivateMessages extends PureComponent {
 							className='icon'
 							icon={faUser} />
 					</Link>
+					{
+						isMobile &&
+						<div className='icon--upload'>
+							<IoIosCloseCircle className='icon close' onClick={() => hideUsersforMobileHandler(false)}/>
+						</div>
+					}
+					
 				</div>
 			</div>
 			<div className='chat__messages' ref={this.chatArea}>
@@ -218,7 +228,8 @@ const mapStateToProps = (state) =>({
   currentUser:state.user.currentUser,
   errors : state.errors,
   allUsers: state.user.users,
-  messages: state.messages.messages
+  messages: state.messages.messages,
+  usersStatus: state.user.usersStatus
 })
   
 const mapDispatchToProps = dispatch => ({

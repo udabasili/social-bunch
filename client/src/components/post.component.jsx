@@ -102,14 +102,14 @@ function Post({
 			<div className="user-icon">
 			<div className="user-icon__photo-border">
 				<img
-				src={user.userImage ? user.userImage : noImage}
+				src={ user  && user.userImage ? user.userImage : noImage}
 				alt="your profile"
 				className="user-icon__photo"
 				/>
 			</div>
 			</div>
 			<div className="post__user-username">
-			<span className="username">{`@${user.username}`}</span>
+			<span className="username">{`@${ user  &&  user.username}`}</span>
 			<span className="time-ago" >{timeAgo(post.createdAt)}</span>
 			</div>
 		</div>

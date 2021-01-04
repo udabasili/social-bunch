@@ -10,12 +10,12 @@ import {
   setRooms, 
   unRegisterSetOnlineUsers, 
   UnRegistersetAllUsersListener,
-  UnRegisterChangeOnlineUsers,
   setAllUsersListener, 
   UnregisterCurrentUserUpdateListener,
   UnRegisterSetUserInfo,
   startIOConnection,
-  disconnectSocket} from "./services/socketIo";
+  disconnectSocket,
+  UnRegisterReceiveVideoCallRequest} from "./services/socketIo";
 import NotFoundPage from './components/not-found';
 import Navigation from './components/navigation';
 import { removeError } from './redux/action/errors.action';
@@ -55,12 +55,13 @@ class MainRouter extends React.Component {
 	}
 
 	handleUnload(){
+		disconnectSocket()
 		unRegisterSetOnlineUsers()
 		UnRegisterSetUserInfo()
 		UnRegistersetAllUsersListener()
-		UnRegisterChangeOnlineUsers()
 		UnregisterCurrentUserUpdateListener()
-		disconnectSocket()
+		UnRegisterReceiveVideoCallRequest()
+
 
 	}
 

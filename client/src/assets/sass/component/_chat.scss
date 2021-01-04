@@ -9,7 +9,6 @@
 
     @include response(tab-port){
         height: 100%;
-        width: 70%;
     }
     
 
@@ -24,10 +23,14 @@
         border-bottom: 2px solid #10ad5a;
 
          @include response(phone){
+            background-color: black;
+            border: none;
             height: 10%;
         }
 
         @include response(tab-port){
+            background-color: black;
+            border: none;
             height: 14%;
         }
 
@@ -56,10 +59,13 @@
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
-
+                 @include response(tab-port) {
+                     color: white;
+                 }
                 .username{
                     font-weight: bold;
                     text-transform: capitalize;
+
 
                 }
                 .status{
@@ -77,11 +83,20 @@
             align-items: center;
             padding: 2rem;
 
+
                 .icon {
                     font-size: 3rem;
                     color: black;
                     margin: 0 .5rem;
                     cursor: pointer;
+                    @include response(tab-port) {
+                        color: $color-primary-dark;
+                    }
+
+                    @include response(tab-port) {
+                        color: $color-primary-dark;
+                    }
+
             
 
                     &--upload{
@@ -103,6 +118,10 @@
                            background-color: white;
                         }
                     }
+                }
+
+                .close{
+                    color: rgb(255, 19, 19);
                 }
         }
 
@@ -151,7 +170,7 @@
         }
         .left-date{
             grid-column: 1 / -1;
-            justify-self: flex-end;
+            justify-self: flex-start;
         }
 
         .sender-data{
@@ -184,8 +203,9 @@
 
         @include response(phone){
             font-size: 1.2rem;
-            width: 100%;
             padding: 5px 10px;
+            width: 30rem;
+
 
         }
 
@@ -289,12 +309,18 @@
     grid-template-columns:  min-content max-content;
     justify-content: flex-end;
 }
+
+.left {
+    grid-template-columns: max-content max-content;
+    justify-content: flex-start;
+}
 //Chat send Box
 
 .chat-box{
   max-width: 100%;
   position: relative;
   display: grid;
+
   grid-template-columns: 10% 70% 20%;
   align-items: center;
   height: 10%;
@@ -303,7 +329,7 @@
     
 
     @include response(phone){
-      height: 10%;
+      overflow: hidden;
     }
 
     @include response(tab-port){

@@ -39,7 +39,6 @@ export const logOut = () =>{
         dispatch(setAllUsersStatus([],[]))
         dispatch(setGroups(null))
         dispatch(setEvents(null))
-        getOnlineUsers()
         disconnectSocket()
         toast.success('User logged out')
     }

@@ -33,17 +33,18 @@ class ProfilePage extends React.PureComponent {
 	componentDidMount(){
 		getUser(this.props.match.params.userId)
 			.then((userData) =>{
+				
 				this.setState((prevState) => ({
 					...prevState,
 					user: {
 						...prevState.user,
 						_id: userData._id,
-						username: userData.username,
-						bio: userData.bio,
-						location: userData.location,
-						telephone: userData.phoneNumber,
+						username: userData.username || "",
+						bio: userData.bio || "",
+						location: userData.location  || "",
+						telephone: userData.phoneNumber || "",
 						userImage: userData.userImage,
-						occupation: userData.occupation ,
+						occupation: userData.occupation || "" ,
 						isAdmin: userData.isAdmin.toString() ,
 						joined: userData.createdAt.split('T')[0]
 					},
@@ -88,7 +89,7 @@ class ProfilePage extends React.PureComponent {
 				<ul className="profile__list">
 					<li className='profile__item'>
 						<span className='label'>Location: </span>
-						<span className='value'>{location.split(',')[0]}</span>
+						<span className='value'>{location ? location.split(',')[0] : ""}</span>
 					</li>
 					<li className='profile__item'>
 						<span className='label'>Telephone: </span>

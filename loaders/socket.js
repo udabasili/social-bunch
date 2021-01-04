@@ -27,19 +27,12 @@ function setRoomEvent(socket) {
  */
 function getAllOnlineUsersEvent(socket, io) {
     socket.on('getOnlineUsers', async ()=>{  
-        try {
-            const { users, onlineUsers } = await services.ChatService.getOnlineUsers()
-            io.emit('onlineUsers', {
-                users,
-                usersStatus: onlineUsers
-                }
-            )
-        } catch (error) {
-            return next(error)
-
-        }
+        const { users, onlineUsers } = await services.ChatService.getOnlineUsers()
+        io.emit('onlineUsers', {
+            users,
+            usersStatus: onlineUsers
+            })
         
-         ;
     })
 }
 
@@ -49,13 +42,12 @@ function getAllOnlineUsersEvent(socket, io) {
  */
 function setUserSocketIdEvent(socket, io){
     socket.on('login',async ({username},callback) => {   
-        try {
             await services.ChatService.setUserSocketId(username, socket.id)
-            io.emit('changeOnlineUsers')
-        } catch (error) {
-            return next(error)
-
-        }
+            const { users, onlineUsers } = await services.ChatService.getOnlineUsers()
+            io.emit('onlineUsers', {
+                users,
+                usersStatus: onlineUsers
+            })
         
     })
 }
@@ -188,7 +180,6 @@ function setAllUser(socket,io){
     socket.on('allUsers', async() =>{
         try {
             const allUsers = await services.ChatService.getAllUsers()
-            console.log(allUsers.length)
             io.emit('setAllUsers', {
                 allUsers
             })
@@ -203,7 +194,11 @@ function setAllUser(socket,io){
 
 function newUserAdded(socket, io) {
     socket.on('newUser', async () => {
-        socket.broadcast.emit('newUserAdded')
+        const { users, onlineUsers } = await services.ChatService.getOnlineUsers()
+        socket.broadcast.emit('newUserAdded', {
+        users,
+        usersStatus: onlineUsers
+    })
     })
 }
 
@@ -225,7 +220,6 @@ function updateParticularUsersData(socket, io) {
 
 function makeVideoCallWithUser(socket, io){
     socket.on('video-offer-1',async ({name,target, sdp}) =>{
-        console.log(name, target)
         const {caller, receiver} = await services.VideoService.makeCall(name, target)
         let msg = {
             name,
@@ -257,9 +251,13 @@ function iCECandidateHandler(socket, io){
     })
 }
 
-function onDisconnect(socket, io) {
+async function onDisconnect(socket, io) {
     services.ChatService.logOutCurrentUser(socket.id);
-    io.emit('changeOnlineUsers')
+    const { users, onlineUsers } = await services.ChatService.getOnlineUsers()
+    io.emit('onlineUsers', {
+        users,
+        usersStatus: onlineUsers
+    })
     loggerFunction('info', `Socket ${socket.id} disconnected`)
 }
 

@@ -49,17 +49,9 @@ class GroupPage extends Component {
 	}
   
   componentDidMount() {
-	const { setAllUsersStatus, getPosts } = this.props
     const {currentUser, groupId } = this.state;
     let username = currentUser.username;      
-	currentUserUpdateListener(({currentUser}) =>{
-		this.props.setCurrentUser(currentUser)
-	})
     setSocket(currentUser.username)
-      setOnlineUsers((response => {
-        setAllUsersStatus(response.users, response.usersStatus)
-      }
-    ))
     receiveMessageForGroup(this.setGroupMessages)
     updateRoomMembersStatus(this.updateRoomMembersStatus)
     enterRoom(username, groupId);

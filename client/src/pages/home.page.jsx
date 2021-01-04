@@ -7,47 +7,66 @@ import {
   setSocket,
   newUserListener,
   currentUserUpdateListener,
+  getOnlineUsers,
   setOnlineUsers,
 } from "../services/socketIo";
+import { getAllGroups } from '../redux/action/group.action'
+import { getAllEvents } from '../redux/action/event.action';
 import ChatRoom from "./chatroom.page";
 import EventPage from "./event.pages";
 import UsersPage from "./users.page";
 import { connect } from "react-redux";
-import { getUser, setAllUsersStatus, setCurrentUser, verifyUser } from "../redux/action/user.action";
+import { getUser, setAllUsersStatus, setCurrentUser, getAllUsers, verifyUser } from "../redux/action/user.action";
 import { toast } from "react-toastify";
 import { setNotification, toggleDropdown } from "../redux/action/notification.action";
 import FeedPage from "./feed.page";
 import { getPosts } from "../redux/action/post.actions"
-
 class Home extends Component {
 
     componentDidMount(){
-		const { currentUser, setAllUsersStatus, getPosts } = this.props
+		const { currentUser, 
+				setAllUsersStatus,
+				getPosts, 
+				setCurrentUser, 
+				setNotification, 
+				getAllUsers, 
+				getAllEvents, 
+				getAllGroups } = this.props
+		
 		getPosts()
-		this.props.setNotification(currentUser.notifications)
+		setOnlineUsers((response => {
+            setAllUsersStatus(response.users, response.usersStatus)
+			}
+		))
 		newUserListener(this.newUserAdded)
 		currentUserUpdateListener(({currentUser}) =>{
-			this.props.setCurrentUser(currentUser)
+			setCurrentUser(currentUser)
 		})
-        setSocket(currentUser.username)
-          setOnlineUsers((response => {
-            setAllUsersStatus(response.users, response.usersStatus)
-          }
-        ))
+		setSocket(currentUser.username)
+		getAllEvents()
+		getAllUsers()
+		getAllGroups()
+		setNotification(currentUser.notifications)
         
 	}
 
 	componentDidUpdate(prevProps){
 		if(this.props.currentUser !== prevProps.currentUser){
 			this.props.setNotification(this.props.currentUser.notifications)
+			setSocket(this.props.currentUser.username)
+			getOnlineUsers()
+
 
 		}
 	}
 	
-	newUserAdded = () =>{
-		this.props.verifyUser()
-			.then(() =>{})
-			.catch(res => console.log(res))
+	/**
+	 * Get online users 
+	 */
+
+
+	newUserAdded = response => {
+        this.props.setAllUsersStatus(response.users, response.usersStatus)
 		toast.info('New User Joined')
 	}
   render() {
@@ -80,6 +99,9 @@ const mapDispatchToProps = (dispatch) => ({
 	getPosts: () => dispatch(getPosts()),
 	setCurrentUser:(user) => dispatch(setCurrentUser(user)),
 	getUser:(user) => dispatch(getUser(user)),
+	getAllEvents: () => dispatch(getAllEvents()),
+	getAllGroups : () => dispatch(getAllGroups()),
+	getAllUsers : () => dispatch(getAllUsers()),
 	toggleDropdown : (value) => dispatch(toggleDropdown(value)),
 
 

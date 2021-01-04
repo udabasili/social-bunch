@@ -96,8 +96,8 @@
     }   
 
     &__chat{
-        background-color: gold;
         grid-column: col-end 3 / center-end;
+        height: 85vh;
 
         @include response(phone){
             grid-column: full-start / full-end ;

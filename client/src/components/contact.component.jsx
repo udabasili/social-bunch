@@ -11,7 +11,7 @@ import { toggleDropdown } from '../redux/action/notification.action';
 
 */
 
-function Contacts({currentUser, allUsers, showMessages, toggleDropdown}) {  
+function Contacts({currentUser, allUsers, showMessages, toggleDropdown, hideUsersforMobileHandler}) {  
   return (
       <div className='contacts'>
           {currentUser.friends ?
@@ -21,6 +21,7 @@ function Contacts({currentUser, allUsers, showMessages, toggleDropdown}) {
                     key={i} 
                       onClick={() =>{
                         toggleDropdown(false);
+                        hideUsersforMobileHandler(true)
                         showMessages({
                           image: friend.userImage,
                           ...friend,

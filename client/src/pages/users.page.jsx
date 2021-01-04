@@ -11,6 +11,10 @@ class UsersPage extends Component {
         filteredUserData: [],
         users: "",
     }
+
+    componentDidMount(){
+        this.props.getAllUsers()
+    }
    
     /**
      * show users that have the input typed in as part of their character
@@ -72,5 +76,6 @@ const mapStateToProps = (state) => ({
     currentUser: state.user.currentUser
 
 })
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(UsersPage);

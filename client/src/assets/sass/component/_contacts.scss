@@ -3,6 +3,8 @@
     height: 25%;
     display: flex;
     overflow: auto;
+    flex-grow: 1;
+
     border-top: 2px $color-background solid;
     border-bottom: 4px $color-background solid;
 
@@ -31,9 +33,17 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin: 0 1rem;
+
+    
 
          @include response(phone) {
-             margin: 3rem;
+            margin: 0 3rem;
+
+         }
+
+         @include response(tab-port) {
+             margin: 0 3rem;
 
          }
 

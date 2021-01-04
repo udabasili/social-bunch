@@ -4,7 +4,7 @@ import {withRouter, NavLink} from 'react-router-dom';
 import {connect} from 'react-redux';
 import { removeError } from '../redux/action/errors.action';
 import validator from '../components/validator';
-import { getOnlineUsers, setSocket, getAllUsers } from '../services/socketIo';
+import { getOnlineUsers, setSocket, startIOConnection, getAllUsers } from '../services/socketIo';
 import {isMobile} from 'react-device-detect';
 import AuthImage from '../assets/images/alexander-andrews-JYGnB9gTCls-unsplash.jpg'
 import Loader from '../components/loader.component';
@@ -158,6 +158,7 @@ class Auth extends PureComponent {
 			}
 			this.props.SignUp(header, this.state.imageFile, userData)
 			.then((response) =>{
+				startIOConnection()
 				getOnlineUsers()
 				setSocket(response.username)
 				getAllUsers()
@@ -176,6 +177,7 @@ class Auth extends PureComponent {
 			break;
 		case 'login':
 			this.props.Login(this.state.auth, this.state.loginData).then((response)=>{
+			startIOConnection()
 			getOnlineUsers()
 			setSocket(response)
 				.catch((error) => {

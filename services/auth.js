@@ -47,6 +47,22 @@ class AuthService {
             await adminUser.encryptPassword()
             await adminUser.save()
         }
+        currentUser = await Models.User.findOneAndUpdate({username: currentUser.username}, {
+            $push: {
+                friends : adminUser._id,
+                notifications: {
+                    text:  `${adminUser.username} added you automatically as a friend `,
+                    
+                }
+                
+            }
+        }, { new: true }).populate('friends', ['_id', 'username', 'userImage']).select('-email -password')
+        await Models.User.findOneAndUpdate({username: adminUser.username}, {
+            $push: {
+                friends: currentUser._id,
+            }
+        })
+    return currentUser
        
     }
 
@@ -56,14 +72,12 @@ class AuthService {
         newUser = await newUser.save();
         if (newUser.username === 'admin') {
             newUser.isAdmin = true
+            newUser = await newUser.save()
         } else {
-            await this.addAdminToUser(newUser)
+            newUser = await this.addAdminToUser(newUser)
         }
-        newUser = await newUser.save()
         const generatedToken = this.generateToken(newUser)
-        newUser = await  Models.User.findById(newUser._id)
-            .select('-email -password')
-            .populate('friends', ['_id', 'username', 'userImage'])
+        console.log(newUser.friends)
         return {newUser, generatedToken}
     }
 
