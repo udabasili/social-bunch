@@ -10,7 +10,8 @@
     top: 15vh;
 
     @include response(phone){
-        right: 5vw;
+        right: 0vw;
+        min-width: 100%;
     }
 
     @include response(tab-port) {

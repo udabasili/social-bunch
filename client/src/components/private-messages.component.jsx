@@ -183,7 +183,7 @@ class PrivateMessages extends PureComponent {
 						type='file' 
 						accept='image/*' 
 						className='image-upload'  />
-					<MdKeyboardVoice className='icon' onClick={this.makeVideoCallHandler}/>
+					{/* <MdKeyboardVoice className='icon' onClick={this.makeVideoCallHandler}/> */}
 					<Link
 						to={{
 							pathname: `/user/${recipient._id}/profile`,

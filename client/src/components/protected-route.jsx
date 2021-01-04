@@ -19,20 +19,19 @@ const PrivateRoute = ({ component: Component, currentUser, isAuthenticated, ...r
     axios.interceptors.response.use(
 			response => response,
 			error =>{
-                console.log(error.response.data.message )
-                if(error.response.data.message === 'jwt expired'){
-                     localStorage.clear()
-                    sessionStorage.clear()
-                    setCurrentUser({})
-                    setRestApiHeader(false)
-                    setAllUsersStatus([],[])
-                    setGroups(null)
-                    setEvents(null)
-                    getOnlineUsers()
-                    disconnectSocket()
-                    toast.error('Please login again')
-                    // history.push('/auth/login')
-                }
+        console.log(error.response.data.message )
+        if(error.response.data.message === 'jwt expired'){
+              localStorage.clear()
+            sessionStorage.clear()
+            setCurrentUser({})
+            setRestApiHeader(false)
+            setAllUsersStatus([],[])
+            setGroups(null)
+            setEvents(null)
+            getOnlineUsers()
+            disconnectSocket()
+            toast.error('Please login again')
+        }
 				throw error
 			}
 		) 

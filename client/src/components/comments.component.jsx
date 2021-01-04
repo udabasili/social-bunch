@@ -110,7 +110,7 @@ function Comments({
 
     const deleteCommentHandler = (postId, commentId) =>{
         deleteComment(postId, commentId)
-            .then(() => toast.success("comment replied ") )
+            .then(() => toast.success("Comment deleted ") )
     }
 
 

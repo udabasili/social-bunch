@@ -6,16 +6,7 @@ import { GiStoneWall } from "react-icons/gi";
 
 const LeftNav = ({navLinkChangeHandler}) => {
 
-//    const onClickHandle = (value) =>{
-//         let divArray = Array.from(document.querySelectorAll('.side-nav__item'))
-//         navLinkChangeHandler(value)
-//         divArray.map(element=> (
-//             (element.name === value) ? 
-//             element.classList.add('active') :
-//             element.classList.remove('active')
-//             )
-//         )
-//     }
+
     
     return (
         <div className='side-nav'>

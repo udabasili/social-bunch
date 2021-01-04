@@ -24,11 +24,18 @@
     overflow: auto;
     padding: 19px;
 
+
+
     &__item{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+         @include response(phone) {
+             margin: 3rem;
+
+         }
 
     }
 

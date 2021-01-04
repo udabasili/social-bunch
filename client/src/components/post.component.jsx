@@ -42,7 +42,7 @@ function Post({
 	}
 
 	const timeAgo = (date) =>{
-		let seconds = Math.floor((Date.now() - new Date(date))/ 1000)
+		let seconds = Math.abs(Math.floor((Date.now() - new Date(date))/ 1000))
 		let interval = Math.floor(seconds / 31536000)
 		if(interval > 1){
 			return interval + ' year' + datePrefix(interval)

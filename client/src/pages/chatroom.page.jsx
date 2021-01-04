@@ -19,9 +19,6 @@ import Peer from 'peerjs';
 import HomeAside from '../components/home-aside.component';
 import Contacts from '../components/contact.component';
 import UserMessageHistory from '../components/user-message-history.component';
-// import {Video, VideoCalling, VideoReceiving} from '../components/video.component'
-import SendVideoCall from '../components/send-video-call.component';
-import ReceiveVideoCall from '../components/recieve-video.call.component';
 import VideoCall from '../components/video-call.component';
 
 const { RTCPeerConnection, RTCSessionDescription } = window;
