@@ -8,13 +8,13 @@ class MessageService {
      * @param {String} userId - the id of the current user
      * @param {String} recipientId the id of the current user
      * @param {*} message the message being set
-     * @param {*} location the optional location value of the current user
+     * @param {*} image the optional image value of the current user
      */
-    constructor(userId, recipientId, message=null, location=null) {
+    constructor(userId, recipientId, message=null, image=null) {
         this.senderId = mongoose.Types.ObjectId(userId)
         this.recipientId = mongoose.Types.ObjectId(recipientId)
         this.message = message;
-        this.location = location;
+        this.image = image;
     }
     
     /**
@@ -29,7 +29,7 @@ class MessageService {
         const message = await  Models.Message.create({
             text: this.message ,
             createdBy: currentUser.username,
-            location: this.location,
+            image: this.image,
             chatId: this.generateChatId(this.senderId, this.recipientId)
          })
         await currentUser.saveMessage(receiver, message, 'send');

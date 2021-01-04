@@ -17,9 +17,10 @@ class ChatService {
     }
 
     static async getAllUsers(){
-        const allUsers = await Models.User.find().select('-email -password -friends')
+        const allUsers = await Models.User.find().select('_id username userImage')
         return allUsers
     }
+    
     static async joinRoom(username, socketId, groupId){
         let group = await Models.Group.findById(mongoose.Types.ObjectId(groupId));
         let room = await Models.Room.findOne({name: group.name});        
@@ -125,20 +126,13 @@ class ChatService {
         return onlineFriends
     }
 
-    static async getUserSocketId(receiver, sender){
-        let userReceiver = await Models.User.findOne({
-            username: receiver
+    static async getUserSocketId(user){
+        let userRecord = await Models.User.findOne({
+            username: user
         })
-        let userSender = await Models.User.findOne({
-            username: sender
-        })     
-   
-        const filteredData = await userSender.filterUserData()
-        logger('info', `${sender} messaged ${receiver}`)                
-
+      
         return {
-            socketId: userReceiver.socketId,
-            userSender: filteredData
+            socketId: userRecord.socketId,
         }
     }
     

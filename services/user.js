@@ -33,16 +33,29 @@ const logger = require('../loaders/logger');
          return result;
 
      }
+    
+    static async getCurrentUserData(userId) {
+        let result = await Models.User.findOne({_id: mongoose.Types.ObjectId(userId)})
+            .select('-email -password')
+            .populate('friends', [ '_id' , 'username' , 'userImage'])
+         return result;
+
+     }
 
     async addFriend (){
         let currentUser = await Models.User.findByIdAndUpdate(this.currentUserId, {
             $push: {
-                friends :this.otherUserId
+                friends :this.otherUserId,
+                
             }
         }, { new: true }).populate('friends', ['_id', 'username', 'userImage']).select('-email -password')
         let otherUser = await Models.User.findByIdAndUpdate(this.otherUserId, {
             $push: {
-                friends: this.currentUserId
+                friends: this.currentUserId,
+                notifications: {
+                    text:  `${currentUser.username} added you as a friend `,
+                    
+                }
             }
         }, { new: true }).select('_id username socketId userImage')
 

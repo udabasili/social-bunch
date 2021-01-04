@@ -45,20 +45,9 @@ class AuthService {
                 location: 'California' 
             })
             await adminUser.encryptPassword()
-
-
-            adminUser = await adminUser.save()
+            await adminUser.save()
         }
-        currentUser = await Models.User.findByIdAndUpdate(currentUser._id, {
-            $push: {
-                friends: adminUser._id
-            }
-        }, { new: true }).populate('friends', '_id username userImage').select('_id username userImage')
-        adminUser = await Models.User.findByIdAndUpdate(adminUser._id, {
-            $push: {
-                friends: currentUser._id
-            }
-        }, { new: true }).select('_id username userImage')
+       
     }
 
     async SignUp() {
@@ -73,7 +62,7 @@ class AuthService {
         newUser = await newUser.save()
         const generatedToken = this.generateToken(newUser)
         newUser = await  Models.User.findById(newUser._id)
-            .select('_id username userImage')
+            .select('-email -password')
             .populate('friends', ['_id', 'username', 'userImage'])
         return {newUser, generatedToken}
     }

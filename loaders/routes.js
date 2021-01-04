@@ -25,6 +25,14 @@ module.exports = function(app) {
     app.use('/user/:userId/', 
         middleware.authHandler.setCurrentUser,
         middleware.authHandler.protectedRoute, 
+        routes.postRoute); 
+    app.use('/user/:userId/', 
+        middleware.authHandler.setCurrentUser,
+        middleware.authHandler.protectedRoute, 
+        routes.commentRoute); 
+    app.use('/user/:userId/', 
+        middleware.authHandler.setCurrentUser,
+        middleware.authHandler.protectedRoute, 
         routes.groupRoute);   
     app.use(middleware.errorHandler);
 

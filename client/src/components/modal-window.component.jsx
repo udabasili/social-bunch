@@ -10,11 +10,7 @@ const ModalWindow = ({ closeHandler, children, setCloseButton=true, history}) =>
                 {setCloseButton &&
                     <FontAwesomeIcon
                         className='close-button'
-                        onClick={() => {
-                            closeHandler(false)
-                            history.push('/')
-
-                        }}
+                        onClick={closeHandler}
                         icon={faTimes} />
                 }
                 

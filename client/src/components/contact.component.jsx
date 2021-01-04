@@ -1,6 +1,8 @@
 import  React from 'react';
 import  UserIcon from './user-icon-status';
 import {connect} from 'react-redux';
+import { toggleDropdown } from '../redux/action/notification.action';
+
 
 /**
   * @desc handles showing the user's friends and checking if they are online or not sending the online
@@ -9,7 +11,7 @@ import {connect} from 'react-redux';
 
 */
 
-function Contacts({currentUser, allUsers, showMessages}) {  
+function Contacts({currentUser, allUsers, showMessages, toggleDropdown}) {  
   return (
       <div className='contacts'>
           {currentUser.friends ?
@@ -17,11 +19,13 @@ function Contacts({currentUser, allUsers, showMessages}) {
               {currentUser.friends.map((friend, i)=>(
                   <div 
                     key={i} 
-                      onClick={() =>
+                      onClick={() =>{
+                        toggleDropdown(false);
                         showMessages({
                           image: friend.userImage,
                           ...friend,
-                        })
+                          })
+                        }
                       }
                     className='contact__item'>
                       <UserIcon 
@@ -48,4 +52,8 @@ const mapStateToProps = (state) =>({
 
 })
 
-export default connect(mapStateToProps, null)(Contacts)
+const mapDispatchToProps = dispatch =>({
+    toggleDropdown : (showNotif) => dispatch(toggleDropdown(showNotif)),
+
+ })
+export default connect(mapStateToProps, mapDispatchToProps)(Contacts)

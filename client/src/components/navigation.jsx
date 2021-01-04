@@ -3,6 +3,11 @@ import {connect} from "react-redux";
 import {setCurrentUser, logOut,  addFriend } from "../redux/action/user.action";
 import {withRouter, Link} from "react-router-dom";
 import {ReactComponent as Logo} from '../assets/images/comment.svg'
+import {
+    TiBell
+} from "react-icons/ti";
+import Dropdown from "./dropdown.component";
+import { toggleDropdown } from "../redux/action/notification.action";
 /**
   * @desc header handling notifications and log out actions
   * friends list to User Icon as props
@@ -11,15 +16,15 @@ import {ReactComponent as Logo} from '../assets/images/comment.svg'
   * @author Udendu Abasili
 
 */
-function Navigation ({currentUser, logOut}) {
+function Navigation ({currentUser, logOut, showNotifications, toggleDropdown, notifications}) {
     
     const clickHandler = () => {
-    
         document.querySelector('.navigation__checkbox').checked = false
     }
-    const [showDropDown, toggleDropDown] = useState(false)
-    const toggleDropDownHandler = () =>{
-        toggleDropDown(!showDropDown)
+
+    const logOutHandler = () =>{
+        logOut()
+        clickHandler()
     }
 
     return (
@@ -31,12 +36,14 @@ function Navigation ({currentUser, logOut}) {
                         Simply Chat
                     </Link>
                 </div>
-                <div class="navigation__dropdown">
-                    <p 
-                        onClick={toggleDropDownHandler}
-                        class="navigation__link-001">
+                <div className='notification'>
+                    <TiBell className="notification__icon" onClick={()=> toggleDropdown()} />
+                    <p className='notification__count'>
+                        {notifications.length}
                     </p>
                 </div>
+                {showNotifications && <Dropdown notifications={notifications}/>}
+                
                 <input type='checkbox' className='navigation__checkbox' id='toggle' />
                 <label className='navigation__button' htmlFor='toggle'>
                     <span className='navigation__icon'>&nbsp;</span>
@@ -57,7 +64,7 @@ function Navigation ({currentUser, logOut}) {
                     </li>
                     
                         <li className="navigation__item">
-                            <Link to="/" onClick={() =>logOut()} className="navigation__link">
+                            <Link to="/" onClick={logOutHandler} className="navigation__link">
                                 Log Out
                             </Link>
                         </li>
@@ -70,13 +77,18 @@ function Navigation ({currentUser, logOut}) {
 const mapStateToProps = (state) =>({
     currentUser:state.user.currentUser,
     isAuthenticated:state.user.isAuthenticated,
+    notifications: state.notification.notifications,
+    showNotifications: state.notification.showNotifications,
+
 
  })
 
  const mapDispatchToProps = dispatch =>({
     addFriend: (addedUserId) => dispatch(addFriend(addedUserId)),
     setCurrentUser: user => dispatch(setCurrentUser(user)),
-    logOut : () => dispatch(logOut())
+    logOut : () => dispatch(logOut()),
+    toggleDropdown : () => dispatch(toggleDropdown()),
+
  })
  
  export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Navigation));

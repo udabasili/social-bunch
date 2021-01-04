@@ -8,11 +8,15 @@ import ChatSendBox from './chat-send-box.component';
 import { getMessages } from '../redux/action/message.action';
 import { getLocation } from '../redux/action/user.action';
 import { Link } from 'react-router-dom';
-
+import { IoIosDocument, IoIosCamera } from "react-icons/io";
+import { MdKeyboardVoice } from "react-icons/md";
+import { toast } from 'react-toastify';
+import { toggleDropdown } from '../redux/action/notification.action';
 /**
   * Handles messages between two users
 */
  
+
 class PrivateMessages extends PureComponent {
 	constructor (props) {
 		super(props);
@@ -20,12 +24,18 @@ class PrivateMessages extends PureComponent {
 		this.state ={
 		  currentUser:props.currentUser,
 		  location:null,
-		  messages:null
+		  messages:[],
+		  image:{
+			name:null,
+			data: null,
+		  	isUploaded: false,
+		  },
 		}
 	}
+	
 
 	componentDidMount(){
-	  receivePrivateMessage(this.setReceivedMessage);    
+	 	 receivePrivateMessage(this.setReceivedMessage);    
 		this.props.getMessages(this.state.currentUser._id, this.props.recipient._id)
 		.then((messages) =>{
 			this.setState((prevState) => ({
@@ -66,13 +76,28 @@ class PrivateMessages extends PureComponent {
 	  this.chatArea.current.scroll(0, this.chatArea.current.scrollHeight)
 	}
 
+	appendInput = (message) =>{
+		let currentMessages = this.state.messages
+		currentMessages.push(message)
+		this.setState( prevState => ({
+			...prevState,
+			image:{
+				name:null,
+				data: null,
+				isUploaded: false,
+				messages : [...currentMessages]
+
+			},
+		}), ()=> this.scrollToBottom() )
+
+	}
+
 	/**
 	 * add message that is sent to this user to the message list
 	 * @param {*} message 
 	 */
 	setReceivedMessage = ({ messages, receiver, sender}) =>{ 
 		const { currentUser } = this.props
-		console.log(receiver, currentUser._id, sender  )
 		if (receiver === currentUser._id || sender === currentUser._id) {
 
 			this.setState((prevState) => ({
@@ -89,37 +114,55 @@ class PrivateMessages extends PureComponent {
 	 * @param {*} type 
 	 */
 	
+	 makeVideoCallHandler = () =>{
+		 const {makeVideoCall, toggleDropdown, recipient} = this.props
+		toggleDropdown(false);
+		makeVideoCall({
+			...recipient,
+		}, true)
 
-	getUserLocation = () => {
-		if (!navigator.geolocation) {
-			return alert("Sorry this browser doesn't support geolocation")
-		}    
+	 }
 
-		navigator.geolocation.getCurrentPosition((position)=>{
-			let lat = position.coords.latitude
-			let long = position.coords.longitude
-			let coords = {lat, long}
-			this.props.getLocation(coords)
-			.then((res)=>{
-				this.setState((prevState)=>({
-					...prevState,
-					location: res
-					})
-				)
-			})
-			})
+	imageUpload = () =>{
+		const imageInput = document.querySelector(".image-upload")
+		const types = ['image/png', 'image/jpeg', 'image/jpg']
+		let size = 5 * 1024 * 1024 
+		imageInput.click()
+		imageInput.onchange = (e) => {
+			const files = imageInput.files
+			if(!types.includes(files[0].type)){
+				toast.error("Only png , jpeg and jpg images allowed ")
+				return;
+			}
+			if(Number(files[0].size) > size){
+				toast.error("Image can't be more than 5 MB ")
+				return;
+			}
+			let fileName = imageInput.value.split('\\')[imageInput.value.split('\\').length - 1];
+
+			this.setState( prevState => ({
+				...prevState,
+				image:{
+					name:fileName,
+					data: files[0],
+					isUploaded: true,
+				},
+			}))
+			
+		}
 	}
-  
+
+	
 	
 	render() {
-		const {messages} = this.state;
-		const {recipient} = this.props;
+		const {messages, image} = this.state;
+		const {recipient, makeVideoCall} = this.props;
 		return (
 			<div className='chat'>
 			<div className='chat__header'>
 				<div className="user">
 					<img
-							src={recipient.image || recipient.userImage}
+						src={recipient.image || recipient.userImage}
 						alt="your profile"
 						className="user__photo" />
 					<div className="user__detail">
@@ -128,6 +171,19 @@ class PrivateMessages extends PureComponent {
 					</div>
 				</div>
 				<div className='icons'>
+					<div className='icon--upload'>
+						<IoIosCamera className='icon' onClick={this.imageUpload}/>
+						{
+							image.isUploaded &&
+								<p className='status'>
+								</p>
+						}
+					</div>
+					<input style={{display: 'none'}} 
+						type='file' 
+						accept='image/*' 
+						className='image-upload'  />
+					<MdKeyboardVoice className='icon' onClick={this.makeVideoCallHandler}/>
 					<Link
 						to={{
 							pathname: `/user/${recipient._id}/profile`,
@@ -141,14 +197,17 @@ class PrivateMessages extends PureComponent {
 				</div>
 			</div>
 			<div className='chat__messages' ref={this.chatArea}>
-				{ messages && messages.map((message) =>(
+				{ messages.length > 0 && messages.map((message) =>(
 					<ChatMessenger message={message}
+					recipient={recipient}
 					location = {this.state.location}/>
 					))
-					}
+				}
 			</div>
 			<ChatSendBox 
 				location={this.state.location}
+				image={this.state.image.data}
+				appendInput={this.appendInput}
 				recipient={recipient}/>
 		</div>
 	  )
@@ -163,8 +222,10 @@ const mapStateToProps = (state) =>({
 })
   
 const mapDispatchToProps = dispatch => ({
-  getLocation: (coords) => dispatch(getLocation(coords)) , 
-  getMessages: (userId, recipientId) => dispatch(getMessages(userId, recipientId)),
+	getLocation: (coords) => dispatch(getLocation(coords)) , 
+	getMessages: (userId, recipientId) => dispatch(getMessages(userId, recipientId)),
+	toggleDropdown : (showNotif) => dispatch(toggleDropdown(showNotif)),
+
 })
 
 

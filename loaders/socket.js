@@ -1,8 +1,9 @@
 const loggerFunction = require('./logger')
 const services = require('../services');
 const { User } = require('../models');
+const { getUserSocketId } = require('../services/chat');
 const sockets = {};
-
+var init = null
 /**
  * switch on socket channel for setting values for room model
  * @param {*} socket 
@@ -125,8 +126,6 @@ function exitRoomEvent(socket){
  */
 function privateMessageEvent(socket, io){
     socket.on('messageUser', async ({ message, receiver, sender, location, chatId}, callback) =>{
-        let date = new Date();
-            // const { userSender, socketId } = await services.ChatService.getUserSocketId(receiver, sender)
         const MessageService = new services.MessageService(sender, receiver)
             const messages = await MessageService.getMessagesBetweenUsers();
             io.emit('privateMessage', {
@@ -134,16 +133,6 @@ function privateMessageEvent(socket, io){
                 receiver,
                 sender
             })
-            // const { userSender, socketId } = await services.ChatService.getUserSocketId(receiver, sender)
-            // io.emit('privateMessage', {
-            //     text: message,
-            //     createdAt: date.toISOString(),
-            //     createdBy: sender,
-            //     senderProfile: userSender,
-            //     sentTo: receiver,
-            //     location
-            // })
-
         
         }
     )
@@ -214,10 +203,8 @@ function setAllUser(socket,io){
 
 function newUserAdded(socket, io) {
     socket.on('newUser', async () => {
-            // const allUsers = await User.findOne('')
-            socket.broadcast.emit('newUserAdded')
-        })
-
+        socket.broadcast.emit('newUserAdded')
+    })
 }
 
 function updateParticularUsersData(socket, io) {
@@ -231,6 +218,45 @@ function updateParticularUsersData(socket, io) {
     )
 }
 
+/** 
+ * VIDEO CHAT
+ * 
+*/
+
+function makeVideoCallWithUser(socket, io){
+    socket.on('video-offer-1',async ({name,target, sdp}) =>{
+        console.log(name, target)
+        const {caller, receiver} = await services.VideoService.makeCall(name, target)
+        let msg = {
+            name,
+            target, 
+            sdp
+        }
+         io.to(receiver.socketId).emit("video-offer-2", {
+            caller,
+            receiver,
+            msg
+        });              
+    }) 
+}
+
+function acceptedCallHandler(socket, io){
+     socket.on("video-answer-1", ({ response, callerSocketId, receiverId }) => {
+        // io.to(callerSocketId).emit("answer-made", {
+        //     socketId: receiverId,
+        //     response
+        // });
+    });
+}
+function iCECandidateHandler(socket, io){
+    socket.on('ice-candidate', async ({target, candidate }) =>{
+        const  {socketId} = await getUserSocketId(target)
+        io.to(socketId).emit("ice-candidate-listener",{
+            candidate
+        });
+    })
+}
+
 function onDisconnect(socket, io) {
     services.ChatService.logOutCurrentUser(socket.id);
     io.emit('changeOnlineUsers')
@@ -239,8 +265,8 @@ function onDisconnect(socket, io) {
 
 sockets.init = function (server) {
     const io = require('socket.io').listen(server);
+    init = io
     io.on('connection', function (socket) {
-        
         loggerFunction('info', `Socket ${socket.id} connected`);
         setRoomEvent(socket);
         getAllOnlineUsersEvent(socket, io);
@@ -254,8 +280,9 @@ sockets.init = function (server) {
         updateParticularUsersData(socket, io)
         setAllUser(socket, io)
         newUserAdded(socket, io)
-        
-
+        makeVideoCallWithUser(socket, io)
+        acceptedCallHandler(socket, io)
+        iCECandidateHandler(socket, io)
         socket.on('disconnect', function () {
             onDisconnect(socket, io);
         });
@@ -263,6 +290,14 @@ sockets.init = function (server) {
   });
     
 
+}
+
+
+sockets.getIo =   () =>{
+    if(!init){
+        throw new Error('Socket io no initialized')
+    }
+    return init
 }
 
 module.exports = sockets;

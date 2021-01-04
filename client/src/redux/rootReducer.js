@@ -6,7 +6,8 @@ import groupReducer from "./reducers/group.reducer";
 import eventReducer from "./reducers/event.reducer";
 import errorReducer from "./reducers/error.reducer";
 import messageReducer from "./reducers/message.reducer";
-
+import notificationReducer from "./reducers/notification.reducer";
+import postReducer from "./reducers/post.reducer";
 
 const persistConfig = {
     key: "root", 
@@ -18,7 +19,9 @@ const rootReducer = combineReducers({
     groups: groupReducer,
     events: eventReducer,
     errors: errorReducer,
-    messages: messageReducer
+    messages: messageReducer,
+    notification: notificationReducer,
+    posts: postReducer
 
 })
 

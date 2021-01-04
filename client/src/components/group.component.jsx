@@ -119,7 +119,7 @@ class Group extends Component {
 					</React.Fragment>
 				}
 				{this.state.showModal && 
-					<ModalWindow closeHandler={this.toggleModal} >
+					<ModalWindow closeHandler={() =>this.toggleModal(false)} >
 					<form onSubmit={this.onSubmitHandler}>
 						<FormInput
 							label='Group Name'

@@ -1,29 +1,29 @@
-.notification__dialog{
+.notification{
     position: relative;
-
+    display: flex;
 
     svg{
-        font-size: 3rem;
+        font-size: 6rem;
         color: $color-primary-dark;
         cursor: pointer;
         align-self: center;
     }
 
-    &__icon{       
-        width: 100%;
-        height: 100%
-    }
-
-    &__counter{
+    &__count{
         position: absolute;
+        display: flex;
+        width: 2.5rem;
+        height: 2.5rem;
         border-radius: 50%;
         font-size: 1.2rem;
         top: 0;
-        left: 50%;
-        padding: .1px 6px;
-        text-align: center;
-        background-color: gray;
+        right: 0 ;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: black;
 
     }
+    
 
 }

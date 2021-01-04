@@ -1,0 +1,250 @@
+
+.post{
+    background-color: white;
+    margin: 20px 0;
+    width: 40vw;
+    border-radius: 10px;
+    box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.182);
+    padding: 2rem;
+    padding-bottom: 0;
+
+    @include response(phone) {
+        width: 100%;
+        border-radius: 0;
+
+
+    }
+
+    @include response(tab-port) {
+        width: 90vw;
+
+
+    }
+
+    @include response(tab-land) {
+        width: 55vw;
+
+    }
+
+    &__user{
+        display: flex;
+        align-items: center;
+        height: 15%;
+    }
+
+    &__user-username{
+
+        span{
+            display: block;
+        }
+
+
+        .username {
+            font-size: 2rem;
+            color: black;
+            font-weight: bold;
+
+            @include response(phone) {
+                font-size: 1.4rem;
+            }
+        }
+
+        .time-ago{
+            font-size: 1.2rem;
+            color: gray;
+        }
+    }
+
+    &__message{
+        padding-top: 1rem;
+        text-align: left;
+        font-size: 1.5rem;
+        height: max-content;
+
+    }
+
+    &__options{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem 0;
+
+    }
+
+    &__status{
+        display: flex;
+        width: max-content;
+
+
+        .likes,.comments{
+            all: initial;
+            font-family: Arial,
+            Helvetica,
+            sans-serif;
+            font-weight: 400;
+            font-weight: bold;
+            line-height: 1.7;
+            padding: .2rem;
+            font-size: 1.3rem;
+            color: $color-primary-dark;
+        }
+
+        .comments{
+            cursor: pointer;
+            margin-left: 10px;
+
+            &:hover{
+                color: green;
+            }
+        }
+    }
+
+    &__edit{
+        display: flex;
+
+        .edit, .delete{
+            padding: .3rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: black;
+            cursor: pointer;
+        }
+
+        .edit{
+            color: red;
+        }
+    }
+    .response{
+        display: flex;
+        justify-content: space-around;
+        height: 3%;
+        padding: 1rem 0;
+
+        &__item{
+            display: flex;
+            font-size: 1.5rem;
+            align-items: center;
+        }
+
+     
+    }
+}
+.user-icon{
+    margin: 0rem 1rem 0 0;
+    position: relative;
+
+    &__photo{
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 50%;
+
+    }
+    &__photo-border{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        border-color: white ;
+        border-style: solid;
+        border-width: 3px;
+    }
+
+    &__current-status{
+        background-color: #4cd137;
+        position: absolute;
+        left: 65%;
+        top: 70%;
+        height: 20px;
+        width: 20px;
+        border:3px solid white;
+        border-radius: 50%;
+
+    }
+ 
+}
+
+
+.comment{
+    margin-top: 10px;
+
+    &__input-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include response(phone){
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .user-icon{
+            margin: 0 10px;
+        }
+    }
+
+    &__input{
+        width: 85%;
+        min-height: 5vh;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        border-radius: 1rem;
+
+        @include response(phone){
+            width: 100%;
+            min-width: 9vh;
+        }
+
+        &::placeholder{
+            @include response(phone) {
+                font-size: 1.2rem;
+
+            }
+
+            @include response(tab-port) {
+                
+
+            }
+
+            @include response(tab-land) {
+                
+
+            }
+        }
+
+        
+    }
+
+    &__list{
+        padding: 2rem;
+    }
+
+    &__item{
+        list-style: none;
+        margin-top: 2rem;
+        display: flex;
+
+        @include response(phone){
+            width: 95%;
+        }
+        .user-icon {
+            margin: 0rem 2rem 0 0;
+            position: relative;
+        }
+    }
+
+    &__item-text{
+        background-color: rgba($color: black, $alpha: .3);
+        padding: 1rem;
+        width: 100%;
+        font-size: 1.2rem;
+        border-radius: 10px;
+    }
+}
+hr{
+    background-color: white;
+    color: black;
+    margin: 9px;
+}

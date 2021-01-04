@@ -47,11 +47,21 @@ const userSchema = new Schema({
         type:Boolean,
         default: false
     },
-
+    notifications:[{
+        text: String,
+        textRead:{
+            type : Boolean,
+            default: false
+        }
+    }],
     friends:[{
         type: Schema.ObjectId,
         ref: 'User'
-    }]
+    }],
+    posts:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Post'
+    }],
 
     
 },

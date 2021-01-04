@@ -17,25 +17,28 @@ const path = require('path');
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(cloudinaryConfig.cloudinaryConfig);
 
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(__dirname));
+    app.use(express.static(path.join(__dirname,'../client/build')))
+}
+
 /**ROUTE */
 
-    require('./routes')(app);
-    require('./db')()
+require('./routes')(app);
+require('./db')()
 
 /**STATIC FILES */  
 process.on('unhandledRejection', error => {
     // Won't execute
-    console.log('unhandledRejection', error.message);
+    console.log('unhandledRejection', error);
 });
 
-    if (process.env.NODE_ENV === 'production') {
-        app.use(express.static(__dirname));
-        app.use(express.static(path.join(__dirname,'../client/build')))
-        app.get('/*', (req, res)=>{
-            res.sendFile(path.join(__dirname, '../client/build/index.html'))
-        })
-    }
-
-
+    
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(__dirname));
+    app.get('/*', (req, res)=>{
+        res.sendFile(path.join(__dirname, '../client/build/index.html'))
+    })
+}
 
 module.exports = app;

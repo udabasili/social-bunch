@@ -380,14 +380,14 @@
 
         @include response(phone) {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             flex-direction: row;
            margin-top: 0;
         }
 
         @include response(tab-port) {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             flex-direction: row;
             margin-top: 0;
         }

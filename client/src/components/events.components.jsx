@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import {createEvent, 
@@ -115,7 +116,7 @@ class Events extends Component {
 			</ul>
 			}
 			{this.state.showModal && 
-				<ModalWindow closeHandler={this.toggleModal} >
+				<ModalWindow closeHandler={() =>this.toggleModal(false)} >
 				<Calendar onChange={this.getDate} 
 				/>
 				<form onSubmit={this.onSubmitHandler}>

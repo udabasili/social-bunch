@@ -14,6 +14,17 @@ const messageSchema = new Schema(
         },
         location:{
             type:String
+        },
+        image:{
+            type:String,
+
+        },
+        document:{
+            type: String
+        },
+        status:{
+            type: String,
+            default: 'delivered'
         }
     },
     {

@@ -8,4 +8,5 @@ const app = server.listen(config.port, function(){
 
 })
 
-sockets.init(app)
+const io = sockets.init(app)
+exports.io = io

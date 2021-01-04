@@ -11,12 +11,22 @@ import { getOnlineUsers,
   unRegisterSetOnlineUsers,
   changeOnlineUsers,
   receivePrivateMessage,
-  unRegisterReceivePrivateMessage
+  UnRegisterReceiveVideoCallRequest,
+  unRegisterReceivePrivateMessage,
+  receiveVideoCallRequest
   } from '../services/socketIo';
+import Peer from 'peerjs';
 import HomeAside from '../components/home-aside.component';
 import Contacts from '../components/contact.component';
 import UserMessageHistory from '../components/user-message-history.component';
+// import {Video, VideoCalling, VideoReceiving} from '../components/video.component'
+import SendVideoCall from '../components/send-video-call.component';
+import ReceiveVideoCall from '../components/recieve-video.call.component';
+import VideoCall from '../components/video-call.component';
 
+const { RTCPeerConnection, RTCSessionDescription } = window;
+
+const peerConnection = new RTCPeerConnection();
 
 class Chatroom extends PureComponent {
 	constructor (props) {
@@ -24,15 +34,24 @@ class Chatroom extends PureComponent {
 		this.state = {
 		showUserMessages: false,
 		showModal: false,
+		videoCallUser: false,
+		incomingVideoCall: false,
+		makingCall: false,
+		callType: null,
+		caller:null,
+		calling: null,
 		messages: new Array(0),
 		location:null,
 		room:null,
-		friend:null
+		friend:null,
+		videoCallURequestObject:{},
+		receiverId: null
 		};
     }
 
 
 	componentDidMount() {
+		receiveVideoCallRequest(this.receiveCall)
 		setOnlineUsers(this.setOnlineUsersHandler)
 		changeOnlineUsers(this.updateOnlineUsers)
 		getOnlineUsers()
@@ -46,7 +65,27 @@ class Chatroom extends PureComponent {
 	componentWillUnmount() {
 		unRegisterReceivePrivateMessage()
 		unRegisterSetOnlineUsers()
+		UnRegisterReceiveVideoCallRequest()
 	}
+	
+	receiveCall = async ({caller,receiver, msg}) => {
+		let videoCallURequestObject = {
+			...msg
+		}
+		this.setFriendHandler(caller)
+		this.setState((prevState) => ({
+			...prevState,
+			incomingVideoCall: true,
+			videoCallURequestObject,
+			caller,
+			calling: receiver,
+			receiverId: receiver.socketId,
+			callType: 'called',
+
+		}))
+		
+	}
+	
 	/**
 	 * Hnadles the sending of message through socket
 	 * @param {string} message 
@@ -71,6 +110,18 @@ class Chatroom extends PureComponent {
 		}))
 	}
 
+	makeVideoCallHandler = (friend, showVideoChat) =>{
+		this.setFriendHandler(friend)
+		this.setState((prevState) => ({
+			...prevState,
+			callType: 'calling',
+			videoCallUser: showVideoChat,
+			makingCall: true,
+			caller:this.props.currentUser,
+			calling: friend
+		}))
+	}
+
 	setReceivedMessage = ({ messages, receiver , sender }) => {
 		const {currentUser} = this.props
 		console.log(receiver, currentUser._id)
@@ -79,6 +130,7 @@ class Chatroom extends PureComponent {
 				friend._id === sender
 				)
 			)
+			console.log(user)
 			this.setFriendHandler(user)
 			this.setState((prevState) => ({
 				...prevState,
@@ -98,6 +150,7 @@ class Chatroom extends PureComponent {
 	}
 
 	showUserMessagesHandler = (friend) => {
+		console.log(this.props.currentUser._id, friend._id,"ii")
 		this.props.getMessages(this.props.currentUser._id, friend._id)
 			.then(() => {
 				this.setFriendHandler(friend)
@@ -141,9 +194,20 @@ class Chatroom extends PureComponent {
 				{ this.state.friend && this.state.showUserMessages &&
 					<PrivateMessages 
 					recipient= {this.state.friend}
+					makeVideoCall={this.makeVideoCallHandler} 
 					currentUser = {this.props.currentUser}/>
 				}
 				</div>
+				{
+					(this.state.incomingVideoCall || this.state.makingCall) &&
+					<VideoCall 
+						callType={this.state.callType}
+						makeVideoCall={this.makeVideoCallHandler} 
+						videoCallURequestObject={this.state.videoCallURequestObject}
+						receiverId={this.state.receiverId}
+						calling={this.state.calling}
+						caller= {this.state.caller} />
+				}
 			</React.Fragment>
 		)
 	}

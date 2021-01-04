@@ -2,6 +2,8 @@ import React from 'react';
 import {connect} from "react-redux";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { toggleDropdown } from '../redux/action/notification.action';
+
 
 /**
   * @desc show past messages between a user and his friend
@@ -10,19 +12,24 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 */
 
+
+
 function UserMessageHistory(props) {
+
+  function onClickHandler(friend){
+    props.toggleDropdown(false);
+    props.showMessages({
+      image: friend.userImage,
+      ...friend,
+    })
+  }
     return (
       <div className="messages">
         {props.currentUser.friends.map((friend, i) =>
           (
             <div
               key={i}
-              onClick={() =>
-                props.showMessages({
-                  image: friend.userImage,
-                  ...friend,
-                })
-              }
+              onClick={() => onClickHandler(friend)}
               className="message"
             >
               <div className="message__image">
@@ -44,7 +51,13 @@ function UserMessageHistory(props) {
     );
 }
 const mapStateToProps = (state) =>({
-    currentUser:state.user.currentUser
+    currentUser:state.user.currentUser,
+    
  })
  
- export default connect(mapStateToProps, null)(UserMessageHistory)
+  const mapDispatchToProps = dispatch =>({
+    toggleDropdown : (showNotif) => dispatch(toggleDropdown(showNotif)),
+
+ })
+
+ export default connect(mapStateToProps, mapDispatchToProps)(UserMessageHistory)

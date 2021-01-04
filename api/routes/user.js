@@ -36,6 +36,38 @@ route.get('/profile/:Id', async function (req, res, next) {
     }
 })
 
+route.get('/profile/:Id', async function (req, res, next) {
+    try {
+        
+        const result = await services.UserService.getUserData(req.params.Id) 
+        console.log(result)
+        return res.status(200).json({
+            status: 200,
+            message: result
+        })
+    }
+    catch (error) {
+        return (next)
+
+    }
+})
+
+route.get('/get-current-user', async function (req, res, next) {
+    try {
+        
+        const result = await services.UserService.getUserData(req.params.Id) 
+        console.log(result)
+        return res.status(200).json({
+            status: 200,
+            message: result
+        })
+    }
+    catch (error) {
+        return (next)
+
+    }
+})
+
 route.post('/add-friend/:addedUserId', async function(req, res, next){
     try {
         const UserService = new services.UserService(

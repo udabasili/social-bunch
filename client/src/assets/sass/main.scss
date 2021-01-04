@@ -28,6 +28,9 @@
 @import "./component/loader";
 @import "./component/contacts";
 @import "./component/message";
+@import "./component/post";
+@import "./component/comments";
+@import "./component/video";
 
 //layout
 @import "./layout/header";
@@ -39,6 +42,7 @@
 //page
 @import "./pages/auth.scss";
 @import "./pages/chatroom.scss";
+@import "./pages/feed.scss";
 @import "./pages/group.scss";
 @import "./pages/profile.scss";
 @import "./pages/not-found.scss";

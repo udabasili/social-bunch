@@ -4,3 +4,6 @@ module.exports.GroupService = require('./group');
 module.exports.EventService = require('./event');
 module.exports.MessageService = require('./messages');
 module.exports.ChatService = require('./chat');
+module.exports.PostService = require('./post');
+module.exports.CommentService = require('./comment');
+module.exports.VideoService = require('./videoChat');

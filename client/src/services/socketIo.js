@@ -1,5 +1,5 @@
-const io = require('socket.io-client')
-export const socket = io.connect('')
+import openSocket from 'socket.io-client';
+export const socket = openSocket(window.location.origin)
 
 /**CHAT**/
 //start the connection
@@ -55,7 +55,7 @@ export const disconnectSocket = () => {
 
 /**PRIVATE MESSAGES **/
 
-export const connectOnAuth = (username) => {
+export const setSocket = (username) => {
     socket.emit("login", {username})
 }
 
@@ -133,4 +133,57 @@ export const sendMessageToGroup = (message, groupId) =>{
         }
     })
 }
+
+export const changePostListener = (changePostListenerFunction) =>{
+    socket.on("posts", changePostListenerFunction);
+}
+
+export const UnregisterChangePostListener = () =>{
+    socket.off("posts");
+}
+
+export const currentUserUpdateListener = (currentUserUpdateListenerFunction) =>{
+    socket.on("currentUser", currentUserUpdateListenerFunction);
+}
+
+export const UnregisterCurrentUserUpdateListener = () =>{
+    socket.off("currentUser");
+}
+
+/** 
+ * VIDEO CALL
+*/
+export  function videoCallUser({name, target, sdp}) {
+    socket.emit("video-offer-1", {
+    name,
+    target,
+    sdp
+    })
+}
+
+export function receiveVideoCallRequest(receiveVideoCallRequestHandler){
+    socket.on("video-offer-2", receiveVideoCallRequestHandler)
+}
+
+export function UnRegisterReceiveVideoCallRequest(){
+    socket.off("video-offer" )
+}
+
+export function acceptVideoCall(msg, callerSocketId, receiverId){
+    socket.emit("video-answer-1", { msg, callerSocketId, receiverId })
+}
+
+export function iCECandidateEmittor({target, candidate}){
+    socket.emit("ice-candidate", { target, candidate })
+}
+
+
+export function iCECandidateListener(iCECandidateListenerHandler){
+    socket.on("ice-candidate-listener", iCECandidateListenerHandler)
+}
+
+// export function UnRegisterAcceptVideoCall(){
+//     socket.off("video-answer" )
+// }
+
 

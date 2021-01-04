@@ -12,7 +12,9 @@ import {
   UnRegistersetAllUsersListener,
   UnRegisterChangeOnlineUsers,
   setAllUsersListener, 
+  UnregisterCurrentUserUpdateListener,
   UnRegisterSetUserInfo,
+  startIOConnection,
   disconnectSocket} from "./services/socketIo";
 import NotFoundPage from './components/not-found';
 import Navigation from './components/navigation';
@@ -21,9 +23,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AddProfile from './pages/add-profile.page';
 import Home from './pages/home.page';
+import axios from "axios";
 
-const io = require('socket.io-client')
-export const socket = io.connect('')
 
 if (sessionStorage.getItem("validator")) {  
     setRestApiHeader(sessionStorage.getItem("validator"));
@@ -31,8 +32,11 @@ if (sessionStorage.getItem("validator")) {
   
 
 class MainRouter extends React.Component {
+	
 
 	componentDidMount(){
+		startIOConnection()
+		
 		const { history, removeError } = this.props
 		window.addEventListener('beforeunload', this.handleUnload);
 		this.unregisterHistory = history.listen(() => {
@@ -55,6 +59,7 @@ class MainRouter extends React.Component {
 		UnRegisterSetUserInfo()
 		UnRegistersetAllUsersListener()
 		UnRegisterChangeOnlineUsers()
+		UnregisterCurrentUserUpdateListener()
 		disconnectSocket()
 
 	}

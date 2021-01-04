@@ -10,9 +10,12 @@ import {
 	updateRoomMembersStatus,
 	enterRoom,
 	exitRoom,
-	unRegisterReceiveMessageForGroup } from '../services/socketIo';
+	unRegisterReceiveMessageForGroup, 
+	setSocket,
+	setOnlineUsers,
+	currentUserUpdateListener} from '../services/socketIo';
 import { BiLogInCircle } from "react-icons/bi";
-
+import { setAllUsersStatus } from '../redux/action/user.action';
 
 class GroupPage extends Component {
 	constructor (props) {
@@ -46,8 +49,17 @@ class GroupPage extends Component {
 	}
   
   componentDidMount() {
+	const { setAllUsersStatus, getPosts } = this.props
     const {currentUser, groupId } = this.state;
     let username = currentUser.username;      
+	currentUserUpdateListener(({currentUser}) =>{
+		this.props.setCurrentUser(currentUser)
+	})
+    setSocket(currentUser.username)
+      setOnlineUsers((response => {
+        setAllUsersStatus(response.users, response.usersStatus)
+      }
+    ))
     receiveMessageForGroup(this.setGroupMessages)
     updateRoomMembersStatus(this.updateRoomMembersStatus)
     enterRoom(username, groupId);
@@ -149,7 +161,9 @@ const mapStateToProps = (state) =>({
  })
  
 const mapDispatchToProps = dispatch => ({
-  getGroupMembersById: id => dispatch(getGroupMembersById(id))
+  	getGroupMembersById: id => dispatch(getGroupMembersById(id)),
+    setAllUsersStatus: (users, usersStatus) => dispatch(setAllUsersStatus(users, usersStatus)),
+
 })
 
 

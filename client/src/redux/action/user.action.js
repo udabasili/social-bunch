@@ -34,13 +34,13 @@ export const logOut = () =>{
     return dispatch =>{
         localStorage.clear()
         sessionStorage.clear()
-        disconnectSocket()
         dispatch(setCurrentUser({}))
         setRestApiHeader(false)
         dispatch(setAllUsersStatus([],[]))
         dispatch(setGroups(null))
         dispatch(setEvents(null))
         getOnlineUsers()
+        disconnectSocket()
         toast.success('User logged out')
     }
 }
@@ -174,6 +174,19 @@ export const getAllUsers = () =>{
 export const getUser = (userId) => {
     let currentUserId = sessionStorage.getItem('userId'); 
     return restApi('get', `/user/${currentUserId}/profile/${userId}`)
+        .then((response) => {
+            return response
+        })
+        .catch((error) => {
+            console.log(error.response)
+            return error.response.data.message
+        })
+    
+}
+
+export const getCurrentUser = (userId) => {
+    let currentUserId = sessionStorage.getItem('userId'); 
+    return restApi('get', `/user/${currentUserId}/`)
         .then((response) => {
             return response
         })

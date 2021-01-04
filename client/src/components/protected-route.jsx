@@ -1,6 +1,12 @@
 import  React from 'react'
-import {Route, Redirect} from "react-router-dom";
+import {Route, Redirect, useHistory} from "react-router-dom";
 import {connect} from "react-redux";
+import axios from 'axios'
+import { disconnectSocket, getOnlineUsers, setOnlineUsers } from '../services/socketIo';
+import { setAllUsersStatus, setCurrentUser, setRestApiHeader } from '../redux/action/user.action';
+import { setGroups } from '../redux/action/group.action';
+import { setEvents } from '../redux/action/event.action';
+import { toast } from 'react-toastify';
 
 /**
   * @desc ensures that the current user can only access route when he is logged in and authenticated
@@ -8,8 +14,28 @@ import {connect} from "react-redux";
 
 */
 
-const PrivateRoute = ({ component: Component, currentUser, isAuthenticated, ...rest }) => {    
-    console.log(sessionStorage.getItem("validator") && isAuthenticated)
+const PrivateRoute = ({ component: Component, currentUser, isAuthenticated, ...rest }) => {   
+    const history = useHistory()
+    axios.interceptors.response.use(
+			response => response,
+			error =>{
+                console.log(error.response.data.message )
+                if(error.response.data.message === 'jwt expired'){
+                     localStorage.clear()
+                    sessionStorage.clear()
+                    setCurrentUser({})
+                    setRestApiHeader(false)
+                    setAllUsersStatus([],[])
+                    setGroups(null)
+                    setEvents(null)
+                    getOnlineUsers()
+                    disconnectSocket()
+                    toast.error('Please login again')
+                    // history.push('/auth/login')
+                }
+				throw error
+			}
+		) 
 
     return (
     <Route {...rest} render={(props) => (
@@ -27,6 +53,12 @@ const mapStateToProps = (state) =>({
     currentUser:state.user.currentUser
  })
  
+ 
+const mapDispatchToProps = (dispatch) =>({
+  setAllUsersStatus: (users, usersStatus) => dispatch(setAllUsersStatus(users, usersStatus)),
+  setCurrentUser:(user) => dispatch(setCurrentUser(user)),
 
 
-export default connect(mapStateToProps , null)(PrivateRoute)
+})
+
+export default connect(mapStateToProps , mapDispatchToProps)(PrivateRoute)

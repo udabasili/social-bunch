@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar, faMailBulk, faUserFriends, faObjectGroup } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
+import { GiStoneWall } from "react-icons/gi";
 
 const LeftNav = ({navLinkChangeHandler}) => {
 
@@ -19,7 +20,10 @@ const LeftNav = ({navLinkChangeHandler}) => {
     return (
         <div className='side-nav'>
             <nav className='side-nav__list'>
-                <NavLink exact to='/' className='side-nav__item' title='Mail' >
+                <NavLink exact to='/' className='side-nav__item' title='Home' >
+                    <GiStoneWall className='side-nav__icon'/>
+                </NavLink>
+                <NavLink exact to='/chat' className='side-nav__item' title='Mail' >
                     <FontAwesomeIcon className='side-nav__icon' icon={faMailBulk} ></FontAwesomeIcon>
                 </NavLink>
                 <NavLink to='/events' className=' side-nav__item' title='Events' >
