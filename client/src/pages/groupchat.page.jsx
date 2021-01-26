@@ -102,7 +102,7 @@ class GroupPage extends Component {
                 <li
                   className="groupchat__item"
                 >
-                  <span
+                  {/* <span
                     className={`groupchat__status
                           ${
                             onlineMembers.some(
@@ -111,7 +111,7 @@ class GroupPage extends Component {
                               ? "online"
                               : "offline"
                           }`}
-                  ></span>
+                  ></span> */}
                   <div className="groupchat__name">
                     <span>{member}</span>
                     <br></br>
