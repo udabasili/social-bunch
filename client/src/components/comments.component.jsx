@@ -189,7 +189,7 @@ function Comments({
                         value={comment}
                         placeholder='Enter comment here...'
                         onChange={e => setComment(e.target.value)} className='comment__input'/>
-                    <input type='submit'  className='post-box__button' disabled={!comment.length > 0}/>
+                    <input type='submit'  className='post-box__button' value='submit' disabled={!comment.length > 0}/>
                     </form>
                     <ul className="comment__list">
                         {commentList !== undefined && commentList.length > 0 && (

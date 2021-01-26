@@ -54,12 +54,10 @@ class CommentService{
 
             })
             .populate('comments.replies.author', ['username', 'userImage'])
-            console.log(posts.length)
         return posts
     }
 
     static async updateComment(commentId, postId, comment){
-        console.log(comment.authorImage, comment.authorName, comment.comment, "fff")
         const query = {_id: mongoose.Types.ObjectId(postId), 'comments._id':  mongoose.Types.ObjectId(commentId)  }
         const update = {
             $set:{
@@ -83,7 +81,6 @@ a
  
 
     static async addLikeToComment(likedBy, postId, commentId) {
-        console.log(likedBy, postId, commentId)
         const query = {'_id': mongoose.Types.ObjectId(postId), 'comments._id': mongoose.Types.ObjectId(commentId)}
         const update = {
             $push: {
@@ -104,7 +101,6 @@ a
     }
 
     static async removeLikeFromComment(likedBy, postId, commentId) {
-        console.log(likedBy, postId, commentId)
         const query = {'_id': mongoose.Types.ObjectId(postId), 'comments._id': mongoose.Types.ObjectId(commentId)}
         const update = {
             $pull: {

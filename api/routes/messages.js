@@ -25,7 +25,6 @@ const uploadMiddleware = upload.fields([{ name: 'image', maxCount: 1 }, { name: 
 route.post('/send-message/:receiverId', uploadMiddleware, async function(req, res, next){
     try {
         let userData;
-        console.log(req.files === undefined)
         let image = null;
         if(req.files === undefined){
             userData = req.body
@@ -58,12 +57,10 @@ route.post('/send-message/:receiverId', uploadMiddleware, async function(req, re
 route.get('/messages/:recipientId', async (req, res, next) => {
 
     try {
-        console.log("dd")
         const MessageService = new services.MessageService(
             req.params.userId,
             req.params.recipientId,
         )
-        console.log(req.params.userId, req.params.recipientId)
         const messages = await MessageService.getMessagesBetweenUsers() ;    
         return res.status(200).json({
             status:200,

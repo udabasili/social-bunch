@@ -24,7 +24,7 @@ class Events extends Component {
       this.state = {
         eventName:'',
         time:'',
-        date:'',
+        date: new Date(),
         createdBy:props.currentUser.username,
         showModal: false
       }
@@ -50,7 +50,8 @@ class Events extends Component {
 
     onSubmitHandler = (e) =>{
       e.preventDefault()
-      const event = this.state
+	  const event = this.state
+	  console.log(this.state)
       this.props.addEvent(event)
       this.setState({showModal:false})
       this.setState((prevState) => ({
@@ -71,7 +72,7 @@ class Events extends Component {
 		joinEvent,
 		leaveEvent } = this.props;
 
-		const {eventName, time, } = this.state
+		const {eventName, time, date} = this.state
 		return (
 		<div className='event'>  
 			<button className='add-button' onClick={()=> this.toggleModal(true)} >
@@ -117,7 +118,7 @@ class Events extends Component {
 			}
 			{this.state.showModal && 
 				<ModalWindow closeHandler={() =>this.toggleModal(false)} >
-				<Calendar onChange={this.getDate} 
+				<Calendar onChange={this.getDate}   value={date}
 				/>
 				<form onSubmit={this.onSubmitHandler}>
 					<FormInput

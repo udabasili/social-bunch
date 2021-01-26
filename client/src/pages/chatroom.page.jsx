@@ -6,12 +6,10 @@ import { getMessages } from '../redux/action/message.action';
 import { 
   receivePrivateMessage,
   unRegisterReceivePrivateMessage,
-  receiveVideoCallRequest
   } from '../services/socketIo';
 import HomeAside from '../components/home-aside.component';
 import Contacts from '../components/contact.component';
 import UserMessageHistory from '../components/user-message-history.component';
-import VideoCall from '../components/video-call.component';
 
 
 class Chatroom extends PureComponent {
@@ -20,18 +18,11 @@ class Chatroom extends PureComponent {
 		this.state = {
 			showUserMessages: false,
 			showModal: false,
-			videoCallUser: false,
 			hideUsersforMobile: false,
-			incomingVideoCall: false,
-			makingCall: false,
-			callType: null,
 			isMobile: window.innerWidth <= 900,
-			caller:null,
-			calling: null,
 			messages: new Array(0),
 			room:null,
 			friend:null,
-			videoCallURequestObject:{},
 			receiverId: null
 		};
     }
@@ -39,7 +30,6 @@ class Chatroom extends PureComponent {
 
 	componentDidMount() {
 		window.addEventListener('resize', this.dimensionChange)
-		receiveVideoCallRequest(this.receiveCall)
 		receivePrivateMessage(this.setReceivedMessage)
 
 	}
@@ -58,35 +48,9 @@ class Chatroom extends PureComponent {
 		}))
 	}
 	
-	receiveCall = async ({caller,receiver, msg}) => {
-		let videoCallURequestObject = {
-			...msg
-		}
-		this.setFriendHandler(caller)
-		this.setState((prevState) => ({
-			...prevState,
-			incomingVideoCall: true,
-			videoCallURequestObject,
-			caller,
-			calling: receiver,
-			receiverId: receiver.socketId,
-			callType: 'called',
-
-		}))
-		
-	}
 	
-	/**
-	 * Hnadles the sending of message through socket
-	 * @param {string} message 
-	 */
-	// receiveMessageHandler = (message)  => {    
-	// 	this.setState(prevState => ({
-	// 	...prevState,
-	// 	showUserMessages: true,
-	// 	friend: message.senderProfile
-	// 	})
-	// )}
+	
+
 
 	/**
 	 * Shows messages of the friend clicked from the friend list
@@ -100,17 +64,7 @@ class Chatroom extends PureComponent {
 		}))
 	}
 
-	makeVideoCallHandler = (friend, showVideoChat) =>{
-		this.setFriendHandler(friend)
-		this.setState((prevState) => ({
-			...prevState,
-			callType: 'calling',
-			videoCallUser: showVideoChat,
-			makingCall: true,
-			caller:this.props.currentUser,
-			calling: friend
-		}))
-	}
+
 
 	setReceivedMessage = ({ messages, receiver , sender }) => {
 		const {currentUser} = this.props
@@ -132,10 +86,6 @@ class Chatroom extends PureComponent {
 			}))
 		}
 				
-		// this.setState((prevState) => ({
-		// 	...prevState,
-		// 	messages
-		// }), () => this.scrollToBottom())
 
 	}
 
@@ -195,20 +145,9 @@ class Chatroom extends PureComponent {
 								hideUsersforMobile={hideUsersforMobile}
 								isMobile={isMobile}
 								recipient= {this.state.friend}
-								makeVideoCall={this.makeVideoCallHandler} 
 								currentUser = {this.props.currentUser}/>
 						</div>
 					}
-				{
-					(this.state.incomingVideoCall || this.state.makingCall) &&
-					<VideoCall 
-						callType={this.state.callType}
-						makeVideoCall={this.makeVideoCallHandler} 
-						videoCallURequestObject={this.state.videoCallURequestObject}
-						receiverId={this.state.receiverId}
-						calling={this.state.calling}
-						caller= {this.state.caller} />
-				}
 			</React.Fragment>
 		)
 	}

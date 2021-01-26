@@ -22,8 +22,6 @@ class MessageService {
      * @returns {Array} messages
      */
     async createMessage(){
-        console.log(this.senderId, this.recipientId)
-
         let currentUser = await Models.User.findById(this.senderId)
         const receiver = await Models.User.findById(this.recipientId)
         const message = await  Models.Message.create({

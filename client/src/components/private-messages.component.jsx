@@ -109,19 +109,6 @@ class PrivateMessages extends PureComponent {
 
 	}
 
-	/**
-	 * activate the get location with geolocation api when turned on
-	 * @param {*} type 
-	 */
-	
-	 makeVideoCallHandler = () =>{
-		 const {makeVideoCall, toggleDropdown, recipient} = this.props
-		toggleDropdown(false);
-		makeVideoCall({
-			...recipient,
-		}, true)
-
-	 }
 
 	imageUpload = () =>{
 		const imageInput = document.querySelector(".image-upload")
@@ -156,7 +143,7 @@ class PrivateMessages extends PureComponent {
 	
 	render() {
 		const {messages, image} = this.state;
-		const {recipient, makeVideoCall, isMobile, usersStatus, hideUsersforMobileHandler, } = this.props;
+		const {recipient, isMobile, usersStatus, hideUsersforMobileHandler, } = this.props;
 		let currentUserStatus = usersStatus.find(user => user.username === recipient.username).isOnline || false
 		
 		return (
@@ -186,7 +173,6 @@ class PrivateMessages extends PureComponent {
 						type='file' 
 						accept='image/*' 
 						className='image-upload'  />
-					{/* <MdKeyboardVoice className='icon' onClick={this.makeVideoCallHandler}/> */}
 					<Link
 						to={{
 							pathname: `/user/${recipient._id}/profile`,

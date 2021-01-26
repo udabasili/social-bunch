@@ -77,7 +77,6 @@ class AuthService {
             newUser = await this.addAdminToUser(newUser)
         }
         const generatedToken = this.generateToken(newUser)
-        console.log(newUser.friends)
         return {newUser, generatedToken}
     }
 
