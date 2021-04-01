@@ -1,0 +1,45 @@
+{
+  "name": "social-bunch",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "server": "nodemon ./src/index.js",
+    "test": "jest --watchAll"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "@googlemaps/google-maps-services-js": "^3.1.16",
+    "bcrypt": "^5.0.1",
+    "cloudinary": "^1.21.0",
+    "concurrently": "^6.0.0",
+    "config": "^3.3.1",
+    "connect-mongodb-session": "^2.3.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "csurf": "^1.11.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "express-rate-limit": "^5.2.6",
+    "express-session": "^1.17.1",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.10",
+    "multer": "^1.4.2",
+    "multer-storage-cloudinary": "^4.0.0",
+    "nodemon": "^2.0.3",
+    "socket.io": "^4.0.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-security": "^1.4.0",
+    "jest": "26.6.0",
+    "supertest": "^6.1.3"
+  }
+}

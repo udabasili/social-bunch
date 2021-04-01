@@ -1,0 +1,16 @@
+
+const URI = `mongodb://${process.env.DATABASE_CONTAINER}:${process.env.MONGO_PORT}`;
+console.log(URI)
+module.exports = {
+    PORT: 5000,
+    MONGOOSE_URI : URI,
+    MONGOOSE_URI_USERNAME: process.env.MONGO_INITDB_ROOT_USERNAME,
+    MONGOOSE_URI_PASS: process.env.MONGO_INITDB_ROOT_PASSWORD,
+    ACCESS_TOKEN_SECRET_KEY: process.env.ACCESS_TOKEN_SECRET_KEY || 'tHIS-THE-DEEE-DDEERRHRH',
+    REFRESH_TOKEN_SECRET_KEY: process.env.REFRESH_TOKEN_SECRET_KEY || 'tHIS-TddddeewsHE-DEEE-DDEERRHRH',
+    cloudinary: {
+        CLOUDINARY_CLOUD_NAME: process.env.CLOUDINARY_CLOUD_NAME,
+        CLOUDINARY_API_KEY: process.env.CLOUDINARY_API_KEY,
+        CLOUDINARY_API_SECRET: process.env.CLOUDINARY_API_SECRET
+    },
+}

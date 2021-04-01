@@ -1,0 +1,74 @@
+.profile-page{
+    display: grid;
+    grid-column: sidebar-start / full-end;
+    gap: 1rem;
+    grid-template-columns: 30rem 1fr;
+    margin: 3rem auto;
+    width: 90%;
+    height: 100%;
+
+    @include response(tab-port){
+        grid-template-columns: 1fr;
+
+    }
+
+    @include response(phone){
+        grid-template-columns: 1fr;
+        width: 100%;
+        grid-column: sidebar-start / full-end;
+
+    }
+
+
+    &__aside{
+    }   
+
+    &__main{
+
+        @include response(tab-land){
+            width: 100%;
+        }
+
+        @include response(tab-port){
+            width: 100%;
+        }
+
+        width: 80%;
+        margin: 0 auto;
+
+        .posts{
+            margin-top: 0;
+        }
+
+        .header{
+            height: 6rem;
+            background: black;
+            color: white;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            font-size: 2.4rem;
+            font-weight: bold;
+            justify-content: center;
+            text-transform: capitalize;
+
+            @include response(tab-port){
+                font-size: 1.9rem;
+            }
+
+            &.post-header{
+                margin-top: 3rem;
+            }
+        }
+    }
+
+    &__bio{
+        height: 30rem;
+        background-color: white;
+
+        .description{
+            font-size: 1.9rem;
+            padding: 2rem;
+        }
+    }
+}

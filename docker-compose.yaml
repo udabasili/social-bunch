@@ -1,0 +1,66 @@
+version:  "3.7"
+services: 
+    my-mongo-container:
+        container_name: my-mongo-container
+        image: mongo
+        environment: 
+            - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME} 
+            - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD} 
+        ports: 
+            - "27018:27017"
+        volumes: 
+            - ./data:/data/db 
+
+    client:
+        build: 
+            context: ./client
+        command: yarn start
+        volumes: 
+            - ./client/src:/usr/app/src
+        tty: true 
+        stdin_open: true
+        environment:
+            - REACT_APP_MOVIE_API=${REACT_APP_MOVIE_API}
+            - REACT_APP_UNSPLASH_ACCESS_API=${REACT_APP_UNSPLASH_ACCESS_API}
+            - REACT_APP_UNSPLASH_SECRET_API=${REACT_APP_UNSPLASH_SECRET_API}
+            - CHOKIDAR_USEPOLLING=true
+        depends_on: 
+            - backend
+        # networks: 
+        #     - net
+    backend:
+        build: 
+            context: ./backend
+        volumes: 
+            - ./backend/src:/usr/app/src
+        environment: 
+            - CHOKIDAR_USEPOLLING=true
+            - DATABASE_CONTAINER=${DATABASE_CONTAINER}
+            - MONGO_PORT=${MONGO_PORT}
+            - ACCESS_TOKEN_SECRET_KEY=${ACCESS_TOKEN_SECRET_KEY}
+            - REFRESH_TOKEN_SECRET_KEY=${REFRESH_TOKEN_SECRET_KEY}
+            - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME} 
+            - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+            - CLOUDINARY_API_SECRET=${CLOUDINARY_API_SECRET}
+            - CLOUDINARY_API_KEY=${CLOUDINARY_API_KEY}
+            - CLOUDINARY_CLOUD_NAME=${CLOUDINARY_CLOUD_NAME}
+        stdin_open: true
+        tty: true
+        depends_on: 
+            - my-mongo-container
+        command: bash -c "/usr/app/wait-for-it.sh --timeout=0 my-mongo-container:27017 && yarn run server" 
+    nginx:
+        image: nginx
+        volumes: 
+            - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+        ports: 
+            - "80:80"
+        depends_on: 
+            - backend
+            - client
+volumes: 
+    mongodb_db:
+# networks: 
+#     net:
+#         driver: bridge
+       

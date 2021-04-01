@@ -1,0 +1,133 @@
+.tab{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__input{
+        display: none;
+    }
+
+    &__label{
+        display: flex;
+        cursor: pointer;
+        padding: 3rem;
+        text-align: center;
+        justify-content: center;
+        align-items: flex-end;
+
+        @include response(tab-port){
+            padding: 1.5rem;
+        }
+    }
+
+
+    &__nav{
+        width: 100%;
+        height: max-content;
+    }
+
+    &__list{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        list-style: none;
+        grid-template-columns: repeat(3, 1fr) ;
+        align-items: center;
+    }
+
+    &__item{
+        cursor: pointer;
+        border: 1px solid #ddd;
+        font-size: 2rem;
+        font-weight: bolder;
+        color: #444;
+
+        @include response(tab-port){
+            font-size: 2rem;
+        }
+
+        &.active {
+          background: white;
+          color: $color-primary-dark;
+          border-bottom: 5px solid $color-primary-dark;
+        }
+    }
+
+    &__section{
+        flex: 1;
+        background-color: white;
+        margin: 1.4rem;
+        display: block;
+        flex-direction: column;
+
+        #tab-item{
+            display: none;
+            flex: 1;
+            height: 100%;
+        }
+
+        .text-tab{
+            grid-template-rows: 1fr min-content;
+
+        }
+
+        .image-tab{
+            grid-template-rows: min-content 1fr min-content;
+
+        }
+
+        .video-tab{
+            grid-template-rows: min-content min-content 1fr min-content;
+
+        }
+
+
+    }
+}
+
+#text-tab:checked ~ section .text-tab{
+    display: grid;
+}
+
+#image-tab:checked ~ section .image-tab{
+    display: grid;
+}
+    
+#video-tab:checked ~ section .video-tab{
+    display: grid;
+}
+
+.tab-buttons{
+    width: 90%;
+    margin: 0 auto 2rem auto;
+    display: flex !important;
+    justify-content: flex-end;
+}
+
+.tab-button{
+    display: inline-block;
+    line-height: 18px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: $color-primary-dark;
+    padding: 0;
+    margin: 0 1rem;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    border: 1px solid $color-primary-dark;
+    border-radius: 10px;
+
+    &:hover{
+        background-color: rgba($color: #000000, $alpha: .1);
+    }
+
+    &.close{
+        color: red;
+        border-color: red;
+    }
+
+}

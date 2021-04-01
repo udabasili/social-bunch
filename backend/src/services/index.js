@@ -1,0 +1,10 @@
+module.exports.ChatService = require('./chatService');
+module.exports.AuthService = require('./authServices');
+module.exports.PostService = require('./postService');
+module.exports.CommentService = require('./commentService');
+module.exports.NotificationService = require('./notificationService');
+module.exports.UsersService = require('./usersService');
+module.exports.UserService = require('./userService');
+module.exports.EventService = require('./eventService');
+module.exports.GroupService = require('./groupService');
+module.exports.MessageService = require('./messageService');

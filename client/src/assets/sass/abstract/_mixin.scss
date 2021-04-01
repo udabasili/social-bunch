@@ -1,0 +1,39 @@
+/*Mobile Responsive**/
+
+@mixin response($device) {
+    @if $device == phone { 
+        @media only screen  and (max-width: 600px) {
+            @content
+        
+        };
+    }
+
+    @if $device == tab-port { 
+        @media only screen and (max-width: 900px) {
+            @content
+        
+        };
+    }
+    @if $device == tab-land {
+        @media only screen  and (max-width: 1200px) { @content };   
+    }
+
+    @if $device == big-desktop {
+        @media only screen and (min-width: 1800px) {
+            @content
+        }
+
+        ;
+    }
+}
+
+/** Topography Mixin*/
+
+
+@mixin removeDefaultButtonStyle{
+    background-color:transparent;
+    outline: none;
+    border: none;
+    overflow: hidden;
+    position: relative;
+}
