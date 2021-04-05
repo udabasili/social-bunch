@@ -33,7 +33,11 @@ Social Bunch uses a number of open source projects to work properly:
 
 ## Run
 
-Visit the official Website
+Visit the official Website [Social Bunch](http://www.social-bunch.site/)
+You can either create a new account of use the following created users
+email: user@yahoo.com password: type 1 9 time
+email: user2@yahoo.com password: type 1 9 time
+
 
 
 
