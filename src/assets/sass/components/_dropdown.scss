@@ -1,0 +1,129 @@
+.notification-dropdown{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+
+    &__header{
+        font-size: 2rem;
+        padding: 2rem;
+        text-align: center;
+        color: black;
+        background-color: grey;
+        font-weight: 700;
+
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+
+    }
+
+    &__item{
+        display: grid;
+        grid-template-columns: min-content 1fr min-content;
+        padding: 1.4rem 0;
+        text-decoration: none;
+        color: black;
+
+        &.unread{
+            background-color: rgba($color: #000000, $alpha: .15);
+        }
+
+        .avatar{
+            width: 4rem;
+            height: 4rem;
+            background-color: black;
+            border-radius: 50%;
+            margin: 1rem;
+            margin-top: 0;
+            object-fit: cover;
+        }
+        
+        .information{
+            display: flex;
+            flex-direction: column;
+
+            .username{
+                font-size: 2rem;
+                font-weight: 700;
+            }
+
+            .description{
+                font-size: 1.5rem;
+                margin: .6rem 0;
+            }
+
+            .time{
+                font-size: 1.1rem;
+                color: gray;
+                font-style: italic;
+            }
+        }
+
+        svg{
+            font-size: 3rem;
+        }
+    }
+
+    
+    &__item:hover{
+        background-color: rgba($color: #000000, $alpha: .15);
+    }
+
+    &__footer{
+        font-size: 2rem;
+        text-align: center;
+        padding: 2rem;
+        font-weight: 800;
+        background-color: rgba($color: #000000, $alpha: .4);
+    }
+}
+
+.user-dropdown{
+
+    &__list{
+        background-color: white;
+    }
+
+    &__link{
+        list-style: none;
+        display: flex;
+        color: black;
+        align-items: center;
+        cursor: pointer;
+        flex: 1;
+        padding: 2rem 4rem;
+        text-decoration: none;
+
+        span{
+            font-size: 2rem;
+            font-weight: bold;
+            margin-left: 2rem;
+        }
+    }
+
+    &__item{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        span{
+            font-size: 2rem;
+            font-weight: bold;
+            margin-left: 2rem;
+        }
+
+        &.non-link{
+            padding: 2rem 4rem;
+        }
+    }
+
+    &__item:hover{
+        background-color: rgba($color: #000000, $alpha: .15);
+    }
+}

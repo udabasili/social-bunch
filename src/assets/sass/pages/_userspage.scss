@@ -1,0 +1,234 @@
+.users-page{
+    display: grid;
+    grid-column: sidebar-start / full-end;
+    grid-template-columns: 30% 1fr;
+    height: 100vh;
+    width: 100%;
+
+    @include response(tab-land){
+        grid-template-columns: 50% 1fr;
+    }
+
+    @include response(tab-port){
+        grid-template-columns: 1fr;
+    }
+
+    
+}
+
+.users{
+    &--left-section{
+        overflow-y: auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &--right-section{
+        background-color: rgb(175, 174, 174);
+        height: 100%;
+        width: 100%;
+    }
+
+    &__tabset{
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        input[type="radio"]{
+            display: none;
+        }
+
+        & > label {
+            position: relative;
+            display: inline-block;
+            padding: 15px 15px 25px;
+            border: 1px solid transparent;
+            border-bottom: 0;
+            cursor: pointer;
+            background-color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            &::after{
+                content: "";
+                position: absolute;
+                left: 15px;
+                bottom: 10px;
+                width: 22px;
+                height: 4px;
+                background: black;
+            }
+        }
+
+        & > input:checked + label::after{
+            background-color: white;
+        }
+
+        & > input:checked + label {
+            background-color: $color-primary-dark;
+            border-bottom-color: transparent;
+            color: white;
+
+        }
+
+        & > label:last-child{
+            border-right: none !important;
+
+        }
+    }
+}
+.users__tab-panels{
+    flex: 1;
+    width: 100%;
+    background-color: white;
+}
+
+.users__tab-panel{
+    width: 100%;
+}
+
+.users{
+    width: 100%;
+
+    &__search-box{
+        width: 100%;
+        background-color: #e9e7e7;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    &__search{
+        width: 100%;
+        background-color: transparent;
+        height: 100%;
+        font-size: 2rem;
+        padding: 2rem;
+    }
+
+    &__icon{
+        font-size: 3rem;
+        position: absolute;
+        right: 0;
+        margin: 1rem;
+    }
+
+    &__item{
+        width: 85%;
+        display: grid;
+        background-color: white;
+        grid-template-columns: min-content 1fr 1fr;
+        margin: 2rem auto;
+        border: 2px black solid;
+        border-radius: 10px;
+        box-shadow: 0 1.3rem 3rem rgba($color: #000000, $alpha: .2);
+
+        .avatar{
+            margin: 1rem;
+        }
+
+        .username{
+            align-self: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+
+    &__buttons{
+        display: flex;
+        margin-right: .6rem;
+        align-self: center;
+        justify-self: flex-end;
+    }
+
+    &__button{
+        width: 4rem;
+        display: flex;
+        justify-content: center;
+        border: 1px solid #c0bdbd;
+        border-radius: 50%;
+        margin: 0 4px;
+        align-items: center;
+        height: 4rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: green;
+
+            svg {
+                color: white !important;
+            }
+
+        }
+
+        &.remove{
+            background-color: red !important;
+            color: white;
+        }
+
+        svg{
+            font-size: 2.6rem;
+        }
+    }
+}
+
+.user-summary{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content max-content 1fr;
+    min-height: 93vh;
+    position: relative;
+
+    &__button{
+        margin: 2rem 1rem;
+        display: flex;
+        justify-self: flex-end;
+
+        svg{
+            font-size: 3rem;
+            color: red;
+            cursor: pointer;
+
+            &:hover{
+                color: lightgray;
+            }
+        }
+    }
+
+    &__user {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .user-photo{
+            width: 15rem;
+            height: 15rem;
+            border-radius: 50%;
+            border: 4px solid lightgray;
+        }
+
+        .username{
+            font-weight: bolder;
+            font-size: 3rem;
+            margin-top: 1rem;
+            color: green;
+            text-transform: uppercase;
+        }
+
+        .location{
+            font-size: 1.9rem;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            font-style: italic;
+
+            svg {
+                font-size: 2.2rem;
+            }
+        }
+    }
+
+}

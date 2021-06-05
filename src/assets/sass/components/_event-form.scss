@@ -1,0 +1,13 @@
+.event-form-container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+
+    .close-button{
+        font-size: 4rem;
+        color: red;
+        cursor: pointer;
+        justify-self: flex-end;
+    }
+}

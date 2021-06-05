@@ -1,0 +1,31 @@
+.profile-card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    text-align: center;
+
+    &__image{
+        width: 100%;
+        height: auto;
+    }
+
+    &__title{
+        font-size: 2.4rem;
+        width: 100%;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        padding: 1rem;
+    }
+
+    .age, .occupation {
+        color: grey;
+        font-size: 1.8rem;
+        padding: 2rem 2rem;
+        font-weight: 700;
+        border-bottom: 2px gray solid;
+
+    }
+
+}

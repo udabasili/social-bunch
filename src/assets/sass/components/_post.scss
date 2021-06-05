@@ -1,0 +1,208 @@
+
+
+.post{
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: min-content 1fr;
+    width: 100%;
+    grid-auto-flow: column;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+
+    &--text{
+        max-height: 50vh;
+    }
+
+    &--image{
+        grid-template-rows: min-content min-content 1fr;
+        
+        .images{
+            display: grid;
+            grid-column: 1 / 3;
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+            grid-auto-rows: 35rem;
+            width: 96%;
+            margin: 0 auto;
+  
+            img:nth-child(3){
+                grid-column-end: span 2;
+            }
+            
+            img{
+                display: flex;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .video{
+            display: grid;
+            grid-column: 1 / 3;
+            height: 40rem;
+            width: 96%;
+            margin: 0 auto;
+        }
+    }
+
+    &__message{
+        grid-column: 1 / 3;
+        font-size: 1.8rem;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 1.5rem 2rem;
+        
+        @include response(tab-port){
+            width: 85%;
+            margin: 1rem auto;
+        }
+    
+    }
+
+    &__options{
+        grid-column: 1 / 3;
+        display: flex;
+        margin: .6rem auto;
+        width: 90%;
+        justify-content: space-between;
+    }
+
+    &__status{
+        display: flex;
+        width: max-content;
+
+
+        .likes,.comments{
+            all: initial;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 800;
+            line-height: 1.7;
+            padding: .2rem;
+            font-size: 1.4rem;
+            color: $color-primary-dark;
+
+            @include response(tab-port){
+                font-size: 1.3rem ;
+            }
+        }
+
+        .comments{
+            cursor: pointer;
+            margin-left: 5px;
+
+            &:hover{
+                color: green;
+            }
+        }
+    }
+
+    &__edit{
+        display: flex;
+
+        .edit, .delete{
+            padding: .3rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: black;
+            cursor: pointer;
+
+            @include response(tab-port){
+                font-size: 1.3rem ;
+            }
+        }
+
+        .edit{
+            color: red;
+        }
+    }
+    .response{
+        display: flex;
+        justify-content: space-around;
+        height: 100%;
+        padding: 1rem 0;
+
+        &__item{
+            display: flex;
+            font-size: 2.3rem;
+            cursor: pointer;
+            align-items: center;
+
+            &.liked{
+                cursor: default;
+            }
+        }
+
+        &__label{
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+
+     
+    }
+}
+
+.post--text{
+
+    .response {
+        grid-column: 1 / 3;
+    }
+
+    .comment{
+        grid-column: 1 / 3;
+    }
+}
+
+.post--image{
+    .response , .comment, .post__edit{
+        grid-column: 1 / 4;
+    }
+}
+
+.post{
+
+    .avatar{
+        margin: 1rem 0 1rem 2rem;
+    }
+
+    .user-info{
+        grid-column: 2 / 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 1.5rem;
+
+        .username{
+            font-weight: bold;
+            font-size: 1.6rem;
+            padding: .4rem 0;
+
+            @include response(tab-port){
+                font-size: 2rem;
+            }
+        }
+
+        .date{
+            font-size: 1.3rem;
+            @include response(tab-port){
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    #title{
+        grid-column: 1 / 3;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+hr{
+    border-color: rgba(133, 133, 133, .5);
+    color: black;
+    height: 2px;
+    margin: 9px;
+    border-width: .5px;
+    grid-column: 1 / 3;
+    justify-self: center;
+    width: 90%;
+}

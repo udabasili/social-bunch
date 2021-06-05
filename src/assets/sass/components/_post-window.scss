@@ -1,0 +1,33 @@
+.post-window {
+    display: grid;
+    grid-column: col-start  2 / col-end 7;
+    grid-gap: 2rem;
+    gap: 2rem;
+    grid-auto-rows: max-content;
+    margin: 3rem 0;
+
+    @include response(tab-port){
+        grid-column: sidebar-start / full-end;
+        margin: 3rem auto;
+        width: 80%;
+    }
+
+    @include response(phone){
+        width: 97%;
+    }
+
+    .post{
+        width: 100%;
+        max-height: unset;
+        height: max-content;
+    }
+
+    .comment__input-container{
+        display: none !important;
+    }
+
+    .comment__form .close-button {
+        display: none;
+    }
+
+}

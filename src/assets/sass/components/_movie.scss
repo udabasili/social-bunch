@@ -1,0 +1,106 @@
+.movie{
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    &__list{
+        width: 80%;
+        height: 50%;
+        position: absolute;
+        z-index: 4;
+        top: 0;
+        left: 0;
+    }
+
+    &__item{
+        width: 4vw;
+        height: 4vw;
+        border: 2px solid black;
+        cursor: pointer;
+
+        @include response(tab-land){
+            width: 4rem;
+            height: 4rem;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+
+        &.active{
+            outline: 3px solid black;
+            outline-offset: 1px;
+
+        }
+    }
+
+}
+
+.preview-movie{
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: black;
+
+    &__image-container{
+        overflow: hidden;
+        width: 100%;
+        height: 70%;
+    }
+
+    &__image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+
+    &__rating{
+        font-size: 1.5rem;
+        color: white;
+
+        @include response(tab-land){
+            font-size: 1.1rem;
+        }
+    }
+
+    &__title{
+        font-size: 2.3rem; 
+        text-align: center;
+        word-spacing: .1rem;
+        position: relative;
+        line-height: 1rem;
+        font-weight: 900;
+        color: white;
+
+        @include response(tab-land){
+            font-size: 1.3rem;
+        }
+
+         @include response(tab-port){
+            font-size: 2rem;
+        }
+
+        .movie-name {
+            font-weight: bolder;
+            text-align: center;
+            line-height: 1.2;
+            padding-right: .5rem;
+        }
+    }
+
+    &__details{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+
+}
