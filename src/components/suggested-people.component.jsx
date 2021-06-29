@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 
 function SuggestedPeople({ users }) {
@@ -15,7 +14,10 @@ function SuggestedPeople({ users }) {
                         users.filter((user, i) => i < 3).map((user) => (
                             <li className="home-card__item" key={user._id}>
                                 <div className="avatar">
-                                    <img src={user.image} alt={user.username} />
+                                    <img src={
+                                        user.image || "https://img.icons8.com/ios/50/000000/user-male-circle.png"
+                                    } 
+                                        alt={user.username} />
                                 </div>
                                 <span className="username">
                                     {user.username}

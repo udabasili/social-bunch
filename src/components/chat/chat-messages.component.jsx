@@ -37,7 +37,9 @@ import { BiCheckDouble } from "react-icons/bi";
             {
                 (recipient && message.createdBy !== currentUser._id) &&
                     <img
-                        src={recipient.image}
+                        src = {
+                            recipient.image || "https://img.icons8.com/ios/50/000000/user-male-circle.png"
+                        }
                         alt={recipient.username}
                     className="user__photo" />
                 }

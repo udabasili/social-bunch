@@ -17,7 +17,7 @@ class MessagePage extends Component {
 
 
     componentDidUpdate(prevProps, prevState){
-        if (this.state.selectedUser !== prevState.selectedUser){
+        if (this.state.selectedUser !== prevState.selectedUser && this.state.selectedUser !== undefined){
             const chatId = this.generateChatId(
                 this.props.currentUser._id,
                 this.state.selectedUser._id
@@ -26,11 +26,8 @@ class MessagePage extends Component {
             messageRef.on('value', snapshot => {
                 const exists = snapshot.val() !== null;
                 let messages = []
-                const key = snapshot.key;
                 let messagesData = snapshot.val()
                 if(exists){ 
-                    let recipient = key.split('_').filter(item => this.props.currentUser._id !== item)[0]
-                    const selectedUser = this.props.users.filter(user => user._id === recipient)[0]
                     for(let k in messagesData){
                         let messageObject = messagesData[k]
                         messages.push({
@@ -42,7 +39,6 @@ class MessagePage extends Component {
                     this.setState(prevState => ({
                         ...prevState,
                         messages,
-                        selectedUser
                     }))
                 
             }
@@ -90,8 +86,7 @@ class MessagePage extends Component {
     }
 
     selectUserHandler = (user) => {
-        this.setState((prevState) => ({
-            ...prevState,
+        this.setState(({
             selectedUser: user
         }))
     }

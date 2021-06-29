@@ -1,4 +1,4 @@
-import React,{ useEffect } from 'react'
+import React from 'react'
 import { ReactComponent as AppIcon } from '../assets/icons/instagram.svg';
 import { BiHomeAlt } from "react-icons/bi";
 import { BsBell } from "react-icons/bs";
@@ -103,7 +103,6 @@ const mapStateToProps = (state, props) => {
             for (let key in message) {
                 if (!message[key].read && message[key].createdBy !== currentUserId) {
                     unReadMessagesLength++
-                    console.log(unReadMessagesLength)
                 }
             }
         })

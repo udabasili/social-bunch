@@ -22,7 +22,6 @@ export const createGroup = (groupRecord) => {
             ...groupData
         })
         .then((response)=>{                   
-            toast.success(`New group created`)
             return;
         })
         .catch((error)=>{
@@ -42,7 +41,7 @@ export const joinGroup = (groupId) => {
             members: f.firestore.FieldValue.arrayUnion(userId)
         })
         .then((response)=>{                   
-            toast.success(`You have successfully joined group `)
+            return;
         })
         .catch((error)=>{
             toast.error(error.message)
@@ -60,8 +59,8 @@ export const leaveGroup = (groupId) => {
         return groupsRef.update({
             members: f.firestore.FieldValue.arrayRemove(userId)
         })
-        .then((response)=>{                   
-            toast.success(`You have successfully left group `)
+        .then((response)=>{      
+            return             
         })
         .catch((error)=>{
             toast.error(error.message)
@@ -74,7 +73,6 @@ export const deleteGroup = (groupId) => {
 		const firestore = getFirestore();
 		return firestore.collection('groups').doc(groupId).delete()
 		.then((response) => {
-            toast.success(`You have successfully deleted group `)
             return response
 		})
         .catch((error)=>{

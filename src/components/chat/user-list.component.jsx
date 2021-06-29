@@ -45,7 +45,11 @@ const UserList = ({
                             onClickEvent(user)
                         }}
                     >
-                        <img src={user.image} alt={user.username}/>
+                        <img 
+                            src = {
+                                user.image || "https://img.icons8.com/ios/50/000000/user-male-circle.png"
+                            }
+                            alt={user.username}/>
                         <span className={`
                             online-status 
                             ${ checkOnlineUser(user._id) ? "online": "offline"}
@@ -70,7 +74,7 @@ UserList.propTypes = {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    const data = state.firestore.data.users;
+    const data = state.firestore.data.allUsers;
     const presence = state.firebase.data.presence;
     const messages = state.firebase.data.messages;
     const currentUserId = ownProps.currentUser._id;
@@ -127,10 +131,9 @@ const mapDispatchToProps = {
 }
 
 export default compose(
-	firebaseConnect((props) => [
-		{
-	 		path: `presence`,
-	 	}
-	 ]),
+    firebaseConnect([
+        'presence' // sync /todos from firebase into redux
+    ]),
 	connect(mapStateToProps, mapDispatchToProps)
 )(UserList);
+

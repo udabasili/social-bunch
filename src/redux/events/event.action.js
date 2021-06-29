@@ -23,7 +23,6 @@ export const createEvent = (eventRecord) => {
             ...data
         })
         .then((response)=>{                   
-            toast.success(`New event created`)
             return response
         })
         .catch((error)=>{
@@ -45,7 +44,7 @@ export const joinEvent = (eventId) => {
             attenders: f.firestore.FieldValue.arrayUnion(userId)
         })
         .then((response)=>{                   
-            toast.success(`You have successfully joined event `)
+            return response;
         })
         .catch((error)=>{
             toast.error(error.message)
@@ -62,8 +61,8 @@ export const leaveEvent = (eventId) => {
         return eventsRef.update({
             attenders: f.firestore.FieldValue.arrayRemove(userId)
         })
-        .then((response)=>{                   
-            toast.success(`You have successfully left event `)
+        .then((response)=>{        
+            return response           
         })
         .catch((error)=>{
             toast.error(error.message)
@@ -76,7 +75,6 @@ export const deleteEvent = (eventId) => {
 		const firestore = getFirestore();
 		return firestore.collection('events').doc(eventId).delete()
 		.then((response) => {
-            toast.success(`You have successfully deleted event `)
             return response
 		})
         .catch((error)=>{

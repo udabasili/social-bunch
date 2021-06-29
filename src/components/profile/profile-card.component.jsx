@@ -15,7 +15,9 @@ const ProfileCard = ({ currentUser }) => {
     return (
         <div className="profile-card">
             <img 
-                src={currentUser.image}
+                src = {
+                    currentUser.image || "https://img.icons8.com/ios/50/000000/user-male-circle.png"
+                }
                 alt = "John"
                 className="profile-card__image"
             />

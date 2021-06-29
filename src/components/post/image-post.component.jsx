@@ -11,8 +11,6 @@ import {
 } from '../../redux/posts/post.actions';
 import { toast } from 'react-toastify';
 import { AiFillLike, AiOutlineComment, AiOutlineLike } from 'react-icons/ai';
-import noImage from '../../assets/images/no-image.png'
-import AddPost from '../add-post.component';
 import Modal from '../modal.component';
 
 const ImagePost = ({
@@ -127,14 +125,33 @@ const ImagePost = ({
     return (
         <React.Fragment>
         <div className='post post--image' id={post._id}>
-            <div className="avatar">
-                <img 
-                    src={post.user.image} 
-                    alt={post.user.username}
-                />
+            <div 
+                className={`
+                    avatar
+                    ${post.user.image ? '': 'no-image'}
+                `}>
+                    {
+                        post.user.image && (
+                             <img 
+                                src={post.user.image} 
+                                alt={post.user.username}
+                            />
+                        )
+                    }
+               
             </div>
             <div className="user-info">
-                <span className='username'>{post.user.username}</span>
+                <span className={`
+                    username
+                    ${post.user.username ? '': 'no-username'}
+                `}>
+                    {
+                        post.user.username ? 
+                        post.user.username :
+                        ''
+                    }
+                </span>
+                
                 <span className='date'>{timeAgo(post.createdAt)}</span>
             </div>
             <div className="u-margin-bottom-small u-margin-top-small" id="title">
@@ -208,9 +225,7 @@ const ImagePost = ({
                     <div className="avatar">
                         <img 
                             src={
-                                currentUser.image
-                                ? currentUser.image
-                                : noImage
+                                currentUser.image || "https://img.icons8.com/ios/50/000000/user-male-circle.png"
                             }
                             alt={currentUser.username}
                         />

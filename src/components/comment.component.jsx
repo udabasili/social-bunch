@@ -12,8 +12,6 @@ import {
     addLikeToComment,
     removeLikeFromComment
 } from '../redux/posts/post.actions';
-import {  populate } from 'react-redux-firebase'
-
 
 const populates = [
 	{
@@ -214,8 +212,6 @@ Comment.propTypes = {
 const mapStateToProps = (state, ownProps) => {
     const id = ownProps.id;
     const comments = state.firestore.data.comments;
-    let response = populate(state.firestore, 'comments', populates);
-    console.log(response)
     let comment ;
     let replies = [];
     if (comments) {

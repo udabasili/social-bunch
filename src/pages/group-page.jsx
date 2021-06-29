@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import GroupDetails from '../components/groups/group-details.component'
 import GroupList from '../components/groups/group-list.component'
 import Modal from '../components/modal.component'

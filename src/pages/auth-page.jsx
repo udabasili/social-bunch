@@ -21,7 +21,6 @@ export class AuthPage extends Component {
 
     componentDidUpdate(prevProps, prevState){
         const { currentUser } = this.props;
-        console.log(currentUser)
         if(prevProps.currentUser !== currentUser){
             this.setState({
                 authType: 'login',
@@ -67,13 +66,13 @@ export class AuthPage extends Component {
                 <div className="app-title-mobile">
                     <AppIcon className="app-icon"/>
                     <span className="primary-header">
-                        Social Brunch
+                        Social Bunch
                     </span>
                 </div>
                 <div className="auth">
                     <div className="auth__cover">
                         <AppIcon className="app-icon"/>
-                        <span className="primary-header">Social Brunch</span>
+                        <span className="primary-header">Social Bunch</span>
                         <span className="secondary-header">..... Join the crowd</span>
                     </div>
                     {

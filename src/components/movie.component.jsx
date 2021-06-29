@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import MovieList from './movies/movie-list.component';
 import axios from 'axios';
 import PreviewMovie from './movies/preview-movie.component';
-import Loading from './loader.component';
 
 const MOVIE_API = '1fcf7ebb22d996d1c50123bf39d4a4ca';
 
@@ -15,10 +14,6 @@ export default function Movie() {
         const baseUrl = "https://api.themoviedb.org/3";
         const relativeUrl = "/discover/movie";
         const fullUrl = `${baseUrl}${relativeUrl}?api_key=${MOVIE_API}`;
-        const config = {
-            headers: {
-            }
-        }
         var instance = axios.create();
         delete instance.defaults.headers.common['X-CSRF-Token'];
         return instance.get(fullUrl)
@@ -38,11 +33,12 @@ export default function Movie() {
     }, [])
 
 
+
     return (
         <div className="movie">
             {
                 !movies ?
-                <Loading/> :
+                <div className="movie-loading"/> :
                 <React.Fragment>
                     <PreviewMovie 
                         movie={movies[currentIndex]}/>

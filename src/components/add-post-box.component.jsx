@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import AddPost from './add-post.component';
 import Modal from './modal.component';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 
 /**
  *
@@ -27,7 +26,9 @@ function AddPostBox({currentUser}) {
             <div className="add-post-box">
                 <div className="avatar">
                     <img 
-                        src={currentUser.image} 
+                        src={
+                            currentUser.image || "https://img.icons8.com/ios/50/000000/user-male-circle.png"
+                        } 
                         alt={currentUser.username}
                     />
                 </div>

@@ -33,12 +33,11 @@ function PostWindow({
 
                 }
             }
-            console.log(postId)
             return posts.filter((post) => post._id === postId )
         }
     )
+    const filteredPost = useSelector(selectFilterPosts)[0]
 
-    const filteredPost = useSelector(selectFilterPosts)
     
     const handlePostType = (post) => {
         const type = post.type;

@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import { IoCloseCircleSharp } from 'react-icons/io5';
 
 const UserProfile = ({ user }) => {
@@ -18,7 +17,9 @@ const UserProfile = ({ user }) => {
             { user && (
                 <div className="user-summary__user">
                     <img 
-                        src={user.image} 
+                        src = {
+                            user.image || "https://img.icons8.com/ios/50/000000/user-male-circle.png"
+                        }
                         className="user-photo"
                         alt={user.username}/>
                     <span className="username">

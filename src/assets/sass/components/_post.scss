@@ -7,6 +7,7 @@
     width: 100%;
     grid-auto-flow: column;
     border-radius: 10px;
+    position: relative;
     background-color: white;
     overflow: hidden;
 
@@ -162,7 +163,19 @@
 
     .avatar{
         margin: 1rem 0 1rem 2rem;
+
+        &.no-image {
+            background-color: #CCC;
+            position: relative;
+            width: 6rem;
+            height: 6rem;
+            border: none;
+            @include loadingPosts;
+        }
+       
     }
+
+    
 
     .user-info{
         grid-column: 2 / 3;
@@ -176,6 +189,14 @@
             font-size: 1.6rem;
             padding: .4rem 0;
 
+            &.no-username {
+                background-color: #CCC;
+                position: relative;
+                width: 9rem;
+                height: 1.6rem;
+                @include loadingPosts;
+            }
+
             @include response(tab-port){
                 font-size: 2rem;
             }
@@ -183,8 +204,22 @@
 
         .date{
             font-size: 1.3rem;
+
             @include response(tab-port){
                 font-size: 1.5rem;
+            }
+
+             &.no-date {
+                background-color: #CCC;
+                position: relative;
+                width: 9rem;
+                height: 1.3rem;
+                @include loadingPosts;
+
+                @include response(tab-port){
+                    height: 1.5rem;
+                }
+
             }
         }
     }

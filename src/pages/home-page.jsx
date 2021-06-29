@@ -19,16 +19,6 @@ const populates = [
 	}
 ]
 
-
-
-const usersPopulates = [
-	{
-		child: 'friends',
-		root: 'users'
-	},
-    
-]
-
 /**
  *
  * 
@@ -89,6 +79,7 @@ const mapStateToProps = (state) => {
     const usersRecord = state.firestore.data.allUsers;
     let users = [];
     if (usersRecord) {
+        
         for (let key in usersRecord) {
             users.push({
                 _id: key,

@@ -12,11 +12,9 @@ const MovieList = ({ movies = [], setCurrentIndex}) => {
 
     useEffect(() => {
         const counter = setInterval(function(){
-
-                setCurrentIndexHandler(index => {
-                    return index === 3 ? 0: index + 1
-                })
-            
+            setCurrentIndexHandler(index => {
+                return index === 3 ? 0: index + 1
+            })
         }, 1000)
         return () => {
             clearInterval(counter)

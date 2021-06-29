@@ -19,13 +19,9 @@ import EventPage from './pages/event-page';
 import SettingPage from './pages/setting-page';
 import ProfilePage from './pages/profile-page';
 import { f } from './services/firebase';
-import { firestoreConnect, populate } from 'react-redux-firebase'
+import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux';
-
-const populates = [{
-    child: 'user',
-    root: 'users'
-}]
+import LoadingMessage from './components/splash/LoadingMessage';
 
 const MainRoute = ({
         isAuthenticated,
@@ -38,24 +34,37 @@ const MainRoute = ({
     const firestore = f.firestore()
     const [isLoading, setLoading]  = useState(true)
     
-    useEffect(() => {
-        const unsubscribe = f.auth().onAuthStateChanged(async (user) => {
+    let unsubscribe;
+
+    const setListener = async () => {
+        unsubscribe = f.auth().onAuthStateChanged(async (user) => {
             if (user) {
                 const data = await firestore
                     .collection("users")
                     .doc(user.uid)
                     .get()
-                 if (data.exists) {
-                     const userData = data.data();
-                     setCurrentUser(userData)
-                 }
+                if (data.exists) {
+                    const userData = data.data();
+                    setCurrentUser(userData)
+                }
+                // setLoading(false)
             }
-            setLoading(false)
-        });
-        return () => {
-            unsubscribe()
-        }
-    }, [])
+        })
+    }
+
+       useEffect(() => {
+           try {
+               setListener()
+               setTimeout(() => {
+                   setLoading(false)
+               }, 3000)
+           } catch (err) {
+               setLoading(false)
+           }
+           return () => {
+               unsubscribe()
+           }
+       }, [])
     
 
     return (
@@ -159,7 +168,7 @@ const MainRoute = ({
             <Footer/>
         </React.Fragment> 
         ) :
-        <div> Loading </div>
+        <LoadingMessage/>
     );
 }
 

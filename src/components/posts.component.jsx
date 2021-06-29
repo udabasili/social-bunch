@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import ImagePost from './post/image-post.component';
 import VideoPost from './post/video-post.component';
 import TextPost from './post/text-post.component';

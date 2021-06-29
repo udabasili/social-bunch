@@ -101,11 +101,6 @@
             display: flex;
             justify-content: center;
 
-            @include response(tab-port){
-                justify-content: flex-end;
-            }
-
-
             svg{
                 font-size: 3rem;
                 cursor: pointer;

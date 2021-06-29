@@ -32,3 +32,11 @@ Social Bunch uses a number of open source projects to work properly:
 ## Run
 
 Visit the official Website [Social Bunch](https://socialbunch.netlify.app/)
+
+#### Sample authentication
+You can register from scratch or use registered accounts
+
+use  emails
+user@yahoo.com , test@yahoo.com
+password: type 1 9 times
+use the two different accounts to test chat messages or

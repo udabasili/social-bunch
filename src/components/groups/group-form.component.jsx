@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 import { IoMdCloseCircle } from 'react-icons/io';
 import { Formik } from 'formik';
 import FormInput from '../form-input.component';
-import Loading from '../loader.component';
 import { createGroup } from '../../redux/groups/group.action';
 
 const CATEGORIES = [
@@ -97,6 +96,7 @@ export const GroupForm = ({
                         type='text'
                         onBlur={handleBlur}
                         isMobile={isMobile}
+                        placeholder='Add group name...'
                         value={values.GroupName}
                         required />
                     <textarea
@@ -105,7 +105,7 @@ export const GroupForm = ({
                         rows='10'
                         value={values.GroupDescription}
                         onChange={handleChange}
-                        placeholder='Group Description'
+                        placeholder='Add group description...'
                         required
                         className='form__textarea' 
                     />

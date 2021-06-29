@@ -1,12 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import EventDetails from '../components/events/event-details.component'
 import EventList from '../components/events/event-list.component'
 import Modal from '../components/modal.component'
 import EventForm from '../components/events/event-form.component'
-
-
 
 class EventPage extends Component {
     constructor(props){

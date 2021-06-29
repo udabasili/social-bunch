@@ -5,15 +5,7 @@ import { GrView, GrFormClose } from 'react-icons/gr';
 import { AiOutlineUserAdd } from 'react-icons/ai';
 import UserSummary from './user-summary.component'
 import { addFriend, removeFriend } from '../redux/user/user.action';
-import {  populate } from 'react-redux-firebase'
 
-
-const populates = [
-	{
-		child: 'friends',
-		root: 'users'
-	},
-]
 const Users = ({ 
     filteredUsers=[], 
     type,
@@ -67,7 +59,7 @@ const Users = ({
     return (
         <div className="users">    
             {
-                showAllUsers ? (
+                showAllUsers && currentUser ? (
                     <React.Fragment>
                         <ul className="users__list">
                             {
@@ -75,7 +67,9 @@ const Users = ({
                                 .map((user) => (
                                     <li className="users__item">
                                         <div className="avatar">
-                                            <img src={user.image} alt={user.username} />
+                                            <img src={
+                                                user.image || "https://img.icons8.com/ios/50/000000/user-male-circle.png"
+                                                } alt={user.username} />
                                         </div>
                                         <span className="username">
                                             {user.username}

@@ -21,6 +21,7 @@ const ChatWindow = ({
 
     useEffect(() => { 
       chatMessageArea.current.scrollTop = chatMessageArea.current.scrollHeight;
+     //use this to ensure that messages are only marked as read when the use opens this component for the first time
       if (!currentSender.current) {
             setReadMessages(user._id)
       }
@@ -72,6 +73,12 @@ const ChatWindow = ({
             status: 'delivered',
             read: false
         })
+        //this is to ensure that the setRead in useEffect isnt activated immediately after currentUser has sent message
+        //that way currentSender.current = null only activates for new messages coming from the other user not this one
+        setTimeout(() => {
+            currentSender.current = null
+        }, 3000);
+
     }
 
     return (
@@ -79,7 +86,9 @@ const ChatWindow = ({
             <div className="chat-window__header">
                 <div className="user">
                     <img 
-                        src={user.image}
+                        src = {
+                            user.image || "https://img.icons8.com/ios/50/000000/user-male-circle.png"
+                        }
                         alt={user.username}
                         className="avatar"
                     />

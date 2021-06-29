@@ -36,7 +36,9 @@ const UserSummary = ({
                 user ? 
                     <div className="user-summary__user">
                         <img 
-                            src={user.image} 
+                            src = {
+                                user.image || "https://img.icons8.com/ios/50/000000/user-male-circle.png"
+                            }
                             className="user-photo"
                             alt={user.username}/>
                         <span className="username">
