@@ -1,9 +1,6 @@
-import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useUpdateUser } from '@/features/user/api/updateUser';
-import { useAuth } from '@/lib/auth';
 import FormInput from '@/components/Form/FormInput';
 import { Button } from '@/components/Elements';
 
@@ -11,7 +8,6 @@ function UserInfo() {
     
     const navigator = useNavigate();
     const { updateUserFn } = useUpdateUser()
-    const {  currentUser } = useAuth()
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
     const [submitting, setSubmitting] = useState(false);
     const [user, setUserData] = useState({

@@ -33,7 +33,6 @@ export const protectedRoutes = [
       { path: "/users/*", element: <UserPage /> },
       { path: "/messages/*", element: <MessagePage /> },
       { path: "/profile", element: <UserProfile /> },
-
       { path: "/", element: <Homepage /> },
       { path: "*", element: <Navigate to='.' /> },
 

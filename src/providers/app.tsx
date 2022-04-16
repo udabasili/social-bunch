@@ -3,7 +3,6 @@ import { FullScreenLoader } from "@/components/FullScreenLoader";
 import { fuego } from "@/lib/fuego";
 import { FuegoProvider } from "swr-firestore-v9";
 import { BrowserRouter as Router } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import store, { persistor } from "@/store";
@@ -13,7 +12,6 @@ type AppProviderProps = {
   children: React.ReactNode;
 };
 
-const helmetContext = {};
 
 export const AppProvider = ({ children }: AppProviderProps) => {
   return (

@@ -20,11 +20,11 @@ export const useAuth = () => {
     const authenticated = useAppSelector((state) => state.user.authenticated);
 	const currentUser = useAppSelector((state) => state.user.currentUser as UserAttributes & UserInfoDTO);
     const auth = getAuth()
-    const { data, isValidating } = useDocument<UserAttributes>(authenticated ? `users/${currentUser.uid}`: null, { listen: true })
+    const { data, isValidating } = useDocument<UserAttributes>(currentUser.uid ? `users/${currentUser.uid}`: null, { listen: true })
 
     useEffect(() => {
       
-        if (data && !isValidating) {
+        if (data) {
             dispatch(setCurrentUser({
                 ...data
             } ))

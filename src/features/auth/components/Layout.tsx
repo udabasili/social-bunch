@@ -1,11 +1,11 @@
 import React from 'react'
 import {ReactComponent as AppIcon}  from '@/assets/icons/instagram.svg';
-import { useAuth } from '@/lib/auth';
 import { MainLayout } from '@/components/Layout/MainLayout';
 
 interface LayoutProps {
     children: React.ReactNode
 }
+
 export const Layout = ({ children}: LayoutProps) => {
     return (
         <MainLayout>

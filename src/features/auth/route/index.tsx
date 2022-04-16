@@ -1,4 +1,3 @@
-import { clearError } from "@/features/error/reducer/errorSlice";
 import { useAuth } from "@/lib/auth";
 import { useAppSelector } from "@/store";
 import React, { FC, useEffect, useState } from "react";
@@ -20,7 +19,7 @@ type ComponentsProps = {
 
 export const Auth = () => {
 
-  const { currentUser, authenticated } = useAuth()
+  const { currentUser } = useAuth()
   const [authenticationStep, setAuthenticationStep] = useState<authenticationStep>(() => setCurrentAuthenticationStep());
   const [authType, setAuthType] = useState<"login" | "register">("login");
 

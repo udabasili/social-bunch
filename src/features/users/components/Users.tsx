@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import { GrView, GrFormClose } from 'react-icons/gr';
 import { AiOutlineUserAdd } from 'react-icons/ai';
 import { useAuth } from '@/lib/auth';

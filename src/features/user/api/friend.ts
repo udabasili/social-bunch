@@ -6,13 +6,12 @@ import { AxiosError } from "axios"
 import { FirebaseError } from "firebase/app"
 import { arrayRemove, arrayUnion, doc, updateDoc } from "firebase/firestore"
 import { useDocument } from "swr-firestore-v9"
-import { setCurrentUser } from "../reducer/userSlice"
 import { UserAttributes } from "../types"
 
 export const useFriend = () => {
 
     const { currentUser } = useAuth()
-    const { data, update } = useDocument<UserAttributes>(`users/${currentUser.uid}`)
+    const { update } = useDocument<UserAttributes>(`users/${currentUser.uid}`)
     const dispatch = useAppDispatch()
 
     const addFriend = async (friendId: string) => {
@@ -38,8 +37,6 @@ export const useFriend = () => {
                 errorMessage = errorObject.message
             }
 			dispatch(setError(errorMessage));
-            console.log(errorMessage)
-
             throw error
         }
     }

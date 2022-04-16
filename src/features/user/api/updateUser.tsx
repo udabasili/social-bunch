@@ -2,28 +2,23 @@ import { firebaseErrors } from "@/data/firebaseErrors";
 import { setError } from "@/features/error/reducer/errorSlice";
 import { useAuth } from "@/lib/auth";
 import { useAppDispatch } from "@/store";
-import { upload } from "@testing-library/user-event/dist/upload";
 import { AxiosError } from "axios";
 import { FirebaseError } from "firebase/app";
 import { useDocument } from "swr-firestore-v9";
-import { setCurrentUser } from "../reducer/userSlice";
 import { UserAttributes, UserInfoDTO } from "../types";
 
 export const useUpdateUser = () => {
   const { currentUser } = useAuth();
   const dispatch = useAppDispatch();
-  const { data, set, update } = useDocument<UserAttributes>(
-    `users/${currentUser.uid}`
-  );
+  const { update } = useDocument<UserAttributes>(`users/${currentUser.uid}`);
 
   async function updateUserFn(userInfo: UserInfoDTO) {
     try {
       await update({
         ...userInfo,
         fullAuthenticated: true,
-        nextRoute: "userInfo",
+        nextRoute: "",
       });
-      dispatch(setCurrentUser(data as UserAttributes));
     } catch (error) {
       let errorMessage = "";
       const errorObject = error as AxiosError;

@@ -40,6 +40,7 @@ export default function useFirebaseAuth() {
     useEffect(() => {
       const unsubscribe = auth.onAuthStateChanged(authStateChanged);
       return () => unsubscribe();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
   
     

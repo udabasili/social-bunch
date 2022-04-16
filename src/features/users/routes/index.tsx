@@ -1,8 +1,5 @@
-import { ChangeEvent, useEffect, useState } from 'react'
-import { UserAttributes } from '@/features/user/types';
+import { ChangeEvent, useState } from 'react'
 import Users from '../components/Users';
-import { collection, onSnapshot, query } from 'firebase/firestore';
-import { db } from '@/lib/fuego';
 import { useAuth } from '@/lib/auth';
 import { MainLayout } from '@/components/Layout/MainLayout';
 import { UseGetUsers } from '../api/getAllUsers';
@@ -89,12 +86,4 @@ export const UserPage = () => {
         
     )
 }
-
-const populates = [
-	{
-		child: 'friends',
-		root: 'users'
-	},
-]
-
 
