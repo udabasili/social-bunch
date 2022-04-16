@@ -1,0 +1,38 @@
+.modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    border: none !important;
+    border-radius: unset !important;
+    background-color: rgba($color: #000000, $alpha: .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__content{
+        width: 50vw;
+        min-height: 60%;
+        max-height: 90%;
+        overflow-y: auto;
+        background-color: white;
+        overflow-x: hidden;
+        border-radius: 10px;
+
+        @include response(tab-land){
+            width: 80%;
+            min-height: 50%;
+            height: max-content;
+            
+
+        @include response(tab-port){
+            width: 100%;
+            height: 90%;
+            bottom: 0;
+            position: absolute;
+        }
+        }
+    }
+}

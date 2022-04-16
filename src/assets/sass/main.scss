@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./abstract/mixin";
+@import "./abstract/value";
+
+@import "./base/base";
+@import "./base/animation";
+@import "./base/topography";
+@import "./base/utils";
+
+@import "./components/dropdown";
+@import "./components/movie";
+@import "./components/loading";
+@import "./components/splash";
+@import "./components/add-post";
+@import "./components/tab";
+@import "./components/form";
+@import "./components/button";
+@import "./components/image-upload";
+@import "./components/post";
+@import "./components/post-window";
+@import "./components/comments";
+@import "./components/event-form";
+@import "./components/chat-window";
+@import "./components/chat";
+@import "./components/profile-card";
+
+@import "./layout/navigation";
+@import "./layout/footer";
+@import "./layout/left-nav";
+@import "./layout/modal";
+
+
+@import "./pages/homepage";
+@import "./pages/authpage";
+@import "./pages/userspage";
+@import "./pages/event.page";
+@import "./pages/messages-page";
+@import "./pages/profilepage";

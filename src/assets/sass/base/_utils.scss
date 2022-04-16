@@ -1,0 +1,52 @@
+.u-center-text {
+    text-align: center !important;
+}
+
+.u-margin-bottom-small {
+    margin-bottom: 1rem !important;
+    @include response(tab-port) {
+        margin-bottom: .5rem !important;
+    }
+}
+
+.u-margin-bottom-medium {
+    margin-bottom: 3rem !important;
+}
+
+.u-margin-bottom-big {
+    margin-bottom: 8rem !important;
+
+    @include response(tab-port) {
+        margin-bottom: 5rem !important;
+    }
+}
+
+.u-margin-top-small {
+    margin-top: 1rem !important;
+    @include response(tab-port) {
+        margin-top: .5rem !important;
+    }
+}
+
+.u-margin-top-medium {
+    margin-top: 3rem !important;
+}
+
+.u-margin-top-big {
+    margin-top: 8rem !important;
+}
+
+.u-margin-top-huge {
+    margin-top: 10rem !important;
+}
+
+@mixin loadingPosts {
+    animation-name: animate; 
+    animation-duration: 2s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;   
+    background: -webkit-gradient(linear, left top, right top, color-stop(8%, #eeeeee), color-stop(18%, #dddddd), color-stop(33%, #eeeeee));
+    background: -webkit-linear-gradient(left, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    -webkit-background-size: 800px 104px;  
+}

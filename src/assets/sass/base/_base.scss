@@ -1,0 +1,62 @@
+*::after,
+*::before,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    
+     @include response(tab-land) {
+        font-size: 56.25%; 
+    }
+
+    @include response(tab-port) { 
+        font-size: 50%; 
+    }
+    
+    @include response(big-desktop) {
+        font-size: 75%; 
+    }
+    width: 100%;
+
+}
+
+body, #root{
+    font-weight: 400;
+    line-height: 1.2;
+    width: 100%;
+    display: grid;
+    grid-template-columns: [full-start]  minmax(6rem, 1fr) [center-start] repeat(8 , [col-start]  minmax(min-content, 14rem ) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+}
+
+#root{
+    grid-column: full-start / full-end;
+    grid-template-rows:repeat(3, max-content);
+}
+
+main{
+    grid-column: full-start / full-end;
+    display: grid;
+    width: 100%;
+    background-color: #e7e8e9;
+    grid-template-rows: min-content max-content;
+    min-height: 80vh;
+    grid-template-columns: [sidebar-start] 8rem [full-start] minmax(6rem, 1fr) [center-start]   repeat(8 , [col-start]  minmax(min-content, 20rem ) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+    @include response(tab-land){
+        grid-template-rows: min-content 1fr;
+        grid-template-columns: [sidebar-start] 3rem [full-start] minmax(6rem, 1fr) [center-start]   repeat(8 , [col-start]  minmax(min-content, 20rem ) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+    }
+
+}
+
+
+.Toastify__toast-body {
+    text-align: center;
+    font-size: 2rem;
+}
