@@ -25,6 +25,7 @@ Social Bunch uses a number of open source projects to work properly:
 - SCSS
 - Node
 - Firebase
+- Tailwind
 
 ## Run
 
